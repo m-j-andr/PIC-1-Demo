@@ -53,7 +53,12 @@ w & x & y & z
 
 The *determinant* of the matrix $M$ is given by the following horrifically long formula.
 ```
-+ a p u z - a p v y - a q t z + a q v x + a r t y - a r u x - b n u z + b n v y + b q s z - b q v w - b r s y + b r u w + c n t z - c n v x - c p s z + c p v w + c r s x - c r t w - d n t y + d n u x + d p s y - d p u w - d q s x + d q t w
++ a p u z - a p v y - a q t z + a q v x
++ a r t y - a r u x - b n u z + b n v y
++ b q s z - b q v w - b r s y + b r u w
++ c n t z - c n v x - c p s z + c p v w
++ c r s x - c r t w - d n t y + d n u x
++ d p s y - d p u w - d q s x + d q t w
 ```
 Here, `a p u z` means `a` times `p` times `u` times `z`.
 
