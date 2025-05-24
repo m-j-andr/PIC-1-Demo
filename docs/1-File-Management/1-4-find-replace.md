@@ -42,12 +42,14 @@ To decode it, perform the following "Find and Replace"s.
 The following math equation shows you what a $4\times 4$ *matrix* looks like.
 These mathematical objects show up all over the place in Data Science.
 
+<div>
 \[M = \begin{pmatrix}
 a & b & c & d\\
 n & p & q & r\\
 s & t & u & v\\
 w & x & y & z
 \end{pmatrix}\]
+</div>
 
 The *determinant* of the matrix $M$ is given by the following horrifically long formula.
 ```
@@ -58,12 +60,15 @@ Here, `a p u z` means `a` times `p` times `u` times `z`.
 Make Sublime Text store a valid arithmetic expression,
 only involving numbers (no alphabetic characters),
 for the determinant of the following matrix.
+
+<div>
 \[A = \begin{pmatrix}
 3 & 1 & 4 & 1 \\
 2 & 5 & 1 & 1 \\
 1 & 1 & 2 & 3 \\
 2 & 1 & 2 & 3
 \end{pmatrix}\]
+</div>
 
 Finally, use an online calculator like
 [Desmos Scientific Calculator](https://www.desmos.com/scientific){:target="_blank"}
