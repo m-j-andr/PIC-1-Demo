@@ -43,12 +43,13 @@ The following math equation shows you what a $4\times 4$ *matrix* looks like.
 These mathematical objects show up all over the place in Data Science.
 
 <div>
-\[M = \begin{pmatrix}
-a & b & c & d\\
-n & p & q & r\\
-s & t & u & v\\
-w & x & y & z
-\end{pmatrix}\]
+  \[M =
+  \begin{pmatrix}
+  a & b & c & d\\
+  n & p & q & r\\
+  s & t & u & v\\
+  w & x & y & z
+  \end{pmatrix}\]
 </div>
 
 The *determinant* of the matrix $M$ is given by the following horrifically long formula.
@@ -62,23 +63,24 @@ The *determinant* of the matrix $M$ is given by the following horrifically long 
 ```
 Here, `a p u z` means `a` times `p` times `u` times `z`.
 
-Make Sublime Text store a valid arithmetic expression,
-only involving numbers (no alphabetic characters),
-for the determinant of the following matrix.
+ - Make Sublime Text store a valid arithmetic expression,
+   only involving numbers (no alphabetic characters),
+   for the determinant of the following matrix.
 
-<div>
-\[A = \begin{pmatrix}
-3 & 1 & 4 & 1 \\
-2 & 5 & 1 & 1 \\
-1 & 1 & 2 & 3 \\
-2 & 1 & 2 & 3
-\end{pmatrix}\]
-</div>
+   <div>
+     \[A =
+     \begin{pmatrix}
+     3 & 1 & 4 & 1 \\
+     2 & 5 & 1 & 1 \\
+     1 & 1 & 2 & 3 \\
+     2 & 1 & 2 & 3
+     \end{pmatrix}\]
+   </div>
 
-Finally, use an online calculator like
-[Desmos Scientific Calculator](https://www.desmos.com/scientific){:target="_blank"}
-to find the determinant of the matrix $A$
-by copying and pasting your arithmetic expression into the calculator.
+ - Finally, use an online calculator like
+   [Desmos Scientific Calculator](https://www.desmos.com/scientific){:target="_blank"}
+   to find the determinant of the matrix $A$
+   by copying and pasting your arithmetic expression into the calculator.
 
 
 
@@ -91,9 +93,9 @@ by copying and pasting your arithmetic expression into the calculator.
    `last name, first name, uid, hw1, hw2, hw3, hw4, hw5, exam1, exam2, final`.
 
  - This file was (fictionally) downloaded from a university's grading platform.
-   The grading platform is somewhat silly because it has produced a file where
-   University IDs (UIDs) contain dashes, and yet it will not allow one to upload
-   a file where University IDs (UIDs) contain dashes!
+   The grading platform is somewhat silly because
+   it has produced a file where University IDs (UIDs) contain dashes,
+   and yet it will not allow one to upload a file where UIDs contain dashes!
 
  - Remove all the dashes from the UIDs in the `uid` column.
 
@@ -106,7 +108,24 @@ by copying and pasting your arithmetic expression into the calculator.
 
 ## Chemical reaction
 
+Consider the following large piece of text which attempts to describe some important chemical reactions.
 
+```
+     N_9 H_11 CO_2  +  3 O_2  +                       N_6 H_8 O_6  +  2 N_9 H_15 C_5 O_3  +  N_15 H_22 C_6 O_5 Na
+-->  N_9 H_11 CO_3  +  2 O_2  +    H_2 O  +           N_6 H_8 O_6  +    N_9 H_15 C_5 O_3  +  N_15 H_22 C_6 O_5 Na  +    N_9 H_13 C_5 O_3
+-->  N_9 H_11 CO_4  +    O_2  +  2 H_2 O  +           N_6 H_8 O_6  +                         N_15 H_22 C_6 O_5 Na  +  2 N_9 H_13 C_5 O_3
+-->  N_8 H_11 CO_2  +    O_2  +  2 H_2 O  +  NO_2  +  N_6 H_8 O_6  +                         N_15 H_22 C_6 O_5 Na  +  2 N_9 H_13 C_5 O_3
+-->  N_8 H_11 CO_3  +            3 H_2 O  +  NO_2  +  N_6 H_6 O_6  +                         N_15 H_22 C_6 O_5 Na  +  2 N_9 H_13 C_5 O_3
+-->  N_9 H_13 CO_3  +            3 H_2 O  +  NO_2  +  N_6 H_6 O_6  +                         N_14 H_20 C_6 O_5 Na  +  2 N_9 H_13 C_5 O_3
+-->  N_9 H_13 CO_3  +            2 H_2 O  +  NO_2  +  N_6 H_6 O_6  +    N_4 H_9 C O_2 Na   +  N_10 H_13 C_5 O_4    +  2 N_9 H_13 C_5 O_3
+```
+
+The person recording the reactions has made some mistakes.
+ - Each occurrence of Nitrogen (`N`) should really be a Carbon (`C`).
+ - Each occurrence of Carbon (`C`) should be a Nitrogen (`N`).
+ - Each occurrence of Sodium (`Na`) should really be a Sulphur (`S`).
+
+Fix the mistakes!
 
 
 
