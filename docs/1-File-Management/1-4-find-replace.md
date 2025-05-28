@@ -3,6 +3,14 @@
 
 
 
+Find and Replace are two particularly useful features of Sublime Text (and other text editors).
+ - We can use *find* on a piece of text to jump to particular parts of it and
+   to count how many times a specified piece of text shows up.
+ - We can use *replace* to change any found text to some other specified text.
+
+
+
+
 ## Finding a secret image
 
 There is a secret image hidden inside the following text.
@@ -23,7 +31,8 @@ KKHJKIKKIKHIJHIIIJHJIIHHKIIKHHHHHIJIIIIJHKIHKJJJKIIKJHJ
 IIIJHIIHHIJHKKKKJJHKJJHHJIHJJJIIHIIIIKIHHKJIJHIJIHKKHIK
 ```
 
-To decode it, perform the following "Find and Replace"s.
+To decode it, perform the following "Find and Replace"s
+after copying and pasting it to Sublime Text.
  - `A --> 9`
  - `B --> "`
  - `C --> d`
@@ -101,7 +110,9 @@ Here, `a p u z` means `a` times `p` times `u` times `z`.
 
  - Watch out! Many student names contain dashes and
    the grading platform will not recognize students
-   unless the dashes in their name are correct.
+   unless the dashes in their name appear correctly.
+   You may want to look for something more specific
+   than an isolated dash.
 
 
 
@@ -132,7 +143,90 @@ Fix the mistakes!
 
 ## DNA and RNA sequences
 
+Consider the following text block.
+It is a coding DNA sequence (CDS),
+part of the [MT-ATP8 gene](https://en.wikipedia.org/wiki/MT-ATP8){:target="_blank"}
+found in [humans](https://www.ncbi.nlm.nih.gov/nuccore/NC_012920.1){:target="_blank"}.
 
+```
+tacggggttgatttatgatggcataccgggtggtattaatgggggtatgaggaatgtgataaggagtag
+tgggttgatttttataatttgtgtttgatggtggatggagggagtggtttcgggtatttttatttttta
+atattgtttgggactcttggttttacttgcttttagacaagcgaagtaagtaacgggggtgttaggatc
+```
+
+ - DNA is composed of two *strands* that coil around each other to form a double helix.
+   The *bases* of the two separate strands are bound together according to base pairing rules.
+    - `a <--> t`
+    - `c <--> g`
+
+   Swap `a` and `t` and swap `c` and `g` to calculate the DNA strand that binds to the one listed above.
+
+ - How many times do the following sequences appear?
+   - `act`
+   - `cat`
+   - `tact`
+   - `gaga`
+
+ - Which letter has the longest consecutive block and what is its length?
+
+ - RNA strands are created using DNA strands as a template in a process called *transcription*.
+   DNA bases are exchanged for their corresponding bases except that thymine (`t`) is replaced by uracil (`u`).
+
+   Replace `t` by `u` to calculate the RNA strand created when transcription occurs.
+
+ - Using *the genetic code* an RNA strand specifies a sequence of amino acids within proteins in a process called *translation*.
+   The [vertebrate mitochondrial code translation table](https://en.wikipedia.org/wiki/Vertebrate_mitochondrial_code#Translation_table){:target="_blank"}
+   tells us the replacements that we have to make. However, one has to perform these replacements every three bases / one *codon* at a time.
+   Alternatively, for this specific CDS, one can carefully perform the following replacements in exactly the listed order.
+
+    - `uug        -->  L`
+    - `ucg        -->  S`
+    - `uag        -->  "`
+    - `ugu        -->  C`
+    - `uga, ugg   -->  W`
+    - `cuu        -->  L`
+    - `acg        -->  T`
+    - `aag        -->  K`
+    - `aug        -->  M`
+    - `gua        -->  V`
+    - `gaa        -->  E`
+    - `Lcau       -->  LH`
+    - `uuc        -->  F`
+    - `cccW       -->  PW`
+    - `accc       -->  Tc`
+    - `ccc        -->  P`
+    - `uua        -->  L`
+    - `ucc        -->  S`
+    - `uau        -->  Y`
+    - `cuc        -->  L`
+    - `auu, auc   -->  I`
+    - `uca        -->  S`
+    - `acuaccV    -->  TTV`
+    - `aua        -->  M`
+    - `aau        -->  N`
+    - `aacuaccac  -->  NYH`
+    - `cua        -->  L`
+    - `ccu, cca   -->  P`
+    - `acc        -->  T`
+    - `aac        -->  N`
+    - `aaa        -->  K`
+    - `caa        -->  Q`
+    - `aca        -->  T`
+
+ - Check your answer!
+
+   <textarea id="amino" rows="3" cols="23" style="font-family:monospace"></textarea>
+   <input type="button" value="Submit Amino Acids" id="submit_button">
+   <div id="status"></div>
+   <script>
+     function update_status() {
+       const solution = 'MPQLNTTVWPTMITPMLLTLFLITQLKMLNTNYHLPPSPKPMKMKNYNKPWEPKWTKICSLHSLPPQS"';
+       const submission = document.getElementById('amino').value.replaceAll(' ', '').replaceAll('\n', '');
+
+       document.getElementById('status').innerHTML = submission === solution ? 'Correct - well done!' : 'Try again.';
+     }
+     document.getElementById('submit_button').addEventListener('click', update_status);
+   </script>
 
 
 
