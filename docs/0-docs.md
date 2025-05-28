@@ -1,4 +1,4 @@
-# PIC 1 - Key concepts
+# Key concepts
 
 This document is arranged so that every major concept has a heading associated with it
 which begins with `concept::`. For example, if you want to learn about `if` statements,

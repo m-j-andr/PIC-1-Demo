@@ -1,4 +1,4 @@
-# PIC 1 - Files and File Extensions
+# Files and File Extensions
 
 
 

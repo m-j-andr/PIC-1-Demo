@@ -1,4 +1,4 @@
-# PIC 1 - An Amazing Maze of Paths
+# An Amazing Maze of Paths
 
 
 

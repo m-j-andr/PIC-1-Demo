@@ -1,4 +1,4 @@
-# PIC 1 - Homework Assignments on File Management - HW-0, HW-1, HW-2
+# Homework Assignments on File Management - HW-0, HW-1, HW-2
 
 
 

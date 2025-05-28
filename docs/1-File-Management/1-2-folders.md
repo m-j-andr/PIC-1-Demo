@@ -1,4 +1,4 @@
-# PIC 1 - Folders and Paths
+# Folders and Paths
 
 
 
