@@ -105,5 +105,45 @@ it is okay to submit them; just make sure that you are *not missing* any files o
 
 ## HW-2
 
+ - Create a folder called `HW-2` within `0-Homework-Assignments`.
+ - Use Sublime Text to save a file called `solutions.txt` within `HW-2`,
+   that is, within the folder whose path is
+   `/Users/YOUR_NAME/Documents/UCLA-Classes/PIC-1/0-Homework-Assignments/HW-2`.
+ - Enter solutions to the listed questions from the [Find and Replace activities](1-4-find-replace.md) as follows.
+
+```
+1. Go Bruins!
 
 
+2. The determinant of the matrix A is .
+
+   I found it by typing the following formula into Desmos Scientific Calculator...
+
+
+
+
+3. I have removed dashes from the UIDs and submitted grades.csv along with this file.
+
+
+4. The correct chemical reaction is as follows...
+
+
+
+
+
+
+
+
+
+
+5. a) "act" appears  times.
+   b) "cat" appears  times.
+   c) "gaga" appears  times.
+   d) "tact" appears  times.
+   e)  has the longest consecutive block and its length is .
+
+
+6. I don't care about Formula One. Stop it.
+```
+
+ - Submit `solutions.txt` and `grades.csv` to Gradescope.

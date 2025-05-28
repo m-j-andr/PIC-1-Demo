@@ -25,3 +25,5 @@
 [3 - Maze of Paths](./1-File-Management/1-3-maze.md)
 
 [4 - Find and Replace](./1-File-Management/1-4-find-replace.md)
+
+[5 - Homework](./1-File-Management/1-5-homework.md)

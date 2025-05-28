@@ -136,7 +136,7 @@ The person recording the reactions has made some mistakes.
  - Each occurrence of Carbon (`C`) should be a Nitrogen (`N`).
  - Each occurrence of Sodium (`Na`) should really be a Sulphur (`S`).
 
-Fix the mistakes!
+Fix the mistakes! (Any idea what these reactions are?)
 
 
 
@@ -161,22 +161,26 @@ atattgtttgggactcttggttttacttgcttttagacaagcgaagtaagtaacgggggtgttaggatc
 
    Swap `a` and `t` and swap `c` and `g` to calculate the DNA strand that binds to the one listed above.
 
+
  - How many times do the following sequences appear?
    - `act`
    - `cat`
-   - `tact`
    - `gaga`
+   - `tact`
+
 
  - Which letter has the longest consecutive block and what is its length?
+
 
  - RNA strands are created using DNA strands as a template in a process called *transcription*.
    DNA bases are exchanged for their corresponding bases except that thymine (`t`) is replaced by uracil (`u`).
 
    Replace `t` by `u` to calculate the RNA strand created when transcription occurs.
 
+
  - Using *the genetic code* an RNA strand specifies a sequence of amino acids within proteins in a process called *translation*.
    The [vertebrate mitochondrial code translation table](https://en.wikipedia.org/wiki/Vertebrate_mitochondrial_code#Translation_table){:target="_blank"}
-   tells us the replacements that we have to make. However, one has to perform these replacements every three bases / one *codon* at a time.
+   tells us the replacements that we have to make. However, one has to perform these replacements every three bases, that is, one *codon* at a time.
    Alternatively, for this specific CDS, one can carefully perform the following replacements in exactly the listed order.
 
     - `uug        -->  L`
@@ -213,6 +217,7 @@ atattgtttgggactcttggttttacttgcttttagacaagcgaagtaagtaacgggggtgttaggatc
     - `caa        -->  Q`
     - `aca        -->  T`
 
+
  - Check your answer!
 
    <textarea id="amino" rows="3" cols="23" style="font-family:monospace"></textarea>
@@ -227,6 +232,10 @@ atattgtttgggactcttggttttacttgcttttagacaagcgaagtaagtaacgggggtgttaggatc
      }
      document.getElementById('submit_button').addEventListener('click', update_status);
    </script>
+
+
+ - If only we could tell a computer to perform these tedious replacements to help translate any RNA sequence.
+   By the end of the course, you will be able to write such Python programs!
 
 
 
@@ -279,3 +288,4 @@ atattgtttgggactcttggttttacttgcttttagacaagcgaagtaagtaacgggggtgttaggatc
 
 Your first homework assignments are posted [here](1-5-homework.md).
 Some of the content that you have learned so far is documented [here](../0-docs.md).
+
