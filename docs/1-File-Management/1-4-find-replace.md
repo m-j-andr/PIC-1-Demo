@@ -205,31 +205,34 @@ tctaga
     - Click "Find" and "Replace...".
       Select the icon $.^*$.
       This enables the fancy functionality we are about to use!
-    - `.{3}`        `-->`  `$0 `
-    - `uu[u,c]`     `-->`  `F`
-    - `uu[a,g]`     `-->`  `L`
-    - `uc[u,c,a,g]` `-->`  `S`
-    - `ua[u,c]`     `-->`  `Y`
-    - `ug[u,c]`     `-->`  `C`
-    - `ug[a,g]`     `-->`  `W`
-    - `cu[u,c,a,g]` `-->`  `L`
-    - `cc[u,c,a,g]` `-->`  `P`
-    - `ca[u,c]`     `-->`  `H`
-    - `ca[a,g]`     `-->`  `Q`
-    - `cg[u,c,a,g]` `-->`  `R`
-    - `au[u,c]`     `-->`  `I`
-    - `au[a,g]`     `-->`  `M`
-    - `ac[u,c,a,g]` `-->`  `T`
-    - `aa[u,c]`     `-->`  `N`
-    - `aa[a,g]`     `-->`  `K`
-    - `ag[u,c]`     `-->`  `S`
-    - `ag[a,g]`     `-->`  `"`
-    - `gu[u,c,a,g]` `-->`  `V`
-    - `gc[u,c,a,g]` `-->`  `A`
-    - `ga[u,c]`     `-->`  `D`
-    - `ga[a,g]`     `-->`  `E`
-    - `gg[u,c,a,g]` `-->`  `G`
-    - ` `           `-->`  `{no characters at all}`
+
+      | Find           | Replace                   |
+      | -------------- | ------------------------- |
+      | `.{3}`         |  `$0 `                    |
+      | `uu[u,c]`      |  `F`                      |
+      | `uu[a,g]`      |  `L`                      |
+      | `uc[u,c,a,g]`  |  `S`                      |
+      | `ua[u,c]`      |  `Y`                      |
+      | `ug[u,c]`      |  `C`                      |
+      | `ug[a,g]`      |  `W`                      |
+      | `cu[u,c,a,g]`  |  `L`                      |
+      | `cc[u,c,a,g]`  |  `P`                      |
+      | `ca[u,c]`      |  `H`                      |
+      | `ca[a,g]`      |  `Q`                      |
+      | `cg[u,c,a,g]`  |  `R`                      |
+      | `au[u,c]`      |  `I`                      |
+      | `au[a,g]`      |  `M`                      |
+      | `ac[u,c,a,g]`  |  `T`                      |
+      | `aa[u,c]`      |  `N`                      |
+      | `aa[a,g]`      |  `K`                      |
+      | `ag[u,c]`      |  `S`                      |
+      | `ag[a,g]`      |  `"`                      |
+      | `gu[u,c,a,g]`  |  `V`                      |
+      | `gc[u,c,a,g]`  |  `A`                      |
+      | `ga[u,c]`      |  `D`                      |
+      | `ga[a,g]`      |  `E`                      |
+      | `gg[u,c,a,g]`  |  `G`                      |
+      | `{a space}`    |  `{no characters at all}` |
 
 
  - If you have chosen to live without Sublime Text,
