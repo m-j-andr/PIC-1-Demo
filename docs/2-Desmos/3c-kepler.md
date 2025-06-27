@@ -21,6 +21,7 @@ we will use the following letters.
 
 Kepler proposed there are some constants
 $k$ and $p$ so that $T\ =\ k\cdot D^p$.
+
 Kepler had access to the following information.
 
 | Planet  | Average distance to sun (AU) | Days to complete one orbit |
@@ -33,5 +34,4 @@ Kepler had access to the following information.
 | Saturn  |             9.510            |           10759.2          |
 
  - Using this information, estimate $p$.
-
  - Kepler's third law actually claims that $p$ is some nice fraction. Can you guess what fraction?
