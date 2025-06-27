@@ -1,8 +1,8 @@
 # A day in the life of Johannes Kepler
 
-Johannes Kepler was a German
-astronomer and mathematician.
-Upon Tycho Brahe's death,
+[Johannes Kepler](https://en.wikipedia.org/wiki/Johannes_Kepler){:target="_blank"}
+was a Germann astronomer and mathematician.
+Upon [Tycho Brahe](https://en.wikipedia.org/wiki/Tycho_Brahe){:target="_blank"}'s death,
 Kepler inherited the meticulously collected astronomical observations made by Brahe,
 as well as Brahe's position as *Imperial Mathematician* to the Habsburg Emperor in 1601.
 
