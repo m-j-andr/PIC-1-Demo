@@ -1,10 +1,12 @@
 # A day in the life of Johannes Kepler
 
+
 [Johannes Kepler](https://en.wikipedia.org/wiki/Johannes_Kepler){:target="_blank"}
 was a Germann astronomer and mathematician.
 Upon [Tycho Brahe](https://en.wikipedia.org/wiki/Tycho_Brahe){:target="_blank"}'s death,
 Kepler inherited the meticulously collected astronomical observations made by Brahe,
 as well as Brahe's position as *Imperial Mathematician* to the Habsburg Emperor in 1601.
+
 
 With the detailed observations made by Brahe,
 Kepler was able to formulate his **third law of planetary motion**.
@@ -20,7 +22,8 @@ we will use the following letters.
 </div>
 
 Kepler proposed there are some constants
-$k$ and $p$ so that $T\ =\ k\cdot D^p$.
+$k$ and $p$ so that $T = k\cdot D^p$.
+
 
 Kepler had access to the following information.
 
@@ -34,4 +37,5 @@ Kepler had access to the following information.
 | Saturn  |             9.510            |           10759.2          |
 
  - Using this information, estimate $p$.
+
  - Kepler's third law actually claims that $p$ is some nice fraction. Can you guess what fraction?

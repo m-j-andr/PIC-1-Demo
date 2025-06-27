@@ -13,9 +13,9 @@ You will help this person by taking the following steps
 using the image below (since it will have higher resolution in Desmos).
 
 
-1. **Fit a circle around the (imaginary) whole cookie.**
-   To do this make a table with columns $X_{cookie}$ and $Y_{cookie}$
-   and recall that a circle's formula is as follows.
+1. **Fit a circle around the (not photographed) whole cookie.**
+   To do this, make a table with columns $X_{cookie}$ and $Y_{cookie}$
+   and recall that a circle's equation is as follows.
    <div>
    	 \[(x\ -\ x_{cookie})^2\ +\ (y\ -\ y_{cookie})^2\ =\ r_{cookie}^2\]
    </div>
