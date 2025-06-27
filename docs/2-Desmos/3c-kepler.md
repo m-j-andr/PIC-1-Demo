@@ -10,20 +10,18 @@ With the detailed observations made by Brahe,
 Kepler was able to formulate his third law of planetary motion.
 It says that the time it takes a planet to complete a full orbit around the sun is
 proportional to the average distance of the planet to the sun raised to some power.
-
 To express this statement using a formula,
-let's use the following letters.
+we will use the following letters.
 <div>
   \[\begin{aligned}
-    D\ =\ \text{average distance to the sun}
-    T\ =\ \text{time to orbit the sun}
+    D\ &=\ \text{average distance to the sun}\\
+    T\ &=\ \text{time to orbit the sun}
   \end{aligned}\]
 </div>
 
-Kepler proposed there are some constants $k$ and $p$ so that
-<div>
-  \[T\ =\ k\cdot D^p.\]
-</div>
+Kepler proposed there are some constants
+$k$ and $p$ so that $T\ =\ k\cdot D^p$.
+Kepler had access to the following information.
 
 | Planet  | Average distance to sun (AU) | Days to complete one orbit |
 | ------- | ---------------------------- | ---------------------------|
@@ -34,5 +32,6 @@ Kepler proposed there are some constants $k$ and $p$ so that
 | Jupiter |             5.200            |           4332.62          |
 | Saturn  |             9.510            |           10759.2          |
 
-Kepler had access to the following information. Using this information, estimate $p$.
-Kepler's third law actually claims that $p$ is some nice fraction. Can you guess what fraction?
+ - Using this information, estimate $p$.
+
+ - Kepler's third law actually claims that $p$ is some nice fraction. Can you guess what fraction?
