@@ -7,7 +7,7 @@ Kepler inherited the meticulously collected astronomical observations made by Br
 as well as Brahe's position as *Imperial Mathematician* to the Habsburg Emperor in 1601.
 
 With the detailed observations made by Brahe,
-Kepler was able to formulate his third law of planetary motion.
+Kepler was able to formulate his **third law of planetary motion**.
 It says that the time it takes a planet to complete a full orbit around the sun is
 proportional to the average distance of the planet to the sun raised to some power.
 To express this statement using a formula,
