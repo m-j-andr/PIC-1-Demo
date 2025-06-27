@@ -17,7 +17,7 @@ using the image below (since it will have higher resolution in Desmos).
    To do this make a table with columns $X_{cookie}$ and $Y_{cookie}$
    and recall that a circle's formula is as follows.
    <div>
-   	 \[(x\ -\ x_{cookie})^2\ +\ (y - y_{cookie})^2\ =\ r_{cookie}^2\]
+   	 \[(x\ -\ x_{cookie})^2\ +\ (y\ -\ y_{cookie})^2\ =\ r_{cookie}^2\]
    </div>
    Notice and ignore that their red drawing of the cookie is not quite circular!
 
@@ -28,7 +28,7 @@ using the image below (since it will have higher resolution in Desmos).
 
 3. **Draw a polygon around what is left of the cookie.**
 
-   - Make a table with columns called $X_{left}$ and $Y_left$.
+   - Make a table with columns called $X_{left}$ and $Y_{left}$.
 
    - Click on an empty entry,
      type `P_left→ = polygon(X_left→, Y_left→)`,
@@ -53,17 +53,17 @@ using the image below (since it will have higher resolution in Desmos).
    [Gauss' shoelace formula](https://en.wikipedia.org/wiki/Shoelace_formula#Triangle_formula){:target="_blank"}.**
 
    - The formula uses the number of points making up the polygon, so it is useful to store this quantity.
-     <div>\[N\ =\ \operatorname{length}(X_{left})$\]</div>
+     <div>\[N\ =\ \operatorname{length}(X_{left})\]</div>
 
    - The shoelace formula is as follows.
      <div>\[
-       A_{left}\ =\ \frac{1}{2} \left|
-                                       \left( \sum_{j = 1}^{N - 1} \left( X_{left}[j] Y_{left}[j + 1]\ -\ X_{left}[j + 1] Y_{left}[j] \right) \right)\ 
-                                    +\ \left(                             X_{left}[N] Y_{left}[    1]\ -\ X_{left}[    1] Y_{left}[N]         \right)
-                               \right|
+       A_{left}\ =\ \frac{1}{2} \bigg|
+                                       \bigg( \sum_{j = 1}^{N - 1} \bigg( X_{left}[j]\ Y_{left}[j + 1]\ -\ X_{left}[j + 1]\ Y_{left}[j] \bigg) \bigg)\ 
+                                    +\ \bigg(                             X_{left}[N]\ Y_{left}[    1]\ -\ X_{left}[    1]\ Y_{left}[N]        \bigg)
+                                \bigg|
      \]</div>
 
-     It is not important that you understand where this comes from.
+     It is not important that you understand where this formula comes from.
      However, accurately typing a formula that has been verified by someone else
      is a very useful coding skill.
 
@@ -77,13 +77,19 @@ using the image below (since it will have higher resolution in Desmos).
      - `X_left→[]←j→Y_left→[]←j+1→ - X_left→[]←j+1→Y_left→[]←j→→→→→→→`
      - `X_left→[]←N→Y_left→[]←1→ - X_left→[]←1→Y_left→[]←N→→→`
 
-     By opening and closing parentheses before typing within them,
-     I find it easier to avoid syntax errors.
+     By opening and closing parentheses and square brackets
+     before typing within them, I find it easier to avoid syntax errors.
      Moreover, because `()`, `[]`, and `{}` are next to each other
-     on the keyboard, I often find this is quicker to type.
+     on the keyboard, I often find this leads to quicker typing.
 
 
 5. **Calculate the ratio $\frac{A_{left}}{A_{cookie}}$.**
+
+   - Is it bigger than or less than $0.5$???
+   - What if you purposefully
+     overestimate the size of the original cookie
+     and underestimate the amount left by a little bit.
+   - I think the conclusion is unanimous!!
 
 
 ![About Half A Cookie](./reddit-art/cookie.jpeg)
