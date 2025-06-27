@@ -57,10 +57,10 @@ using the image below (since it will have higher resolution in Desmos).
 
    - The shoelace formula is as follows.
      <div>\[
-       A_{left}\ =\ \frac{1}{2} \bigg|
+       A_{left}\ =\ \frac{1}{2} \Bigg|
                                        \bigg( \sum_{j = 1}^{N - 1} \bigg( X_{left}[j]\ Y_{left}[j + 1]\ -\ X_{left}[j + 1]\ Y_{left}[j] \bigg) \bigg)\ 
                                     +\ \bigg(                             X_{left}[N]\ Y_{left}[    1]\ -\ X_{left}[    1]\ Y_{left}[N]        \bigg)
-                                \bigg|
+                                \Bigg|
      \]</div>
 
      It is not important that you understand where this formula comes from.
@@ -69,7 +69,7 @@ using the image below (since it will have higher resolution in Desmos).
 
      First, note that
      the absolute value symbol `|` is
-     near the `ENTER` key of your keyboard.
+     near the `ENTER` key of your keyboard: `shift + \`.
 
      Here is how I would type the shoelace formula in Desmos.
      - `A_left→ = 1/2→ ||←() + ()←←←←←←`
@@ -89,7 +89,7 @@ using the image below (since it will have higher resolution in Desmos).
    - What if you purposefully
      overestimate the size of the original cookie
      and underestimate the amount left by a little bit.
-   - I think the conclusion is unanimous!!
+   - I think the conclusion is unanimous!! Marriage saved.
 
 
 ![About Half A Cookie](./reddit-art/cookie.jpeg)
