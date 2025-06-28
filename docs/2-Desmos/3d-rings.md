@@ -14,8 +14,8 @@ Estimate the ratio $\frac{r_{ring}}{r_{saturn}}$ where$\ldots$
    the *F ring*, a really, really thin ring.
 
 You will need the equations for two ellipses.
- - $\frac{(x\ -\ x_{saturn})^2}{r_{saturn}^2}$ $+$ $\frac{(y\ -\ y_{saturn})^2}{p_{saturn}^2}$ $=$ $1$
- - $\frac{(x\ -\ x_{ring})^2}{r_{ring}^2}$ $+$ $\frac{(y\ -\ y_{ring})^2}{p_{ring}^2}$ $=$ $1$
+ - $\frac{(x\ -\ x_{saturn})^2}{r_{saturn}^2}\ +\ \frac{(y\ -\ y_{saturn})^2}{p_{saturn}^2}\ =\ 1$
+ - $\frac{(x\ -\ x_{ring})^2}{r_{ring}^2}\ +\ \frac{(y\ -\ y_{ring})^2}{p_{ring}^2}\ =\ 1$
  - $r$ is indended to stand for *radius* and
    $p$ is vaguely intended to stand for *momentum* (the reason for Saturn's bulge) or *perspective*.
 
