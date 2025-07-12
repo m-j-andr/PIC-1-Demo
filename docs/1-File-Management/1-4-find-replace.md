@@ -121,7 +121,6 @@ Here, `a p u z` means `a` times `p` times `u` times `z`.
    <script>
      function respond_to_determinant_submission() {
        const submission = document.getElementById('determinant').value.replaceAll(' ', '').replaceAll('\n', '');
-
        if      (submission === '46') { alert('Correct - well done!');                                               }
        else if (submission ===  '0') { alert('Hmmm. What does the calculator say when you give it 2 1 1 - 1 1 2?'); }
        else                          { alert('Try again.');                                                         }
@@ -144,7 +143,7 @@ Here, `a p u z` means `a` times `p` times `u` times `z`.
    it has produced a file where University IDs (UIDs) contain dashes,
    and yet it will not allow one to upload a file where UIDs contain dashes!
 
- - **Using Sublime Text,**
+ - **Using Sublime Text**,
    remove all the dashes from
    the UIDs in the `uid` column.
 
@@ -189,9 +188,7 @@ Fix the mistakes! Any idea what these reactions are? Check your answer!
                      'C_8H_11NO_3+3H_2O+CO_2+C_6H_6O_6+C_15H_22N_6O_5S+2C_9H_13N_5O_3'             + '-->' +
                      'C_9H_13NO_3+3H_2O+CO_2+C_6H_6O_6+C_14H_20N_6O_5S+2C_9H_13N_5O_3'             + '-->' +
                      'C_9H_13NO_3+2H_2O+CO_2+C_6H_6O_6+C_4H_9NO_2S+C_10H_13N_5O_4+2C_9H_13N_5O_3';
-
     const submission = document.getElementById('chemical_reaction').value.replaceAll(' ', '').replaceAll('\n', '');
-
     alert(submission === solution ? 'Correct - well done!' : 'Try again.');
  }
  document.getElementById('submit_chemical_reaction').addEventListener('click', respond_to_chemical_reaction_submission);
@@ -235,7 +232,7 @@ tctaga
 
 
  - Which letter appears the most times consecutively?
-   How long is this streak of `a`s, `t`s, `c`s, or `g`s?
+   How many times does it appear consecutively?
 
 
  - DNA is composed of two *strands* that coil around each other to form a double helix.
@@ -280,7 +277,6 @@ tctaga
                         'acaugaaacauccuaucaucuguaggcucauucauuucucuaacagcaguaauauuaauaauuuucaugauuugagaagccuucgcuucgaagcga' +
                         'aaaguccuaauaguagaagaacccuccauaaaccuggagugacuauauggaugccccccacccuaccacacauucgaagaacccguauacauaaaa' +
                         'ucuaga';
-
        const solation = 'uacaagcggcuggcaacugauaagagauguuugguguuucuguaaccuugugauauggauaauaagccgcguacucgaccucaggauccgugucga' +
                         'gauucggaggaauaagcucggcucgacccggucgguccguuggaagauccauugcugguguagauguugcaauagcagugucggguacguaaacau' +
                         'uauuagaagaaguaucauuauggguaguauuagccuccgaaaccguugacugaucaaggggauuauuagccacgggggcuauaccgcaaaggggcg' +
@@ -298,9 +294,7 @@ tctaga
                         'uguacuuuguaggauaguagacauccgaguaaguaaagagauugucgucauuauaauuauuaaaaguacuaaacucuucggaagcgaagcuucgcu' +
                         'uuucaggauuaucaucuucuugggagguauuuggaccucacugauauaccuacggggggugggaugguguguaagcuucuugggcauauguauuuu' +
                         'agaucu';
-
        const submission = document.getElementById('rna').value.replaceAll(' ', '').replaceAll('\n', '');
-
        if      (submission === solution) { alert('Correct - well done!');                                             }
        else if (submission === solation) { alert('Hmmm. Did you mix up the coding and template strands of the DNA?'); }
        else                              { alert('Try again.');                                                       }
@@ -313,17 +307,18 @@ tctaga
    The [vertebrate mitochondrial code translation table](https://en.wikipedia.org/wiki/Vertebrate_mitochondrial_code#Translation_table){:target="_blank"}
    tells us the replacements that we have to make.
 
-   Click "Find" and "Replace...".
-   **Then select the icon `.*`.**
-   This enables the fancy functionality (*regular expressions*) we are about to use!
-   The other available buttons are described
-   [here](../0-docs.md#conceptfind-conceptreplace-conceptfind-and-replace-conceptfind-and-replace-options){:target="_blank"}.
-   Now perform the following "Find and Replace"s.
-    - The first "find and replace" should insert a space every three characters.
-    - The ones involving square brackets `[]` should perform multiple "find and replace"s at a time.
-    - For the amino acids, `V`, `A`, `D`, `E`, and `G`,
-      you need to use the
-      [vertebrate mitochondrial code translation table](https://en.wikipedia.org/wiki/Vertebrate_mitochondrial_code#Translation_table){:target="_blank"}.
+    - Click "Find > Replace...".
+    - **Then select the icon `.*`.**
+      This enables the fancy functionality (*regular expressions*) we are about to use!
+      The other available buttons are described
+      [here](../0-docs.md#conceptfind-conceptreplace-conceptfind-and-replace-conceptfind-and-replace-options){:target="_blank"}.
+
+    - Now perform the following "Find and Replace"s.
+      - The first "find and replace" should insert a space every three characters.
+      - The ones involving square brackets `[]` should perform multiple "find and replace"s at a time.
+      - For the amino acids, `V`, `A`, `D`, `E`, and `G`,
+        you need to refer to the
+        [vertebrate mitochondrial code translation table](https://en.wikipedia.org/wiki/Vertebrate_mitochondrial_code#Translation_table){:target="_blank"}.
 
    | Find           | Replace                         |
    | -------------- | ------------------------------- |
@@ -378,9 +373,7 @@ tctaga
                         'TWNILSSVGSFISLTAVMLMIFMIWEAFASKR' +
                         'KVLMVEEPSMNLEWLYGCPPPYHTFEEPVYMK' +
                         'S"';
-
        const submission = document.getElementById('amino_acids').value.replaceAll(' ', '').replaceAll('\n', '');
-
        alert(submission === solution ? 'Correct - well done!' : 'Try again.');
      }
      document.getElementById('submit_amino_acids').addEventListener('click', respond_to_amino_acids_submission);
@@ -940,7 +933,7 @@ tctaga
 
  - Click "Find" and "Replace...".
    Select the icon `.*`.
-   This enables the finds and replaces to recognize `\n` as "newline".
+   This enables the finds and replaces to recognize `\n` as a new line.
 
  - Now perform the following "Find and Replace"s.
    - `a single space --> no characters at all`.
@@ -968,4 +961,3 @@ tctaga
 
 Your first homework assignments are posted [here](1-5-homework.md).
 Some of the content that you have learned so far is documented [here](../0-docs.md).
-

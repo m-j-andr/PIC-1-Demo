@@ -27,7 +27,6 @@
     <script>
       function respond_to_relative_path_submission() {
         const submission = document.getElementById('relative_path').value.replaceAll(' ', '').replaceAll('\n', '');
- 
         if (submission === './y/o/u/a/r/ruby.txt'     ||
             submission === './e/s/u/p/e/topaz.txt'    ||
             submission === './r/w/o/n/d/sapphire.txt' ||
@@ -83,3 +82,4 @@
 ## Up next
 
 Next, you will learn about the power of [find and replace](1-4-find-replace.md).
+

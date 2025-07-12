@@ -137,13 +137,14 @@ Find and Replace are two particularly useful features of Sublime Text (and other
    all occurrences of some looked-for text
    to some other specified text.
 
-Sublime Text provides various options using the buttons at the bottom,
+Sublime Text provides various find and replace options using the buttons at the bottom,
 next to where you type what you would like to find.
  - `.*` enables searching for
    *[regular expressions](https://en.wikipedia.org/wiki/Regular_expression){:target="_blank"}*. 
    These provide clever ways to match text. As examples...
     - `uc[u,c,a,g]` allows one to search for
-      `ucu`, `ucc`, `uca`, and `ucg` using a single search.
+      `ucu`, `ucc`, `uca`, and `ucg`
+      simultaneously using a single search.
     - `\n` allows one to search for the new line character;
     - `.{3}` allows one to search for groups of three characters.
 
@@ -172,7 +173,9 @@ next to where you type what you would like to find.
    and I suggest that you ignore it.
 
  - When replacing, one can select `AB` to *preserve cases*.
-   ```Test test```
+   ```
+   Test test
+   ```
    - With case sensitivity turned off
      and preserve cases turned off,
      finding `test` and replacing all with
@@ -251,3 +254,4 @@ next to where you type what you would like to find.
 ## concept::fitting, concept::line-fitting, concept::curve-fitting
 
 ## concept::matplotlib, concept::plotting, concept::plt
+

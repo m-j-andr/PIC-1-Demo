@@ -125,9 +125,8 @@ In theory, later versions are supposed to improve upon earlier versions,
 although some major companies' products show that this is not always true.
 Regarding [Sublime Text](https://www.sublimetext.com/download){:target="_blank"},
 the most recent version will certainly be adequate for this class.
-On a Mac, you may want to drag `SublimeText.app` from
-`/Users/YOUR_NAME/Downloads` to `/Applications`
-**before you open it for the first time.**
+On a Mac, you may want to drag `Sublime Text.app` from `Downloads`
+to `Applications` before you open it for the first time.
 
 
 ### Setting Sublime Text as the default for .txt and .py files on MacOS
@@ -261,3 +260,4 @@ to investigate such consequences!
 ## Up next
 
 Next, you will learn about [folders and paths](1-2-folders.md).
+

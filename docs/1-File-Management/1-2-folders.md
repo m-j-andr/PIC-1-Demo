@@ -90,11 +90,11 @@ PIC-1
 
 **NOTE.** The concepts mentioned in this section are explained further
 [here](../0-docs.md#conceptdirectory-conceptfolder){:target="_blank"}
-to facilitate you looking them up again whenever you need to in the future.
+to facilitate you looking them up again whenever you need to.
 
 On most computers, the `Documents` folder is contained in a folder with your name,
 which is contained in a folder called `Users`,
-which is contained in a folder above all other folders: the *root directory*.
+which is contained in a folder above all other folders: *the root directory*.
 
 The *path* of a file records the exact location of the file on your computer.
 For example, the path of the original file `demo.html` is
