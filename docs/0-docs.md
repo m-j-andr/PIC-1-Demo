@@ -103,10 +103,86 @@ Then the path of your file is `/Users/YOUR_NAME/Documents/UCLA-Classes/PIC-1/0-H
 Similarly, the folder `HW-1` has the path `/Users/YOUR_NAME/Documents/UCLA-Classes/PIC-1/0-Homework-Assignments/HW-1`.
 Both of these are *absolute paths* because they start at the root directory.
 
-We can also give *relative paths* relative to a current working directory.
-If we are working within the `PIC-1` directory, then
+When using Finder on Mac or File Explorer on Windows,
+your *current working directory* is listed at the top.
+It can be convenient to give *relative paths*
+relative to this current working directory.
+For example, if we are working within the `PIC-1` directory, then
 the path of the file `solutions.txt` relative to `PIC-1` is `./0-Homework-Assignments/HW-1/solutions.txt` and
 the path of the directory `HW-1` relative to `PIC-1` is `./0-Homework-Assignments/HW-1`.
+
+By analogy, you might like to imagine giving
+your best alien friend the directions
+to the In-N-Out closest to us:
+`/Observable Universe/Laniakea Supercluster/Virgo Supercluster/Local Group/Milky Way Galaxy/Orion Arm/Solar System/Planet Earth/North America/United States of America/California/Los Angeles/Westwood/Gayley Ave/922`.
+If they call you and tell you that they are already in Los Angeles,
+you can give them directions from `Los Angeles` instead:
+`./Westwood/Gayley Ave/922`.
+If you believe that addresses are useful,
+then you understand why paths are useful!
+
+
+## concept::find, concept::replace, concept::find-and-replace, concept::find-and-replace-options
+
+Find and Replace are two particularly useful features of Sublime Text (and other text editors).
+ - We can use *find* on a piece of text to jump to particular parts of it and
+   to count how many times a specified piece of text shows up.
+    - Either select "Find > Find..."
+    - or use the keyboard shortcut "command + F" on MacOS or "ctrl + F" on Windows.
+ - We can use *replace* to change any found text
+   to some other specified text.
+    - Either select "Find > Replace..."
+    - or use the keyboard shortcut "command + option + F" on MacOS or "ctrl + H" on Windows.
+ - We can use *replace all* to change
+   all occurrences of some looked-for text
+   to some other specified text.
+
+Sublime Text provides various options using the buttons at the bottom,
+next to where you type what you would like to find.
+ - `.*` enables searching for
+   *[regular expressions](https://en.wikipedia.org/wiki/Regular_expression){:target="_blank"}*. 
+   These provide clever ways to match text. As examples...
+    - `uc[u,c,a,g]` allows one to search for
+      `ucu`, `ucc`, `uca`, and `ucg` using a single search.
+    - `\n` allows one to search for the new line character;
+    - `.{3}` allows one to search for groups of three characters.
+
+ - `Aa` enables *case sensitivity*.
+   ```
+   The cat on the mat by the window saw the bird on the branch of the tree in the garden.
+   ```
+   - Turned off, `the` will be found seven times in the sentence above.
+   - Turned on, `the` will be found six times in the sentence above
+     since the first occurence has a capital `T`.
+
+ - The quotes enable searching for *whole words*.
+   ```
+   Yesterday, there was a cat on the mat by the window.
+   ```
+   - Turned off, `the` will be found three times in the sentence above.
+   - Turned on, `the` will be found two times in the sentence above
+     since the first occurence is part of the word `there`.
+
+ - One can specify whether to *wrap*
+   (go back to the first result
+   after the last result) and
+   whether to *highlight matches*.
+
+ - The *in selection* option does not work very well
+   and I suggest that you ignore it.
+
+ - When replacing, one can select `AB` to *preserve cases*.
+   ```Test test```
+   - With case sensitivity turned off
+     and preserve cases turned off,
+     finding `test` and replacing all with
+     `tester` gives `tester tester`.
+   - With case sensitivity turned off
+     and preserve cases turned on,
+     finding `test` and replacing all with
+     `tester` gives `Tester tester`.
+
+
 
 
 ## concept::string

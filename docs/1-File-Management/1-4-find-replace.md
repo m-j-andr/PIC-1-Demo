@@ -48,8 +48,14 @@ after copying and pasting it to Sublime Text.
  - `E --> .`
  - `F --> o`
  - `G --> '`
- - `H`, `I`, `J`, `K --> 8`
- - `L`, `M`, `N`, `O -->` a single space
+ - `H --> 8`
+ - `I --> 8`
+ - `J --> 8`
+ - `K --> 8`
+ - `L -->` a single space
+ - `M -->` a single space
+ - `N -->` a single space
+ - `O -->` a single space
 
 
 
@@ -99,6 +105,30 @@ Here, `a p u z` means `a` times `p` times `u` times `z`.
    to find the determinant of the matrix $A$
    by copying and pasting your arithmetic expression into the calculator.
 
+ - **NOTE.** It is not necessary to understand
+   where the formula above comes from or even
+   why a matrix is a useful mathematical entity.
+   However, using a formula that has been verified
+   by someone else is a very useful coding skill.
+   You are in the middle of some
+   "Find and Replace" exercises.
+   You are not in a math class!
+
+ - Check your answer!
+
+   <textarea id="determinant" rows="1" cols="8" style="font-family:monospace"></textarea>
+   <input type="button" value="Submit Value of Determinant" id="submit_determinant">
+   <script>
+     function respond_to_determinant_submission() {
+       const submission = document.getElementById('determinant').value.replaceAll(' ', '').replaceAll('\n', '');
+
+       if      (submission === '46') { alert('Correct - well done!');                                               }
+       else if (submission ===  '0') { alert('Hmmm. What does the calculator say when you give it 2 1 1 - 1 1 2?'); }
+       else                          { alert('Try again.');                                                         }
+     }
+     document.getElementById('submit_determinant').addEventListener('click', respond_to_determinant_submission);
+   </script>
+
 
 
 
@@ -114,11 +144,13 @@ Here, `a p u z` means `a` times `p` times `u` times `z`.
    it has produced a file where University IDs (UIDs) contain dashes,
    and yet it will not allow one to upload a file where UIDs contain dashes!
 
- - Remove all the dashes from the UIDs in the `uid` column.
+ - **Using Sublime Text,**
+   remove all the dashes from
+   the UIDs in the `uid` column.
 
  - Watch out! Many student names contain dashes and
    the grading platform will not recognize students
-   unless the dashes in their name appear correctly.
+   unless the dashes in their names appear correctly.
    You may want to look for something more specific
    than an isolated dash.
 
@@ -130,13 +162,13 @@ Here, `a p u z` means `a` times `p` times `u` times `z`.
 Consider the following large piece of text which attempts to describe some important chemical reactions.
 
 ```
-     N_9 H_11 CO_2  +  3 O_2  +                       N_6 H_8 O_6  +  2 N_9 H_15 C_5 O_3  +  N_15 H_22 C_6 O_5 Na
--->  N_9 H_11 CO_3  +  2 O_2  +    H_2 O  +           N_6 H_8 O_6  +    N_9 H_15 C_5 O_3  +  N_15 H_22 C_6 O_5 Na  +    N_9 H_13 C_5 O_3
--->  N_9 H_11 CO_4  +    O_2  +  2 H_2 O  +           N_6 H_8 O_6  +                         N_15 H_22 C_6 O_5 Na  +  2 N_9 H_13 C_5 O_3
--->  N_8 H_11 CO_2  +    O_2  +  2 H_2 O  +  NO_2  +  N_6 H_8 O_6  +                         N_15 H_22 C_6 O_5 Na  +  2 N_9 H_13 C_5 O_3
--->  N_8 H_11 CO_3  +            3 H_2 O  +  NO_2  +  N_6 H_6 O_6  +                         N_15 H_22 C_6 O_5 Na  +  2 N_9 H_13 C_5 O_3
--->  N_9 H_13 CO_3  +            3 H_2 O  +  NO_2  +  N_6 H_6 O_6  +                         N_14 H_20 C_6 O_5 Na  +  2 N_9 H_13 C_5 O_3
--->  N_9 H_13 CO_3  +            2 H_2 O  +  NO_2  +  N_6 H_6 O_6  +    N_4 H_9 C O_2 Na   +  N_10 H_13 C_5 O_4    +  2 N_9 H_13 C_5 O_3
+     N_9 H_11 C O_2  +  3 O_2  +                        N_6 H_8 O_6  +  2 N_9 H_15 C_5 O_3  +  N_15 H_22 C_6 O_5 Na
+-->  N_9 H_11 C O_3  +  2 O_2  +    H_2 O  +            N_6 H_8 O_6  +    N_9 H_15 C_5 O_3  +  N_15 H_22 C_6 O_5 Na  +    N_9 H_13 C_5 O_3
+-->  N_9 H_11 C O_4  +    O_2  +  2 H_2 O  +            N_6 H_8 O_6  +                         N_15 H_22 C_6 O_5 Na  +  2 N_9 H_13 C_5 O_3
+-->  N_8 H_11 C O_2  +    O_2  +  2 H_2 O  +  N O_2  +  N_6 H_8 O_6  +                         N_15 H_22 C_6 O_5 Na  +  2 N_9 H_13 C_5 O_3
+-->  N_8 H_11 C O_3  +            3 H_2 O  +  N O_2  +  N_6 H_6 O_6  +                         N_15 H_22 C_6 O_5 Na  +  2 N_9 H_13 C_5 O_3
+-->  N_9 H_13 C O_3  +            3 H_2 O  +  N O_2  +  N_6 H_6 O_6  +                         N_14 H_20 C_6 O_5 Na  +  2 N_9 H_13 C_5 O_3
+-->  N_9 H_13 C O_3  +            2 H_2 O  +  N O_2  +  N_6 H_6 O_6  +    N_4 H_9 C O_2 Na   +  N_10 H_13 C_5 O_4    +  2 N_9 H_13 C_5 O_3
 ```
 
 The person recording the reactions has made some mistakes.
@@ -144,12 +176,31 @@ The person recording the reactions has made some mistakes.
  - Each occurrence of Carbon (`C`) should be a Nitrogen (`N`).
  - Each occurrence of Sodium (`Na`) should really be a Sulphur (`S`).
 
-Fix the mistakes! (Any idea what these reactions are?)
+Fix the mistakes! Any idea what these reactions are? Check your answer!
+
+<textarea id="chemical_reaction" rows="8" cols="148" style="font-family:monospace"></textarea>
+<input type="button" value="Submit Chemical Reaction" id="submit_chemical_reaction">
+<script>
+  function respond_to_chemical_reaction_submission() {
+    const solution = 'C_9H_11NO_2+3O_2+C_6H_8O_6+2C_9H_15N_5O_3+C_15H_22N_6O_5S'                   + '-->' +
+                     'C_9H_11NO_3+2O_2+H_2O+C_6H_8O_6+C_9H_15N_5O_3+C_15H_22N_6O_5S+C_9H_13N_5O_3' + '-->' +
+                     'C_9H_11NO_4+O_2+2H_2O+C_6H_8O_6+C_15H_22N_6O_5S+2C_9H_13N_5O_3'              + '-->' +
+                     'C_8H_11NO_2+O_2+2H_2O+CO_2+C_6H_8O_6+C_15H_22N_6O_5S+2C_9H_13N_5O_3'         + '-->' +
+                     'C_8H_11NO_3+3H_2O+CO_2+C_6H_6O_6+C_15H_22N_6O_5S+2C_9H_13N_5O_3'             + '-->' +
+                     'C_9H_13NO_3+3H_2O+CO_2+C_6H_6O_6+C_14H_20N_6O_5S+2C_9H_13N_5O_3'             + '-->' +
+                     'C_9H_13NO_3+2H_2O+CO_2+C_6H_6O_6+C_4H_9NO_2S+C_10H_13N_5O_4+2C_9H_13N_5O_3';
+
+    const submission = document.getElementById('chemical_reaction').value.replaceAll(' ', '').replaceAll('\n', '');
+
+    alert(submission === solution ? 'Correct - well done!' : 'Try again.');
+ }
+ document.getElementById('submit_chemical_reaction').addEventListener('click', respond_to_chemical_reaction_submission);
+</script>
 
 
 
 
-## DNA and RNA sequences
+## DNA and RNA sequences and Amino Acids
 
 Consider the following text block.
 It is a *coding* DNA sequence (CDS),
@@ -183,7 +234,8 @@ tctaga
    - `tact`
 
 
- - Which letter has the longest consecutive block and what is its length?
+ - Which letter appears the most times consecutively?
+   How long is this streak of `a`s, `t`s, `c`s, or `g`s?
 
 
  - DNA is composed of two *strands* that coil around each other to form a double helix.
@@ -205,13 +257,73 @@ tctaga
    Calculate the RNA strand that is created when transcription occurs.
 
 
+ - Check your answer!
+
+   <textarea id="rna" rows="18" cols="98" style="font-family:monospace"></textarea>
+   <input type="button" value="Submit RNA Sequence" id="submit_rna">
+   <script>
+     function respond_to_rna_submission() {
+       const solution = 'auguucgccgaccguugacuauucucuacaaaccacaaagacauuggaacacuauaccuauuauucggcgcaugagcuggaguccuaggcacagcu' +
+                        'cuaagccuccuuauucgagccgagcugggccagccaggcaaccuucuagguaacgaccacaucuacaacguuaucgucacagcccaugcauuugua' +
+                        'auaaucuucuucauaguaauacccaucauaaucggaggcuuuggcaacugacuaguuccccuaauaaucggugcccccgauauggcguuuccccgc' +
+                        'auaaacaacauaagcuucugacucuuaccucccucucuccuacuccugcucgcaucugcuauaguggaggccggagcaggaacagguugaacaguc' +
+                        'uacccucccuuagcagggaacuacucccacccuggagccuccguagaccuaaccaucuucuccuuacaccuagcaggugucuccucuaucuuaggg' +
+                        'gccaucaauuucaucacaacaauuaucaauauaaaacccccugccauaacccaauaccaaacgccccucuucgucugauccguccuaaucacagca' +
+                        'guccuacuucuccuaucucucccaguccuagcugcuggcaucacuauacuacuaacagaccgcaaccucaacaccaccuucuucgaccccgccgga' +
+                        'ggaggagaccccauucuauaccaacaccuauucugauuuuucggucacccugaaguuuauauucuuauccuaccaggcuucggaauaaucucccau' +
+                        'auuguaacuuacuacuccggaaaaaaagaaccauuuggauacauagguauggucugagcuaugauaucaauuggcuuccuaggguuuaucguguga' +
+                        'gcacaccauauauuuacaguaggaauagacguagacacacgagcauauuucaccuccgcuaccauaaucaucgcuauccccaccggcgucaaagua' +
+                        'uuuagcugacucgccacacuccacggaagcaauaugaaaugaucugcugcagugcucugagcccuaggauucaucuuucuuuucaccguagguggc' +
+                        'cugacuggcauuguauuagcaaacucaucacuagacaucguacuacacgacacguacuacguuguagcccacuuccacuauguccuaucaauagga' +
+                        'gcuguauuugccaucauaggaggcuucauucacugauuuccccuauucucaggcuacacccuagaccaaaccuacgccaaaauccauuucacuauc' +
+                        'auauucaucggcguaaaucuaacuuucuucccacaacacuuucucggccuauccggaaugccccgacguuacucggacuaccccgaugcauacacc' +
+                        'acaugaaacauccuaucaucuguaggcucauucauuucucuaacagcaguaauauuaauaauuuucaugauuugagaagccuucgcuucgaagcga' +
+                        'aaaguccuaauaguagaagaacccuccauaaaccuggagugacuauauggaugccccccacccuaccacacauucgaagaacccguauacauaaaa' +
+                        'ucuaga';
+
+       const solation = 'uacaagcggcuggcaacugauaagagauguuugguguuucuguaaccuugugauauggauaauaagccgcguacucgaccucaggauccgugucga' +
+                        'gauucggaggaauaagcucggcucgacccggucgguccguuggaagauccauugcugguguagauguugcaauagcagugucggguacguaaacau' +
+                        'uauuagaagaaguaucauuauggguaguauuagccuccgaaaccguugacugaucaaggggauuauuagccacgggggcuauaccgcaaaggggcg' +
+                        'uauuuguuguauucgaagacugagaauggagggagagaggaugaggacgagcguagacgauaucaccuccggccucguccuuguccaacuugucag' +
+                        'augggagggaaucgucccuugaugagggugggaccucggaggcaucuggauugguagaagaggaauguggaucguccacagaggagauagaauccc' +
+                        'cgguaguuaaaguaguguuguuaauaguuauauuuugggggacgguauuggguuaugguuugcggggagaagcagacuaggcaggauuagugucgu' +
+                        'caggaugaagaggauagagagggucaggaucgacgaccguagugauaugaugauugucuggcguuggaguugugguggaagaagcuggggcggccu' +
+                        'ccuccucugggguaagauaugguuguggauaagacuaaaaagccagugggacuucaaauauaagaauaggaugguccgaagccuuauuagagggua' +
+                        'uaacauugaaugaugaggccuuuuuuucuugguaaaccuauguauccauaccagacucgauacuauaguuaaccgaaggaucccaaauagcacacu' +
+                        'cgugugguauauaaaugucauccuuaucugcaucugugugcucguauaaaguggaggcgaugguauuaguagcgauagggguggccgcaguuucau' +
+                        'aaaucgacugagcggugugaggugccuucguuauacuuuacuagacgacgucacgagacucgggauccuaaguagaaagaaaaguggcauccaccg' +
+                        'gacugaccguaacauaaucguuugaguagugaucuguagcaugaugugcugugcaugaugcaacaucgggugaaggugauacaggauaguuauccu' +
+                        'cgacauaaacgguaguauccuccgaaguaagugacuaaaggggauaagaguccgaugugggaucugguuuggaugcgguuuuagguaaagugauag' +
+                        'uauaaguagccgcauuuagauugaaagaaggguguugugaaagagccggauaggccuuacggggcugcaaugagccugauggggcuacguaugugg' +
+                        'uguacuuuguaggauaguagacauccgaguaaguaaagagauugucgucauuauaauuauuaaaaguacuaaacucuucggaagcgaagcuucgcu' +
+                        'uuucaggauuaucaucuucuugggagguauuuggaccucacugauauaccuacggggggugggaugguguguaagcuucuugggcauauguauuuu' +
+                        'agaucu';
+
+       const submission = document.getElementById('rna').value.replaceAll(' ', '').replaceAll('\n', '');
+
+       if      (submission === solution) { alert('Correct - well done!');                                             }
+       else if (submission === solation) { alert('Hmmm. Did you mix up the coding and template strands of the DNA?'); }
+       else                              { alert('Try again.');                                                       }
+     }
+     document.getElementById('submit_rna').addEventListener('click', respond_to_rna_submission);
+   </script>
+
+
  - Using *the genetic code* an RNA strand specifies a sequence of amino acids within proteins in a process called *translation*.
    The [vertebrate mitochondrial code translation table](https://en.wikipedia.org/wiki/Vertebrate_mitochondrial_code#Translation_table){:target="_blank"}
    tells us the replacements that we have to make.
 
    Click "Find" and "Replace...".
-   **Then select the icon** $.^*$**.**
-   This enables the fancy functionality we are about to use!
+   **Then select the icon `.*`.**
+   This enables the fancy functionality (*regular expressions*) we are about to use!
+   The other available buttons are described
+   [here](../0-docs.md#conceptfind-conceptreplace-conceptfind-and-replace-conceptfind-and-replace-options){:target="_blank"}.
+   Now perform the following "Find and Replace"s.
+    - The first "find and replace" should insert a space every three characters.
+    - The ones involving square brackets `[]` should perform multiple "find and replace"s at a time.
+    - For the amino acids, `V`, `A`, `D`, `E`, and `G`,
+      you need to use the
+      [vertebrate mitochondrial code translation table](https://en.wikipedia.org/wiki/Vertebrate_mitochondrial_code#Translation_table){:target="_blank"}.
 
    | Find           | Replace                         |
    | -------------- | ------------------------------- |
@@ -245,11 +357,10 @@ tctaga
 
  - Check your answer!
 
-   <textarea id="amino" rows="17" cols="32" style="font-family:monospace"></textarea>
-   <input type="button" value="Submit Amino Acids" id="submit_button">
-   <div id="status"></div>
+   <textarea id="amino_acids" rows="18" cols="38" style="font-family:monospace"></textarea>
+   <input type="button" value="Submit Amino Acids" id="submit_amino_acids">
    <script>
-     function update_status() {
+     function respond_to_amino_acids_submission() {
        const solution = 'MFADRWLFSTNHKDIGTLYLLFGAWAGVLGTA' +
                         'LSLLIRAELGQPGNLLGNDHIYNVIVTAHAFV' +
                         'MIFFMVMPIMIGGFGNWLVPLMIGAPDMAFPR' +
@@ -268,26 +379,26 @@ tctaga
                         'KVLMVEEPSMNLEWLYGCPPPYHTFEEPVYMK' +
                         'S"';
 
-       const submission = document.getElementById('amino').value.replaceAll(' ', '').replaceAll('\n', '');
+       const submission = document.getElementById('amino_acids').value.replaceAll(' ', '').replaceAll('\n', '');
 
-       document.getElementById('status').innerHTML = submission === solution ? 'Correct - well done!' : 'Try again.';
+       alert(submission === solution ? 'Correct - well done!' : 'Try again.');
      }
-     document.getElementById('submit_button').addEventListener('click', update_status);
+     document.getElementById('submit_amino_acids').addEventListener('click', respond_to_amino_acids_submission);
    </script>
 
 
  - If only we could tell a computer to perform these tedious replacements to help translate any RNA sequence.
-   By the end of the course, you will be able to write such Python programs!
+   By the end of the course, you will be able to write such a Python program!
 
 
  - By the way,
    if you were unable
    to complete the exercise above because
    you have chosen to live without Sublime Text,
-   then you can perform the following find and replaces
+   then you can perform the following "Find and Replace"s
    one-by-one (no "Replace All") instead!
 
-   **There is another exercise below this nonsense.**
+   **There is another exercise below this nonsense!**
 
    | Find  | Replace |
    | ----- | ------- |
@@ -828,7 +939,7 @@ tctaga
  - Right-click or two-finger tap and select "Reopen File as Text".
 
  - Click "Find" and "Replace...".
-   Select the icon $.^*$.
+   Select the icon `.*`.
    This enables the finds and replaces to recognize `\n` as "newline".
 
  - Now perform the following "Find and Replace"s.
@@ -857,3 +968,4 @@ tctaga
 
 Your first homework assignments are posted [here](1-5-homework.md).
 Some of the content that you have learned so far is documented [here](../0-docs.md).
+

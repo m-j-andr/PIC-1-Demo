@@ -88,9 +88,13 @@ PIC-1
 
 ## Paths
 
+**NOTE.** The concepts mentioned in this section are explained further
+[here](../0-docs.md#conceptdirectory-conceptfolder){:target="_blank"}
+to facilitate you looking them up again whenever you need to in the future.
+
 On most computers, the `Documents` folder is contained in a folder with your name,
 which is contained in a folder called `Users`,
-which is contained in a folder above all other folders: the root directory.
+which is contained in a folder above all other folders: the *root directory*.
 
 The *path* of a file records the exact location of the file on your computer.
 For example, the path of the original file `demo.html` is
@@ -100,12 +104,15 @@ and the path of the copy that you made is
 The path of the folder `1-File-Management` is `/Users/YOUR_NAME/Documents/UCLA-Classes/PIC-1/1-File-Management`.
 All of these are *absolute paths* because they start at the root directory.
 
-We can also give *relative paths* relative to a current working directory.
-If we are working within the `PIC-1` directory, then
-the paths above can be described more concisely as follows.
+When using Finder on Mac or File Explorer on Windows,
+your *current working directory* is listed at the top.
+It can be convenient to give *relative paths*
+relative to this current working directory.
+For example, if we are working within the `PIC-1` directory,
+then the paths above can be described more concisely as follows.
  - `./1-File-Management/1-Files/demo.html`
- - `./1-File-Management/2-Folders/Browser/demo.html`.
- - `./1-File-Management`.
+ - `./1-File-Management/2-Folders/Browser/demo.html`
+ - `./1-File-Management`
 
 
 ### Seeing path information on MacOS
@@ -143,7 +150,7 @@ Searching for files can be very useful.
  - Search (top-right of Finder) for `demo.html`.
  - You will see at least two results.
  - Highlight one of them by single-clicking.
- - At the bottom you will see the path to that file.
+ - At the bottom, you will see the path to that file.
  - This also gives a way to obtain the filepath.
    - Right-click (or two-finger tap) at the bottom on `demo.html`.
    - Select "Copy `demo.html` as Pathname".
@@ -167,3 +174,4 @@ Searching for files can be very useful.
 
 Next, you will try [an exercise](1-3-maze.md) that
 uses the concepts you have just learned about.
+

@@ -26,16 +26,17 @@ Unzipping files on a Mac is normally as simple as double-clicking on the ZIP arc
 ### Unzipping files on Windows
 
 [7-Zip](https://www.7-zip.org/download.html){:target="_blank"} is
-the best tool for unzipping ZIP archive on Windows,
+the best tool for unzipping ZIP archives on Windows,
 so it is useful for you to download it now.
 
-Unzipping files on a Windows is often done by
+Unzipping files on Windows is often done by
 right-clicking on the ZIP archive,
 clicking on "Show more options" (if necessary),
 and selecting "7-Zip > Extract Here".
 Note that this is a better option than
 directly clicking "Extract All..."
 (it preserves the metadata of the content).
+
 
 ### Success??
 
@@ -84,24 +85,49 @@ and so it is always helpful for us to be able to see them...
 
 ### Success??
 
-You should now see that the eight files
-use three distinct extensions:
-`.csv`, `.py`, `.txt`.
+Your computer may have already been displaying file extensions or
+you may not have noticed any differences upon changing the setting.
+Look within the `Files` folder that you obtained from unzipping `files.zip`.
+If you see the following file names, you have succeeded!
+ - `demo.csv`
+ - `demo.py`
+ - `demo.txt`
+ - `HTML_FILE.txt`
+ - `JPEG_FILE.txt`
+ - `JPG_FILE.txt`
+ - `M4A_FILE.txt`
+ - `WAV_FILE.txt`
+
+Three distinct file extensions are used: `.csv`, `.py`, and `.txt`.
 
 
 
 
 ## A good text editor: Sublime Text
 
-A good text editor has many applications.
-In this course, we ask you to start using [Sublime Text](https://www.sublimetext.com/download){:target="_blank"}.
+In this course, we ask you to start using *Sublime Text*.
+Sublime Text is one of the most popular text editors.
+A good text editor, like Sublime Text, has many applications.
 
  - Sublime Text understands many programming and markup languages (including Python, C++, Java, JavaScript, and HTML).
  - It performs useful syntax highlighting of code written in these languages.
  - It provides transparent search and replace functionality (with support for regular expressions).
  - It is available for MacOS, Windows, and Linux.
- - Although Sublime Text is proprietary software, it can be downloaded for free and used as an evaluation version with no time limit.
-   View PIC classes as your evaluation period of Sublime Text. If you use Sublime Text for work purposes, please consider buying it.
+
+By the end of this course, words like "programming language" and "syntax" will be more meaningful to you.
+
+Although Sublime Text is proprietary software, it can be [downloaded](https://www.sublimetext.com/download){:target="_blank"}
+for free and used as an evaluation version with no time limit. You can view PIC classes as your evaluation period of Sublime Text.
+If you use Sublime Text for work purposes, please consider buying it.
+
+Operating systems, software, and programming languages often have different versions available for use.
+In theory, later versions are supposed to improve upon earlier versions,
+although some major companies' products show that this is not always true.
+Regarding [Sublime Text](https://www.sublimetext.com/download){:target="_blank"},
+the most recent version will certainly be adequate for this class.
+On a Mac, you may want to drag `SublimeText.app` from
+`/Users/YOUR_NAME/Downloads` to `/Applications`
+**before you open it for the first time.**
 
 
 ### Setting Sublime Text as the default for .txt and .py files on MacOS
@@ -133,7 +159,7 @@ In this course, we ask you to start using [Sublime Text](https://www.sublimetext
 
 ### Success??
 
-You should now be able to open `demo.py` file to see the code
+You should now be able to open `demo.py` to see the code
 ```python
 for s in ['Welcome', 'to', 'PIC', '1!']:
   print(s + ' ', end='')
@@ -234,4 +260,4 @@ to investigate such consequences!
 
 ## Up next
 
-Next, you will learn about [folders](1-2-folders.md).
+Next, you will learn about [folders and paths](1-2-folders.md).

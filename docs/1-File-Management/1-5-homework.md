@@ -83,6 +83,11 @@ it is okay to submit them; just make sure that you are *not missing* any files o
  - Use Sublime Text to save a file called `solutions.txt` within `HW-1`,
    that is, within the folder whose path is
    `/Users/YOUR_NAME/Documents/UCLA-Classes/PIC-1/0-Homework-Assignments/HW-1`.
+   - "File > Save" is one option.
+   - "Command + S" on MacOS or "ctrl + S" on Windows provide other options.
+   - Sublime Text does **not** autosave.
+   - A circle on a tab, next to a filename,
+     indicates that you have unsaved changes.
  - Enter your solutions to the [Maze Activity](1-3-maze.md) formatted as follows.
 
 ```
@@ -147,3 +152,4 @@ it is okay to submit them; just make sure that you are *not missing* any files o
 ```
 
  - Submit `solutions.txt` and `grades.csv` to Gradescope.
+
