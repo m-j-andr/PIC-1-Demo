@@ -31,19 +31,19 @@
             submission === './e/s/u/p/e/topaz.txt'    ||
             submission === './r/w/o/n/d/sapphire.txt' ||
             submission === './e/r/f/u/l/what-is-the-real-treasure.txt') {
-          alert('You specified one of the relative paths - well done!');
+          alert('You specified one of the relative paths correctly - well done!');
         }
         else if (submission === '/y/o/u/a/r/ruby.txt'     ||
                  submission === '/e/s/u/p/e/topaz.txt'    ||
                  submission === '/r/w/o/n/d/sapphire.txt' ||
                  submission === '/e/r/f/u/l/what-is-the-real-treasure.txt') {
-          alert('You are very close. Remember that the relative paths listed so far all start with a period');
+          alert('You are very close. Remember that the relative paths listed so far all start with a period.');
         }
         else if (submission.includes('/y/o/u/a/r/ruby.txt')     ||
                  submission.includes('/e/s/u/p/e/topaz.txt')    ||
                  submission.includes('/r/w/o/n/d/sapphire.txt') ||
                  submission.includes('/e/r/f/u/l/what-is-the-real-treasure.txt')) {
-          alert('Lots of the path you wrote is correct, but are you giving the path **relative to** the folder called "maze"???');
+          alert('Lots of the path you specified is correct, but are you giving the path **relative to** the folder called "maze"???');
         }
         else {
           alert('Try again.');
