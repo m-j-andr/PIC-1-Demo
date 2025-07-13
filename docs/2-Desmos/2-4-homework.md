@@ -101,7 +101,7 @@ I think Kepler's law says p is
    that is, within the folder whose path is
    `/Users/YOUR_NAME/Documents/UCLA-Classes/PIC-1/0-Homework-Assignments/HW-4`.
  - In `cookie.txt` answer the following question.
-   > Why did the one part of the exercise suggest to overestimate the size of the original cookie and underestimate the amount left?
+   > Why did one part of the exercise suggest to overestimate the size of the original cookie and underestimate the amount left?
  - Save a screenshot of your Desmos solution to the same folder and rename it as `cookie.png`.
    You might have to look up how to take a screenshot!
  - Submit `cookie.txt` and `cookie.png` to Gradescope.
