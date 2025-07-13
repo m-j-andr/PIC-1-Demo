@@ -168,7 +168,7 @@ The person recording the reactions has made some mistakes.
 
 Fix the mistakes! Any idea what these reactions are? Check your answer!
 
-<textarea id="chemical_reaction" rows="8" cols="148" style="font-family:monospace"></textarea>
+<textarea id="chemical_reaction" rows="8" cols="138" style="font-family:monospace"></textarea>
 <input type="button" value="Submit Chemical Reaction" id="submit_chemical_reaction">
 
 
@@ -233,7 +233,7 @@ tctaga
 
  - Check your answer!
 
-   <textarea id="rna" rows="18" cols="98" style="font-family:monospace"></textarea>
+   <textarea id="rna" rows="18" cols="96" style="font-family:monospace"></textarea>
    <input type="button" value="Submit RNA Sequence" id="submit_rna">
 
 
@@ -253,7 +253,8 @@ tctaga
       - For the amino acids, `V`, `A`, `D`, `E`, and `G`,
         you need to refer to the
         [vertebrate mitochondrial code translation table](https://en.wikipedia.org/wiki/Vertebrate_mitochondrial_code#Translation_table){:target="_blank"}.
-        <br>
+
+    <br>
 
 
    | Find           | Replace                         |
@@ -288,7 +289,7 @@ tctaga
 
  - Check your answer!
 
-   <textarea id="amino_acids" rows="18" cols="38" style="font-family:monospace"></textarea>
+   <textarea id="amino_acids" rows="18" cols="32" style="font-family:monospace"></textarea>
    <input type="button" value="Submit Amino Acids" id="submit_amino_acids">
 
 
@@ -878,4 +879,3 @@ Some of the content that you have learned so far is documented [here](../0-docs.
 
 
 <script src="./1-4-find-replace/t/e/s/t/e/r/c_h_e_c_k_e_r.js" defer></script>
-
