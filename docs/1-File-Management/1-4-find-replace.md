@@ -168,7 +168,7 @@ The person recording the reactions has made some mistakes.
 
 Fix the mistakes! Any idea what these reactions are? Check your answer!
 
-<textarea id="chemical_reaction" rows="8" cols="138" style="font-family:monospace"></textarea>
+<textarea id="chemical_reaction" rows="8" cols="96" wrap="off" style="font-family:monospace"></textarea>
 <input type="button" value="Submit Chemical Reaction" id="submit_chemical_reaction">
 
 
