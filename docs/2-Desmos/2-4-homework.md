@@ -81,7 +81,7 @@ share the values that your Desmos learned for
 $p$ and the value you guessed for the nice fractional value of $p$.
 
 ```
-Desmos learn p as 
+Desmos learned p as 
 
 I think Kepler's law says p is 
 ```
