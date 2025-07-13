@@ -117,7 +117,7 @@ Here, `a p u z` means `a` times `p` times `u` times `z`.
  - Check your answer!
 
    <textarea id="determinant" rows="1" cols="8" style="font-family:monospace"></textarea>
-   <input type="button" value="Submit Value of Determinant" id="submit_determinant">
+   <input type="button" value="Submit Determinant" id="submit_determinant">
 
 
 
@@ -168,7 +168,7 @@ The person recording the reactions has made some mistakes.
 
 Fix the mistakes! Any idea what these reactions are? Check your answer!
 
-<textarea id="chemical_reaction" rows="8" cols="96" wrap="off" style="font-family:monospace"></textarea>
+<textarea id="chemical_reaction" rows="8" cols="100" wrap="off" style="font-family:monospace"></textarea>
 <input type="button" value="Submit Chemical Reaction" id="submit_chemical_reaction">
 
 

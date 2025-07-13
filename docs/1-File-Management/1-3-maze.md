@@ -23,7 +23,7 @@
     there is **not a file** whose relative path is `./e/8/5/k/1/gemstone.txt`.
 
     <textarea id="relative_path" rows="1" cols="48" style="font-family:monospace"></textarea>
-    <input type="button" value="Check the correctness of single relative path" id="submit_relative_path">
+    <input type="button" value="Check the correctness of a relative path" id="submit_relative_path">
     <script>
       function respond_to_relative_path_submission() {
         const submission = document.getElementById('relative_path').value.replaceAll(' ', '').replaceAll('\n', '');
