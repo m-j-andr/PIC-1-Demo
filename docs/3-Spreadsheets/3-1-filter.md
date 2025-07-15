@@ -60,7 +60,7 @@ Numbers and Dates.
 
 ## Quick Summary of Selected Values or Columns
 
-Quick summaries of cell data can be useful.
+Quick summaries of cells' data can be useful.
 There are different options for Text, Numbers, and Dates.
 
  - Highlight `D2` to `D8`.
@@ -70,7 +70,7 @@ There are different options for Text, Numbers, and Dates.
  - Highlight all of column `E`.
    Compare Count and Count Numbers.
    ![Quick summary options for numbers; count versus count numbers](./sheets-screenshots/04.png)
-   Count includes the column heading whereas count numbers does not.
+   "Count" includes the column heading whereas "Count Numbers" does not.
  - Highlight `A2` to `A8`.
    At the bottom-right one can select between Min, Max, Count, and Count Numbers.
 
@@ -155,9 +155,9 @@ the entries that involve Carlos Mensah.
  - Click on the `Carlos Mensah` search result.
    ![Creating a filter](./sheets-screenshots/10.png)
  - Click `OK`.
-
-Conveniently, you can see just the information associated with Carlos Mensah.
-![Carlos Mensah](./sheets-screenshots/11.png)
+ - Conveniently, you can now see just the information associated with Carlos Mensah
+   and the funnel looks even more like a funnel!
+   ![Carlos Mensah](./sheets-screenshots/11.png)
 
 
 
