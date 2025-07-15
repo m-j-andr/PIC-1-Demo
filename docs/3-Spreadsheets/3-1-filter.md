@@ -5,55 +5,74 @@
 
 ## Opening a CSV File
 
- - Download [this file](???.csv)
- - Save to `/Users/YOUR_NAME/Documents/UCLA-Classes/PIC-1/3-Spreadsheets/???.csv`
- - `Sheets`
- - `Blank spreadsheet`
- - `File > Open`
- - `Upload > Browse`
- - Select the file just downloaded
+ - Download [this file](./data/tutoring.csv).
+ - Save it in the folder `/Users/YOUR_NAME/Documents/UCLA-Classes/PIC-1/3-Spreadsheets`.
+ - Through your g.ucla.edu email, open `Sheets`.
+   - Click on the icon with 9 dots, next to UCLA, in the top-right.
+   - Select `Sheets`.
+ - Click on `Blank spreadsheet`.
+ - Select `File > Open`.
+ - Select `Upload > Browse`.
+   ![File > Open, Upload > Browse](./sheets-screenshots/01.png)
+ - Open the file that you just downloaded.
 
 
 
 
 ## Converting to a Table and Specifying Types
 
- - `Format > Convert to table`
-
- - Click where it says `Table1` and edit it to say `Tutoring`.
-
- - `Name > Edit column type > Text`
- - `Course > Edit column type > Text`
- - `UID > Edit column type > Number > Number`
- - `Time (minutes) > Edit column type > Number > Number`
- - `Timestamp > Edit column type > Date > Date time`
-
- - Select columns `A` to `E`. `Format > Alignment > Center`
+ - Select `Format > Convert to table` from the top menu.
+ - Click at the top of the table (dark green)
+   where it says `Table1` and edit it to say `Tutoring`.
+ - Using the arrows in the column headings.
+   - Select `Name > Edit column type > Text`.
+   - Select `Course > Edit column type > Text`.
+   - Select `UID > Edit column type > Number > Number`.
+   - Select `Time (minutes) > Edit column type > Number > Number`.
+   - Select `Timestamp > Edit column type > Date > Date time`.
+   This allowed us to specify the correct datatypes for each column.
+ - Select columns `A` to `E` and then
+   select `Format > Alignment > Center` from the top menu.
+ - If your table looks like the following screenshot, well done!
+   ![Titled table with correct datatypes and nice alignment](./sheets-screenshots/02.png)
 
 
 
 
 ## Sorting a Column
 
- - `Name > Sort Column > Sort A to Z`
- - `Time (minutes) > Sort Column > Sort Z to A`
-    - Notice that times are sorted in decreasing order
-    - Notice that names are still sorted for each time
- - `Timestamp > Sort Column > Sort A to Z`
+We can sort columns by
+using the arrows in the column headings again.
+
+ - Select `Name > Sort Column > Sort A to Z`.
+ - Select `Time (minutes) > Sort Column > Sort Z to A`.
+    - Notice that the times are sorted in decreasing order.
+    - Notice that the names are still sorted for each time.
+   ![Table sorted by times and names](./sheets-screenshots/03.png)
+ - Select `Timestamp > Sort Column > Sort A to Z`.
+
+Note that it is a little strange that the options always say
+"Sort A to Z" and "Sort Z to A" even when we are sorting
+Numbers and Dates.
 
 
 
 
 ## Quick Summary of Selected Values or Columns
 
- - Highlight `D2` to `D8`
-   At the bottom-right it shows `Count: 7`
- - Highlight `E2` to `E8`
-   At the bottom-right one can select between Sum, Avg, Min, Max, Count, and Count Numbers
+Quick summaries of cell data can be useful.
+There are different options for Text, Numbers, and Dates.
+
+ - Highlight `D2` to `D8`.
+   At the bottom-right it shows `Count: 7`.
+ - Highlight `E2` to `E8`.
+   At the bottom-right one can select between Sum, Avg, Min, Max, Count, and Count Numbers.
  - Highlight all of column `E`.
-   Compare Count and Count Numbers
- - Highlight `A2` to `A8`
-   At the bottom-right one can select between Min, Max, Count, and Count Numbers
+   Compare Count and Count Numbers.
+   ![Quick summary options for numbers; count versus count numbers](./sheets-screenshots/04.png)
+   Count includes the column heading whereas count numbers does not.
+ - Highlight `A2` to `A8`.
+   At the bottom-right one can select between Min, Max, Count, and Count Numbers.
 
 
 
@@ -71,9 +90,9 @@
 
 ## Filters - What They Are For?
 
-To answer the last two questions it was helpful to
- - sort the `Course` column from A to Z
- - sort the `Name` column from A to Z
+To answer the last two questions it was helpful to...
+ - sort the `Course` column from A to Z;
+ - sort the `Name` column from A to Z.
 
 This way Ahmed Ibrahim's information is shown at the top
 and their different courses are grouped together.
@@ -84,6 +103,8 @@ and looking at the sum recorded at the bottom-right,
 we can see they dedicated the most time to Engr 7
 (175 minutes).
 
+![Table sorted by course and names with a quick summary for Engr 7](./sheets-screenshots/05.png)
+
 This was not too tricky,
 but if our data set was larger,
 you can imagine that these questions
@@ -93,8 +114,7 @@ to answer such questions more easily.
 A filter does so
 by allowing us to focus
 on a subset of our data.
-
-Suppose for a minute
+Suppose, for a minute,
 that we had asked the questions
 about Carlos Mensah.
  - You would have had
@@ -115,8 +135,11 @@ the entries that involve Carlos Mensah.
  - Click on calculator to the right of where it says `Tutoring`
    (where it used to say `Table1`).
  - Click `Create filter view`.
+   ![Create filter view](./sheets-screenshots/06.png)
  - Click `Save view`.
+   ![Save view](./sheets-screenshots/07.png)
  - Name the *view* as `Carlos Mensah`.
+   ![Name view](./sheets-screenshots/08.png)
  - Click `Save`.
 
 
@@ -124,14 +147,17 @@ the entries that involve Carlos Mensah.
 
 ## Filtering By Value
 
- - Click the filter icon next to `Name`.
+ - Click the filter icon to the right of where it says `Name`.
+   It is supposed to look like a [funnel](https://en.wikipedia.org/wiki/Funnel#/media/File:Kitchen_Funnel.jpg){:target="_blank"}.
+   ![Filter icon](./sheets-screenshots/09.png)
  - Click `Clear`.
  - Type `Carlos` in the search box.
  - Click on the `Carlos Mensah` search result.
+   ![Creating a filter](./sheets-screenshots/10.png)
  - Click `OK`.
 
 Conveniently, you can see just the information associated with Carlos Mensah.
-
+![Carlos Mensah](./sheets-screenshots/11.png)
 
 
 
@@ -140,6 +166,7 @@ Conveniently, you can see just the information associated with Carlos Mensah.
  - Click on the calculator to the right of where it says `Tutoring`
    (where it used to say `Table1`).
  - Click `Exit view`.
+   ![Exit view](./sheets-screenshots/12.png)
 
 
 
@@ -151,18 +178,21 @@ Conveniently, you can see just the information associated with Carlos Mensah.
      (where it used to say `Table1`).
    - Click `Create filter view`.
    - Click `Save view`.
-   - Name the *view* as `Long sessions`.
+   - Name the view as `Long sessions`.
    - Click `Save`.
 
  - Click the filter icon next to `Time (Minutes)`.
  - Click `Filter by condition`
- - Click on the box below and select `Greater than`.
- - Type `90` in the box.
+ - Click on the box below that says `None` and select `Greater than`.
+ - Type `90` in the box below.
+   ![Filtering by condition](./sheets-screenshots/13.png)
  - Click `OK`.
 
 Notice that "greater than" is different
 to "greater than or equal to":
 90-minute sessions are excluded.
+
+![No 90-minute sessions](./sheets-screenshots/14.png)
 
 
 
@@ -171,19 +201,20 @@ to "greater than or equal to":
 
  - Click on the calculator to the right of where it says `Tutoring`
    (where it used to say `Table1`).
- - You can now see the views `Carlos Mensah` and `Long sessions`
+ - You can now see that the views `Carlos Mensah` and `Long sessions`
    are easily available.
  - Let's delete the `Carlos Mensah` view.
  - Select it.
  - `Data > View options > Delete view` will delete it.
    Take note of other useful options that are available.
+   ![Deleting a view](./sheets-screenshots/15.png)
 
 
 
 
 ## Some Questions About The Data
 
-Using filters, sorting and selecting columns,
+**Using filters, sorting and selecting columns,**
 answer the following questions.
 
  - How many students who attended tutoring are called Elena?
@@ -193,3 +224,4 @@ answer the following questions.
  - Which Amina attended the most tutoring sessions?
  - What was the total number of tutoring sessions this Amina attended?
  - Which three students are tied for attending the most tutoring sessions greater than 90 minutes long?
+
