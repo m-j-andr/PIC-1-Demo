@@ -50,10 +50,9 @@ using the arrows in the column headings again.
     - Notice that the names are still sorted for each time.
    ![Table sorted by times and names](./sheets-screenshots/03.png)
  - Select `Timestamp > Sort Column > Sort A to Z`.
-
-Note that it is a little strange that the options always say
-"Sort A to Z" and "Sort Z to A" even when we are sorting
-Numbers and Dates.
+ - Note that it is a little strange that the options always say
+   "Sort A to Z" and "Sort Z to A" even when we are sorting
+   Numbers and Dates.
 
 
 
@@ -156,7 +155,7 @@ the entries that involve Carlos Mensah.
    ![Creating a filter](./sheets-screenshots/10.png)
  - Click `OK`.
  - Conveniently, you can now see just the information associated with Carlos Mensah
-   and the funnel looks even more like a funnel!
+   and the filter icon looks even more like a funnel!
    ![Carlos Mensah](./sheets-screenshots/11.png)
 
 
@@ -187,12 +186,10 @@ the entries that involve Carlos Mensah.
  - Type `90` in the box below.
    ![Filtering by condition](./sheets-screenshots/13.png)
  - Click `OK`.
-
-Notice that "greater than" is different
-to "greater than or equal to":
-90-minute sessions are excluded.
-
-![No 90-minute sessions](./sheets-screenshots/14.png)
+ - Notice that "greater than" is different
+   to "greater than or equal to":
+   90-minute sessions are excluded.
+   ![No 90-minute sessions](./sheets-screenshots/14.png)
 
 
 
@@ -224,4 +221,3 @@ answer the following questions.
  - Which Amina attended the most tutoring sessions?
  - What was the total number of tutoring sessions this Amina attended?
  - Which three students are tied for attending the most tutoring sessions greater than 90 minutes long?
-
