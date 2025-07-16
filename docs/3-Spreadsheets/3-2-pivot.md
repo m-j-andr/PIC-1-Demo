@@ -14,7 +14,7 @@
    ![Creating a pivot table](./sheets-screenshots/16.png)
    - "Data range: Tutoring" is perfect.
    - "Insert to: New sheet"  is perfect.
- - Select "Sum of Time (Minutes) for each Name by Course".
+ - Select the suggested "Sum of Time (Minutes) for each Name by Course".
    ![Creating a suggested pivot table](./sheets-screenshots/17.png)
  - Select all columns by
    clicking to the left of the column heading `A` and above the row label `1`.
