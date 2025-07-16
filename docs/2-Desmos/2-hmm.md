@@ -28,7 +28,8 @@
     it is good for understanding the universe in regions of both large scale and high mass.
 
   - Is quantum mechanics correct?
-    It is the best theory for understanding the universe in regions of both very small scale and low mass.
+    It is the best theory of gravity currently available to us
+    for understanding the universe in regions of both very small scale and low mass.
 
   - However, it is a longstanding Physics problem to come up with
     [a theory that unites these two theories](https://en.wikipedia.org/wiki/Theory_of_everything){:target="_blank"}.
@@ -43,9 +44,8 @@
   For the motion of a thrown ball,
   the quadratic equation can be derived using Newton's laws of gravity.
   However, this model ignores air resistance.
-  I doubt Rafa Nadal's topspin forehands at Roland Garros
-  ever followed a qadratic equation.
+  I doubt [Rafa Nadal](https://en.wikipedia.org/wiki/Rafael_Nadal_at_the_French_Open){:target="_blank"}'s
+  topspin forehands at Roland Garros ever followed a quadratic equation.
 
 Can you think of a good name for this collection of questions?
 Science!!
-
