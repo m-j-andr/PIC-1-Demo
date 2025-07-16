@@ -11,10 +11,10 @@
 
   When discussing science, rather than saying "the model (or theory) that fits
   the data most closely out of the models (and theories) currently available"
-  people frequently say "correct model (or theory)" instead.
+  people frequently say "the correct model (or theory)" instead.
   They are often wrong to say this because in most scenarios,
   it is possible for new models (or theories) to appear
-  that fit the data of the world even more precisely.
+  that fit the data of the world even more accurately.
 
   For example,
   [Newton's theory of gravity](https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation){:target="_blank"}
