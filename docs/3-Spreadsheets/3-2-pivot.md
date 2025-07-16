@@ -145,8 +145,16 @@ Now, let's filter by date.
      the names are in alphebetical order.
    - Under the **Rows** heading,
      change "Sort by" to "SUM of Time (Minutes) in Grand Total".
-     ![Sorting](./sheets-screenshots/28.png)
-     ![Sorting](./sheets-screenshots/29.png)
+     Click on the image below to see what to expect.
+     <img id="sorting" src="./sheets-screenshots/28.png" alt="Sorting"/>
+     <script>
+       const sorting = document.getElementById('sorting');
+       let sorting_clicked_on_an_even_number_of_times = true;
+       sorting.addEventListener('click', function() {
+         sorting_clicked_on_an_even_number_of_times = !sorting_clicked_on_an_even_number_of_times;
+         sorting.src = sorting_clicked_on_an_even_number_of_times ? './sheets-screenshots/28.png' : './sheets-screenshots/29.png';
+       });
+     </script>
    - Now the student who spent the most time at tutoring sessions
      on 09/08/2025 --- Mariana da Silva --- is at the bottom.
      ![Sorting](./sheets-screenshots/30.png)
@@ -298,12 +306,15 @@ and they will further highlight the utility of pivot tables.
    drag the gray box that says
    "Timestamp - Day of the week"
    to under the columns header.
- - Move your mouse over the image below. Wow!!
+ - Click on the image below. Wow!!
    <img id="wow" src="./sheets-screenshots/38.png" alt="Moving timestamp from rows to columns"/>
    <script>
      const wow = document.getElementById('wow');
-     wow.addEventListener('mouseover', function() { wow.src = './sheets-screenshots/39.png'; });
-     wow.addEventListener('mouseout',  function() { wow.src = './sheets-screenshots/38.png'; });
+     let wow_clicked_on_an_even_number_of_times = true;
+     wow.addEventListener('click', function() {
+       wow_clicked_on_an_even_number_of_times = !wow_clicked_on_an_even_number_of_times;
+       wow.src = wow_clicked_on_an_even_number_of_times ? './sheets-screenshots/38.png' : './sheets-screenshots/39.png';
+     });
    </script>
 
 
