@@ -19,9 +19,9 @@
  - Select all columns by
    clicking to the left of the column heading `A` and above the row label `1`.
    While all columns are selected...
-    - select `Format > Alignment > Center`.
-    - If you like, also double-click on the boundary between column heading `B` and `C`.
-      This makes the columns widths fit their current contents,
+    - Select `Format > Alignment > Center`.
+    - If you like, also double-click on the boundary between the column headings `B` and `C`.
+      This will make the columns shrink or expand to fit their current contents,
       although you may have to do this again in the future.
    ![Formatting the pivot table a little](./sheets-screenshots/18.png)
 
@@ -298,7 +298,7 @@ and they will further highlight the utility of pivot tables.
    drag the gray box that says
    "Timestamp - Day of the week"
    to under the columns header.
- - Wow!!
+ - Move your mouse over the image below. Wow!!
    <img id="wow" src="./sheets-screenshots/38.png" alt="Moving timestamp from rows to columns"/>
    <script>
      const wow = document.getElementById('wow');
