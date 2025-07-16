@@ -28,7 +28,7 @@
     it is good for understanding the universe in regions of both large scale and high mass.
 
   - Is quantum mechanics correct?
-    It is the best theory of gravity currently available to us
+    It is the best theory currently available to us
     for understanding the universe in regions of both very small scale and low mass.
 
   - However, it is a longstanding Physics problem to come up with
