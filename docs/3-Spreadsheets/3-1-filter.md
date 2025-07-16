@@ -50,7 +50,7 @@ using the arrows in the column headings again.
     - Notice that the names are still sorted for each time.
    ![Table sorted by times and names](./sheets-screenshots/03.png)
  - Select `Timestamp > Sort Column > Sort A to Z`.
- - Note that it is a little strange that the options always say
+ - Notice that it is a little strange that the options always say
    "Sort A to Z" and "Sort Z to A" even when we are sorting
    Numbers and Dates.
 
@@ -221,3 +221,8 @@ answer the following questions.
  - Which Amina attended the most tutoring sessions?
  - What was the total number of tutoring sessions this Amina attended?
  - Which three students are tied for attending the most tutoring sessions greater than 90 minutes long?
+
+
+
+
+On to [Pivot Tables](3-2-pivot.md)!!

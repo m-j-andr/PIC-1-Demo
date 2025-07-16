@@ -39,3 +39,11 @@
 
 [4 - Homework](./2-Desmos/2-4-homework.md)
 
+
+# 3 - Spreadsheet: data analysis
+
+[1 - Filters](./3-Spreadsheets/3-1-filter.md)
+
+[2 - Pivot tables](./3-Spreadsheets/3-2-pivot.md)
+
+[3 - Hamilton or Not Hamilton](./3-Spreadsheets/3-3-hamilton.md)
