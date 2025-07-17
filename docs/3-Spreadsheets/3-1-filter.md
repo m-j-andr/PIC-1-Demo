@@ -30,7 +30,7 @@
    - Select `UID > Edit column type > Number > Number`.
    - Select `Time (minutes) > Edit column type > Number > Number`.
    - Select `Timestamp > Edit column type > Date > Date time`.
-   This allowed us to specify the correct datatypes for each column.
+   - These selections specified the most appropriate datatype for each column.
  - Select columns `A` to `E` and then
    select `Format > Alignment > Center` from the top menu.
  - If your table looks like the following screenshot, well done!
@@ -131,7 +131,7 @@ the entries that involve Carlos Mensah.
 
 ## Creating and Saving a Filter View
 
- - Click on calculator to the right of where it says `Tutoring`
+ - Click on the calculator to the right of where it says `Tutoring`
    (where it used to say `Table1`).
  - Click `Create filter view`.
    ![Create filter view](./sheets-screenshots/06.png)
@@ -173,7 +173,7 @@ the entries that involve Carlos Mensah.
 ## Filtering By Condition
 
  - Create another Filter View called `Long sessions`.
-   - Click on calculator to the right of where it says `Tutoring`
+   - Click on the calculator to the right of where it says `Tutoring`
      (where it used to say `Table1`).
    - Click `Create filter view`.
    - Click `Save view`.
@@ -201,8 +201,8 @@ the entries that involve Carlos Mensah.
  - You can now see that the views `Carlos Mensah` and `Long sessions`
    are easily available.
  - Let's delete the `Carlos Mensah` view.
- - Select it.
- - `Data > View options > Delete view` will delete it.
+ - Select the `Carlos Mensah` view.
+ - `Data > View options > Delete view` will delete this view.
    Take note of other useful options that are available.
    ![Deleting a view](./sheets-screenshots/15.png)
 

@@ -14,6 +14,7 @@
    ![Creating a pivot table](./sheets-screenshots/16.png)
    - "Data range: Tutoring" is perfect.
    - "Insert to: New sheet"  is perfect.
+   - Click `Create`.
  - Select the suggested "Sum of Time (Minutes) for each Name by Course".
    ![Creating a suggested pivot table](./sheets-screenshots/17.png)
  - Select all columns by
@@ -42,7 +43,7 @@
    - When scrolling down through the pivot table,
      the column headings now stay in view.
 
- - Hiding and displaying pivot table editor.
+ - Hiding and displaying the pivot table editor.
    - Where you selected "Sum of Time (Minutes) for each Name by Course"
      is called the *pivot table editor*.
    - You can click the cross to the top-right to close it.
@@ -90,7 +91,7 @@ The behavior of the filter is a little buggy.
 Suppose we want to see the data for
 Mitchel Anders and Benson Lynn.
 You would hope to...
- - Click the box that currently says on "Showing 1 item".
+ - Click the box that currently says "Showing 1 item".
  - Type `Benson` in the search box.
  - Click on the `Benson Lynn` search result.
  - Click `OK`.
@@ -130,19 +131,19 @@ Now, let's filter by date.
 
 ## Sorting and Toggling Totals
 
- - Under both the **Rows** and **Column** heading,
+ - Under both the **Rows** and **Columns** heading,
    one can toggle "Show totals".
 
    - Turning on "Show totals" for rows creates a new row
-     which stores the sums of the value in each column.
+     which stores the sums of the values in each column.
    - Turning on "Show totals" for columns creates a new column
-     which stores the sums of the value in each rows.
+     which stores the sums of the values in each row.
 
- - Under both the **Rows** and **Column** heading,
+ - Under both the **Rows** and **Columns** heading,
    one can specify "Order" and "Sort by".
 
    - The rows are currently arranged so that
-     the names are in alphebetical order.
+     the names are in alphabetical order.
    - Under the **Rows** heading,
      change "Sort by" to "SUM of Time (Minutes) in Grand Total".
      Click on the image below to see what to expect.
@@ -155,6 +156,7 @@ Now, let's filter by date.
          sorting.src = sorting_clicked_on_an_even_number_of_times ? './sheets-screenshots/28.png' : './sheets-screenshots/29.png';
        });
      </script>
+
    - Now the student who spent the most time at tutoring sessions
      on 09/08/2025 --- Mariana da Silva --- is at the bottom.
      ![Sorting](./sheets-screenshots/30.png)
@@ -165,7 +167,7 @@ Now, let's filter by date.
      the class names are in alphabetical order.
    - Under the **Columns** heading,
      change "Sort by" to "SUM of Time (Minutes) in Grand Total".
-   - You can see "Econ 1" to the right because
+   - You can see Econ 1 to the right because
      it was the most popular for tutoring that day.
      ![Sorting](./sheets-screenshots/31.png)
 
@@ -197,7 +199,7 @@ The previous questions can be answered elegantly using pivot tables.
  - How many times did Isabel Nguyen attend tutoring?
    - Under the **Values** heading,
      change "Summarize by" to COUNT.
-   - Under the **Filter** heading,
+   - Under the **Filters** heading,
      add a filter which selects only Isabel Nguyen.
    - Under the **Columns** heading,
      make sure "Show totals" is selected.
@@ -265,7 +267,7 @@ and they will further highlight the utility of pivot tables.
 ## Creating Your Own Custom Pivot Table From Scratch
 
  - Scroll to the top of the pivot table editor.
- - Click "Clear all".
+ - Click `Clear all`.
  - Select `View > Freeze > no rows`.
  - We will now experiment with selecting
    categories for rows, columns, and values.
@@ -296,7 +298,7 @@ and they will further highlight the utility of pivot tables.
    and they are organized by course.
    However, this presentation is somewhat overwhelming.
    - Right-click (or two-finger tap) on any of the timestamps.
-   - `Create pivot date group > Day of the week`
+   - Select `Create pivot date group > Day of the week`.
      ![Grouping](./sheets-screenshots/37.png)
  - We now have a table showing us
    how many tutoring minutes were
@@ -324,8 +326,8 @@ and they will further highlight the utility of pivot tables.
 
  - Clear your previous pivot table.
    - Scroll to the top of the pivot table editor.
-   - Click "Clear all".
-   - `View > Freeze > 2 rows`
+   - Click `Clear all`.
+   - Select `View > Freeze > 2 rows`.
  - We will now reconstruct our first pivot table step-by-step.
    - Next to the heading saying **Rows**...
      - Click `Add`.
@@ -365,4 +367,4 @@ Try to answer the following questions using pivot tables as effectively as possi
  - What was the total number of tutoring sessions they attended?
  - Which three students spent the most time at the tutoring sessions?
  - Which three students attended the most tutoring sessions greater than 90 minutes long?
- - Other questions that Bon-Soon came up with.
+ - Still need to add some of the other questions that Bon-Soon came up with.
