@@ -248,7 +248,7 @@ a consequence when learning with tilde `~`.
    so we should celebrate this important moment!!
 
 
-## concept::desmos-coventions
+## concept::desmos-conventions
 
 Throughout our Desmos examples, we adopt the following conventions.
 
@@ -279,7 +279,7 @@ we could have used $x_1$ and $y_1$ instead of $X$ and $Y$.
  - We think our equations look nicer. Which do you prefer?
    The first equation or the second equation?
    <div>
-     \[Y\   \sim\ a X^2\   +\ b X\   +\ c\ \ \ \ 
+     \[Y\   \sim\ a X^2\   +\ b X\   +\ c\ \ \ \ \ \ \ \ \ \ \ \ 
        y_1\ \sim\ a x_1^2\ +\ b x_1\ +\ c\]
    </div>
  - Finally, $a$, $b$, and $c$ are being learned by Desmos whereas
@@ -307,8 +307,9 @@ Coordinates consist of an $x$- and $y$-coordinate.
    in a different context, this choice did not seem like the best one to us.
 
 If the remarks above convince you to label
-$x$-coordinates with the letter $x$ and $y$-coordinates with the letter $y$,
-then we now have to distinguish the different appearances of these coordinates.
+$x$-coordinates with the letters $x$ and $X$ and
+$y$-coordinates with the letters $y$ and $Y$,
+then we now have to distinguish the different appearances of these letters.
 We have no choice over what to call the coordinates that Desmos draws (3) because
 Desmos mandates that we use $x$ and $y$ for these coordinates.
 For (1) and (2), subscripts are a possibility.
@@ -400,4 +401,3 @@ mistyping $pepperoni$ or $mushroom$ is easily noticed and fixed.
 ## concept::fitting, concept::line-fitting, concept::curve-fitting
 
 ## concept::matplotlib, concept::plotting, concept::plt
-
