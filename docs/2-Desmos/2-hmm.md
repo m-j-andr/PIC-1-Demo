@@ -44,7 +44,7 @@
   For the trajectory of a thrown ball,
   the quadratic equation can be derived from Newton's laws of gravity.
   However, this model only acknowledges gravity and it ignores air resistance and
-  [the Magnus effect](https://en.wikipedia.org/wiki/Magnus_effect){:target="_blank"}.
+  the [Magnus effect](https://en.wikipedia.org/wiki/Magnus_effect){:target="_blank"}.
   I doubt [Rafa Nadal](https://en.wikipedia.org/wiki/Rafael_Nadal_at_the_French_Open){:target="_blank"}'s
   topspin forehands at Roland Garros ever followed a quadratic equation,
   and his record at Roland Garros certainly defies explanation.
@@ -52,7 +52,7 @@
   Since our quadratic model for the trajectory of a thrown ball works well,
   a cubic or quartic model would also work well. However, I would be hesitant
   to include a cubic or quartic term unless it could be justified by air resistance or
-  [the Magnus effect](https://en.wikipedia.org/wiki/Magnus_effect){:target="_blank"}.
+  the [Magnus effect](https://en.wikipedia.org/wiki/Magnus_effect){:target="_blank"}.
   The most famous example of the Magnus effect is given by
   [Roberto Carlos' freekick against France in 1997](https://youtu.be/WLgMRyRjVrI?si=vKF4q99AeZegD6q7){:target="_blank"}.
   It is discussed [here](https://youtu.be/m57cimnJ7fc?si=Zq7d35zqTbcq1Uud){:target="_blank"},
