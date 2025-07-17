@@ -133,7 +133,6 @@ Now, let's filter by date.
 
  - Under both the **Rows** and **Columns** heading,
    one can toggle "Show totals".
-
    - Turning on "Show totals" for rows creates a new row
      which stores the sums of the values in each column.
    - Turning on "Show totals" for columns creates a new column
@@ -141,7 +140,6 @@ Now, let's filter by date.
 
  - Under both the **Rows** and **Columns** heading,
    one can specify "Order" and "Sort by".
-
    - The rows are currently arranged so that
      the names are in alphabetical order.
    - Under the **Rows** heading,
