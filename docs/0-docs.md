@@ -192,7 +192,7 @@ next to where you type what you would like to find.
 ### $x$ and $y$
 
 Desmos is a graphing calculator. Since it draws graphs in the $(x,\ y)$ plane,
-The variables $x$ and $y$ behave differently to other variables like $a$ and $b$.
+the variables $x$ and $y$ behave differently to other variables like $a$ and $b$.
 (Due to polar coordinates, $r$ and $\theta$ also behave differently.)
 
 ![a and b versus x and y](./2-Desmos/desmos-screenshots/13.png)
@@ -225,24 +225,25 @@ We often talk about Desmos *learning* values
 because algorithms which perform curve fitting
 are some of the earliest machine learning algorithms!
 The above remarks about $x$ and $y$ have
-a consequence when "learning" with tilde `~`.
+a consequence when learning with tilde `~`.
 
  - If we make two tables,
    the first using column headings $x_1$ and $y_1$,
    the second using column headings $x_2$ and $y_2$,
    then we can learn values for $m$ and $b$, and
    $s$, $t$, and $u$ by typing the following expressions.
+
    - $y_1\ \sim\ m x_1\ +\ b$
    - $s\ x_2\ +\ t\ y_2\ \sim\ u\ \\{u>0\\}$
 
    Desmos successfully learns about two lines.
    ![x_1, y_1, x_2, y_2](./2-Desmos/desmos-screenshots/14.png)
 
- - Using $x$ and $y$ in place of $x_1$ and $y_1$ gives an error.
-   Using $x$ and $y$ in place of $x_2$ and $y_2$ gives an error.
+ - Using $x$ and $y$ in place of $x_1$ and $y_1$      gives an error.
+   Using $x$ and $y$ in place of $x_2$ and $y_2$ also gives an error.
    ![x_1, y_1 --> x, y; x_2, y_2 --> x, y,](./2-Desmos/desmos-screenshots/15_16.png)
 
- - **These are our first programming errors!!**
+ - **These are our first programming errors!**
    A programmer encounters many errors during their life,
    so we should celebrate this important moment!!
 
@@ -275,12 +276,11 @@ In the [first Desmos example](./2-Desmos/2-1.md){:target="_blank"},
 we could have used $x_1$ and $y_1$ instead of $X$ and $Y$.
  - By using $X$ and $Y$, we avoided having to use subscripts and
    we avoided the error that using $x$ and $y$ would have produced.
- - Our equations look nicer. Which do you prefer? The first or second equation
+ - We think our equations look nicer. Which do you prefer?
+   The first equation or the second equation?
    <div>
-     \[\begin{aligned}
-       Y\   &\sim\ a X^2\   +\ b X\   +\ c
-       y_1\ &\sim\ a x_1^2\ +\ b x_1\ +\ c
-     \end{aligned}\]
+     \[Y\   \sim\ a X^2\   +\ b X\   +\ c\ \ \ \ 
+       y_1\ \sim\ a x_1^2\ +\ b x_1\ +\ c\]
    </div>
  - Finally, $a$, $b$, and $c$ are being learned by Desmos whereas
    $X$ and $Y$ are being entered by us, the users of Desmos.
@@ -321,6 +321,9 @@ good choices to us. One just has to remember that $X_{pepperoni}$
 corresponds to the data we provide, that is, points on the boundary,
 and that $x_{pepperoni}$ is learned by Desmos,
 and so it corresponds to the center.
+These decisions also have the nice consequence
+that the equation of a circle is written
+completely in lowercase as is most common.
 
 Finally, using $x_1$, $x_2$, $x_3$, and $x_4$ in place of
 $X_{pepperoni}$, $x_{pepperoni}$, $X_{mushroom}$, and $x_{mushroom}$
@@ -397,3 +400,4 @@ mistyping $pepperoni$ or $mushroom$ is easily noticed and fixed.
 ## concept::fitting, concept::line-fitting, concept::curve-fitting
 
 ## concept::matplotlib, concept::plotting, concept::plt
+
