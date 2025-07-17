@@ -188,6 +188,9 @@ next to where you type what you would like to find.
 
 ## concept::desmos, concept::desmos-graphing-calculator
 
+
+### $x$ and $y$
+
 Desmos is a graphing calculator. Since it draws graphs in the $(x,\ y)$ plane,
 The variables $x$ and $y$ behave differently to other variables like $a$ and $b$.
 (Due to polar coordinates, $r$ and $\theta$ also behave differently.)
@@ -206,20 +209,23 @@ For $a$ and $b\ldots$
    numbers with a fractional part, and sequences of characters.
 
 For $x$ and $y\ldots$
- - Typing $x\ =\ 1$ draws vertical line consisting of all points with coordinates like $(1,\ y)$
+ - Typing $x\ =\ 1$ draws a vertical line consisting of all points with coordinates like $(1,\ y)$
    and produces a slider so that we can slide between other vertical lines.
  - Typing $y\ =\ 2x\ +\ 3$ draws the line consisting of all points with coordinates like $(x,\ 2x\ +\ 3)$.
    Changing the equation $x\ =\ 1$ has no impact on the line drawn by $y\ =\ 2x\ +\ 3$.
-   This is very different than the behavior described for $b$ above.
+   This is very different to the behavior described for $b$ above.
+
+
+### Fitting with `~`
 
 In Desmos,
 a tilde `~` is used to perform
 [curve fitting](https://en.wikipedia.org/wiki/Curve_fitting){:target="_blank"}.
-We often refer to Desmos *learning* values
+We often talk about Desmos *learning* values
 because algorithms which perform curve fitting
 are some of the earliest machine learning algorithms!
-
-The above remarks about $x$ and $y$ have a consequence when "learning" with tilde `~`.
+The above remarks about $x$ and $y$ have
+a consequence when "learning" with tilde `~`.
 
  - If we make two tables,
    the first using column headings $x_1$ and $y_1$,
@@ -228,14 +234,20 @@ The above remarks about $x$ and $y$ have a consequence when "learning" with tild
    $s$, $t$, and $u$ by typing the following expressions.
    - $y_1\ \sim\ m x_1\ +\ b$
    - $s\ x_2\ +\ t\ y_2\ \sim\ u\ \\{u>0\\}$
+
    Desmos successfully learns about two lines.
    ![x_1, y_1, x_2, y_2](./2-Desmos/desmos-screenshots/14.png)
+
  - Using $x$ and $y$ in place of $x_1$ and $y_1$ gives an error.
    Using $x$ and $y$ in place of $x_2$ and $y_2$ gives an error.
-   ![x_1, y_1 --> x, y](./2-Desmos/desmos-screenshots/15.png) ![x_2, y_2 --> x, y](./2-Desmos/desmos-screenshots/16.png)
+   ![x_1, y_1 --> x, y; x_2, y_2 --> x, y,](./2-Desmos/desmos-screenshots/15_16.png)
+
  - **These are our first programming errors!!**
    A programmer encounters many errors during their life,
    so we should celebrate this important moment!!
+
+
+## concept::desmos-coventions
 
 Throughout our Desmos examples, we adopt the following conventions.
 
@@ -256,8 +268,8 @@ However, when writing an expository document,
 it is most important to be consistent,
 and hopefully those who prefer other
 conventions respect our consistency.
-When writing code, consistency is just as important,
-so understanding our thought process may be useful to you.
+**When writing code, consistency is just as important,
+so understanding our thought process may be useful to you.**
 
 In the [first Desmos example](./2-Desmos/2-1.md){:target="_blank"},
 we could have used $x_1$ and $y_1$ instead of $X$ and $Y$.
@@ -297,8 +309,8 @@ We have no choice over what to call the coordinates that Desmos draws (3) becaus
 Desmos mandates that we use $x$ and $y$ for these coordinates.
 For (1) and (2), subscripts are a possibility.
 Desmos does not allow subscripts to be very complicated,
-but maybe $x_{boundarypepperoni}$ and $x_{centerpepperoni}$
-seem like acceptable choices to you for $x$-coordinates?
+but perhaps $x_{boundarypepperoni}$ and $x_{centerpepperoni}$
+seem like acceptable choices to you for $x$-coordinates.
 Since capitals already worked out nicely in the first example for avoiding
 unnecessary subscripts, $X_{pepperoni}$ and $x_{pepperoni}$ seemed
 like good choices to us.
