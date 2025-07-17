@@ -192,53 +192,56 @@ Desmos is a graphing calculator. Since it draws graphs in the $(x,\ y)$ plane,
 The variables $x$ and $y$ behave differently to other variables like $a$ and $b$.
 (Due to polar coordinates, $r$ and $\theta$ also behave differently.)
 
-![a and b versus x and y](./desmos-screenshots/13.png)
+![a and b versus x and y](./2-Desmos/desmos-screenshots/13.png)
 
-For $a$ and $b$...
+For $a$ and $b\ldots$
  - Typing $a\ =\ 1$ creates a variable called $a$, gives it the value $1$,
    and produces a slider for changing its value.
  - Typing $b\ =\ 2a\ +\ 3$ creates a variable called $b$.
    $b$ will originally have the value $5$ because $2\cdot 1\ +\ 3 = 5$.
    As we change the value of $a$ via typing or through the slider,
    $b$'s value will update according to the formula $b\ =\ 2a\ +\ 3$.
-   **WARNING.** This is very different behavior to the variables
+ - **WARNING.** This is very different behavior to the variables
    we will learn about in Python for storing integers,
    numbers with a fractional part, and sequences of characters.
 
-For $x$ and $y$...
+For $x$ and $y\ldots$
  - Typing $x\ =\ 1$ draws vertical line consisting of all points with coordinates like $(1,\ y)$
    and produces a slider so that we can slide between other vertical lines.
  - Typing $y\ =\ 2x\ +\ 3$ draws the line consisting of all points with coordinates like $(x,\ 2x\ +\ 3)$.
    Changing the equation $x\ =\ 1$ has no impact on the line drawn by $y\ =\ 2x\ +\ 3$.
-   This is very different than $b$'s behavior described above.
+   This is very different than the behavior described for $b$ above.
 
-This has a consequence when "learning" with tilde `~`.
+In Desmos,
+a tilde `~` is used to perform
+[curve fitting](https://en.wikipedia.org/wiki/Curve_fitting){:target="_blank"}.
+We often refer to Desmos *learning* values
+because algorithms which perform curve fitting
+are some of the earliest machine learning algorithms!
+
+The above remarks about $x$ and $y$ have a consequence when "learning" with tilde `~`.
 
  - If we make two tables,
-   the first with column headings $x_1$ and $y_1$,
-   the second with column headings $x_2$ and $y_2$,
+   the first using column headings $x_1$ and $y_1$,
+   the second using column headings $x_2$ and $y_2$,
    then we can learn values for $m$ and $b$, and
    $s$, $t$, and $u$ by typing the following expressions.
    - $y_1\ \sim\ m x_1\ +\ b$
-   - $s\ x_2\ +\ t\ y_2\ \sim\ u\ \{u>0\}$
+   - $s\ x_2\ +\ t\ y_2\ \sim\ u\ \\{u>0\\}$
+   Desmos successfully learns about two lines.
    ![x_1, y_1, x_2, y_2](./2-Desmos/desmos-screenshots/14.png)
-
  - Using $x$ and $y$ in place of $x_1$ and $y_1$ gives an error.
-   ![x_1, y_1 --> x, y](./2-Desmos/desmos-screenshots/15.png)
-
- - Using $x$ and $y$ in place of $x_2$ and $y_2$ gives an error.
-   ![x_2, y_2 --> x, y](./2-Desmos/desmos-screenshots/16.png)
-
+   Using $x$ and $y$ in place of $x_2$ and $y_2$ gives an error.
+   ![x_1, y_1 --> x, y](./2-Desmos/desmos-screenshots/15.png) ![x_2, y_2 --> x, y](./2-Desmos/desmos-screenshots/16.png)
  - **These are our first programming errors!!**
    A programmer encounters many errors during their life,
    so we should celebrate this important moment!!
 
-
-Throughout our Desmos examples, we adopt the following convention.
+Throughout our Desmos examples, we adopt the following conventions.
 
 | Type of quantity | Variables used                                                  |
 | ---------------- | --------------------------------------------------------------- |
-|     Data         | Capitalized letters                                             |
+|        Data      | Capitalized letters                                             |
 |     Learned      | Lowercase, not $x$ or $y$, but subscripted $x$ and $y$ are fine |
 |     Plotted      | $x$, $y$ (in pairs that make a specified equation true)         |
 
@@ -254,22 +257,22 @@ it is most important to be consistent,
 and hopefully those who prefer other
 conventions respect our consistency.
 When writing code, consistency is just as important,
-so understanding our thought process may be useful.
+so understanding our thought process may be useful to you.
 
-In [the first Desmos example](./2-Desmos/2-1.md){:target="_blank"},
+In the [first Desmos example](./2-Desmos/2-1.md){:target="_blank"},
 we could have used $x_1$ and $y_1$ instead of $X$ and $Y$.
  - By using $X$ and $Y$, we avoided having to use subscripts and
    we avoided the error that using $x$ and $y$ would have produced.
  - Our equations look nicer. Which do you prefer?
-   $Y\ \sim\ a X^2\ +\ b X\ +\ c$ or
+   $Y\ \sim\ a X^2\ +\ b X\ +\ c$?
    $y_1\ \sim\ a x_1^2\ +\ b x_1\ +\ c$?!
- - Finally, $a$, $b$, and $c$ are being learned by Desmos;
+ - Finally, $a$, $b$, and $c$ are being learned by Desmos whereas
    $X$ and $Y$ are being entered by us, the users of Desmos.
-   The different cases provide a quick reminder to ourselves
+   The different cases serve as a quick reminder to ourselves
    of the different roles of $X$, $Y$, $a$, $b$, and $c$.
 
-These type of issues become more significant in
-[the second Desmos example](./2-Desmos/2-2.md){:target="_blank"}.
+These type of issues become more significant in the
+[second Desmos example](./2-Desmos/2-2.md){:target="_blank"}.
 When working with the pepperoni pizza,
 we need to consider three types of values.
  1. Coordinates of points on the boundary of the pizza entered by us.
@@ -280,30 +283,30 @@ Coordinates consist of an $x$- and $y$-coordinate.
  - Do you want to name an $x$-coordinate by a letter other than $x$ or $X$?
  - Do you want to name a  $y$-coordinate by a letter other than $y$ or $Y$?
  - These are leading questions because the people writing this answered "no"
-   to both questions. Someone else could argue that points on the boundary
+   to both questions. Someone else might argue that points on the boundary
    and the center point feel different in nature. They might want us to
    label the center using $a$ and $b$, or $c$ together with some subscripts.
    Because $a$, $b$, and $c$ show up in the
    [tilt of Saturn exercise](./2-Desmos/2-3f-tilt.md)
    in a different context, this choice did not seem like a good one to us.
 
-If what is written somewhat convinces you that labeling
+If the remarks above convince you to label
 $x$-coordinates with the letter $x$ and $y$-coordinates with the letter $y$,
 then we now have to distinguish the different appearances of these coordinates.
-We have no choice over what to call the coordinates that Desmos draws (3):
+We have no choice over what to call the coordinates that Desmos draws (3) because
 Desmos mandates that we use $x$ and $y$ for these coordinates.
 For (1) and (2), subscripts are a possibility.
 Desmos does not allow subscripts to be very complicated,
-but maybe $x_{boundarypepp}$ and $x_{centerpepp}$
+but maybe $x_{boundarypepperoni}$ and $x_{centerpepperoni}$
 seem like acceptable choices to you for $x$-coordinates?
-Since capitals already worked nicely in the first example for avoiding
+Since capitals already worked out nicely in the first example for avoiding
 unnecessary subscripts, $X_{pepperoni}$ and $x_{pepperoni}$ seemed
 like good choices to us.
 
 Finally, using $x_1$, $x_2$, $x_3$, and $x_4$ in place of
 $X_{pepperoni}$, $x_{pepperoni}$, $X_{mushroom}$, and $x_{mushroom}$
-felt totally unacceptable to us. It would have been much too easy to
-make an error that was very difficult to track down. On the other hand,
+felt totally unacceptable to us. **It would have been much too easy to
+make an error that was very difficult to track down.** On the other hand,
 mistyping $pepperoni$ or $mushroom$ is easily noticed and fixed.
 
 
@@ -375,3 +378,4 @@ mistyping $pepperoni$ or $mushroom$ is easily noticed and fixed.
 ## concept::fitting, concept::line-fitting, concept::curve-fitting
 
 ## concept::matplotlib, concept::plotting, concept::plt
+
