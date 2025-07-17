@@ -275,9 +275,13 @@ In the [first Desmos example](./2-Desmos/2-1.md){:target="_blank"},
 we could have used $x_1$ and $y_1$ instead of $X$ and $Y$.
  - By using $X$ and $Y$, we avoided having to use subscripts and
    we avoided the error that using $x$ and $y$ would have produced.
- - Our equations look nicer. Which do you prefer?
-   $Y\ \sim\ a X^2\ +\ b X\ +\ c$?
-   $y_1\ \sim\ a x_1^2\ +\ b x_1\ +\ c$?!
+ - Our equations look nicer. Which do you prefer? The first or second equation
+   <div>
+     \[\begin{aligned}
+       Y\   &\sim\ a X^2\   +\ b X\   +\ c
+       y_1\ &\sim\ a x_1^2\ +\ b x_1\ +\ c
+     \end{aligned}\]
+   </div>
  - Finally, $a$, $b$, and $c$ are being learned by Desmos whereas
    $X$ and $Y$ are being entered by us, the users of Desmos.
    The different cases serve as a quick reminder to ourselves
@@ -300,7 +304,7 @@ Coordinates consist of an $x$- and $y$-coordinate.
    label the center using $a$ and $b$, or $c$ together with some subscripts.
    Because $a$, $b$, and $c$ show up in the
    [tilt of Saturn exercise](./2-Desmos/2-3f-tilt.md)
-   in a different context, this choice did not seem like a good one to us.
+   in a different context, this choice did not seem like the best one to us.
 
 If the remarks above convince you to label
 $x$-coordinates with the letter $x$ and $y$-coordinates with the letter $y$,
@@ -312,8 +316,11 @@ Desmos does not allow subscripts to be very complicated,
 but perhaps $x_{boundarypepperoni}$ and $x_{centerpepperoni}$
 seem like acceptable choices to you for $x$-coordinates.
 Since capitals already worked out nicely in the first example for avoiding
-unnecessary subscripts, $X_{pepperoni}$ and $x_{pepperoni}$ seemed
-like good choices to us.
+unnecessary subscripts, $X_{pepperoni}$ and $x_{pepperoni}$ seemed like
+good choices to us. One just has to remember that $X_{pepperoni}$
+corresponds to the data we provide, that is, points on the boundary,
+and that $x_{pepperoni}$ is learned by Desmos,
+and so it corresponds to the center.
 
 Finally, using $x_1$, $x_2$, $x_3$, and $x_4$ in place of
 $X_{pepperoni}$, $x_{pepperoni}$, $X_{mushroom}$, and $x_{mushroom}$
@@ -390,4 +397,3 @@ mistyping $pepperoni$ or $mushroom$ is easily noticed and fixed.
 ## concept::fitting, concept::line-fitting, concept::curve-fitting
 
 ## concept::matplotlib, concept::plotting, concept::plt
-
