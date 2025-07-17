@@ -57,8 +57,8 @@
   [Roberto Carlos' freekick against France in 1997](https://youtu.be/WLgMRyRjVrI?si=vKF4q99AeZegD6q7){:target="_blank"}.
   It is discussed [here](https://youtu.be/m57cimnJ7fc?si=Zq7d35zqTbcq1Uud){:target="_blank"},
   [here](https://www.espn.com/soccer/story/_/id/37475858/physics-impossible-strike){:target="_blank"},
-  and, by the man himself, [here](https://youtu.be/lZPEZie3eCk?si=eR6Gwf8T7vv9g5Jv){:target="_blank"}.
-  Funnily enough, the Magnus effect effect was first observed and recorded by Newton while playing tennis.
+  and [here](https://youtu.be/lZPEZie3eCk?si=eR6Gwf8T7vv9g5Jv){:target="_blank"} (by the man himself).
+  Funnily enough, the Magnus effect was first observed and recorded by Newton while playing tennis.
 
 Can you think of a good name for this collection of questions?
 **Science!!**
