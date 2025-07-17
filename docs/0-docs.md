@@ -252,11 +252,11 @@ a consequence when learning with tilde `~`.
 
 Throughout our Desmos examples, we adopt the following conventions.
 
-| Type of quantity | Variables used                                                  |
-| ---------------- | --------------------------------------------------------------- |
-|        Data      | Capitalized letters                                             |
-|     Learned      | Lowercase, not $x$ or $y$, but subscripted $x$ and $y$ are fine |
-|     Plotted      | $x$, $y$ (in pairs that make a specified equation true)         |
+| Type of quantity | Variables used                                                             |
+| ---------------- | -------------------------------------------------------------------------- |
+|        Data      | Capitalized letters                                                        |
+|     Learned      | Lowercase, not $x$, $y$ or $r$, but subscripted $x$, $y$, and $r$ are fine |
+|     Plotted      | $x$, $y$ (in pairs that make a specified equation true)                    |
 
 **These conventions concern the naming of quantities.
 Naming quantities carefully and clearly is a very important skill in programming.
