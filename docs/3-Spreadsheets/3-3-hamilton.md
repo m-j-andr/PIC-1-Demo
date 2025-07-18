@@ -45,7 +45,7 @@ The number [Madison] claimed [to have written] in a list first made public in 18
 differed significantly from one attributed to Hamilton, which had appeared ten years earlier in *The Port Folio*, a Philadelphia magazine.
 The 14 November 1807 issue of that magazine reproduced a memorandum, said to be in Hamilton's handwriting...
 The discrepancy between these two lists gave rise to a famous literary dispute over the authorship of certain numbers of *The Federalist*..."
-[https://founders.archives.gov/documents/Madison/01-10-02-0177](https://founders.archives.gov/documents/Madison/01-10-02-0177)
+[https://founders.archives.gov/documents/Madison/01-10-02-0177](https://founders.archives.gov/documents/Madison/01-10-02-0177){:target="_blank"}
 
 In this exercise, we will try to resolve the dispute!
 

@@ -370,4 +370,4 @@ Try to answer the following questions using pivot tables as effectively as possi
 
 
 
-Next: [Hamilton Or Not Hamilton? That Is The Question!](3-3-hamilton.md)!!
+Next: [Hamilton Or Not Hamilton? That Is The Question!](3-3-hamilton.md)
