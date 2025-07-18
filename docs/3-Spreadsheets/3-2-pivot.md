@@ -366,3 +366,8 @@ Try to answer the following questions using pivot tables as effectively as possi
  - Which three students spent the most time at the tutoring sessions?
  - Which three students attended the most tutoring sessions greater than 90 minutes long?
  - Still need to add some of the other questions that Bon-Soon came up with.
+
+
+
+
+Next: [Hamilton Or Not Hamilton? That Is The Question!](3-3-hamilton.md)!!
