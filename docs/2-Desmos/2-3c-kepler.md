@@ -36,6 +36,6 @@ Kepler had access to the following information.
 | Jupiter |             5.200            |           4332.62          |
 | Saturn  |             9.510            |           10759.2          |
 
- - Using this information, estimate $p$.
+ - Using this information and Desmos Graphing Calculator, estimate $p$.
 
  - Kepler's third law actually claims that $p$ is some nice fraction. Can you guess this fraction?

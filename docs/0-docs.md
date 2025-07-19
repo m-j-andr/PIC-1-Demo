@@ -186,10 +186,7 @@ next to where you type what you would like to find.
      `tester` gives `Tester tester`.
 
 
-## concept::desmos, concept::desmos-graphing-calculator
-
-
-### $x$ and $y$
+## concept::desmos, concept::desmos-graphing-calculator, concept::desmos-x, concept::desmos-y
 
 Desmos is a graphing calculator. Since it draws graphs in the $(x,\ y)$ plane,
 the variables $x$ and $y$ behave differently to other variables like $a$ and $b$.
@@ -216,7 +213,19 @@ For $x$ and $y\ldots$
    This is very different to the behavior described for $b$ above.
 
 
-### Fitting with `~`
+## concept::desmos-superscript
+
+  - The `^` key (`shift + 6`) will allow you to start typing a *superscript*.
+  - To exit typing superscripted text, you will need to press the right arrow key `→`.
+
+
+## concept::desmos-subscript
+
+  - An underscore `_` will allow you to start typing a *subscript*.
+  - To exit typing subscripted text, you will need to press the right arrow key `→`.
+
+
+## concept::desmos-fitting, concept::desmos-fitting-x-error, concept::desmos-fitting-y-error, concept::desmos-fitting-error
 
 In Desmos,
 a tilde `~` is used to perform
@@ -224,8 +233,10 @@ a tilde `~` is used to perform
 We often talk about Desmos *learning* values
 because algorithms which perform curve fitting
 are some of the earliest machine learning algorithms!
+The tilde `~` tells Desmos to learn the values of any variables that
+it has not already encountered (by using regression techniques).
 The above remarks about $x$ and $y$ have
-a consequence when learning with tilde `~`.
+a consequence when learning with tilde `~`...
 
  - If we make two tables,
    the first using column headings $x_1$ and $y_1$,
@@ -246,6 +257,29 @@ a consequence when learning with tilde `~`.
  - **These are our first programming errors!**
    A programmer encounters many errors during their life,
    so we should celebrate this important moment!!
+
+
+## concept::desmos-fitting-quadratic
+
+There are two steps
+to fitting a quadratic curve to a set of $(X,\ Y)$ pairs.
+
+ - Make a table containing the $(X,\ Y)$ pairs.
+ - Write $Y\ \sim\ a X^2\ +\ b X\ +\ c$ in a new cell to learn $a$, $b$, and $c$ and to plot the parabola.
+
+
+## concept::desmos-fitting-circle
+
+There are three steps
+to fitting a circle to a set of $(X,\ Y)$ pairs.
+
+ - Make a table containing the $(X,\ Y)$ pairs.
+ - Write $(X\ -\ x_0)^2\ +\ (Y\ -\ y_0)^2\ \sim\ r_0^2$ in a new cell to learn $x_0$, $y_0$, and $r_0$.
+ - Write $(x\ -\ x_0)^2\ +\ (y\ -\ y_0)^2\    =\ r_0^2$ in a new cell to plot the circle.
+
+If there is more than one circle,
+then you will need to subscript each $X$ and $Y$
+and use more informative subscripts than $0$ for $x_0$ $y_0$, and $r_0$.
 
 
 ## concept::desmos-conventions
