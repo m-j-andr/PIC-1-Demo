@@ -236,7 +236,7 @@ are some of the earliest machine learning algorithms!
 The tilde `~` tells Desmos to learn the values of any variables that
 it has not already encountered (by using regression techniques).
 The above remarks about $x$ and $y$ have
-a consequence when learning with tilde `~`...
+a consequence when learning with tilde `~`.
 
  - If we make two tables,
    the first using column headings $x_1$ and $y_1$,
@@ -278,8 +278,8 @@ to fitting a circle to a set of $(X,\ Y)$ pairs.
  - Write $(x\ -\ x_0)^2\ +\ (y\ -\ y_0)^2\    =\ r_0^2$ in a new cell to plot the circle.
 
 If there is more than one circle,
-then you will need to subscript each $X$ and $Y$
-and use more informative subscripts than $0$ for $x_0$ $y_0$, and $r_0$.
+then you will need to use subscripts for each $X$ and $Y$,
+and you will need to use more informative subscripts than $0$ for $x_0$, $y_0$, and $r_0$.
 
 
 ## concept::desmos-conventions
