@@ -188,7 +188,7 @@ next to where you type what you would like to find.
 
 ## concept::desmos, concept::desmos-graphing-calculator, concept::desmos-x, concept::desmos-y
 
-Desmos is a graphing calculator. Since it draws graphs in the $(x,\ y)$ plane,
+Desmos is a graphing calculator. Since it draws graphs in the $xy$-plane,
 the variables $x$ and $y$ behave differently to other variables like $a$ and $b$.
 (Due to polar coordinates, $r$ and $\theta$ also behave differently.)
 
@@ -227,8 +227,8 @@ For $x$ and $y\ldots$
 
 ## concept::desmos-fitting, concept::desmos-fitting-x-error, concept::desmos-fitting-y-error, concept::desmos-fitting-error
 
-In Desmos,
-a tilde `~` is used to perform
+In Desmos, a tilde `~` (next to `1` on US keyboards and
+next to `z` on British keyboards) is used to perform
 [curve fitting](https://en.wikipedia.org/wiki/Curve_fitting){:target="_blank"}.
 We often talk about Desmos *learning* values
 because algorithms which perform curve fitting
@@ -264,7 +264,7 @@ a consequence when learning with tilde `~`.
 There are two steps
 to fitting a quadratic curve to a set of $(X,\ Y)$ pairs.
 
- - Make a table containing the $(X,\ Y)$ pairs.
+ - Make a table containing at least three $(X,\ Y)$ pairs.
  - Write $Y\ \sim\ a X^2\ +\ b X\ +\ c$ in a new cell to learn $a$, $b$, and $c$ and to plot the parabola.
 
 
@@ -273,13 +273,28 @@ to fitting a quadratic curve to a set of $(X,\ Y)$ pairs.
 There are three steps
 to fitting a circle to a set of $(X,\ Y)$ pairs.
 
- - Make a table containing the $(X,\ Y)$ pairs.
+ - Make a table containing at least three $(X,\ Y)$ pairs.
  - Write $(X\ -\ x_0)^2\ +\ (Y\ -\ y_0)^2\ \sim\ r_0^2$ in a new cell to learn $x_0$, $y_0$, and $r_0$.
  - Write $(x\ -\ x_0)^2\ +\ (y\ -\ y_0)^2\    =\ r_0^2$ in a new cell to plot the circle.
 
 If there is more than one circle,
 then you will need to use subscripts for each $X$ and $Y$,
 and you will need to use more informative subscripts than $0$ for $x_0$, $y_0$, and $r_0$.
+
+
+## concept::desmos-fitting-constraints
+
+You can add learning *constraints* using curly brackets $\\{ \\}$.
+For example, when fitting a circle, by writing
+<div>
+  \[
+    (X\ -\ x_0)^2\ +\ (Y\ -\ y_0)^2\ \sim\ r_0^2\ \{r_0 > 0\}
+  \]
+</div>
+
+you will ensure that Desmos learns a positive $r_0$.
+In some applications, constraining learned values is essential in order
+to avoid solutions that do not make sense to the problem being solved.
 
 
 ## concept::desmos-conventions
@@ -435,3 +450,4 @@ mistyping $pepperoni$ or $mushroom$ is easily noticed and fixed.
 ## concept::fitting, concept::line-fitting, concept::curve-fitting
 
 ## concept::matplotlib, concept::plotting, concept::plt
+
