@@ -257,15 +257,17 @@ a consequence when learning with tilde `~`.
  - **These are our first programming errors!**
    A programmer encounters many errors during their life,
    so we should celebrate this important moment!!
+   We have learned that we are not allowed to use $x$ and $y$
+   when we are using tilde `~` to perform curve fitting.
 
 
 ## concept::desmos-fitting-quadratic
 
 There are two steps
-to fitting a quadratic curve to a set of $(X,\ Y)$ pairs.
+to fitting a *quadratic curve* to a set of $(X,\ Y)$ pairs.
 
  - Make a table containing at least three $(X,\ Y)$ pairs.
- - Write $Y\ \sim\ a X^2\ +\ b X\ +\ c$ in a new cell to learn $a$, $b$, and $c$ and to plot the parabola.
+ - Type $Y\ \sim\ a X^2\ +\ b X\ +\ c$ in a new cell to learn $a$, $b$, and $c$ and to plot the *parabola*.
 
 
 ## concept::desmos-fitting-circle
@@ -274,27 +276,29 @@ There are three steps
 to fitting a circle to a set of $(X,\ Y)$ pairs.
 
  - Make a table containing at least three $(X,\ Y)$ pairs.
- - Write $(X\ -\ x_0)^2\ +\ (Y\ -\ y_0)^2\ \sim\ r_0^2$ in a new cell to learn $x_0$, $y_0$, and $r_0$.
- - Write $(x\ -\ x_0)^2\ +\ (y\ -\ y_0)^2\    =\ r_0^2$ in a new cell to plot the circle.
+ - Type $(X\ -\ x_0)^2\ +\ (Y\ -\ y_0)^2\ \sim\ r_0^2$ in a new cell to learn $x_0$, $y_0$, and $r_0$.
+ - Type $(x\ -\ x_0)^2\ +\ (y\ -\ y_0)^2\    =\ r_0^2$ in a new cell to plot the circle.
 
 If there is more than one circle,
 then you will need to use subscripts for each $X$ and $Y$,
 and you will need to use more informative subscripts than $0$ for $x_0$, $y_0$, and $r_0$.
+For an example, see the [second Desmos example](./2-Desmos/2-2.md){:target="_blank"}.
 
 
 ## concept::desmos-fitting-constraints
 
 You can add learning *constraints* using curly brackets $\\{ \\}$.
-For example, when fitting a circle, by writing
+For example, when fitting a circle, by typing
 <div>
   \[
-    (X\ -\ x_0)^2\ +\ (Y\ -\ y_0)^2\ \sim\ r_0^2\ \{r_0 > 0\}
+    (X\ -\ x_0)^2\ +\ (Y\ -\ y_0)^2\ \sim\ r_0^2\ \ \ \ \{r_0 > 0\}
   \]
 </div>
 
 you will ensure that Desmos learns a positive $r_0$.
 In some applications, constraining learned values is essential in order
 to avoid solutions that do not make sense to the problem being solved.
+For an example, see the [rings of Saturn exercise](./2-Desmos/2-3e-rings.md).
 
 
 ## concept::desmos-conventions
@@ -332,7 +336,7 @@ we could have used $x_1$ and $y_1$ instead of $X$ and $Y$.
        y_1\ \sim\ a x_1^2\ +\ b x_1\ +\ c\]
    </div>
  - Finally, $a$, $b$, and $c$ are being learned by Desmos whereas
-   $X$ and $Y$ are being entered by us, the users of Desmos.
+   $X$ and $Y$ label data being entered by us, the users of Desmos.
    The different cases serve as a quick reminder to ourselves
    of the different roles of $X$, $Y$, $a$, $b$, and $c$.
 
@@ -382,6 +386,19 @@ make an error that was very difficult to track down.** On the other hand,
 mistyping $pepperoni$ or $mushroom$ is easily noticed and fixed.
 
 
+## concept::wikipedia
+
+We have used Wikipedia as a reference a number of times in this course.
+As with any other resource, the truth of Wikipedia should be questioned.
+For example, articles about people can be edited in defamatory ways.
+However, mathematical articles are normally edited by mathematicians who
+do not have hidden agendas; they simply want to share mathematics with others.
+Of course, some pages may have errors, but in our experience, they are rare.
+Most of the pages shared in this course are only shared with you
+to encourage you to explore a topic further, if you find it interesting.
+If you track down inaccuracies because you read very carefully on a topic,
+this is a positive outcome! In any case, Wikipedia is currently much more
+reliable than ChatGPT on mathematics and computer science!
 
 
 ## concept::string
@@ -450,4 +467,3 @@ mistyping $pepperoni$ or $mushroom$ is easily noticed and fixed.
 ## concept::fitting, concept::line-fitting, concept::curve-fitting
 
 ## concept::matplotlib, concept::plotting, concept::plt
-

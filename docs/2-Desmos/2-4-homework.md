@@ -58,16 +58,26 @@ Upon discussing the exercise with two other students in the class I found
 ### `orbits.txt`
 
 Work on the [exercise](2-3b-orbit.md).
-In `orbits.txt`,
-share the values that your Desmos learned
-for $r_{saturn}$ and $r_{earth}$,
-and the value that your Desmos
-calculated for $\frac{r_{saturn}}{r_{earth}}$.
+In `orbits.txt`, share...
+ - the center of your image;
+ - the values that your Desmos learned for $r_{saturn}$ and $r_{earth}$;
+ - the value that your Desmos calculated for $\frac{r_{saturn}}{r_{earth}}$;
+ - the values that your Desmos learned for $y_{saturn}$ and $y_{earth}$
+   (the $y$-coordinates of the centers);
+ - the other ratio that Desmos calculated for you.
+
+Here is how you might start filling in `orbits.txt`.
 
 ```
-            r_{saturn} = 
-             r_{earth} = 
-r_{saturn} / r_{earth} = 
+The value I am using for the center of the image is 
+
+                          r_{saturn} = 
+                           r_{earth} = 
+              r_{saturn} / r_{earth} = 
+
+                          y_{saturn} = 
+                           y_{earth} = 
+(y_{saturn} - y_{earth}) / r_{earth} = 
 ```
 
 
@@ -83,7 +93,7 @@ $p$ and the value you guessed for the nice fractional value of $p$.
 ```
 Desmos learned p as 
 
-I think Kepler's law says p is 
+I think that Kepler's law says p is 
 ```
 
 
