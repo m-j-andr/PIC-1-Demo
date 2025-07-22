@@ -114,11 +114,11 @@ Fill in columns `B`, `C`, and `D` for essay 12.
    because this number is displayed at the bottom.
  - Enter `HAMILTON`, `7`, and `13094` into
    cells `B13`, `C13`, and `D13`, respectively.
- - **Note.** In order to be consistent,
+ - **NOTE.** In order to be consistent,
    it is simplest to enter the authors
    exactly as the `.txt` files display them:
    uppercase for names,
-   lowercase for "or" and "with".
+   lowercase for the words "or" and "with".
 
 <br>
 <br>
@@ -145,20 +145,24 @@ You will complete the data entry as part of a team.
    that was just shared with you.
  - Enter the data for the remaining essays.
    - If you are a team of four...
-     - student 1 can work on essays  1 to 22;
-     - student 2 can work on essays 23 to 43;
-     - student 3 can work on essays 44 to 64;
-     - student 4 can work on essays 65 to 85.
+     | Student |  Essays  |
+     | ------- | -------- |
+     |    1    |  1 to 22 |
+     |    2    | 23 to 43 |
+     |    3    | 44 to 64 |
+     |    4    | 65 to 85 |
    - If you are a team of five...
-     - student 1 can work on essays  1 to 17;
-     - student 2 can work on essays 18 to 34;
-     - student 3 can work on essays 35 to 51;
-     - student 4 can work on essays 52 to 68;
-     - student 5 can work on essays 69 to 85.
+     | Student |  Essays  |
+     | ------- | -------- |
+     |    1    |  1 to 17 |
+     |    2    | 18 to 34 |
+     |    3    | 35 to 51 |
+     |    4    | 52 to 68 |
+     |    5    | 69 to 85 |
  - Hopefully, as a team, you can complete the data entry in 10 to 20 minutes.
    Can you enter the data faster **and more accurately** than the team next to you?!
  - When you have finished, compare your table with the team next to you to help fix any mistakes.
- - Finally, copy and paste the data from `Federalist-Papers-Team-Data` (the team Google sheet)
+ - Finally, copy and paste the data from `Federalist-Papers-Team-Data` (your team's Google sheet)
    back to `Federalist-Papers-Data` (your individual Google sheet).
 
 FYI, the writers of this webpage performed their
@@ -167,7 +171,7 @@ by running the following Python code,
 pasting its output into a CSV file,
 and importing that CSV file into Google sheets.
 You are not expected to understand any of the code below,
-but hopefully, this example makes you excited to learn some Python.
+but, hopefully, this example makes you excited to learn some Python.
 ```python
 print('Essay number, Author, Number of "upon"s, Number of characters, "Upon"s per 10000 characters')
 
@@ -178,12 +182,12 @@ for i in range(1, 86):
   with open(path, 'r') as f:
     s = f.read()
 
-    j = s.index('\n', s.index('\n', s.index('\n', s.index('\n', s.index('\n', s.index('\n') + 1) + 1) + 1) + 1) + 1)
-    k = s.index('\n', s.index('\n', j + 1) + 1)
+    j = s.index('\n', s.index('\n', s.index('\n', s.index('\n', s.index('\n', s.index('\n') + 1) + 1) + 1) + 1) + 1) + 1
+    k = s.index('\n', s.index('\n', j) + 1)
 
     upons = s.count('upon') + s.count('Upon')
 
-    print(i, '"' + s[j + 1 : k].strip() + '"', upons, len(s), sep=', ', end=',\n')
+    print(i, '"' + s[j : k].strip() + '"', upons, len(s), sep=', ', end=',\n')
 ```
 
 
