@@ -258,7 +258,7 @@ tctaga
 
 
    | Find           | Replace                         |
-   | -------------- | ------------------------------- |
+   | -------------: | :------------------------------ |
    | `.{3}`         | `$0` followed by a single space |
    | `uu[u,c]`      | `F`                             |
    | `uu[a,g]`      | `L`                             |
@@ -306,8 +306,8 @@ tctaga
 
    **There is another exercise below this nonsense!**
 
-   | Find  | Replace |
-   | ----- | ------- |
+   |  Find | Replace |
+   | ----: | :------ |
    | `aug` |   `M`   |
    | `uuc` |   `F`   |
    | `gcc` |   `A`   |

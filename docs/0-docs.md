@@ -42,7 +42,7 @@ and so it is always helpful for us to be able to see them...
 Here are some common file extensions.
 Do not worry if you have not encountered them all.
 
-| Extension               | Purpose                                                                                                 |
+|  Extension              | Purpose                                                                                                 |
 | ----------------------: | :------------------------------------------------------------------------------------------------------ |
 |  `.txt`                 | Text file consisting of plain text (no formatting)                                                      |
 |  `.csv`                 | Text file containing tabular data where columns are separated by commas                                 |

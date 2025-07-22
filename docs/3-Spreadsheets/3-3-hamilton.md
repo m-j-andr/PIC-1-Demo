@@ -145,20 +145,24 @@ You will complete the data entry as part of a team.
    that was just shared with you.
  - Enter the data for the remaining essays.
    - If you are a team of four...
+
      | Student |  Essays  |
-     | ------- | -------- |
+     | :-----: | :------: |
      |    1    |  1 to 22 |
      |    2    | 23 to 43 |
      |    3    | 44 to 64 |
      |    4    | 65 to 85 |
+
    - If you are a team of five...
+
      | Student |  Essays  |
-     | ------- | -------- |
+     | :-----: | :------: |
      |    1    |  1 to 17 |
      |    2    | 18 to 34 |
      |    3    | 35 to 51 |
      |    4    | 52 to 68 |
      |    5    | 69 to 85 |
+
  - Hopefully, as a team, you can complete the data entry in 10 to 20 minutes.
    Can you enter the data faster **and more accurately** than the team next to you?!
  - When you have finished, compare your table with the team next to you to help fix any mistakes.
