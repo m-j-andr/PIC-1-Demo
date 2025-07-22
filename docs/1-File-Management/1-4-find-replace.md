@@ -124,7 +124,7 @@ Here, `a p u z` means `a` times `p` times `u` times `z`.
 
 ## Formatting UIDs
 
- - Download [grades.csv](./1-4-find-replace/grades.csv)
+ - Download [grades.csv](./1-4-find-replace/grades.csv).
 
  - This file consists of a table with the following headings:
    `last name, first name, uid, hw1, hw2, hw3, hw4, hw5, exam1, exam2, final`.
@@ -134,7 +134,7 @@ Here, `a p u z` means `a` times `p` times `u` times `z`.
    it has produced a file where University IDs (UIDs) contain dashes,
    and yet it will not allow one to upload a file where UIDs contain dashes!
 
- - **Using Sublime Text**,
+ - **Using Sublime Text,**
    remove all the dashes from
    the UIDs in the `uid` column.
 

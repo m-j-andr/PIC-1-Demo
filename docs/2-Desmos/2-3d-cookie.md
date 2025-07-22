@@ -39,12 +39,12 @@ You will help this person by taking the steps enumerated below
 
    ![Cookie with an Enclosing Polygon](./desmos-screenshots/cookie.png)
 
-   - Make a table with columns called $X_{left}$ and $Y_{left}$.
+   - Make a table where $X_{left}$ and $Y_{left}$ are the column headings.
 
    - Click on an empty entry,
      type `P_left→ = polygon(X_left→, Y_left→)`,
      and hit `ENTER`,
-     so that it looks like
+     so that it looks like follows.
      <div>
        \[P_{left}\ =\ \operatorname{polygon}(X_{left},\ Y_{left})\]
      </div>

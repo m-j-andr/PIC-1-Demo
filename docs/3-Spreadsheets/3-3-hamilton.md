@@ -211,14 +211,14 @@ We can calculate this ratio more precisely.
 
 To perform this calculation in Google Sheets...
  - **Type `= 10000 * C13 / D13` into cell `E13` and hit the `ENTER` key.**
- - There is a more fun way to enter the same formula...
+ - There is a more fun way to enter the same formula:
    - type `= 10000 * `
    - click on `C13`
    - type ` / `
    - click on `D13`
    - and hit the `ENTER` key.
 
-This creates allows for a few bits of magic.
+This allows for a few bits of magic.
  - We can use the cross (+) that we used before to
    **populate cells `E2` to `E86` with analogous formulae.**
  - In fact, perhaps a "suggested autofill" appeared that
