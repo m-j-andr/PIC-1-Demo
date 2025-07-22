@@ -38,7 +38,7 @@ attributed to Hamilton, Jay, or Madison.
 Some are also attributed to Madison with Hamilton.
 However, if you look at `49.txt` to `57.txt`,
 `62.txt`, and `63.txt`, the author is listed as
-Madison **or** Hamilton.
+"MADISON **or** HAMILTON".
 
 > "... The original manuscripts have never been found and were most likely destroyed at the time of printing (except for the drafts of Jay's essays)...
 The number [Madison] claimed [to have written] in a list first made public in 1818...
@@ -47,20 +47,22 @@ The 14 November 1807 issue of that magazine reproduced a memorandum, said to be 
 The discrepancy between these two lists gave rise to a famous literary dispute over the authorship of certain numbers of *The Federalist*..."
 [https://founders.archives.gov/documents/Madison/01-10-02-0177](https://founders.archives.gov/documents/Madison/01-10-02-0177){:target="_blank"}
 
-In this exercise, we will try to resolve the dispute!
+In this exercise, we will try to resolve the dispute
+by saying who wrote essays 49 to 57, 62, and 63!
 
 
 
 
-## Making a table that is appropriate for the problem
+## Making a table that is appropriate for addressing the problem
 
-Our attempt to resolve the dispute focusses on the use of the word "upon".
+Our attempt to resolve the dispute
+focusses on the use of the word "upon".
 For each essay, we will record
 the essay number, the author, the number of "upon"s,
-the number of characters, and the "upon"s per 10000 characters.
+the number of characters, and the "upon"s per 10,000 characters.
 
  - Through your g.ucla.edu email, open `Sheets`.
-   - Click on the icon with 9 dots, next to UCLA, in the top-right.
+   - Click on the icon with 9 dots that is in the top-right, next to UCLA.
    - Select `Sheets`.
  - Click on `Blank spreadsheet`.
  - Title your document as `Federalist-Papers-Data`
@@ -104,11 +106,12 @@ the number of characters, and the "upon"s per 10000 characters.
 Fill in columns `B`, `C`, and `D` for essay 12.
  - Open `12.txt`.
  - You can see the author is listed as HAMILTON.
- - You can use Sublime Text to count the numbers of "upon"s as 7,
-   6 with a lowercase `u` and one with an uppercase `U`.
+ - You can use Sublime Text to count the numbers of "upon"s as 7.
+   6 have a lowercase `u` and one has an uppercase `U`.
+   **It is best to deselect the case sensitivity icon `Aa`.**
  - By using "Select All"
    (`Selection > Select All`; "command + A" on MacOS; "ctrl + A" on Windows),
-   you can count the number of characters as 13094 quickly
+   you can count the number of characters as 13,094 quickly
    because this number is displayed at the bottom.
  - Enter `HAMILTON`, `7`, and `13094` into
    cells `B13`, `C13`, and `D13`, respectively.
@@ -116,7 +119,38 @@ Fill in columns `B`, `C`, and `D` for essay 12.
    it is simplest to enter the author
    exactly as the `.txt` file displays it.
 
-Insert instructions to distribute the labor of filling in the entire table.
+There are 84 essays left to enter information for.
+You will complete the data entry as part of a team.
+
+ - Form a group with at least three other students,
+   so that there are at least four of you in total.
+ - Pick one member of the team to be the owner of the team data.
+   This student needs to follow the following steps.
+   - Select `File > Make a copy`.
+   - Name the file as `Federalist-Papers-Team-Data`,
+     i.e. edit the name to include `Team-`.
+   - Click `Make a copy`.
+   - Select `File > Share > Share with others`.
+   - Type a member of your team's g.ucla.edu email address
+     in the "Add people, groups, and calendar events" box.
+   - Enter the g.ucla.edu email addresses of
+     the other members of your team.
+   - **Make sure to select "Editor".**
+   - Click "Send".
+ - Open `Federalist-Papers-Team-Data`.
+ - Enter the data for the remaining essays.
+   If you are a team of four.
+    - Student 1 can work on essays  1 to 22 (the work for essay 12 is already done).
+    - Student 2 can work on essays 23 to 43.
+    - Student 3 can work on essays 44 to 64.
+    - Student 4 can work on essays 65 to 85.
+
+   If you are a team of five.
+    - Student 1 can work on essays  1 to 17.
+    - Student 2 can work on essays 18 to 34.
+    - Student 3 can work on essays 35 to 51.
+    - Student 4 can work on essays 52 to 68.
+    - Student 5 can work on essays 69 to 85.
 
 
 
@@ -124,9 +158,9 @@ Insert instructions to distribute the labor of filling in the entire table.
 ## Analyzing the frequency of the word "upon" using Pivot Tables
 
 Think back to essay 12.
-7 "upon"s were used in 13094 characters.
+7 "upon"s were used in 13,094 characters.
 That means 5 to 6 "upon"s
-for every 10000 characters.
+for every 10,000 characters.
 We can calculate this ratio more precisely.
 
 <div>
@@ -143,12 +177,12 @@ To perform this calculation in Google Sheets...
    - and hit the `ENTER` key.
 
 This creates allows for a few bits of magic.
- - We can use the cross (+) from before to
+ - We can use the cross (+) that we used before to
    **populate cells `E2` to `E86` with analogous formulae.**
- - Perhaps a "suggested autofill" popped up that
+ - In fact, perhaps a "suggested autofill" popped up that
    populated the cells for you already!
  - If we edit the values in cell `C13` and `D13`,
-   the value of 5.34596 will is conveniently updated
+   the value of 5.34596 is conveniently updated
    using the formula that we just typed.
 
 
