@@ -71,9 +71,9 @@ the number of characters, and the "upon"s per 10000 characters.
    - Number of "upon"s
    - Number of characters
    - "Upon"s per 10000 characters
- - We want the first column to contain the numbers $1$ to $85$.
-   - Type $1$ into `A2`.
-   - Type $2$ into `A3`.
+ - We want the first column to contain the numbers 1 to 85.
+   - Type 1 into `A2`.
+   - Type 2 into `A3`.
    - Highlight `A2` and `A3`.
    - Hover your mouse where the blue circle is:
      at the bottom-right of the highlighted region.
@@ -108,7 +108,7 @@ Fill in columns `B`, `C`, and `D` for essay 12.
    6 with a lowercase `u` and one with an uppercase `U`.
  - By using "Select All"
    (`Selection > Select All`; "command + A" on MacOS; "ctrl + A" on Windows),
-   you can count the number of characters as $13094$ quickly
+   you can count the number of characters as 13094 quickly
    because this number is displayed at the bottom.
  - Enter `HAMILTON`, `7`, and `13094` into
    cells `B13`, `C13`, and `D13`, respectively.
@@ -124,17 +124,17 @@ Insert instructions to distribute the labor of filling in the entire table.
 ## Analyzing the frequency of the word "upon" using Pivot Tables
 
 Think back to essay 12.
-$7$ "upon"s were used in $13094$ characters.
-That means $5$ to $6$ "upon"s
-for every $10000$ characters.
+7 "upon"s were used in 13094 characters.
+That means 5 to 6 "upon"s
+for every 10000 characters.
 We can calculate this ratio more precisely.
 
 <div>
-  \[\frac{7}{1.3094}\ =\ 10000\cdot\frac{7}{13094}\ = 5.34596\ \text{(5dp)}\]
+  \[\frac{7}{1.3094}\ =\ 10000\ \times\ \frac{7}{13094}\ =\ 5.34596\ \text{(5dp)}\]
 </div>
 
-To do this in Google Sheets...
- - We can type `= 10000 * C13 / D13` into cell `E13` and hit the `ENTER` key.
+To perform this calculation in Google Sheets...
+ - **Type `= 10000 * C13 / D13` into cell `E13` and hit the `ENTER` key.**
  - A more fun way is to...
    - type `= 10000 * `
    - click on `C13`
@@ -145,10 +145,10 @@ To do this in Google Sheets...
 This creates allows for a few bits of magic.
  - We can use the cross (+) from before to
    **populate cells `E2` to `E86` with analogous formulae.**
- - Perhaps a "Suggested autofill" popped up that
+ - Perhaps a "suggested autofill" popped up that
    populated the cells for you already!
  - If we edit the values in cell `C13` and `D13`,
-   the value of $5.34596$ is conveniently recalculated
+   the value of 5.34596 will is conveniently updated
    using the formula that we just typed.
 
 
