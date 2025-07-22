@@ -54,7 +54,7 @@ In this exercise, we will try to resolve the dispute!
 
 ## Making a table that is appropriate for the problem
 
-Our attempt to resolve the dispute is focussed on the usage of the word "upon".
+Our attempt to resolve the dispute focusses on the use of the word "upon".
 For each essay, we will record
 the essay number, the author, the number of "upon"s,
 the number of characters, and the "upon"s per 10000 characters.
@@ -104,8 +104,8 @@ the number of characters, and the "upon"s per 10000 characters.
 Fill in columns `B`, `C`, and `D` for essay 12.
  - Open `12.txt`.
  - You can see the author is listed as HAMILTON.
- - You can use Sublime Text to count the numbers of "upon"s as 7
-   (6 with a lowercase `u` and one with an uppercase `U`).
+ - You can use Sublime Text to count the numbers of "upon"s as 7,
+   6 with a lowercase `u` and one with an uppercase `U`.
  - By using "Select All"
    (`Selection > Select All`; "command + A" on MacOS; "ctrl + A" on Windows),
    you can count the number of characters as $13094$ quickly
@@ -114,7 +114,7 @@ Fill in columns `B`, `C`, and `D` for essay 12.
    cells `B13`, `C13`, and `D13`, respectively.
  - **Note.** In order to be consistent,
    it is simplest to enter the author
-   exactly as the `.txt` displays it.
+   exactly as the `.txt` file displays it.
 
 Insert instructions to distribute the labor of filling in the entire table.
 
@@ -123,6 +123,33 @@ Insert instructions to distribute the labor of filling in the entire table.
 
 ## Analyzing the frequency of the word "upon" using Pivot Tables
 
+Think back to essay 12.
+$7$ "upon"s were used in $13094$ characters.
+That means $5$ to $6$ "upon"s
+for every $10000$ characters.
+We can calculate this ratio more precisely.
+
+<div>
+  \[\frac{7}{1.3094}\ =\ 10000\cdot\frac{7}{13094}\ = 5.34596\ \text{(5dp)}\]
+</div>
+
+To do this in Google Sheets...
+ - We can type `= 10000 * C13 / D13` into cell `E13` and hit the `ENTER` key.
+ - A more fun way is to...
+   - type `= 10000 * `
+   - click on `C13`
+   - type ` / `
+   - click on `D13`
+   - and hit the `ENTER` key.
+
+This creates allows for a few bits of magic.
+ - We can use the cross (+) from before to
+   **populate cells `E2` to `E86` with analogous formulae.**
+ - Perhaps a "Suggested autofill" popped up that
+   populated the cells for you already!
+ - If we edit the values in cell `C13` and `D13`,
+   the value of $5.34596$ is conveniently recalculated
+   using the formula that we just typed.
 
 
 

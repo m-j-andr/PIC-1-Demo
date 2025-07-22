@@ -402,7 +402,7 @@ this is a positive outcome! In any case, Wikipedia is currently much more
 reliable than ChatGPT when it comes to mathematics and computer science!
 
 
-# concept::sheets, concept::table
+## concept::sheets, concept::table
 
 Tables are convenient because they allow one
 to specify *datatypes* for each column.
@@ -414,7 +414,7 @@ you can select `Edit column type`
 to select the appropriate datatype.
 
 
-# concept::sheets, concept::filter
+## concept::sheets, concept::filter
 
 *Filters* allow us to focus
 on a subset of our data.
@@ -437,7 +437,7 @@ You can exit a filter view as follows.
  - Click `Exit view`.
 
 
-# concept::sheets, concept::pivot-table
+## concept::sheets, concept::pivot-table
 
 Pivot tables allow us to display our data in different ways
 to highlight the information that concerns us the most.
