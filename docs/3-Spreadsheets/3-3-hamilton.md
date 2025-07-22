@@ -10,7 +10,7 @@
  - Unzip it to obtain a folder with path
    `/Users/YOUR_NAME/Documents/UCLA-Classes/PIC-1/3-Spreadsheets/The-Federalist-Papers`.
  - Within this folder, you will find a file called `all.txt`.
-   `all.txt` file was downloaded from [The Project Gutenberg](https://www.gutenberg.org/).
+   `all.txt` was downloaded from [The Project Gutenberg](https://www.gutenberg.org/){:target="_blank"}.
    It is for use within the United States in accordance with
    the Project Gutenberg License included with the ebook.
  - There are also files called `00.txt`, `01.txt`, `02.txt`, ..., `85.txt`.
@@ -24,8 +24,8 @@ They were published from 1787 to 1788.
 
 The essays were intended to persuade New Yorkers
 at the time to ratify the new U.S. Constitution.
-Over time, these essays became highly influential in
-the interpretation of United States constitutional theory.
+Over time, these essays strongly influenced
+United States constitutional theory.
 
 
 
@@ -33,11 +33,11 @@ the interpretation of United States constitutional theory.
 ## Essays 49 to 57, 62, and 63
 
 As you look through `01.txt` to `85.txt`,
-you will notice that most essays are
-attributed to Hamilton, Jay, or Madison;
-some are attributed to Madison with Hamilton.
+you will notice that most of the essays are
+attributed to Hamilton, Jay, or Madison.
+Some are also attributed to Madison with Hamilton.
 However, if you look at `49.txt` to `57.txt`,
-`62.txt` and `63.txt`, the author is listed as
+`62.txt`, and `63.txt`, the author is listed as
 Madison **or** Hamilton.
 
 > "... The original manuscripts have never been found and were most likely destroyed at the time of printing (except for the drafts of Jay's essays)...
@@ -52,12 +52,12 @@ In this exercise, we will try to resolve the dispute!
 
 
 
-## Recording the frequency of the word "upon"
+## Making a table that is appropriate for the problem
 
 Our attempt to resolve the dispute is focussed on the usage of the word "upon".
 For each essay, we will record
 the essay number, the author, the number of "upon"s,
-the number of characters, and the "Upon"s per 10000 characters.
+the number of characters, and the "upon"s per 10000 characters.
 
  - Through your g.ucla.edu email, open `Sheets`.
    - Click on the icon with 9 dots, next to UCLA, in the top-right.
@@ -71,9 +71,9 @@ the number of characters, and the "Upon"s per 10000 characters.
    - Number of "upon"s
    - Number of characters
    - "Upon"s per 10000 characters
- - We want the first column to contain the numbers 1 to 85.
-   - Type 1 into `A2`.
-   - Type 2 into `A3`.
+ - We want the first column to contain the numbers $1$ to $85$.
+   - Type $1$ into `A2`.
+   - Type $2$ into `A3`.
    - Highlight `A2` and `A3`.
    - Hover your mouse where the blue circle is:
      at the bottom-right of the highlighted region.
@@ -94,12 +94,35 @@ the number of characters, and the "Upon"s per 10000 characters.
    - Select columns `A` to `E` and then
      select `Format > Alignment > Center` from the top menu.
  - If your table looks like the following screenshot, well done!
-   ![Empty Hamilt-upon Table](./sheets-screenshots/42.png)
+   ![Empty Hamilt-upon Table](./sheets-screenshots/??.png)
+
+
+
+
+## Recording the frequency of the word "upon"
+
+Fill in columns `B`, `C`, and `D` for essay 12.
+ - Open `12.txt`.
+ - You can see the author is listed as HAMILTON.
+ - You can use Sublime Text to count the numbers of "upon"s as 7
+   (6 with a lowercase `u` and one with an uppercase `U`).
+ - By using "Select All"
+   (`Selection > Select All`; "command + A" on MacOS; "ctrl + A" on Windows),
+   you can count the number of characters as $13094$ quickly
+   because this number is displayed at the bottom.
+ - Enter `HAMILTON`, `7`, and `13094` into
+   cells `B13`, `C13`, and `D13`, respectively.
+ - **Note.** In order to be consistent,
+   it is simplest to enter the author
+   exactly as the `.txt` displays it.
+
+Insert instructions to distribute the labor of filling in the entire table.
 
 
 
 
 ## Analyzing the frequency of the word "upon" using Pivot Tables
+
 
 
 

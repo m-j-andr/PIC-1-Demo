@@ -30,7 +30,7 @@
    - Select `UID > Edit column type > Number > Number`.
    - Select `Time (minutes) > Edit column type > Number > Number`.
    - Select `Timestamp > Edit column type > Date > Date time`.
-   - These selections specified the most appropriate datatype for each column.
+   - These selections specified the most appropriate *datatype* for each column.
  - Select columns `A` to `E` and then
    select `Format > Alignment > Center` from the top menu.
  - If your table looks like the following screenshot, well done!

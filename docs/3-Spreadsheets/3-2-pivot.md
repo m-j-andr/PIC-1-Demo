@@ -13,7 +13,7 @@
  - Select `Insert > Pivot table` from the top menu.
    ![Creating a pivot table](./sheets-screenshots/16.png)
    - "Data range: Tutoring" is perfect.
-   - "Insert to: New sheet"  is perfect.
+   - "Insert to: New sheet" is perfect.
    - Click `Create`.
  - Select the suggested "Sum of Time (Minutes) for each Name by Course".
    ![Creating a suggested pivot table](./sheets-screenshots/17.png)

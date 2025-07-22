@@ -388,17 +388,71 @@ mistyping $pepperoni$ or $mushroom$ is easily noticed and fixed.
 
 ## concept::wikipedia
 
-We have used Wikipedia as a reference a number of times in this course.
+We have used [Wikipedia](https://www.wikipedia.org/){:target="_blank"}
+as a reference a number of times in this course.
 As with any other resource, the truth of Wikipedia should be questioned.
 For example, articles about people can be edited in defamatory ways.
 However, mathematical articles are normally edited by mathematicians who
 do not have hidden agendas; they simply want to share mathematics with others.
-Of course, some pages may have errors, but in our experience, they are rare.
+Of course, some pages may have errors, but in our experience, these are rare.
 Most of the pages shared in this course are only shared with you
 to encourage you to explore a topic further, if you find it interesting.
-If you track down inaccuracies because you read very carefully on a topic,
+If you track down inaccuracies because you read very carefully about a topic,
 this is a positive outcome! In any case, Wikipedia is currently much more
-reliable than ChatGPT on mathematics and computer science!
+reliable than ChatGPT when it comes to mathematics and computer science!
+
+
+# concept::sheets, concept::table
+
+Tables are convenient because they allow one
+to specify *datatypes* for each column.
+After selecting a collection of cells,
+you can select `Format > Convert to table`
+from the top menu.
+Using the arrows in the column headings,
+you can select `Edit column type`
+to select the appropriate datatype.
+
+
+# concept::sheets, concept::filter
+
+*Filters* allow us to focus
+on a subset of our data.
+
+You can create a *filter view* as follows.
+ - Click on the calculator to the right of the table heading.
+ - Click `Create filter view`.
+ - Click `Save view`.
+ - Name the view.
+ - Click `Save`.
+
+You can apply a filter as follows.
+ - Click the filter icon to the right of the column name.
+   It is supposed to look like a [funnel](https://en.wikipedia.org/wiki/Funnel#/media/File:Kitchen_Funnel.jpg){:target="_blank"}.
+ - Choose the desired settings for the filter.
+ - Click `OK`.
+
+You can exit a filter view as follows.
+ - Click on the calculator to the right of the table heading.
+ - Click `Exit view`.
+
+
+# concept::sheets, concept::pivot-table
+
+Pivot tables allow us to display our data in different ways
+to highlight the information that concerns us the most.
+You can create one as follows.
+
+ - Make sure to exit any filter views.
+ - Click anywhere on the original table.
+ - Select `Insert > Pivot table` from the top menu.
+ - Click `Create`.
+ - Ponder what you want the rows and/or columns to be,
+   and what information you would like to be displayed.
+ - Upon making such decisions, you can click `Add`
+   next to a heading in the *pivot table editor*
+   that says **Rows**, **Columns**, or **Values**,
+   and make your chosen selections.
 
 
 ## concept::string
@@ -467,3 +521,4 @@ reliable than ChatGPT on mathematics and computer science!
 ## concept::fitting, concept::line-fitting, concept::curve-fitting
 
 ## concept::matplotlib, concept::plotting, concept::plt
+
