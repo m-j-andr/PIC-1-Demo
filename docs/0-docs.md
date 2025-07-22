@@ -43,7 +43,7 @@ Here are some common file extensions.
 Do not worry if you have not encountered them all.
 
 | Extension               | Purpose                                                                                                 |
-| ----------------------- | ------------------------------------------------------------------------------------------------------- |
+| ----------------------: | :------------------------------------------------------------------------------------------------------ |
 |  `.txt`                 | Text file consisting of plain text (no formatting)                                                      |
 |  `.csv`                 | Text file containing tabular data where columns are separated by commas                                 |
 |  `.bmp`, `.jpg`, `.png` | Image file                                                                                              |
@@ -306,7 +306,7 @@ For an example, see the [rings of Saturn exercise](./2-Desmos/2-3e-rings.md).
 Throughout our Desmos examples, we adopt the following conventions.
 
 | Type of quantity | Variables used                                                             |
-| ---------------- | -------------------------------------------------------------------------- |
+| ---------------: | :------------------------------------------------------------------------- |
 |        Data      | Capitalized letters                                                        |
 |     Learned      | Lowercase, not $x$, $y$ or $r$, but subscripted $x$, $y$, and $r$ are fine |
 |     Plotted      | $x$, $y$ (in pairs that make a specified equation true)                    |
