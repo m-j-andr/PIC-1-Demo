@@ -21,7 +21,6 @@
 Alexander Hamilton, John Jay, and James Madison
 under the pseudonym *Publius*.
 They were published from 1787 to 1788.
-
 The essays were intended to persuade New Yorkers
 at the time to ratify the new U.S. Constitution.
 Over time, these essays strongly influenced
@@ -62,7 +61,7 @@ the essay number, the author, the number of "upon"s,
 the number of characters, and the "upon"s per 10,000 characters.
 
  - Through your g.ucla.edu email, open `Sheets`.
-   - Click on the icon with 9 dots that is in the top-right, next to UCLA.
+   - Click on the icon with 9 dots at the top-right, next to UCLA.
    - Select `Sheets`.
  - Click on `Blank spreadsheet`.
  - Title your document as `Federalist-Papers-Data`
@@ -101,23 +100,28 @@ the number of characters, and the "upon"s per 10,000 characters.
 
 
 
-## Recording the frequency of the word "upon"
+## Collecting data
 
 Fill in columns `B`, `C`, and `D` for essay 12.
  - Open `12.txt`.
  - You can see the author is listed as HAMILTON.
- - You can use Sublime Text to count the numbers of "upon"s as 7.
-   6 have a lowercase `u` and one has an uppercase `U`.
-   **It is best to deselect the case sensitivity icon `Aa`.**
+ - You can use Sublime Text to count the numbers of "upon"s.
+   There are seven. Six have a lowercase `u` and one has an uppercase `U`.
+   **Deselect the case sensitivity icon `Aa` so that Sublime Text says 7.**
  - By using "Select All"
    (`Selection > Select All`; "command + A" on MacOS; "ctrl + A" on Windows),
-   you can count the number of characters as 13,094 quickly
+   you can quickly count the number of characters as 13,094
    because this number is displayed at the bottom.
  - Enter `HAMILTON`, `7`, and `13094` into
    cells `B13`, `C13`, and `D13`, respectively.
  - **Note.** In order to be consistent,
-   it is simplest to enter the author
-   exactly as the `.txt` file displays it.
+   it is simplest to enter the authors
+   exactly as the `.txt` files display them:
+   uppercase for names,
+   lowercase for "or" and "with".
+
+<br>
+<br>
 
 There are 84 essays left to enter information for.
 You will complete the data entry as part of a team.
@@ -136,30 +140,60 @@ You will complete the data entry as part of a team.
    - Enter the g.ucla.edu email addresses of
      the other members of your team.
    - **Make sure to select "Editor".**
-   - Click "Send".
- - Open `Federalist-Papers-Team-Data`.
+   - Click `Send`.
+ - Open the sheet `Federalist-Papers-Team-Data`
+   that was just shared with you.
  - Enter the data for the remaining essays.
-   If you are a team of four.
-    - Student 1 can work on essays  1 to 22 (the work for essay 12 is already done).
-    - Student 2 can work on essays 23 to 43.
-    - Student 3 can work on essays 44 to 64.
-    - Student 4 can work on essays 65 to 85.
+   - If you are a team of four...
+     - student 1 can work on essays  1 to 22;
+     - student 2 can work on essays 23 to 43;
+     - student 3 can work on essays 44 to 64;
+     - student 4 can work on essays 65 to 85.
+   - If you are a team of five...
+     - student 1 can work on essays  1 to 17;
+     - student 2 can work on essays 18 to 34;
+     - student 3 can work on essays 35 to 51;
+     - student 4 can work on essays 52 to 68;
+     - student 5 can work on essays 69 to 85.
+ - Hopefully, as a team, you can complete the data entry in 10 to 20 minutes.
+   Can you enter the data faster **and more accurately** than the team next to you?!
+ - When you have finished, compare your table with the team next to you to help fix any mistakes.
+ - Finally, copy and paste the data from `Federalist-Papers-Team-Data` (the team Google sheet)
+   back to `Federalist-Papers-Data` (your individual Google sheet).
 
-   If you are a team of five.
-    - Student 1 can work on essays  1 to 17.
-    - Student 2 can work on essays 18 to 34.
-    - Student 3 can work on essays 35 to 51.
-    - Student 4 can work on essays 52 to 68.
-    - Student 5 can work on essays 69 to 85.
+FYI, the writers of this webpage performed their
+entire data collection process in under a minute
+by running the following Python code,
+pasting its output into a CSV file,
+and importing that CSV file into Google sheets.
+You are not expected to understand any of the code below,
+but hopefully, this example makes you excited to learn some Python.
+```python
+print('Essay number, Author, Number of "upon"s, Number of characters, "Upon"s per 10000 characters')
+
+for i in range(1, 86):
+  if i < 10: path = '0' + str(i) + '.txt'
+  else:      path =       str(i) + '.txt'
+
+  with open(path, 'r') as f:
+    s = f.read()
+
+    j = s.index('\n', s.index('\n', s.index('\n', s.index('\n', s.index('\n', s.index('\n') + 1) + 1) + 1) + 1) + 1)
+    k = s.index('\n', s.index('\n', j + 1) + 1)
+
+    upons = s.count('upon') + s.count('Upon')
+
+    print(i, '"' + s[j + 1 : k].strip() + '"', upons, len(s), sep=', ', end=',\n')
+```
 
 
 
 
-## Analyzing the frequency of the word "upon" using Pivot Tables
+## Using a formula in Google sheets
 
 Think back to essay 12.
-7 "upon"s were used in 13,094 characters.
-That means 5 to 6 "upon"s
+Seven "upon"s were used in 13,094 characters.
+That means there were five to six "upon"s
 for every 10,000 characters.
 We can calculate this ratio more precisely.
 
@@ -169,7 +203,7 @@ We can calculate this ratio more precisely.
 
 To perform this calculation in Google Sheets...
  - **Type `= 10000 * C13 / D13` into cell `E13` and hit the `ENTER` key.**
- - A more fun way is to...
+ - There is a more fun way to enter the same formula...
    - type `= 10000 * `
    - click on `C13`
    - type ` / `
@@ -179,11 +213,16 @@ To perform this calculation in Google Sheets...
 This creates allows for a few bits of magic.
  - We can use the cross (+) that we used before to
    **populate cells `E2` to `E86` with analogous formulae.**
- - In fact, perhaps a "suggested autofill" popped up that
+ - In fact, perhaps a "suggested autofill" appeared that
    populated the cells for you already!
  - If we edit the values in cell `C13` and `D13`,
-   the value of 5.34596 is conveniently updated
-   using the formula that we just typed.
+   the value is conveniently updated using
+   the formula that we just typed.
+
+
+
+
+## Analyzing the frequency of the word "upon" using Pivot Tables
 
 
 
