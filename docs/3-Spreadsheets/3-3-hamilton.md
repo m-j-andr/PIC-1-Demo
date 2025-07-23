@@ -233,14 +233,129 @@ This allows for a few bits of magic.
 ## Analyzing the frequency of the word "upon" using Pivot Tables
 
 
+### Analysis 1
+
+Create a new pivot table.
+ - For the rows, use `Author`.
+ - For the values, use `Number of "upon"s` and summarize by SUM.
+
+Use the pivot table to analyze the Federalist Papers data.
+ - What does the pivot table suggest to you about the authorship of
+   the essays whose author is labelled as "MADISON or HAMILTON"?
+ - Does the pivot table alone show enough information
+   to prove your conjecture?
+
+
+### Analysis 2
+
+Create a new pivot table.
+ - For the rows, use `Author`.
+ - For the columns, use `Number of "upon"s`.
+ - For the values, use `Essay number` and summarize by COUNT.
+
+Use the pivot table to analyze the Federalist Papers data.
+ - What does the pivot table suggest to you about the authorship of
+   the essays whose author is labelled as "MADISON or HAMILTON"?
+ - Does the pivot table alone show enough information
+   to prove your conjecture?
+
+
+### Analysis 3
+
+Create a new pivot table.
+ - For the rows, use `Author`.
+ - For the columns, use `"Upon"s per 10000 characters`.
+   - Right-click (or two-finger tap) on any of the column headings.
+   - Select `Create pivot group rule`.
+   - Under "Interval size", type 2.
+   - Click `OK`.
+ - For the values, use `Essay number` and summarize by COUNT.
+
+Use the pivot table to analyze the Federalist Papers data.
+ - What does the pivot table suggest to you about the authorship of
+   the essays whose author is labelled as "MADISON or HAMILTON"?
+ - Does the pivot table alone show enough information
+   to prove your conjecture?
+
+
+### Analysis 4
+
+Use the same pivot table from "Analysis 3".
+ - Right-click (or two-finger tap) on any of the column headings.
+ - Select `Edit pivot group rule`.
+ - Under "Interval size", change 2 to 1.6.
+ - Click `OK`.
+
+Use the pivot table to analyze the Federalist Papers data.
+ - What does the pivot table suggest to you about the authorship of
+   the essays whose author is labelled as "MADISON or HAMILTON"?
+ - Does the pivot table alone show enough information
+   to prove your conjecture?
+
+
 
 
 ## Conditional Formatting
+
+Go back to the original sheet. We are going to highlight
+the `"Upons" per 10000 characters` column using different colors.
+
+First color.
+ - Right-click (or two-finger tap) on column `E`.
+ - Select `Conditional formatting`.
+ - For **Apply to range**, type `E2:E86`.
+ - For **Format rules**, select to format cells if "Greater than".
+ - For the "Value or formula", type 2.1.
+ - For the "Fill color", select a green of your choice.
+
+Second color.
+ - Right-click (or two-finger tap) on column `E`.
+ - Select `Conditional formatting`.
+ - Click `+ Add another rule`.
+ - For **Apply to range**, type `E2:E86`.
+ - For **Format rules**, select to format cells if "Less than".
+ - For the "Value or formula", type 1.6.
+ - For the "Fill color", select a blue of your choice.
+
+Third color.
+ - Right-click (or two-finger tap) on column `E`.
+ - Select `Conditional formatting`.
+ - Click `+ Add another rule`.
+ - For **Apply to range**, type `E2:E86`.
+ - For **Format rules**, select to format cells if "Is between".
+ - For the "Value or formula" boxes, type 1.6 and 2.1.
+ - For the "Fill color", select a yellow of your choice.
+
+Analyze the data.
+ - What do you notice about the green boxes?
+ - What do you notice about the blue boxes?
+ - There are three yellow boxes. For each of them,
+   describe the significance of the box being yellow.
 
 
 
 
 ## Conjecturing the Authorship of Essays 49 to 57, 62, and 63
 
+Essays 49 to 57, 62, and 63 amount to 11 papers.
+Suppose that you are made to gamble and
+the only resource you have
+to help you with your bet is
+the Google Sheet that you just created.
 
+You can pick between three options.
+In each option, if you are correct, you win the money,
+and if you are incorrect, you have to pay the money.
 
+ 1. The bet is for \$1100. To win,
+    you have to specify the author for each of the 11 papers correctly.
+ 2. The bet is for \$1000. To win,
+    you have to pick 10 of the 11 papers
+    and specify the author for each of the 10 papers correctly.
+ 3. The bet is for \$900. To win,
+    you have to pick 9 of the 11 papers
+    and specify the author for each of the 9 papers correctly.
+
+Which option do you pick?
+And how do you specify the author for the papers that you chose?
+Justify your decision.
