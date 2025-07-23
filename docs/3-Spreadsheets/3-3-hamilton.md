@@ -212,7 +212,7 @@ We can perform this calculation in Google Sheets.
  - There is also a more fun way to enter the same formula.
    - Type `= 10000 * `
    - Click on `C13`
-   - Type ` / `
+   - Type `/`
    - Click on `D13`
    - Hit the `ENTER` key
 
@@ -247,6 +247,8 @@ Use the pivot table to analyze the Federalist Papers data.
  - Does the pivot table alone display enough information
    to prove your conjecture?
 
+<br>
+
 
 ### Analysis 2
 
@@ -260,6 +262,8 @@ Use the pivot table to analyze the Federalist Papers data.
    the essays whose author is labelled as "MADISON or HAMILTON"?
  - Does the pivot table alone show enough information
    to prove your conjecture?
+
+<br>
 
 
 ### Analysis 3
@@ -279,10 +283,14 @@ Use the pivot table to analyze the Federalist Papers data.
  - Does the pivot table alone show enough information
    to prove your conjecture?
 
+<br>
+
 
 ### Analysis 4
 
 Use the same pivot table from "Analysis 3".
+You could right-click (or two-finger tap)
+where it says "Pivot Table 3" and select `Duplicate`.
  - Right-click (or two-finger tap) on any of the column headings.
  - Select `Edit pivot group rule`.
  - Under "Interval size", change `2` to `1.6`.
@@ -302,40 +310,39 @@ Use the pivot table to analyze the Federalist Papers data.
 Go back to the original sheet. We are going to highlight the cells in
 the `"Upons" per 10,000 characters` column using different colors.
 
-Green cells.
- - Right-click (or two-finger tap) on column `E`.
-   ![Conditional formatting](./sheets-screenshots/46.png)
- - Select `Conditional formatting`.
- - For **Apply to range**, type `E2:E86`.
- - For **Format rules**, select to format cells if "Greater than".
- - For the "Value or formula", type `2.1`.
- - For the "Fill color", select a green of your choice.
-   ![Green conditional formatting](./sheets-screenshots/47.png)
- - Click `Done`.
+- **Green cells.**
+  - Right-click (or two-finger tap) on column `E`.
+    ![Conditional formatting](./sheets-screenshots/46.png)
+  - Select `Conditional formatting`.
+  - For **Apply to range**, type `E2:E86`.
+  - For **Format rules**, select format cells if "Greater than".
+  - For the "Value or formula", type `2.1`.
+  - For the "Fill color", select a green of your choice.
+    ![Green conditional formatting](./sheets-screenshots/47.png)
+  - Click `Done`.
 
-Blue cells.
- - If necessary, right-click (or two-finger tap) on column `E`
-   and select `Conditional formatting`.
- - Click `+ Add another rule`.
- - For **Apply to range**, type `E2:E86`.
- - For **Format rules**, select to format cells if "Less than".
- - For the "Value or formula", type `1.6`.
- - For the "Fill color", select a blue of your choice.
- - Click `Done`.
+- **Blue cells.**
+  - If necessary, right-click (or two-finger tap) on column `E`
+    and select `Conditional formatting`.
+  - Click `+ Add another rule`.
+  - For **Apply to range**, type `E2:E86`.
+  - For **Format rules**, select format cells if "Less than".
+  - For the "Value or formula", type `1.6`.
+  - For the "Fill color", select a blue of your choice.
+  - Click `Done`.
 
-Yellow cells.
- - If necessary, right-click (or two-finger tap) on column `E`
-   and select `Conditional formatting`.
- - Click `+ Add another rule`.
- - For **Apply to range**, type `E2:E86`.
- - For **Format rules**, select to format cells if "Is between".
- - For the "Value or formula" boxes, type `1.6` and `2.1`.
- - For the "Fill color", select a yellow of your choice.
- - Click `Done`.
+- **Yellow cells.**
+  - If necessary, right-click (or two-finger tap) on column `E`
+    and select `Conditional formatting`.
+  - Click `+ Add another rule`.
+  - For **Apply to range**, type `E2:E86`.
+  - For **Format rules**, select format cells if "Is between".
+  - For the "Value or formula" boxes, type `1.6` and `2.1`.
+  - For the "Fill color", select a yellow of your choice.
+  - Click `Done`.
 
-In the following screenshot columns `C` and `D` are hidden.
-
-![Completed conditional formatting](./sheets-screenshots/48.png)
+- In the following screenshot columns `C` and `D` are hidden.
+  ![Completed conditional formatting](./sheets-screenshots/48.png)
 
 Analyze the data.
  - What do you notice about the green boxes?
@@ -352,7 +359,7 @@ Essays 49 to 57, 62, and 63 amount to 11 papers.
 Suppose that you are made to gamble and that
 the Google Sheet you just created
 is the only resource you have
-to help you with your bet.
+to help decide on your bet.
 
 You are allowed to pick between three options.
 
