@@ -46,8 +46,8 @@ The 14 November 1807 issue of that magazine reproduced a memorandum, said to be 
 The discrepancy between these two lists gave rise to a famous literary dispute over the authorship of certain numbers of *The Federalist*..."
 [https://founders.archives.gov/documents/Madison/01-10-02-0177](https://founders.archives.gov/documents/Madison/01-10-02-0177){:target="_blank"}
 
-In this exercise, we will try to resolve the dispute
-by saying who wrote essays 49 to 57, 62, and 63!
+In this exercise, you will try to resolve the dispute,
+attempting to deduce who wrote essays 49 to 57, 62, and 63!
 
 
 
@@ -71,7 +71,7 @@ the number of characters, and the "upon"s per 10,000 characters.
    - Author
    - Number of "upon"s
    - Number of characters
-   - "Upon"s per 10000 characters
+   - "Upon"s per 10,000 characters
  - We want the first column to contain the numbers 1 to 85.
    - Type 1 into `A2`.
    - Type 2 into `A3`.
@@ -81,7 +81,7 @@ the number of characters, and the "upon"s per 10,000 characters.
      A cross (+) will appear.
    - Click and drag down to cell `A86`.
    - BOOM!
- - We want to use a *table* as before.
+ - We want to use a table as before.
    - Highlight from `A1` to `E86`.
    - Select `Format > Convert to table` from the top menu.
    - Click at the top of the table (dark green)
@@ -91,11 +91,11 @@ the number of characters, and the "upon"s per 10,000 characters.
      - Select `Essay number > Edit column type > Number > Number`.
      - Select `Number of "upon"s > Edit column type > Number > Number`.
      - Select `Number of characters > Edit column type > Number > Number`.
-     - Select `"Upon"s per 10000 characters > Edit column type > Number > Number`.
+     - Select `"Upon"s per 10,000 characters > Edit column type > Number > Number`.
    - Select columns `A` to `E` and then
      select `Format > Alignment > Center` from the top menu.
  - If your table looks like the following screenshot, well done!
-   ![Empty Hamilt-upon Table](./sheets-screenshots/??.png)
+   ![Empty Hamilt-upon Table](./sheets-screenshots/42.png)
 
 
 
@@ -108,6 +108,7 @@ Fill in columns `B`, `C`, and `D` for essay 12.
  - You can use Sublime Text to count the numbers of "upon"s.
    There are seven. Six have a lowercase `u` and one has an uppercase `U`.
    **Deselect the case sensitivity icon `Aa` so that Sublime Text says 7.**
+ - Press `ESC` to stop using "Find".
  - By using "Select All"
    (`Selection > Select All`; "command + A" on MacOS; "ctrl + A" on Windows),
    you can quickly count the number of characters as 13,094
@@ -120,8 +121,7 @@ Fill in columns `B`, `C`, and `D` for essay 12.
    uppercase for names,
    lowercase for the words "or" and "with".
 
-<br>
-<br>
+![Hamilt-upon table with row 12 filled](./sheets-screenshots/43.png)
 
 There are 84 essays left to enter information for.
 You will complete the data entry as part of a team.
@@ -144,7 +144,7 @@ You will complete the data entry as part of a team.
  - Open the sheet `Federalist-Papers-Team-Data`
    that was just shared with you.
  - Enter the data for the remaining essays.
-   - If you are a team of four...
+   - If you are a team of four, distribute the labor as follows.
 
      | Student |  Essays  |
      | :-----: | :------: |
@@ -153,7 +153,7 @@ You will complete the data entry as part of a team.
      |    3    | 44 to 64 |
      |    4    | 65 to 85 |
 
-   - If you are a team of five...
+   - If you are a team of five, distribute the labor as follows.
 
      | Student |  Essays  |
      | :-----: | :------: |
@@ -177,8 +177,6 @@ and importing that CSV file into Google sheets.
 You are not expected to understand any of the code below,
 but, hopefully, this example makes you excited to learn some Python.
 ```python
-print('Essay number, Author, Number of "upon"s, Number of characters, "Upon"s per 10000 characters')
-
 for i in range(1, 86):
   if i < 10: path = '0' + str(i) + '.txt'
   else:      path =       str(i) + '.txt'
@@ -191,7 +189,7 @@ for i in range(1, 86):
 
     upons = s.count('upon') + s.count('Upon')
 
-    print(i, '"' + s[j : k].strip() + '"', upons, len(s), sep=', ', end=',\n')
+    print(i, '"' + s[j : k].strip() + '"', upons, len(s), sep=', ')
 ```
 
 
@@ -209,14 +207,16 @@ We can calculate this ratio more precisely.
   \[\frac{7}{1.3094}\ =\ 10000\ \times\ \frac{7}{13094}\ =\ 5.34596\ \text{(5dp)}\]
 </div>
 
-To perform this calculation in Google Sheets...
+We can perform this calculation in Google Sheets.
  - **Type `= 10000 * C13 / D13` into cell `E13` and hit the `ENTER` key.**
- - There is a more fun way to enter the same formula:
-   - type `= 10000 * `
-   - click on `C13`
-   - type ` / `
-   - click on `D13`
-   - and hit the `ENTER` key.
+ - There is also a more fun way to enter the same formula.
+   - Type `= 10000 * `
+   - Click on `C13`
+   - Type ` / `
+   - Click on `D13`
+   - Hit the `ENTER` key
+
+![Hamilt-upon table with a formula on row 12](./sheets-screenshots/44.png)
 
 This allows for a few bits of magic.
  - We can use the cross (+) that we used before to
@@ -237,12 +237,14 @@ This allows for a few bits of magic.
 
 Create a new pivot table.
  - For the rows, use `Author`.
- - For the values, use `Number of "upon"s` and summarize by SUM.
+ - For the values, use `Number of "upon"s` and summarize by `SUM`.
+
+![Hamilt-upon pivot table for analysis 1](./sheets-screenshots/45.png)
 
 Use the pivot table to analyze the Federalist Papers data.
- - What does the pivot table suggest to you about the authorship of
-   the essays whose author is labelled as "MADISON or HAMILTON"?
- - Does the pivot table alone show enough information
+ - What does the pivot table suggest to you about the author of the essays
+   whose author is currently labelled as "MADISON or HAMILTON"?
+ - Does the pivot table alone display enough information
    to prove your conjecture?
 
 
@@ -251,7 +253,7 @@ Use the pivot table to analyze the Federalist Papers data.
 Create a new pivot table.
  - For the rows, use `Author`.
  - For the columns, use `Number of "upon"s`.
- - For the values, use `Essay number` and summarize by COUNT.
+ - For the values, use `Essay number` and summarize by `COUNT`.
 
 Use the pivot table to analyze the Federalist Papers data.
  - What does the pivot table suggest to you about the authorship of
@@ -264,12 +266,12 @@ Use the pivot table to analyze the Federalist Papers data.
 
 Create a new pivot table.
  - For the rows, use `Author`.
- - For the columns, use `"Upon"s per 10000 characters`.
+ - For the columns, use `"Upon"s per 10,000 characters`.
    - Right-click (or two-finger tap) on any of the column headings.
    - Select `Create pivot group rule`.
-   - Under "Interval size", type 2.
+   - Under "Interval size", type `2`.
    - Click `OK`.
- - For the values, use `Essay number` and summarize by COUNT.
+ - For the values, use `Essay number` and summarize by `COUNT`.
 
 Use the pivot table to analyze the Federalist Papers data.
  - What does the pivot table suggest to you about the authorship of
@@ -283,7 +285,7 @@ Use the pivot table to analyze the Federalist Papers data.
 Use the same pivot table from "Analysis 3".
  - Right-click (or two-finger tap) on any of the column headings.
  - Select `Edit pivot group rule`.
- - Under "Interval size", change 2 to 1.6.
+ - Under "Interval size", change `2` to `1.6`.
  - Click `OK`.
 
 Use the pivot table to analyze the Federalist Papers data.
@@ -297,34 +299,43 @@ Use the pivot table to analyze the Federalist Papers data.
 
 ## Conditional Formatting
 
-Go back to the original sheet. We are going to highlight
-the `"Upons" per 10000 characters` column using different colors.
+Go back to the original sheet. We are going to highlight the cells in
+the `"Upons" per 10,000 characters` column using different colors.
 
-First color.
+Green cells.
  - Right-click (or two-finger tap) on column `E`.
+   ![Conditional formatting](./sheets-screenshots/46.png)
  - Select `Conditional formatting`.
  - For **Apply to range**, type `E2:E86`.
  - For **Format rules**, select to format cells if "Greater than".
- - For the "Value or formula", type 2.1.
+ - For the "Value or formula", type `2.1`.
  - For the "Fill color", select a green of your choice.
+   ![Green conditional formatting](./sheets-screenshots/47.png)
+ - Click `Done`.
 
-Second color.
- - Right-click (or two-finger tap) on column `E`.
- - Select `Conditional formatting`.
+Blue cells.
+ - If necessary, right-click (or two-finger tap) on column `E`
+   and select `Conditional formatting`.
  - Click `+ Add another rule`.
  - For **Apply to range**, type `E2:E86`.
  - For **Format rules**, select to format cells if "Less than".
- - For the "Value or formula", type 1.6.
+ - For the "Value or formula", type `1.6`.
  - For the "Fill color", select a blue of your choice.
+ - Click `Done`.
 
-Third color.
- - Right-click (or two-finger tap) on column `E`.
- - Select `Conditional formatting`.
+Yellow cells.
+ - If necessary, right-click (or two-finger tap) on column `E`
+   and select `Conditional formatting`.
  - Click `+ Add another rule`.
  - For **Apply to range**, type `E2:E86`.
  - For **Format rules**, select to format cells if "Is between".
- - For the "Value or formula" boxes, type 1.6 and 2.1.
+ - For the "Value or formula" boxes, type `1.6` and `2.1`.
  - For the "Fill color", select a yellow of your choice.
+ - Click `Done`.
+
+In the following screenshot columns `C` and `D` are hidden.
+
+![Completed conditional formatting](./sheets-screenshots/48.png)
 
 Analyze the data.
  - What do you notice about the green boxes?
@@ -338,24 +349,25 @@ Analyze the data.
 ## Conjecturing the Authorship of Essays 49 to 57, 62, and 63
 
 Essays 49 to 57, 62, and 63 amount to 11 papers.
-Suppose that you are made to gamble and
-the only resource you have
-to help you with your bet is
-the Google Sheet that you just created.
+Suppose that you are made to gamble and that
+the Google Sheet you just created
+is the only resource you have
+to help you with your bet.
 
-You can pick between three options.
-In each option, if you are correct, you win the money,
-and if you are incorrect, you have to pay the money.
+You are allowed to pick between three options.
 
  1. The bet is for \$1100. To win,
     you have to specify the author for each of the 11 papers correctly.
  2. The bet is for \$1000. To win,
     you have to pick 10 of the 11 papers
-    and specify the author for each of the 10 papers correctly.
+    and specify the author for each of those 10 papers correctly.
  3. The bet is for \$900. To win,
     you have to pick 9 of the 11 papers
-    and specify the author for each of the 9 papers correctly.
+    and specify the author for each of those 9 papers correctly.
 
-Which option do you pick?
-And how do you specify the author for the papers that you chose?
-Justify your decision.
+In each option, if you are correct, you win the money,
+but if you are incorrect, you have to pay the money.
+ - Which option do you pick?
+ - How do you specify the author for the papers that you chose?
+ - Justify your decisions.
+
