@@ -347,7 +347,10 @@ the `"Upons" per 10,000 characters` column using different colors.
 Analyze the data.
  - What do you notice about the green boxes?
  - What do you notice about the blue boxes?
- - There are three yellow boxes. For each of them,
+ - There are **three** yellow boxes.
+   In the table, each yellow box corresponds to a different author.
+   Therefore, the significance of each feels quite different.
+   For each of the yellow boxes,
    describe the significance of the box being yellow.
 
 
@@ -364,17 +367,17 @@ to help decide on your bet.
 You are allowed to pick between three options.
 
  1. The bet is for \$1100. To win,
-    you have to specify the author for each of the 11 papers correctly.
+    you have to specify the true author for each of the 11 papers correctly.
  2. The bet is for \$1000. To win,
     you have to pick 10 of the 11 papers
-    and specify the author for each of those 10 papers correctly.
+    and specify the true author for each of those 10 papers correctly.
  3. The bet is for \$900. To win,
     you have to pick 9 of the 11 papers
-    and specify the author for each of those 9 papers correctly.
+    and specify the true author for each of those 9 papers correctly.
 
 In each option, if you are correct, you win the money,
 but if you are incorrect, you have to pay the money.
  - Which option do you pick?
- - How do you specify the author for the papers that you chose?
+ - How do you specify the true author for the papers that you chose?
  - Justify your decisions.
 
