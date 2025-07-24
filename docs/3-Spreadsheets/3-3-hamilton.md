@@ -383,13 +383,13 @@ but if you are incorrect, you have to pay the money.
  - Justify your decisions.
 
 Upon completing this activity,
-you will understand that
-the interpretation of data
-depends upon how it is presented,
+you will appreciate that
+people's interpretation of data often
+depends upon how the data is presented,
 and that if you insist upon knowing the truth,
 then you cannot place enough emphasis
 upon the importance of careful data analysis,
 so you should always make sure to put
-your thinking-hat upon your head.
+your thinking hat upon your head.
 Who do you think wrote that last sentence?!
 
