@@ -173,7 +173,7 @@ FYI, the writers of this webpage performed their
 entire data collection process in under a minute
 by running the following Python code,
 pasting its output into a CSV file,
-and importing that CSV file into Google sheets.
+and importing that CSV file into Google Sheets.
 You are not expected to understand any of the code below,
 but, hopefully, this example makes you excited to learn some Python.
 ```python
@@ -195,7 +195,7 @@ for i in range(1, 86):
 
 
 
-## Using a formula in Google sheets
+## Using a formula in Google Sheets
 
 Think back to essay 12.
 Seven "upon"s were used in 13,094 characters.
@@ -242,10 +242,10 @@ Create a new pivot table.
 ![Hamilt-upon pivot table for analysis 1](./sheets-screenshots/45.png)
 
 Use the pivot table to analyze the Federalist Papers data.
- - What does the pivot table suggest to you about the author of the essays
-   whose author is currently labelled as "MADISON or HAMILTON"?
- - Does the pivot table alone display enough information
-   to prove your conjecture?
+ - What does the pivot table suggest to you about
+   the true author of the "MADISON or HAMILTON" essays?
+ - How would someone cast doubt upon this suggestion?
+   What would they complain about with regards to your pivot table?
 
 <br>
 
@@ -258,10 +258,10 @@ Create a new pivot table.
  - For the values, use `Essay number` and summarize by `COUNT`.
 
 Use the pivot table to analyze the Federalist Papers data.
- - What does the pivot table suggest to you about the authorship of
-   the essays whose author is labelled as "MADISON or HAMILTON"?
- - Does the pivot table alone show enough information
-   to prove your conjecture?
+ - What does the pivot table suggest to you about
+   the true author of the "MADISON or HAMILTON" essays?
+ - How would someone cast doubt upon this suggestion?
+   What would they complain about with regards to your pivot table?
 
 <br>
 
@@ -278,10 +278,10 @@ Create a new pivot table.
  - For the values, use `Essay number` and summarize by `COUNT`.
 
 Use the pivot table to analyze the Federalist Papers data.
- - What does the pivot table suggest to you about the authorship of
-   the essays whose author is labelled as "MADISON or HAMILTON"?
- - Does the pivot table alone show enough information
-   to prove your conjecture?
+ - What does the pivot table suggest to you about
+   the true author of the "MADISON or HAMILTON" essays?
+ - How would someone cast doubt upon this suggestion?
+   What data would they point at in your pivot table?
 
 <br>
 
@@ -297,10 +297,11 @@ where it says "Pivot Table 3" and select `Duplicate`.
  - Click `OK`.
 
 Use the pivot table to analyze the Federalist Papers data.
- - What does the pivot table suggest to you about the authorship of
-   the essays whose author is labelled as "MADISON or HAMILTON"?
- - Does the pivot table alone show enough information
-   to prove your conjecture?
+ - What does the pivot table suggest to you about
+   the true author of the "MADISON or HAMILTON" essays?
+ - Based on analysis 3 and analysis 4,
+   are there some essays that
+   you would like to pay special attention to?
 
 
 
@@ -360,7 +361,7 @@ Analyze the data.
 
 Essays 49 to 57, 62, and 63 amount to 11 papers.
 Suppose that you are made to gamble and that
-the Google Sheet you just created
+the Google sheet you just created
 is the only resource you have
 to help decide on your bet.
 
@@ -380,4 +381,15 @@ but if you are incorrect, you have to pay the money.
  - Which option do you pick?
  - How do you specify the true author for the papers that you chose?
  - Justify your decisions.
+
+Upon completing this activity,
+you will understand that
+the interpretation of data
+depends upon how it is presented,
+and that if you insist upon knowing the truth,
+then you cannot place enough emphasis
+upon the importance of careful data analysis,
+so you should always make sure to put
+your thinking-hat upon your head.
+Who do you think wrote that last sentence?!
 
