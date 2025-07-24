@@ -47,3 +47,5 @@
 [2 - Pivot tables](./3-Spreadsheets/3-2-pivot.md)
 
 [3 - Hamilton or Not Hamilton](./3-Spreadsheets/3-3-hamilton.md)
+
+[4 - 2048 and friends](./3-Spreadsheets/3-4-pow2.md)
