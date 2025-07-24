@@ -390,6 +390,6 @@ and that if you insist upon knowing the truth,
 then you cannot place enough emphasis
 upon the importance of careful data analysis,
 so you should always make sure to put
-your thinking hat upon your head.
+your thinking hat upon your head,
+and not to be put upon.
 Who do you think wrote that last sentence?!
-
