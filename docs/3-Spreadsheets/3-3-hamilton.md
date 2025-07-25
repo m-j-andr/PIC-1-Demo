@@ -310,6 +310,8 @@ Use the pivot table to analyze the Federalist Papers data.
 
 Go back to the original sheet. We are going to highlight the cells in
 the `"Upons" per 10,000 characters` column using different colors.
+If the colors below are not distinct enough for you,
+feel free to make different choices.
 
 - **Green cells.**
   - Right-click (or two-finger tap) on column `E`.
