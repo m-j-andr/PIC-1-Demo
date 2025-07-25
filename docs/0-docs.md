@@ -192,9 +192,9 @@ The following is a reasonable and correct sentence concerning
 the solution to a quadratic equation.
 
 If $a$, $b$, $c$, and $x$ are numbers
-and $ax^2\ +\ bx\ +\ c\ =\ 0$,
-then $x\ =\ \frac{-b\ +\ \sqrt{b^2 - 4ac}}{2a}$
-or $x\ =\ \frac{-b\ -\ \sqrt{b^2 - 4ac}}{2a}$.
+and $ax^2 + bx + c = 0$,
+then $x = \frac{-b + \sqrt{b^2 - 4ac}}{2a}$
+or $x = \frac{-b - \sqrt{b^2 - 4ac}}{2a}$.
 
  - There are commas after $a$, $b$, $c$, and $0$.
  - There is a period after the last mathematical expression
@@ -324,7 +324,7 @@ may be helpful.
  - $x^2\ =\ 1$ describes two vertical lines.
  - $y^2\ =\ 1$ describes two horizontal lines.
  - $x^2\ +\ y^2\ =\ 2$ describes a circle of radius $\sqrt{2}$.
- - All of these graphs pass through the points $(1,\ 1)$, $(1,\ -1)$, $(-1,\ 1)$, and $(-1,\ -1)$.
+ - All of these graphs pass through the points $(1,\ 1)$, $(1, -1)$, $(-1,\ 1)$, and $(-1, -1)$.
 
 
 ## concept::desmos-conventions
