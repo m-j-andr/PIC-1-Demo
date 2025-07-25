@@ -186,6 +186,24 @@ next to where you type what you would like to find.
      `tester` gives `Tester tester`.
 
 
+## concept::math, concept::sentence, concept::period
+
+The following is a reasonable and correct sentence concerning
+the solution to a quadratic equation.
+
+If $a$, $b$, $c$, and $x$ are numbers
+and $ax^2\ +\ bx\ +\ c\ =\ 0$,
+then $x\ =\ \frac{-b\ +\ \sqrt{b^2 - 4ac}}{2a}$
+or $x\ =\ \frac{-b\ -\ \sqrt{b^2 - 4ac}}{2a}$.
+
+ - There are commas after $a$, $b$, $c$, and $0$.
+ - There is a period after the last mathematical expression
+   because the sentence ends with this expression.
+ - The commas and the period are not a part of the math.
+ - When discussing math,
+   one should still adhere to the usual rules of grammar.
+
+
 ## concept::desmos, concept::desmos-graphing-calculator, concept::desmos-x, concept::desmos-y
 
 Desmos is a graphing calculator. Since it draws graphs in the $xy$-plane,
@@ -299,6 +317,14 @@ you will ensure that Desmos learns a positive $r_0$.
 In some applications, constraining learned values is essential in order
 to avoid solutions that do not make sense to the problem being solved.
 For an example, see the [rings of Saturn exercise](./2-Desmos/2-3e-rings.md).
+
+For another example,
+[this instance of Desmos](https://www.desmos.com/calculator/e1ygxp8z65){:target="_blank"}
+may be helpful.
+ - $x^2\ =\ 1$ describes two vertical lines.
+ - $y^2\ =\ 1$ describes two horizontal lines.
+ - $x^2\ +\ y^2\ =\ 2$ describes a circle of radius $\sqrt{2}$.
+ - All of these graphs pass through the points $(1,\ 1)$, $(1,\ -1)$, $(-1,\ 1)$, and $(-1,\ -1)$.
 
 
 ## concept::desmos-conventions

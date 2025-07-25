@@ -34,7 +34,7 @@ image you prefer.
    another table with column names
    $X_{ring}$ and $Y_{ring}$.
 
- - **You will need at least four points to fit each ellipse**.
+ - **You will need at least four points to fit each ellipse.**
 
  - **You will need the equations for two ellipses.**
    <div>
@@ -54,14 +54,16 @@ image you prefer.
        - For the A ring, the radius in the $y$-direction is shorter
          because of the angle at which the image has been captured.
 
-     $p$ is vaguely intended to stand for *momentum* or *perspective*.
-
  - **You will also need to constrain some of the values that Desmos learns.**
    Otherwise, the values Desmos learns can be very unhelpful!
 
    ![Saturn with an Enclosing Ellipse](./desmos-screenshots/saturn.png)
 
    - $x_{saturn}$ and $x_{ring}$ can be constrained to lie within the $x$-values of the image.
+     - What are the $x$-values for the image above? The $x$-axis will help you.
+     - What was the constraint for $x_{saturn}$ used in the image above?
    - $y_{saturn}$ and $y_{ring}$ can be constrained to lie within the $y$-values of the image.
-   - $1 < r_{saturn} < 3$ and $1 < p_{saturn} < 3$ are sensible constraints.
-   - $4 < r_{ring} < 5$ and $0 < p_{ring} < 3$ are sensible constraints.
+     - What are the $y$-values for the image above? The $y$-axis will help you.
+     - What was the constraint for $y_{saturn}$ used in the image above?
+   - $1 < r_{saturn} < 3$ and $1 < p_{saturn} < 3$ are sensible constraints (unless you rescale the images).
+   - $4 < r_{ring} < 5$ and $0 < p_{ring} < 3$ are sensible constraints (unless you rescale the images).

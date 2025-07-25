@@ -81,6 +81,9 @@ You will help this person by taking the steps enumerated below
      First, note that
      the absolute value symbol `|` is
      near the `ENTER` key of your keyboard: `shift + \`.
+     Second, note that
+     the sigma $\sum$ indicates a summation,
+     and it is obtained, in Desmos, by typing `sum`.
 
      Here is how I would type the shoelace formula in Desmos.
      - `A_left→ = 1/2→ ||←() + ()←←←←←←`
@@ -101,3 +104,4 @@ You will help this person by taking the steps enumerated below
      overestimate the size of the original cookie
      and underestimate the amount left by a little bit?
    - I think the conclusion is unanimous!! Marriage saved.
+

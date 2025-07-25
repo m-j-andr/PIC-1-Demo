@@ -128,8 +128,8 @@ Autumn, Winter, Spring, and Summer!
       $a(x\ -\ x_{shadow})^2\ +\ b(y\ -\ y_{shadow})^2\ +\ c(x\ -\ x_{shadow})(y\ -\ y_{shadow})\ =\ 1$
       to the shadow created by Saturn on its rings.
       Around 12 points together with
-      constraints on $x_{ring}$ and $y_{ring}$ and
-      the constraints $a>0$ and $b>0$
+      the constraints $a>0$ and $b>0$,
+      and constraints on $x_{shadow}$ and $y_{shadow}$
       might be necessary.
 
     - Calculate...

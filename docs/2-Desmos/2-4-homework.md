@@ -113,6 +113,7 @@ I think that Kepler's law says p is
  - In `cookie.txt` answer the following question.
    > Why did one part of the exercise suggest to overestimate the size of the original cookie and underestimate the amount left?
  - Save a screenshot of your Desmos solution to the same folder and rename it as `cookie.png`.
+   Your screenshot should include the cookie, the polygon, and the fraction $\frac{A_{left}}{A_{cookie}}$.
    You might have to look up how to take a screenshot!
  - Submit `cookie.txt` and `cookie.png` to Gradescope.
 
@@ -146,4 +147,3 @@ r_{saturn} / r_{ring} =
  - Submit `rings.txt` to Gradescope.
  - **REMARK.** The [tilt of Saturn exercise](2-3f-tilt.md) is a bonus exercise.
    Solving it is rewarding, but it will not give you extra course credit.
-
