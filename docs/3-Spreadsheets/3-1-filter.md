@@ -32,7 +32,7 @@ and [Google Sheets](https://en.wikipedia.org/wiki/Google_Sheets){:target="_blank
  - Download [this file](./data/tutoring.csv).
    As you will see shortly,
    this CSV file contains data
-   for the use of a tutoring service at a school.
+   regarding the use of a tutoring service at a school.
    The data is made-up: a fictitious school with fictitious students.
  - Save the file in the folder `/Users/YOUR_NAME/Documents/UCLA-Classes/PIC-1/3-Spreadsheets`.
  - Through your g.ucla.edu email,
@@ -108,15 +108,15 @@ There are different options for Text, Numbers, and Dates.
 ## Some Questions About The Data
 
  - How many times did Ahmed Ibrahim attend tutoring?
-   - <textarea id="ahmed_1" rows="1" cols="8"></textarea>
+   - <textarea id="ahmed_1" rows="1" cols="18"></textarea>
  - What was the total time Ahmed attended tutoring for?
-   - <textarea id="ahmed_2" rows="1" cols="8"></textarea>
+   - <textarea id="ahmed_2" rows="1" cols="18"></textarea>
  - What was Ahmed's longest tutoring session?
-   - <textarea id="ahmed_3" rows="1" cols="8"></textarea>
+   - <textarea id="ahmed_3" rows="1" cols="18"></textarea>
  - Which course did Ahmed receive the most tutoring sessions for?
-   - <textarea id="ahmed_4" rows="1" cols="8"></textarea>
+   - <textarea id="ahmed_4" rows="1" cols="18"></textarea>
  - Which course did Ahmed dedicate the most time to during their tutoring sessions?
-   - <textarea id="ahmed_5" rows="1" cols="8"></textarea>
+   - <textarea id="ahmed_5" rows="1" cols="18"></textarea>
  - <input type="button" value="Submit solutions" id="ahmed_submit">
    - <span id="comment"><br><br></span>
    <script>

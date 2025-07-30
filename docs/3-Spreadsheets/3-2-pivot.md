@@ -178,23 +178,23 @@ Use Pivot Tables to **elegantly** answer the following questions
 with **minimal scrolling through data**.
 
  - How many times did Isabel Nguyen attend tutoring?
-   - <textarea id="isabel_1" rows="1" cols="8"></textarea>
+   - <textarea id="isabel_1" rows="1" cols="18"></textarea>
  - Which course did Isabel receive the most tutoring sessions for?
-   - <textarea id="isabel_2" rows="1" cols="8"></textarea>
+   - <textarea id="isabel_2" rows="1" cols="18"></textarea>
  - How many times did Fatima Al-Farsi attend tutoring?
-   - <textarea id="fatima_1" rows="1" cols="8"></textarea>
+   - <textarea id="fatima_1" rows="1" cols="18"></textarea>
  - Which course did Fatima dedicate the least time to during their tutoring sessions?
-   - <textarea id="fatima_2" rows="1" cols="8"></textarea>
+   - <textarea id="fatima_2" rows="1" cols="18"></textarea>
  - Which Elena spent the most time at tutoring sessions?
-   - <textarea id="elenas_1" rows="1" cols="8"></textarea>
+   - <textarea id="elenas_1" rows="1" cols="18"></textarea>
  - What was the total time this Elena attended tutoring for?
-   - <textarea id="elenas_2" rows="1" cols="8"></textarea>
+   - <textarea id="elenas_2" rows="1" cols="18"></textarea>
  - Which course did the Elenas dedicate the most time to during their tutoring sessions?
-   - <textarea id="elenas_3" rows="1" cols="8"></textarea>
+   - <textarea id="elenas_3" rows="1" cols="18"></textarea>
  - What was the total tutoring time the Elenas dedicated to this course?
-   - <textarea id="elenas_4" rows="1" cols="8"></textarea>
+   - <textarea id="elenas_4" rows="1" cols="18"></textarea>
  - What was the total time that all Elenas attended tutoring for?
-   - <textarea id="elenas_5" rows="1" cols="8"></textarea>
+   - <textarea id="elenas_5" rows="1" cols="18"></textarea>
  - <input type="button" value="Submit solutions" id="isabel_fatima_elenas_submit">
    - <span id="comment"><br><br></span>
    <script>

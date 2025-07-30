@@ -254,10 +254,12 @@ Create a new pivot table.
 
 Analyze the Federalist Papers data using
 **only the pivot table that you just created.**
+Forget any insights that you had while collecting the data.
  - What does the pivot table suggest to you about
    the true authors of the "MADISON or HAMILTON" essays?
- - How would someone cast doubt upon this suggestion?
-   In particular, what would they complain about with regard to your pivot table?
+ - Imagine that a person who you mistrust has shown this pivot table to you,
+   and so you are wary of being manipulated by the data that they have presented.
+   Can you think of other explanations for the data presented which are currently plausible?
 
 <br>
 
@@ -270,11 +272,11 @@ Create a new pivot table.
  - For the values, use `Essay number` and summarize by `COUNT`.
 
 Analyze the Federalist Papers data using
-**only the pivot table that you just created.**
+**only the pivot tables that you have just created.**
  - What does the pivot table suggest to you about
    the true authors of the "MADISON or HAMILTON" essays?
- - How would someone cast doubt upon this suggestion?
-   In particular, what would they complain about with regard to your pivot table?
+ - Does the question seem more subtle than when
+   you were looking at the first pivot table?
 
 <br>
 
@@ -294,8 +296,9 @@ Analyze the Federalist Papers data using
 **only the pivot table that you just created.**
  - What does the pivot table suggest to you about
    the true authors of the "MADISON or HAMILTON" essays?
- - How would someone cast doubt upon this suggestion?
-   What data would they point at in your pivot table?
+ - Imagine that you are a descendent of Hamilton and you wish to argue on his behalf.
+   What data in the pivot table should you point at vigorously?
+
 
 <br>
 
@@ -315,8 +318,29 @@ Analyze the Federalist Papers data using
  - What does the pivot table suggest to you about
    the true authors of the "MADISON or HAMILTON" essays?
  - Based on analysis 3 and analysis 4,
-   are there some essays that
-   you would like to pay special attention to?
+   are there some essays that you would like
+   to pay special attention to?
+
+
+<br>
+
+
+### Analysis 5
+
+Create a new pivot table.
+ - For the rows, use `Author`.
+ - For the columns, use `Number of characters`.
+   - Right-click (or two-finger tap) on any of the column headings.
+   - Select `Create pivot group rule`.
+   - Under "Interval size", type `5,600`.
+   - Click `OK`.
+ - For the values, use `Essay number` and summarize by `COUNT`.
+
+Analyze the Federalist Papers data using
+**only the pivot table that you just created.**
+ - What does the pivot table suggest to you about
+   the true authors of the "MADISON or HAMILTON" essays?
+ - How do you currently feel about your prior analysis?
 
 
 
