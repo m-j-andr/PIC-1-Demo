@@ -35,10 +35,10 @@ but you can assume they are circular
 ## Task 3 - Compare with Data from the Internet
 
  - Look up "the radius of the orbit of Saturn in astronomical units, perihelion, aphelion".
- - If your search result rasies any new questions, look up answers to these questions too!
+ - If your search result raises any new questions, look up answers to these questions too!
  - Based on the values you calculated in task 1 and task 2,
    in what ways is the cartoon depiction close-to-accurate
-   with regards to the orbits of Saturn and Earth?
+   regarding the orbits of Saturn and Earth?
  - In what ways is the cartoon depiction inaccurate?
 
 
