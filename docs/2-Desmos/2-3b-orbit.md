@@ -11,31 +11,35 @@ Using this cartoon, estimate the ratio of
 the radius of Saturn's orbit to the radius of Earth's orbit.
 The real orbits are elliptical,
 but you can assume they are circular
-(like the pizzas in [example 2](2-2.md)).
+(like the pizzas in [example 2](2-2.md){:target="_blank"}).
 
 
 
 
 ## Task 2 - The Centers of the Orbits
 
- - In the cartoon, is the Sun at the center of Earth's orbit?
+ - Based on the values you calculated in task 1,
+   determine whether the center point of Earth's orbit lies within the Sun?
 
- - In the cartoon, is the Sun at the center of Saturn's orbit?
+ - Based on the values you calculated in task 1,
+   determine whether the center point of Saturn's orbit lies within the Sun?
 
  - Calculate another interesting ratio...
-   - Start with the $y$-coordinate Desmos learned for the center of Saturn's orbit.
-   - Subtract the $y$-coordinate Desmos learned for the center of Earth's orbit.
+   - Start with the $y$-coordinate Desmos learned for the center point of Saturn's orbit.
+   - Subtract the $y$-coordinate Desmos learned for the center point of Earth's orbit.
    - Divide the difference by the value Desmos learned for the radius of Earth's orbit.
 
 
 
 
-## Task 3 - Compare with 
+## Task 3 - Compare with Data from the Internet
 
- - Look up "the radius of the orbit of saturn in astronomical units, perihelion, aphelion".
- - In what ways is the cartoon depiction close-to-accurate
+ - Look up "the radius of the orbit of Saturn in astronomical units, perihelion, aphelion".
+ - If your search result rasies any new questions, look up answers to these questions too!
+ - Based on the values you calculated in task 1 and task 2,
+   in what ways is the cartoon depiction close-to-accurate
    with regards to the orbits of Saturn and Earth?
- - In what ways is it inaccurate?
+ - In what ways is the cartoon depiction inaccurate?
 
 
 
