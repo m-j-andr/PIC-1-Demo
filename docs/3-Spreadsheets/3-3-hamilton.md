@@ -233,6 +233,12 @@ This allows for a few bits of magic.
 ## Analyzing the frequency of the word "upon" using Pivot Tables
 
 
+Hamilton and Madison both claimed to have written essays 49 to 57, 62, and 63
+**without collaborating with the other.**
+
+<br>
+
+
 ### Analysis 1
 
 Create a new pivot table.
@@ -241,7 +247,8 @@ Create a new pivot table.
 
 ![Hamilt-upon pivot table for analysis 1](./sheets-screenshots/45.png)
 
-Use **only the pivot table** to analyze the Federalist Papers data.
+Use **only the pivot table that you just created**
+to analyze the Federalist Papers data.
  - What does the pivot table suggest to you about
    the true author of the "MADISON or HAMILTON" essays?
  - How would someone cast doubt upon this suggestion?
@@ -257,7 +264,8 @@ Create a new pivot table.
  - For the columns, use `Number of "upon"s`.
  - For the values, use `Essay number` and summarize by `COUNT`.
 
-Use **only the pivot table** to analyze the Federalist Papers data.
+Use **only the pivot table that you just created**
+to analyze the Federalist Papers data.
  - What does the pivot table suggest to you about
    the true author of the "MADISON or HAMILTON" essays?
  - How would someone cast doubt upon this suggestion?
@@ -277,7 +285,8 @@ Create a new pivot table.
    - Click `OK`.
  - For the values, use `Essay number` and summarize by `COUNT`.
 
-Use **only the pivot table** to analyze the Federalist Papers data.
+Use **only the pivot table that you just created**
+to analyze the Federalist Papers data.
  - What does the pivot table suggest to you about
    the true author of the "MADISON or HAMILTON" essays?
  - How would someone cast doubt upon this suggestion?
@@ -296,7 +305,8 @@ where it says "Pivot Table 3" and select `Duplicate`.
  - Under "Interval size", change `2` to `1.6`.
  - Click `OK`.
 
-Use **only the pivot table** to analyze the Federalist Papers data.
+Use **only the pivot table that you just created**
+to analyze the Federalist Papers data.
  - What does the pivot table suggest to you about
    the true author of the "MADISON or HAMILTON" essays?
  - Based on analysis 3 and analysis 4,
