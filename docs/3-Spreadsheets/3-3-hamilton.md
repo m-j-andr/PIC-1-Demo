@@ -24,7 +24,7 @@ They were published from 1787 to 1788.
 The essays were intended to persuade New Yorkers
 at the time to ratify the new U.S. Constitution.
 Over time, these essays strongly influenced
-United States constitutional theory.
+the United States' constitutional theory.
 
 
 
@@ -55,7 +55,7 @@ attempting to deduce who wrote essays 49 to 57, 62, and 63!
 ## Making a table that is appropriate for addressing the problem
 
 Our attempt to resolve the dispute
-focusses on the use of the word "upon".
+focuses on the use of the word "upon".
 For each essay, we will record
 the essay number, the author, the number of "upon"s,
 the number of characters, and the "upon"s per 10,000 characters.
@@ -86,7 +86,7 @@ the number of characters, and the "upon"s per 10,000 characters.
    - Select `Format > Convert to table` from the top menu.
    - Click at the top of the table (dark green)
      where it says `Table1` and edit it to say `Hamilt_upon`.
-   - Using the arrows in the column headings.
+   - Now use the arrows in the column headings.
      - Select `Author > Edit column type > Text`.
      - Select `Essay number > Edit column type > Number > Number`.
      - Select `Number of "upon"s > Edit column type > Number > Number`.
@@ -105,7 +105,7 @@ the number of characters, and the "upon"s per 10,000 characters.
 Fill in columns `B`, `C`, and `D` for essay 12.
  - Open `12.txt`.
  - You can see the author is listed as HAMILTON.
- - You can use Sublime Text to count the numbers of "upon"s.
+ - You can use Sublime Text to count the number of "upon"s.
    There are seven. Six have a lowercase `u` and one has an uppercase `U`.
    **Deselect the case sensitivity icon `Aa` so that Sublime Text says 7.**
  - Press `ESC` to stop using "Find".
@@ -175,7 +175,7 @@ by running the following Python code,
 pasting its output into a CSV file,
 and importing that CSV file into Google Sheets.
 You are not expected to understand any of the code below,
-but, hopefully, this example makes you excited to learn some Python.
+but hopefully, this example makes you excited to learn some Python.
 ```python
 for i in range(1, 86):
   if i < 10: path = '0' + str(i) + '.txt'
@@ -241,11 +241,11 @@ Create a new pivot table.
 
 ![Hamilt-upon pivot table for analysis 1](./sheets-screenshots/45.png)
 
-Use the pivot table to analyze the Federalist Papers data.
+Use **only the pivot table** to analyze the Federalist Papers data.
  - What does the pivot table suggest to you about
    the true author of the "MADISON or HAMILTON" essays?
  - How would someone cast doubt upon this suggestion?
-   What would they complain about with regards to your pivot table?
+   In particular, what would they complain about with regard to your pivot table?
 
 <br>
 
@@ -257,11 +257,11 @@ Create a new pivot table.
  - For the columns, use `Number of "upon"s`.
  - For the values, use `Essay number` and summarize by `COUNT`.
 
-Use the pivot table to analyze the Federalist Papers data.
+Use **only the pivot table** to analyze the Federalist Papers data.
  - What does the pivot table suggest to you about
    the true author of the "MADISON or HAMILTON" essays?
  - How would someone cast doubt upon this suggestion?
-   What would they complain about with regards to your pivot table?
+   In particular, what would they complain about with regard to your pivot table?
 
 <br>
 
@@ -277,7 +277,7 @@ Create a new pivot table.
    - Click `OK`.
  - For the values, use `Essay number` and summarize by `COUNT`.
 
-Use the pivot table to analyze the Federalist Papers data.
+Use **only the pivot table** to analyze the Federalist Papers data.
  - What does the pivot table suggest to you about
    the true author of the "MADISON or HAMILTON" essays?
  - How would someone cast doubt upon this suggestion?
@@ -296,7 +296,7 @@ where it says "Pivot Table 3" and select `Duplicate`.
  - Under "Interval size", change `2` to `1.6`.
  - Click `OK`.
 
-Use the pivot table to analyze the Federalist Papers data.
+Use **only the pivot table** to analyze the Federalist Papers data.
  - What does the pivot table suggest to you about
    the true author of the "MADISON or HAMILTON" essays?
  - Based on analysis 3 and analysis 4,
@@ -344,7 +344,7 @@ feel free to make different choices.
   - For the "Fill color", select a yellow of your choice.
   - Click `Done`.
 
-- In the following screenshot columns `C` and `D` are hidden.
+- In the following screenshot, columns `C` and `D` are hidden.
   ![Completed conditional formatting](./sheets-screenshots/48.png)
 
 Analyze the data.

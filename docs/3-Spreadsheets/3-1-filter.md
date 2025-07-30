@@ -7,7 +7,7 @@
 
  - Download [this file](./data/tutoring.csv).
  - Save it in the folder `/Users/YOUR_NAME/Documents/UCLA-Classes/PIC-1/3-Spreadsheets`.
- - Through your g.ucla.edu email, open `Sheets`.
+ - Through your g.ucla.edu email, open Google Sheets.
    - Click on the icon with 9 dots, next to UCLA, in the top-right.
    - Select `Sheets`.
  - Click on `Blank spreadsheet`.
@@ -24,7 +24,7 @@
  - Select `Format > Convert to table` from the top menu.
  - Click at the top of the table (dark green)
    where it says `Table1` and edit it to say `Tutoring`.
- - Using the arrows in the column headings.
+ - Now use the arrows in the column headings.
    - Select `Name > Edit column type > Text`.
    - Select `Course > Edit column type > Text`.
    - Select `UID > Edit column type > Number > Number`.
@@ -63,15 +63,15 @@ Quick summaries of cells' data can be useful.
 There are different options for Text, Numbers, and Dates.
 
  - Highlight `D2` to `D8`.
-   At the bottom-right it shows `Count: 7`.
+   At the bottom-right, it shows `Count: 7`.
  - Highlight `E2` to `E8`.
-   At the bottom-right one can select between Sum, Avg, Min, Max, Count, and Count Numbers.
+   At the bottom-right, one can select between Sum, Avg, Min, Max, Count, and Count Numbers.
  - Highlight all of column `E`.
    Compare Count and Count Numbers.
    ![Quick summary options for numbers; count versus count numbers](./sheets-screenshots/04.png)
-   "Count" includes the column heading whereas "Count Numbers" does not.
+   "Count" includes the column heading, whereas "Count Numbers" does not.
  - Highlight `A2` to `A8`.
-   At the bottom-right one can select between Min, Max, Count, and Count Numbers.
+   At the bottom-right, one can select between Min, Max, Count, and Count Numbers.
 
 
 
@@ -79,17 +79,17 @@ There are different options for Text, Numbers, and Dates.
 ## Some Questions About The Data
 
  - How many times did Ahmed Ibrahim attend tutoring?
- - What was the total time they attended tutoring for?
- - What was their longest tutoring session?
- - Which course did they receive the most tutoring sessions for?
- - Which course did they dedicate the most time to during their tutoring sessions?
+ - What was the total time Ahmed attended tutoring for?
+ - What was Ahmed's longest tutoring session?
+ - Which course did Ahmed receive the most tutoring sessions for?
+ - Which course did Ahmed dedicate the most time to during their tutoring sessions?
 
 
 
 
-## Filters - What They Are For?
+## Filters - What Are They For?
 
-To answer the last two questions it was helpful to...
+To answer the last two questions, it was helpful to...
  - sort the `Course` column from A to Z;
  - sort the `Name` column from A to Z.
 
@@ -154,7 +154,7 @@ the entries that involve Carlos Mensah.
  - Click on the `Carlos Mensah` search result.
    ![Creating a filter](./sheets-screenshots/10.png)
  - Click `OK`.
- - Conveniently, you can now see just the information associated with Carlos Mensah
+ - Conveniently, you can now see just the information associated with Carlos Mensah,
    and the filter icon looks even more like a funnel!
    ![Carlos Mensah](./sheets-screenshots/11.png)
 
@@ -211,7 +211,7 @@ the entries that involve Carlos Mensah.
 
 ## Some Questions About The Data
 
-**Using filters, sorting and selecting columns,**
+**Using filters, sorting, and selecting columns,**
 answer the following questions.
 
  - How many students who attended tutoring are called Elena?

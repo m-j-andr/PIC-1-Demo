@@ -46,9 +46,9 @@
  - Hiding and displaying the pivot table editor.
    - Where you selected "Sum of Time (Minutes) for each Name by Course"
      is called the *pivot table editor*.
-   - You can click the cross to the top-right to close it.
+   - You can click the cross at the top-right to close it.
      ![Closing the pivot table editor](./sheets-screenshots/19.png)
-   - A little green pencil is often displayed to the bottom-left of the table.
+   - A little green pencil is often displayed at the bottom-left of the table.
      Hovering near it will cause the word "Edit" to appear.
      Clicking on it will display the pivot table editor again.
      ![Opening the pivot table editor](./sheets-screenshots/20.png)
@@ -131,7 +131,7 @@ Now, let's filter by date.
 
 ## Sorting and Toggling Totals
 
- - Under both the **Rows** and **Columns** heading,
+ - Under both the **Rows** and **Columns** headings,
    one can toggle "Show totals".
    - Turning on "Show totals" for rows creates a new row
      which stores the sums of the values in each column.
@@ -155,12 +155,12 @@ Now, let's filter by date.
        });
      </script>
 
-   - Now the student who spent the most time at tutoring sessions
-     on 09/08/2025 --- Mariana da Silva --- is at the bottom.
+   - The student who spent the most time at tutoring sessions
+     on 09/08/2025 --- Mariana da Silva --- is at the bottom now.
      ![Sorting](./sheets-screenshots/30.png)
    - Under the **Rows** heading,
      change "Order" to "Descending".
-   - Now Mariana da Silva is at the top.
+   - Mariana da Silva is at the top now.
    - The columns are currently arranged so that
      the class names are in alphabetical order.
    - Under the **Columns** heading,
@@ -190,7 +190,7 @@ with **minimal scrolling through data**.
 
 
 
-## Pivot Tables - What They Are For?
+## Pivot Tables - What Are They For?
 
 The previous questions can be answered elegantly using pivot tables.
 
@@ -298,10 +298,8 @@ and they will further highlight the utility of pivot tables.
    - Right-click (or two-finger tap) on any of the timestamps.
    - Select `Create pivot date group > Day of the week`.
      ![Grouping](./sheets-screenshots/37.png)
- - We now have a table showing us
-   how many tutoring minutes were
-   spent on each course broken down
-   by the day of the week.
+ - We now have a table showing us how many tutoring minutes
+   were spent on each course, broken down by the day of the week.
  - In the pivot table editor,
    drag the gray box that says
    "Timestamp - Day of the week"
@@ -340,16 +338,16 @@ and they will further highlight the utility of pivot tables.
    Next to the heading saying **Rows**...
    - Click `Add`.
    - Click `UID`.
- - On row 9 and 10, we can see that there are two students called Amina Lopez.
+ - On rows 9 and 10, we can see that there are two students called Amina Lopez.
    ![Amina Lopez](./sheets-screenshots/40.png)
  - Let's account for students with the same name more elegantly.
    - In the pivot table editor,
      drag the gray box that says "UID"
-     to be above the gray box that says "Name".
+     above the gray box that says "Name".
    - Deselect "Show totals" for "Name".
  - Now we have a table where students with the same name
    and different UIDs are acknowledged as different students,
-   and the information is displayed nice and clearly.
+   and the information is displayed clearly.
    ![Useful UIDs](./sheets-screenshots/41.png)
    We see two students named Grace O'Connor on row 40 and row 63.
 
