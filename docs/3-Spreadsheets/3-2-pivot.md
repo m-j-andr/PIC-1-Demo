@@ -178,14 +178,72 @@ Use Pivot Tables to **elegantly** answer the following questions
 with **minimal scrolling through data**.
 
  - How many times did Isabel Nguyen attend tutoring?
+   - <textarea id="isabel_1" rows="1" cols="8"></textarea>
  - Which course did Isabel receive the most tutoring sessions for?
+   - <textarea id="isabel_2" rows="1" cols="8"></textarea>
  - How many times did Fatima Al-Farsi attend tutoring?
+   - <textarea id="fatima_1" rows="1" cols="8"></textarea>
  - Which course did Fatima dedicate the least time to during their tutoring sessions?
+   - <textarea id="fatima_2" rows="1" cols="8"></textarea>
  - Which Elena spent the most time at tutoring sessions?
+   - <textarea id="elenas_1" rows="1" cols="8"></textarea>
  - What was the total time this Elena attended tutoring for?
+   - <textarea id="elenas_2" rows="1" cols="8"></textarea>
  - Which course did the Elenas dedicate the most time to during their tutoring sessions?
+   - <textarea id="elenas_3" rows="1" cols="8"></textarea>
  - What was the total tutoring time the Elenas dedicated to this course?
+   - <textarea id="elenas_4" rows="1" cols="8"></textarea>
  - What was the total time that all Elenas attended tutoring for?
+   - <textarea id="elenas_5" rows="1" cols="8"></textarea>
+ - <input type="button" value="Submit solutions" id="isabel_fatima_elenas_submit">
+   - <span id="comment"><br><br></span>
+   <script>
+     function respond_to_isabel_fatima_elenas_submission() {
+       const isabel_submission_1 = document.getElementById('isabel_1').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();
+       const isabel_submission_2 = document.getElementById('isabel_2').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();
+       const fatima_submission_1 = document.getElementById('fatima_1').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();
+       const fatima_submission_2 = document.getElementById('fatima_2').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();
+       const elenas_submission_1 = document.getElementById('elenas_1').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();
+       const elenas_submission_2 = document.getElementById('elenas_2').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();
+       const elenas_submission_3 = document.getElementById('elenas_3').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();
+       const elenas_submission_4 = document.getElementById('elenas_4').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();
+       const elenas_submission_5 = document.getElementById('elenas_5').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();
+       let correct = true;
+       if (!isabel_submission_1.startsWith('20'))          { correct = false;  alert('Your first Isabel answer is incorrect.'); }
+       if ( isabel_submission_2        !== 'math31a')      { correct = false; alert('Your second Isabel answer is incorrect.'); }
+       if (!fatima_submission_1.startsWith('20'))          { correct = false;  alert('Your first Fatima answer is incorrect.'); }
+       if ( fatima_submission_2        !== 'engr110')      { correct = false; alert('Your second Fatima answer is incorrect.'); }
+       if ( elenas_submission_1        !== 'elenaivanova') { correct = false;  alert('Your first Elenas answer is incorrect.'); }
+       if (!elenas_submission_2.startsWith('685'))         { correct = false; alert('Your second Elenas answer is incorrect.'); }
+       if ( elenas_submission_3        !== 'physics7')     { correct = false;  alert('Your third Elenas answer is incorrect.'); }
+       if (!elenas_submission_4.startsWith('385'))         { correct = false; alert('Your fourth Elenas answer is incorrect.'); }
+       if (!elenas_submission_5.startsWith('1725'))        { correct = false;  alert('Your fifth Elenas answer is incorrect.'); }
+       if (correct) {
+         document.getElementById('comment').innerHTML = 'You got it --- well done!';
+         document.getElementById('new-lines').remove();
+       }
+     }
+     document.getElementById('isabel_fatima_elenas_submit').addEventListener('click', respond_to_isabel_fatima_elenas_submission);
+   </script>
+
+<span id="new-lines">
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</span>
 
 
 

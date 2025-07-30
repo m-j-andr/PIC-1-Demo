@@ -233,8 +233,13 @@ This allows for a few bits of magic.
 ## Analyzing the frequency of the word "upon" using Pivot Tables
 
 
-Hamilton and Madison both claimed to have written essays 49 to 57, 62, and 63
+Hamilton and Madison both claimed
+to have written essays 49 to 57, 62, and 63
 **without collaborating with the other.**
+Therefore, for each "MADISON or HAMILTON" essay,
+we will assume the author is
+either Madison or Hamilton,
+and **not Madison with Hamilton.**
 
 <br>
 
@@ -247,10 +252,10 @@ Create a new pivot table.
 
 ![Hamilt-upon pivot table for analysis 1](./sheets-screenshots/45.png)
 
-Use **only the pivot table that you just created**
-to analyze the Federalist Papers data.
+Analyze the Federalist Papers data using
+**only the pivot table that you just created.**
  - What does the pivot table suggest to you about
-   the true author of the "MADISON or HAMILTON" essays?
+   the true authors of the "MADISON or HAMILTON" essays?
  - How would someone cast doubt upon this suggestion?
    In particular, what would they complain about with regard to your pivot table?
 
@@ -264,10 +269,10 @@ Create a new pivot table.
  - For the columns, use `Number of "upon"s`.
  - For the values, use `Essay number` and summarize by `COUNT`.
 
-Use **only the pivot table that you just created**
-to analyze the Federalist Papers data.
+Analyze the Federalist Papers data using
+**only the pivot table that you just created.**
  - What does the pivot table suggest to you about
-   the true author of the "MADISON or HAMILTON" essays?
+   the true authors of the "MADISON or HAMILTON" essays?
  - How would someone cast doubt upon this suggestion?
    In particular, what would they complain about with regard to your pivot table?
 
@@ -285,10 +290,10 @@ Create a new pivot table.
    - Click `OK`.
  - For the values, use `Essay number` and summarize by `COUNT`.
 
-Use **only the pivot table that you just created**
-to analyze the Federalist Papers data.
+Analyze the Federalist Papers data using
+**only the pivot table that you just created.**
  - What does the pivot table suggest to you about
-   the true author of the "MADISON or HAMILTON" essays?
+   the true authors of the "MADISON or HAMILTON" essays?
  - How would someone cast doubt upon this suggestion?
    What data would they point at in your pivot table?
 
@@ -305,10 +310,10 @@ where it says "Pivot Table 3" and select `Duplicate`.
  - Under "Interval size", change `2` to `1.6`.
  - Click `OK`.
 
-Use **only the pivot table that you just created**
-to analyze the Federalist Papers data.
+Analyze the Federalist Papers data using
+**only the current pivot table.**
  - What does the pivot table suggest to you about
-   the true author of the "MADISON or HAMILTON" essays?
+   the true authors of the "MADISON or HAMILTON" essays?
  - Based on analysis 3 and analysis 4,
    are there some essays that
    you would like to pay special attention to?
@@ -405,3 +410,4 @@ so you should always make sure to put
 your thinking hat upon your head,
 and not to be put upon.
 Who do you think wrote that last sentence?!
+

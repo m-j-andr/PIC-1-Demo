@@ -123,18 +123,18 @@ There are different options for Text, Numbers, and Dates.
      function respond_to_ahmed_submission() {
        const submission_1 = document.getElementById('ahmed_1').value.replaceAll(' ', '').replaceAll('\n', '');
        const submission_2 = document.getElementById('ahmed_2').value.replaceAll(' ', '').replaceAll('\n', '');
-       const submission_3 = document.getElementById('ahmed_2').value;
-       const submission_4 = document.getElementById('ahmed_4').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();;
-       const submission_5 = document.getElementById('ahmed_5').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();;
+       const submission_3 = document.getElementById('ahmed_3').value;
+       const submission_4 = document.getElementById('ahmed_4').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();
+       const submission_5 = document.getElementById('ahmed_5').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();
        let correct = true;
-       if (submission_1 !==    "10") { correct = false; alert('Your first answer is incorrect.');  }
-       if (submission_2 !==   "490") { correct = false; alert('Your second answer is incorrect.'); }
-       if (submission_3 ===      "") { correct = false; alert('Your third answer is incorrect.');  }
-       if (submission_4 !== "art3c") { correct = false; alert('Your fourth answer is incorrect.'); }
-       if (submission_5 !== "engr7") { correct = false; alert('Your fifth answer is incorrect.');  }
+       if (!submission_1.startsWith('10'))   { correct = false;  alert('Your first answer is incorrect.'); }
+       if (!submission_2.startsWith('490'))  { correct = false; alert('Your second answer is incorrect.'); }
+       if ( submission_3        === '')      { correct = false;  alert('Your third answer is incorrect.'); }
+       if ( submission_4        !== 'art3c') { correct = false; alert('Your fourth answer is incorrect.'); }
+       if ( submission_5        !== 'engr7') { correct = false;  alert('Your fifth answer is incorrect.'); }
        if (correct) {
-         document.getElementById('comment').innerHTML = "You got it!";
-         document.getElementById("new-lines").remove();
+         document.getElementById('comment').innerHTML = 'You got it --- well done!';
+         document.getElementById('new-lines').remove();
        }
      }
      document.getElementById('ahmed_submit').addEventListener('click', respond_to_ahmed_submission);
