@@ -178,9 +178,9 @@ Use Pivot Tables to **elegantly** answer the following questions
 with **minimal scrolling through data**.
 
  - How many times did Isabel Nguyen attend tutoring?
- - Which course did they receive the most tutoring sessions for?
+ - Which course did Isabel receive the most tutoring sessions for?
  - How many times did Fatima Al-Farsi attend tutoring?
- - Which course did they dedicate the least time to during their tutoring sessions?
+ - Which course did Fatima dedicate the least time to during their tutoring sessions?
  - Which Elena spent the most time at tutoring sessions?
  - What was the total time this Elena attended tutoring for?
  - Which course did the Elenas dedicate the most time to during their tutoring sessions?

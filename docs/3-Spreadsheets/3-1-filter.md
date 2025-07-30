@@ -3,11 +3,40 @@
 
 
 
+## Why Google Sheets?
+
+Spreadsheets enable the organization, analysis,
+and storage of data in tabular form.
+The most popular spreadsheet editors are
+[Microsoft Excel](https://en.wikipedia.org/wiki/Microsoft_Excel){:target="_blank"},
+[Numbers](https://en.wikipedia.org/wiki/Numbers_(spreadsheet)){:target="_blank"},
+and [Google Sheets](https://en.wikipedia.org/wiki/Google_Sheets){:target="_blank"}.
+
+ - A free, web-based version of Excel is
+   available through Microsoft's website,
+   but its functionality is inferior to 
+   the full, desktop version of Excel,
+   which is not free.
+ - Numbers is only available for Mac users.
+ - [Google Sheets](https://docs.google.com/spreadsheets){:target="_blank"}
+   is part of the free,
+   web-based Google Docs Editors.
+   Moreover, it is compatible with
+   Microsoft Excel file formats.
+
+
+
+
 ## Opening a CSV File
 
  - Download [this file](./data/tutoring.csv).
- - Save it in the folder `/Users/YOUR_NAME/Documents/UCLA-Classes/PIC-1/3-Spreadsheets`.
- - Through your g.ucla.edu email, open Google Sheets.
+   As you will see shortly,
+   this CSV file contains data
+   for the use of a tutoring service at a school.
+   The data is made-up: a fictitious school with fictitious students.
+ - Save the file in the folder `/Users/YOUR_NAME/Documents/UCLA-Classes/PIC-1/3-Spreadsheets`.
+ - Through your g.ucla.edu email,
+   open [Google Sheets](https://docs.google.com/spreadsheets){:target="_blank"}.
    - Click on the icon with 9 dots, next to UCLA, in the top-right.
    - Select `Sheets`.
  - Click on `Blank spreadsheet`.
@@ -78,11 +107,48 @@ There are different options for Text, Numbers, and Dates.
 
 ## Some Questions About The Data
 
- - How many times did Ahmed Ibrahim attend tutoring?
- - What was the total time Ahmed attended tutoring for?
- - What was Ahmed's longest tutoring session?
- - Which course did Ahmed receive the most tutoring sessions for?
- - Which course did Ahmed dedicate the most time to during their tutoring sessions?
+ - How many times did Ahmed Ibrahim attend tutoring? <textarea id="ahmed_1" rows="1" cols="8"></textarea>
+ - What was the total time Ahmed attended tutoring for? <textarea id="ahmed_2" rows="1" cols="8"></textarea>
+ - What was Ahmed's longest tutoring session? <textarea id="ahmed_3" rows="1" cols="8"></textarea>
+ - Which course did Ahmed receive the most tutoring sessions for? <textarea id="ahmed_4" rows="1" cols="8"></textarea>
+ - Which course did Ahmed dedicate the most time to during their tutoring sessions? <textarea id="ahmed_5" rows="1" cols="8"></textarea>
+ - <input type="button" value="Submit solutions" id="ahmed_submit">
+   <script>
+     function respond_to_ahmed_submission() {
+       const submission_1 = document.getElementById('ahmed_1').value.replaceAll(' ', '').replaceAll('\n', '');
+       const submission_2 = document.getElementById('ahmed_2').value.replaceAll(' ', '').replaceAll('\n', '');
+       const submission_4 = document.getElementById('ahmed_4').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();;
+       const submission_5 = document.getElementById('ahmed_5').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();;
+       let correct = true;
+       if (submission_1 !==    "10") { correct = false; alert('Your first answer is incorrect');  }
+       if (submission_2 !==   "490") { correct = false; alert('Your second answer is incorrect'); }
+       if (submission_4 !== "art3c") { correct = false; alert('Your fourth answer is incorrect'); }
+       if (submission_5 !== "engr7") { correct = false; alert('Your fifth answer is incorrect');  }
+       if (correct) {
+         document.getElementById("new-lines").remove();
+       }
+     }
+     document.getElementById('ahmed_submit').addEventListener('click', respond_to_ahmed_submission);
+   </script>
+
+<span id="new-lines">
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</span>
 
 
 
