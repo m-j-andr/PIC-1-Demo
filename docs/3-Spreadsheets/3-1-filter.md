@@ -107,24 +107,33 @@ There are different options for Text, Numbers, and Dates.
 
 ## Some Questions About The Data
 
- - How many times did Ahmed Ibrahim attend tutoring? <textarea id="ahmed_1" rows="1" cols="8"></textarea>
- - What was the total time Ahmed attended tutoring for? <textarea id="ahmed_2" rows="1" cols="8"></textarea>
- - What was Ahmed's longest tutoring session? <textarea id="ahmed_3" rows="1" cols="8"></textarea>
- - Which course did Ahmed receive the most tutoring sessions for? <textarea id="ahmed_4" rows="1" cols="8"></textarea>
- - Which course did Ahmed dedicate the most time to during their tutoring sessions? <textarea id="ahmed_5" rows="1" cols="8"></textarea>
+ - How many times did Ahmed Ibrahim attend tutoring?
+   - <textarea id="ahmed_1" rows="1" cols="8"></textarea>
+ - What was the total time Ahmed attended tutoring for?
+   - <textarea id="ahmed_2" rows="1" cols="8"></textarea>
+ - What was Ahmed's longest tutoring session?
+   - <textarea id="ahmed_3" rows="1" cols="8"></textarea>
+ - Which course did Ahmed receive the most tutoring sessions for?
+   - <textarea id="ahmed_4" rows="1" cols="8"></textarea>
+ - Which course did Ahmed dedicate the most time to during their tutoring sessions?
+   - <textarea id="ahmed_5" rows="1" cols="8"></textarea>
  - <input type="button" value="Submit solutions" id="ahmed_submit">
+   - <span id="comment"><br><br></span>
    <script>
      function respond_to_ahmed_submission() {
        const submission_1 = document.getElementById('ahmed_1').value.replaceAll(' ', '').replaceAll('\n', '');
        const submission_2 = document.getElementById('ahmed_2').value.replaceAll(' ', '').replaceAll('\n', '');
+       const submission_3 = document.getElementById('ahmed_2').value;
        const submission_4 = document.getElementById('ahmed_4').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();;
        const submission_5 = document.getElementById('ahmed_5').value.replaceAll(' ', '').replaceAll('\n', '').toLowerCase();;
        let correct = true;
-       if (submission_1 !==    "10") { correct = false; alert('Your first answer is incorrect');  }
-       if (submission_2 !==   "490") { correct = false; alert('Your second answer is incorrect'); }
-       if (submission_4 !== "art3c") { correct = false; alert('Your fourth answer is incorrect'); }
-       if (submission_5 !== "engr7") { correct = false; alert('Your fifth answer is incorrect');  }
+       if (submission_1 !==    "10") { correct = false; alert('Your first answer is incorrect.');  }
+       if (submission_2 !==   "490") { correct = false; alert('Your second answer is incorrect.'); }
+       if (submission_3 ===      "") { correct = false; alert('Your third answer is incorrect.');  }
+       if (submission_4 !== "art3c") { correct = false; alert('Your fourth answer is incorrect.'); }
+       if (submission_5 !== "engr7") { correct = false; alert('Your fifth answer is incorrect.');  }
        if (correct) {
+         document.getElementById('comment').innerHTML = "You got it!";
          document.getElementById("new-lines").remove();
        }
      }
