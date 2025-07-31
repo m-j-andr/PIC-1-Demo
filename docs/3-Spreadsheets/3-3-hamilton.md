@@ -54,8 +54,8 @@ attempting to deduce who wrote essays 49 to 57, 62, and 63!
 
 ## Making a table that is appropriate for addressing the problem
 
-Our attempt to resolve the dispute
-focuses on the use of the word "upon".
+One of our strategies to attempt to resolve the dispute
+will focus on the use of the word "upon".
 For each essay, we will record
 the essay number, the author, the number of "upon"s,
 the number of characters, and the "upon"s per 10,000 characters.
@@ -275,8 +275,8 @@ Analyze the Federalist Papers data using
 **only the pivot tables that you have just created.**
  - What does the pivot table suggest to you about
    the true authors of the "MADISON or HAMILTON" essays?
- - Does the question seem more subtle than when
-   you were looking at the first pivot table?
+ - Does the authorship issue seem to be more nuanced
+   than you thought during *analysis 1*?
 
 <br>
 
@@ -317,7 +317,7 @@ Analyze the Federalist Papers data using
 **only the current pivot table.**
  - What does the pivot table suggest to you about
    the true authors of the "MADISON or HAMILTON" essays?
- - Based on analysis 3 and analysis 4,
+ - Based on *analysis 3* and *analysis 4*,
    are there some essays that you would like
    to pay special attention to?
 
@@ -339,8 +339,9 @@ Create a new pivot table.
 Analyze the Federalist Papers data using
 **only the pivot table that you just created.**
  - What does the pivot table suggest to you about
-   the true authors of the "MADISON or HAMILTON" essays?
- - How do you currently feel about your prior analysis?
+   the true authors of the **shortest** "MADISON or HAMILTON" essays?
+ - Do you feel manipulated by *analysis 1* to *analysis 4*
+   because it only focussed on the word "upon"?
 
 
 
@@ -352,7 +353,7 @@ the `"Upons" per 10,000 characters` column using different colors.
 If the colors below are not distinct enough for you,
 feel free to make different choices.
 
-- **Green cells.**
+- **Green cells in column E.**
   - Right-click (or two-finger tap) on column `E`.
     ![Conditional formatting](./sheets-screenshots/46.png)
   - Select `Conditional formatting`.
@@ -363,7 +364,7 @@ feel free to make different choices.
     ![Green conditional formatting](./sheets-screenshots/47.png)
   - Click `Done`.
 
-- **Blue cells.**
+- **Blue cells in column E.**
   - If necessary, right-click (or two-finger tap) on column `E`
     and select `Conditional formatting`.
   - Click `+ Add another rule`.
@@ -373,7 +374,7 @@ feel free to make different choices.
   - For the "Fill color", select a blue of your choice.
   - Click `Done`.
 
-- **Yellow cells.**
+- **Yellow cells in column E.**
   - If necessary, right-click (or two-finger tap) on column `E`
     and select `Conditional formatting`.
   - Click `+ Add another rule`.
@@ -383,10 +384,19 @@ feel free to make different choices.
   - For the "Fill color", select a yellow of your choice.
   - Click `Done`.
 
+- **Orange cells in column D.**
+  - Right-click (or two-finger tap) on column `D` (not `E`).
+  - Select `Conditional formatting`.
+  - For **Apply to range**, type `D2:D86`.
+  - For **Format rules**, select format cells if "Less than".
+  - For the "Value or formula", type `8000`.
+  - For the "Fill color", select an orange of your choice.
+  - Click `Done`.
+
 - In the following screenshot, columns `C` and `D` are hidden.
   ![Completed conditional formatting](./sheets-screenshots/48.png)
 
-Analyze the data.
+**Analyze the data.**
  - What do you notice about the green boxes?
  - What do you notice about the blue boxes?
  - There are **three** yellow boxes.
@@ -394,6 +404,8 @@ Analyze the data.
    Therefore, the significance of each feels quite different.
    For each of the yellow boxes,
    describe the significance of the box being yellow.
+ - There are **four** orange boxes.
+   Who do you think is the true author of essay 50?
 
 
 
