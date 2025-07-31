@@ -47,7 +47,8 @@ The discrepancy between these two lists gave rise to a famous literary dispute o
 [https://founders.archives.gov/documents/Madison/01-10-02-0177](https://founders.archives.gov/documents/Madison/01-10-02-0177){:target="_blank"}
 
 In this exercise, you will try to resolve the dispute,
-attempting to deduce who wrote essays 49 to 57, 62, and 63!
+attempting to deduce who wrote essays
+[49 to 57, 62, and 63](https://guides.loc.gov/federalist-papers/full-text){:target="_blank"}!
 
 
 
@@ -164,7 +165,8 @@ You will complete the data entry as part of a team.
      |    5    | 69 to 85 |
 
  - Hopefully, as a team, you can complete the data entry in 10 to 20 minutes.
-   Can you enter the data faster **and more accurately** than the team next to you?!
+   Can you enter the data faster **and more accurately** than the team next to you?
+   Is it faster to enter the data row-by-row or column-by-column?
  - When you have finished, compare your table with the team next to you to help fix any mistakes.
  - Finally, copy and paste the data from `Federalist-Papers-Team-Data` (your team's Google sheet)
    back to `Federalist-Papers-Data` (your individual Google sheet).
@@ -189,7 +191,7 @@ for i in range(1, 86):
 
     upons = s.count('upon') + s.count('Upon')
 
-    print(i, '"' + s[j : k].strip() + '"', upons, len(s), sep=', ')
+    print(i, s[j : k].strip(), upons, len(s), sep=', ')
 ```
 
 
@@ -232,7 +234,6 @@ This allows for a few bits of magic.
 
 ## Analyzing the frequency of the word "upon" using Pivot Tables
 
-
 Hamilton and Madison both claimed
 to have written essays 49 to 57, 62, and 63
 **without collaborating with the other.**
@@ -240,6 +241,7 @@ Therefore, for each "MADISON or HAMILTON" essay,
 we will assume the author is
 either Madison or Hamilton,
 and **not Madison with Hamilton.**
+
 
 <br>
 
@@ -259,7 +261,9 @@ Forget any insights that you had while collecting the data.
    the true authors of the "MADISON or HAMILTON" essays?
  - Imagine that a person who you mistrust has shown this pivot table to you,
    and so you are wary of being manipulated by the data that they have presented.
-   Can you think of other explanations for the data presented which are currently plausible?
+   Can you think of other explanations for the data presented which are currently plausible
+   (because the pivot table does not display all information)?
+
 
 <br>
 
@@ -277,6 +281,7 @@ Analyze the Federalist Papers data using
    the true authors of the "MADISON or HAMILTON" essays?
  - Is the authorship question more nuanced than
    you thought during *analysis 1*? Why?
+
 
 <br>
 
@@ -352,7 +357,7 @@ the `"Upons" per 10,000 characters` column using different colors.
 If the colors below are not distinct enough for you,
 feel free to make different choices.
 
-- **Green cells in column E.**
+- **Green cells.**
   - Right-click (or two-finger tap) on column `E`.
     ![Conditional formatting](./sheets-screenshots/46.png)
   - Select `Conditional formatting`.
@@ -363,7 +368,7 @@ feel free to make different choices.
     ![Green conditional formatting](./sheets-screenshots/47.png)
   - Click `Done`.
 
-- **Blue cells in column E.**
+- **Blue cells.**
   - If necessary, right-click (or two-finger tap) on column `E`
     and select `Conditional formatting`.
   - Click `+ Add another rule`.
@@ -373,7 +378,7 @@ feel free to make different choices.
   - For the "Fill color", select a blue of your choice.
   - Click `Done`.
 
-- **Yellow cells in column E.**
+- **Yellow cells.**
   - If necessary, right-click (or two-finger tap) on column `E`
     and select `Conditional formatting`.
   - Click `+ Add another rule`.
@@ -383,7 +388,14 @@ feel free to make different choices.
   - For the "Fill color", select a yellow of your choice.
   - Click `Done`.
 
-- **Orange cells in column D.**
+- In the following screenshot, columns `C` and `D` are hidden.
+  ![Completed conditional formatting](./sheets-screenshots/48.png)
+
+
+We will also highlight some cells in
+the `Number of characters` column.
+
+- **Orange cells.**
   - Right-click (or two-finger tap) on column `D` (not `E`).
   - Select `Conditional formatting`.
   - For **Apply to range**, type `D2:D86`.
@@ -392,10 +404,9 @@ feel free to make different choices.
   - For the "Fill color", select an orange of your choice.
   - Click `Done`.
 
-- In the following screenshot, columns `C` and `D` are hidden.
-  ![Completed conditional formatting](./sheets-screenshots/48.png)
 
 **Analyze the data.**
+
  - What do you notice about the green boxes?
  - What do you notice about the blue boxes?
  - There are **three** yellow boxes.

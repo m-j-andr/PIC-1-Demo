@@ -304,7 +304,7 @@ The previous questions can be answered elegantly using pivot tables.
      ![Elenas](./sheets-screenshots/35.png)
 
 The ease with which we could
-answer these questions
+answer these questions by
 using pivot tables effectively
 demonstrates how useful they are.
 

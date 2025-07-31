@@ -81,7 +81,7 @@ using the arrows in the column headings again.
  - Select `Timestamp > Sort Column > Sort A to Z`.
  - Notice that it is a little strange that the options always say
    "Sort A to Z" and "Sort Z to A" even when we are sorting
-   Numbers and Dates.
+   numbers and dates.
 
 
 
