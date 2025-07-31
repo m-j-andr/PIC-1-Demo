@@ -276,7 +276,7 @@ Analyze the Federalist Papers data using
  - What does the pivot table suggest to you about
    the true authors of the "MADISON or HAMILTON" essays?
  - Does the authorship issue seem to be more nuanced
-   than you thought during *analysis 1*?
+   than you thought during *analysis 1*? Why?
 
 <br>
 
@@ -340,8 +340,7 @@ Analyze the Federalist Papers data using
 **only the pivot table that you just created.**
  - What does the pivot table suggest to you about
    the true authors of the **shortest** "MADISON or HAMILTON" essays?
- - Do you feel manipulated by *analysis 1* to *analysis 4*
-   because it only focussed on the word "upon"?
+ - Do you feel manipulated by *analysis 1* to *analysis 4*?
 
 
 
@@ -446,4 +445,3 @@ so you should always make sure to put
 your thinking hat upon your head,
 and not to be put upon.
 Who do you think wrote that last sentence?!
-
