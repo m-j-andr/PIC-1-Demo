@@ -52,7 +52,8 @@
       "upon" twice. Since there are five HAMILTON essays
       that use "upon" twice and only one MADISON essay
       that uses "upon" twice, one could reasonably claim
-      that HAMILTON authored this essay.
+      that HAMILTON authored this essay
+      (since $\frac{5}{1} > \frac{51}{15}$).
 
  - *Is the authorship question more nuanced than
    you thought during analysis 1? Why?*
@@ -88,7 +89,7 @@
    shows that there is a possibility that HAMILTON
    authored some of the "MADISON or HAMILTON" essays.
    It seems that not all of his essays required such
-   frequent "upon" usage!
+   frequent use of the word "upon"!
 
 
 ## Analysis 4
@@ -159,7 +160,7 @@
    may be too simplistic to reach solid conclusions
    and that data can tell many different stories.
    However, this analysis, by itself, is probably
-   less valuable than analysis 1 to 4.
+   less valuable than *analysis 1 to 4*.
 
 
 ## Conditional Formatting Analysis
