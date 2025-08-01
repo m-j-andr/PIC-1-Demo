@@ -481,6 +481,50 @@ You can create one as follows.
    and make your chosen selections.
 
 
+## concept::sheets, concept::datatype, concept::text
+
+When a cell's datatype is *text*,
+it can store up to 50,000 characters.
+
+ - Characters from the English alphabet are allowed.
+ - All the digits (0 to 9) are allowed.
+ - Some special characters like spaces are allowed too.
+
+
+## concept::sheets, concept::datatype, concept::number
+
+When a cell's datatype is *number*,
+it can store many numerical values.
+However,
+there are limitations to which numbers can
+be stored and which numbers can be entered.
+
+We can use *numbers* for arithmetic. However,
+the accuracy of arithmetic is not always perfect.
+In many applications, this lack of precision can be ignored,
+but this issue can matter much more than you might expect.
+
+
+## concept::sheets, concept::to_text, concept::value,
+
+ - Any *number* can be used to produce some *text*
+   by using the `TO_TEXT` function.
+ - We can use a function called `VALUE`
+   to attempt to obtain a *number*
+   from some *text*.
+   This will only work when
+   the text is appropriately numeric.
+
+
+## concept::sheets, concept::pow, concept::left
+
+ - `POW` is a function that accepts two *numbers* $c$ and $d$.
+   `POW(c, d)` calculates $c^d$. For example, typing
+   `= POW(2, 3)` into a cell will calculate $2^3 = 8$.
+ - `LEFT` is a function that accepts *text*
+   and gives the left-most character.
+
+
 ## concept::string
 
 ## concept::charset
@@ -547,4 +591,3 @@ You can create one as follows.
 ## concept::fitting, concept::line-fitting, concept::curve-fitting
 
 ## concept::matplotlib, concept::plotting, concept::plt
-
