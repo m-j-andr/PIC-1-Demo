@@ -465,4 +465,10 @@ upon the importance of careful data analysis,
 so you should always make sure to put
 your thinking hat upon your head,
 and not to be put upon.
-Who do you think wrote that last sentence?!
+Who do you think wrote that last sent<span id="egg">en</span>ce?!
+<script>
+  const egg = document.getElementById('egg');
+  egg.addEventListener('click', function() {
+    window.location.assign('3-hmm.html');
+  });
+</script>
