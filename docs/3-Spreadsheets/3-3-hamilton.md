@@ -302,7 +302,7 @@ Analyze the Federalist Papers data using
  - What does the pivot table suggest to you about
    the true authors of the "MADISON or HAMILTON" essays?
  - Imagine that you are a descendent of Hamilton and you wish to argue on his behalf.
-   What data in the pivot table should you point at vigorously?
+   What data in the pivot table that you just created should you point at vigorously?
 
 
 <br>

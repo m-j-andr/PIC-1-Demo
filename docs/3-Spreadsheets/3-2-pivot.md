@@ -426,4 +426,8 @@ Try to answer the following questions using pivot tables as effectively as possi
 
 
 
+<br><br>
+
+
 Next: [Hamilton Or Not Hamilton? That Is The Question!](3-3-hamilton.md)
+

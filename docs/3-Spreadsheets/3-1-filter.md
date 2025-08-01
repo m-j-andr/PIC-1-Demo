@@ -57,7 +57,7 @@ and [Google Sheets](https://en.wikipedia.org/wiki/Google_Sheets){:target="_blank
    - Select `Name > Edit column type > Text`.
    - Select `Course > Edit column type > Text`.
    - Select `UID > Edit column type > Number > Number`.
-   - Select `Time (minutes) > Edit column type > Number > Number`.
+   - Select `Time (Minutes) > Edit column type > Number > Number`.
    - Select `Timestamp > Edit column type > Date > Date time`.
    - These selections specified the most appropriate *datatype* for each column.
  - Select columns `A` to `E` and then
@@ -74,9 +74,10 @@ We can sort columns by
 using the arrows in the column headings again.
 
  - Select `Name > Sort Column > Sort A to Z`.
- - Select `Time (minutes) > Sort Column > Sort Z to A`.
-    - Notice that the times are sorted in decreasing order.
-    - Notice that the names are still sorted for each time.
+ - Select `Time (Minutes) > Sort Column > Sort Z to A`.
+    - Notice that the times (not timestamps) are sorted in decreasing order.
+    - Notice that the names are still sorted for each time (not timestamp).
+    - Notice that the screenshot below shows rows 46 to 65.
    ![Table sorted by times and names](./sheets-screenshots/03.png)
  - Select `Timestamp > Sort Column > Sort A to Z`.
  - Notice that it is a little strange that the options always say
@@ -298,6 +299,9 @@ answer the following questions.
  - Which three students are tied for attending the most tutoring sessions greater than 90 minutes long?
 
 
+
+
+<br><br>
 
 
 On to [Pivot Tables](3-2-pivot.md)!!
