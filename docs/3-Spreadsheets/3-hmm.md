@@ -59,9 +59,9 @@
 
    Yes, the authorship question is more nuanced
    than it appeared in *analysis 1* because the
-   pivot table has revealed at least one paper
-   where the "upon" usage actually suggests that
-   HAMILTON authored the essay.
+   pivot table has revealed at least one essay
+   where the use of "upon" actually suggests
+   that HAMILTON authored the essay.
 
 
 ## Analysis 3
@@ -118,7 +118,7 @@
      that uses between 0 and 2 "upon"s per 10,000 characters.
    - Analysis 3 also showed an essay credited to MADISON individually
      that uses between 2 and 4 "upon"s per 10,000 characters.
-   - Analysis 3 highlighted a "MADISON or HAMILTON" essay
+   - Analysis 4 highlighted a "MADISON or HAMILTON" essay
      that uses between 1.6 and 3.2 "upon"s per 10,000 characters.
 
    These essays are interesting as examples of
@@ -137,7 +137,6 @@
    we find 16 essays credited to HAMILTON individually,
    no essays credited to MADISON individually,
    and four "MADISON or HAMILTON" essays.
-
    This analysis could lead one to speculate
    that HAMILTON authored the four shortest
    "MADISON or HAMILTON" essays.
@@ -214,6 +213,7 @@
    I conjecture that MADISON is the true author.
 
  - *Justify your decisions.*
-   - For the 9 essays, I choose MADISON based on *analysis 2*.
+   - For the 9 essays that I selected, I choose MADISON based on *analysis 2*.
    - The use of "upon" in essays 50 and 54 casts doubt on their authorship:
-     enough to consider HAMILTON as the author, but not enough to rule out MADISON.
+     enough "upon"s to consider HAMILTON as the author,
+     but not enough "upon"s to rule out MADISON.
