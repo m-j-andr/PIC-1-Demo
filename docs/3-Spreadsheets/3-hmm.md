@@ -87,7 +87,7 @@
    uses between 0 and 2 "upon"s per 10,000 characters
    shows that there is a possibility that HAMILTON
    authored some of the "MADISON or HAMILTON" essays.
-   It seems that not all of his essays require such
+   It seems that not all of his essays required such
    frequent "upon" usage!
 
 
@@ -122,8 +122,8 @@
      that uses between 1.6 and 3.2 "upon"s per 10,000 characters.
 
    These essays are interesting as examples of
-   HAMILTON using fewer "upon"s than normal,
-   MADISON using more "upon"s than normal,
+   HAMILTON using "upon" less frequently than normal,
+   MADISON using "upon" more frequently than normal,
    and a "MADISON or HAMILTON" essay for which it is
    particularly difficult to conjecture authorship.
 
@@ -133,8 +133,7 @@
  - *What does the pivot table suggest to you about
    the true authors of the **shortest** "MADISON or HAMILTON" essays?*
 
-   When looking at the essays that use between
-   5,600 characters and 11,199 characters
+   When looking at the essays that use fewer than 11,200 characters,
    we find 16 essays credited to HAMILTON individually,
    no essays credited to MADISON individually,
    and four "MADISON or HAMILTON" essays.
@@ -146,7 +145,7 @@
  - *Do you feel manipulated by analysis 1 to 4?*
 
    This part was written to manipulate you
-   to feel manipulated by *analysis 1 to 4*!
+   to feel manipulated by *analysis 1 to 4*!!
 
    It is very easy,
    and it might even be required by a publisher,
@@ -156,19 +155,22 @@
    an author will deviate from
    their usual use of words like
    "upon", "while", "enough", and "intended".
-   Although this length analysis has been useful
-   for highlighting that focusing on a single word
-   may be too simplistic to reach solid conclusions,
-   this analysis, by itself, is probably less valuable
-   than analysis 1 to 4.
+   This length analysis has been useful for
+   highlighting that focusing on a single word
+   may be too simplistic to reach solid conclusions
+   and that data can tell many different stories.
+   However, this analysis, by itself, is probably
+   less valuable than analysis 1 to 4.
 
 
 ## Conditional Formatting Analysis
 
  - *What do you notice about the green boxes?*
+
    Every green box corresponds to an essay credited to HAMILTON individually.
 
  - *What do you notice about the blue boxes?*
+
    There are blue boxes corresponding to essays written by MADISON with HAMILTON and
    there are blue boxes corresponding to "MADISON or HAMILTON" essays. However,
    there is not a single blue box corresponding to an essay credited to HAMILTON individually.
@@ -180,10 +182,10 @@
    describe the significance of the box being yellow.*
 
    These yellow boxes highlight
-   HAMILTON using fewer "upon"s than normal,
-   MADISON using more "upon"s than normal,
-   and a "MADISON or HAMILTON" essay for which it is
-   particularly difficult to conjecture authorship.
+   HAMILTON using "upon" less frequently than normal,
+   MADISON using "upon" more frequently than normal,
+   and essay 54, a "MADISON or HAMILTON" essay for which
+   it is particularly difficult to conjecture authorship.
 
  - *There are four orange boxes.
    Who do you think is the true author of essay 50?*
@@ -195,23 +197,23 @@
    may not be particularly valuable, but essay 50 also
    happens to be one of only two "MADISON or HAMILTON"
    essays that use the word "upon".
-
-   I am confused by essay 50.
+   I am confused by essay 50!
 
 
 ## Conjecturing the Authorship of Essays 49 to 57, 62, and 63
 
  - *Which option do you pick?*
-   I would choose the third option and
-   I would pick essays 49, 51, 52, 53, 55, 56, 57, 62, and 63,
+
+   I choose the third option and
+   I pick essays 49, 51, 52, 53, 55, 56, 57, 62, and 63;
    not essays 50 and 54.
 
  - *How do you specify the true author for the papers that you chose?*
+
    For essays 49, 51, 52, 53, 55, 56, 57, 62, and 63,
    I conjecture that MADISON is the true author.
 
  - *Justify your decisions.*
-   For the nine essays, I choose MADISON based on *analysis 2*.
-   The use of "upon" in essays 50 and 54 make me less certain about them.
-   In addition, essay 50 is shorter and essay 54 uses "upon"
-   more than 1.67 times per 10,000 characters.
+   - For the 9 essays, I choose MADISON based on *analysis 2*.
+   - The use of "upon" in essays 50 and 54 casts doubt on their authorship:
+     enough to consider HAMILTON as the author, but not enough to rule out MADISON.
