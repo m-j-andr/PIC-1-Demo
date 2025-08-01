@@ -61,7 +61,8 @@ For each essay, we will record
 the essay number, the author, the number of "upon"s,
 the number of characters, and the "upon"s per 10,000 characters.
 
- - Through your g.ucla.edu email, open `Sheets`.
+ - Through your g.ucla.edu email,
+   open [Google Sheets](https://docs.google.com/spreadsheets){:target="_blank"}.
    - Click on the icon with 9 dots at the top-right, next to UCLA.
    - Select `Sheets`.
  - Click on `Blank spreadsheet`.
@@ -346,6 +347,15 @@ Analyze the Federalist Papers data using
  - What does the pivot table suggest to you about
    the true authors of the **shortest** "MADISON or HAMILTON" essays?
  - Do you feel manipulated by *analysis 1 to 4*?
+
+
+
+
+## Reflecting on your analysis
+
+It is a good time to discuss
+the results of your analysis
+with your classmates and your lecturer.
 
 
 
