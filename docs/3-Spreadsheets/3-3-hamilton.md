@@ -263,7 +263,7 @@ Forget any insights that you had while collecting the data.
  - Imagine that a person who you mistrust has shown this pivot table to you,
    and so you are wary of being manipulated by the data that they have presented.
    Can you think of other explanations for the data presented which are currently plausible
-   (because the pivot table does not display all information)?
+   (because the pivot table does not display all the information)?
 
 
 <br>
