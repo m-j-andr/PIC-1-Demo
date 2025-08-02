@@ -56,10 +56,10 @@ The correct calculation is as follows.
 
 <div>
   \[
-    \frac{17}{100}\times\frac{62}{100}\ +\ 
-    \frac{26}{100}\times\frac{85}{100}\ +\ 
-    \frac{19}{100}\times\frac{55}{100}\ +\ 
-    \frac{38}{100}\times\frac{22}{100}\ =\ \frac{51.45}{100}
+    \left(\frac{17}{100}\times\frac{62}{100}\right)\ +\ 
+    \left(\frac{26}{100}\times\frac{85}{100}\right)\ +\ 
+    \left(\frac{19}{100}\times\frac{55}{100}\right)\ +\ 
+    \left(\frac{38}{100}\times\frac{22}{100}\right)\ =\ \frac{51.45}{100}
   \]
 </div>
 
@@ -67,10 +67,10 @@ Said another way...
 
 <div>
   \[
-    17% \times 62%\ +\ 
-    26% \times 85%\ +\ 
-    19% \times 55%\ +\ 
-    38% \times 22%\ =\ 51.45%
+    17\% \times 62\%\ +\ 
+    26\% \times 85\%\ +\ 
+    19\% \times 55\%\ +\ 
+    38\% \times 22\%\ =\ 51.45\%
   \]
 </div>
 
@@ -83,15 +83,15 @@ Said another way...
  - We have *weighted* 22%, the fraction of the Polynesian paintings that we visited,
    by 38%, the fraction of the items in the museum that they account for.
 
-Our *weights* are given by the fraction of the items in the museum that an exhibition accounts for.
+Our *weights* are given by the fraction of the items in the museum that each exhibition accounts for.
 Our *weighted average* is calculated by the following formula.
 
 <div>
   \[
-    \text{weighted average}\ =\ \text{weight}_1 \times \frac{fraction}_1\ +\ 
-                                \text{weight}_2 \times \frac{fraction}_2\ +\ 
-                                \text{weight}_3 \times \frac{fraction}_3\ +\ 
-                                \text{weight}_4 \times \frac{fraction}_4
+    \text{weighted average}\ =\ \text{weight}_1 \times \text{fraction}_1\ +\ 
+                                \text{weight}_2 \times \text{fraction}_2\ +\ 
+                                \text{weight}_3 \times \text{fraction}_3\ +\ 
+                                \text{weight}_4 \times \text{fraction}_4
   \]
 </div>
 
@@ -126,4 +126,4 @@ Create the following table in Google Sheets.
      - Select `Fraction of exhibition visited > Edit column type > Number > Percent`.
      - Select `Fraction of museum visited > Edit column type > Number > Percent`.
      - Select `"Upon"s per 10,000 characters > Edit column type > Number > Percent`.
- - Type in the values indicated for columns `A`, `B`, and `C`.
+ - Type in the values indicated for the first three columns.
