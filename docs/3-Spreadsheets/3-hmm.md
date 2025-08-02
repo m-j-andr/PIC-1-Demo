@@ -147,7 +147,7 @@
    This part was written to manipulate you
    to feel manipulated by *analysis 1 to 4*!!
 
-   > ["Man, this is getting manipulated, man!"](https://www.youtube.com/watch?v=qBkoK3VCSyQ){:target="_blank"} Sir Lewis Hamilton.
+   > ["This is getting manipulated, man!"](https://www.youtube.com/watch?v=qBkoK3VCSyQ){:target="_blank"} Sir Lewis Hamilton.
 
    It is very easy,
    and it might even be required by a publisher,
