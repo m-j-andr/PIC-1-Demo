@@ -1,6 +1,8 @@
 # Weighted Averages and a Trip to the Museum
 
 
+
+
 ## Motivating Weighted Averages
 
 A museum has the following exhibitions.
@@ -56,10 +58,10 @@ The correct calculation is as follows.
 
 <div>
   \[
-    \left(\frac{17}{100}\times\frac{62}{100}\right)\ +\ 
-    \left(\frac{26}{100}\times\frac{85}{100}\right)\ +\ 
-    \left(\frac{19}{100}\times\frac{55}{100}\right)\ +\ 
-    \left(\frac{38}{100}\times\frac{22}{100}\right)\ =\ \frac{51.45}{100}
+    \left( \frac{17}{100} \times \frac{62}{100} \right)\ +\ 
+    \left( \frac{26}{100} \times \frac{85}{100} \right)\ +\ 
+    \left( \frac{19}{100} \times \frac{55}{100} \right)\ +\ 
+    \left( \frac{38}{100} \times \frac{22}{100} \right)\ =\ \frac{51.45}{100}
   \]
 </div>
 
@@ -67,35 +69,37 @@ Said another way...
 
 <div>
   \[
-    17\% \times 62\%\ +\ 
-    26\% \times 85\%\ +\ 
-    19\% \times 55\%\ +\ 
-    38\% \times 22\%\ =\ 51.45\%
+    \left( 17\% \times 62\% \right)\ +\ 
+    \left( 26\% \times 85\% \right)\ +\ 
+    \left( 19\% \times 55\% \right)\ +\ 
+    \left( 38\% \times 22\% \right)\ =\ 51.45\%
   \]
 </div>
 
  - We have *weighted* 62%, the fraction of the Ancient Greek artefacts that we visited,
-   by 17%, the fraction of the items in the museum that they account for.
+   by 17%, the fraction of the items in the museum that the Ancient Greek artefacts account for.
  - We have *weighted* 85%, the fraction of the Middle Eastern mosaics that we visited,
-   by 26%, the fraction of the items in the museum that they account for.
+   by 26%, the fraction of the items in the museum that the Middle Eastern mosaics account for.
  - We have *weighted* 55%, the fraction of the South American sculptures that we visited,
-   by 19%, the fraction of the items in the museum that they account for.
+   by 19%, the fraction of the items in the museum that the South American sculptures account for.
  - We have *weighted* 22%, the fraction of the Polynesian paintings that we visited,
-   by 38%, the fraction of the items in the museum that they account for.
+   by 38%, the fraction of the items in the museum that the Polynesian paintings account for.
 
 Our *weights* are given by the fraction of the items in the museum that each exhibition accounts for.
 Our *weighted average* is calculated by the following formula.
 
 <div>
   \[
-    \text{weighted average}\ =\ \text{weight}_1 \times \text{fraction}_1\ +\ 
-                                \text{weight}_2 \times \text{fraction}_2\ +\ 
-                                \text{weight}_3 \times \text{fraction}_3\ +\ 
-                                \text{weight}_4 \times \text{fraction}_4
+    \text{weighted average}\ =\ \left( \text{weight}_1 \times \text{fraction}_1 \right)\ +\ 
+                                \left( \text{weight}_2 \times \text{fraction}_2 \right)\ +\ 
+                                \left( \text{weight}_3 \times \text{fraction}_3 \right)\ +\ 
+                                \left( \text{weight}_4 \times \text{fraction}_4 \right)
   \]
 </div>
 
 We visited 51.45% of the museum's items.
+
+
 
 
 ## Calculating Weighted Averages in Google Sheets
