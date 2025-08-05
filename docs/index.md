@@ -49,3 +49,8 @@
 [3 - Hamilton or Not Hamilton](./3-Spreadsheets/3-3-hamilton.md)
 
 [4 - 2048 and friends](./3-Spreadsheets/3-4-pow2.md)
+
+[5 - Creating Graphics For F1 TV](./3-Spreadsheets/3-5-f1.md)
+
+[6 - Weighted Averages and a Trip to the Museum](./3-Spreadsheets/3-6-museum.md)
+
