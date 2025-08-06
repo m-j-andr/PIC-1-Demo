@@ -236,7 +236,7 @@ and we can perform other exploratory calculations.
 By changing the cell `C5` to store 50%,
 we immediately obtain a new value of 62.09%
 for the fraction of the museum's items you visited.
-We can perform the same calculation without have to enter
+We can perform similar calculations without have to enter
 the formulas over and over again!
 
 > By exploring different fractions,
@@ -253,7 +253,6 @@ the formulas over and over again!
 <script>
   function respond_to_polynesian_submission() {
     const submission = document.getElementById('polynesian').value.replaceAll(' ', '').replaceAll('\n', '');
-
     if (submission == '83' || submission == '85') {
       alert('That is very close!');
     }
