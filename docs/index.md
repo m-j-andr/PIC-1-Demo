@@ -54,4 +54,4 @@
 
 [6 - Creating Graphics For F1 TV](./3-Spreadsheets/3-6-f1.md)
 
-[7 - Calculating Grades](./3-Spreadsheets/3-7-grades.md)
+[7 - Calculating Grades](https://two.bonsoon.net/read/pic-1-design/unit-3/04-calculating-grades-and-averages.md)
