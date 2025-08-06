@@ -130,7 +130,7 @@ Create the following table in Google Sheets.
      - Select `Fraction of exhibition visited > Edit column type > Number > Percent`.
      - Select `Fraction of museum visited > Edit column type > Number > Percent`.
  - Type in the values indicated for the first three columns.
-
+   ![Table](./sheets-screenshots/61.png)
 
 
 
@@ -161,14 +161,19 @@ Here, we are a little bit more careful.
      - the formula `= B4 * C4` in cell `D4`;
      - the formula `= B5 * C5` in cell `D5`;
      - the formula `= B6 * C6` in cell `D6`.
+
      The formulas for cells `D3`, `D4`, and `D5`
      are what we want. They calculate the
-     $\text{weight}_2 \times \text{fraction}_2$,
-     $\text{weight}_3 \times \text{fraction}_3$, and
-     $\text{weight}_4 \times \text{fraction}_4$ terms
-     of our weighted average formula, respectively.
-     However, the formula for cell `D6`
-     does not make sense,
+     <div>
+     \[
+       \text{weight}_2 \times \text{fraction}_2,\ \ 
+       \text{weight}_3 \times \text{fraction}_3,\ \ \text{and}\ \ 
+       \text{weight}_4 \times \text{fraction}_4
+     \]
+     </div>
+
+     terms of our weighted average formula, respectively.
+     However, the formula for cell `D6` does not make sense,
      and we should delete it.
 
    - If we reject the "suggested autofill" option,
@@ -183,24 +188,19 @@ Here, we are a little bit more careful.
      to confirm that they are the formulas we hoped for.
      Sometimes, it is easier to check our formulas
      when Google Sheets performs cell highlighting.
-     By double-clicking on a cell, we can start to edit it,
-     and our formulas are conveniently color-coded.
+     ![Cell highlighting](./sheets-screenshots/62.png)
+      - By double-clicking on a cell, we can start to edit it,
+        and our formulas are conveniently color-coded.
+      - If we do not wish to make an edit,
+        we can press `ESC` to safely exit
+        without accidentally editing the cell contents.
 
  - Typing `=` into cell `D6`
    creates an autocomplete option: `=SUM(D2:D5)`.
    - This is sensible.
    - It uses a function called `SUM`
      to sum the values of cells `D2`, `D3`, `D4`, and `D5`.
-   - This completes the calculation of
-     <div>
-       \[
-         \text{weighted average}\ =\ \left( \text{weight}_1 \times \text{fraction}_1 \right)\ +\ 
-                                     \left( \text{weight}_2 \times \text{fraction}_2 \right)\ +\ 
-                                     \left( \text{weight}_3 \times \text{fraction}_3 \right)\ +\ 
-                                     \left( \text{weight}_4 \times \text{fraction}_4 \right)
-       \]
-     </div>
-
+   - This completes the calculation of the weighted average
      and we see the correct answer: 51.45%.
 
  - It is good to know how to enter the last formula another way.
@@ -222,36 +222,79 @@ Here, we are a little bit more careful.
 ## Benefits over a Calculator
 
 Since this calculation could have been done with a calculator,
-you might ask, "What is the advantage of using a spreadsheet?"
-We now have a dynamic representation of this calculation and
-we can perform exploratory calculations.
+you might ask...
 
- - What if you had seen
-   50% of the Polynesian paintings
-   instead of just 22%?
-   - By changing the cell `C5` to store 50%,
-     we immediately obtain a new value of 62.09%
-     for the fraction of the museum's items you visited.
-     We can perform the same calculation without have to enter
-     the formulas over and over again!
- - **Your turn!**
-   By exploring different fractions,
-   find the **minimum fraction**,
-   to the nearest whole percent,
-   of the Polynesian paintings
-   that you would need to see
-   in order to have seen more than
-   75% of the items in the museum exhibit
-   (with other fractions unchanged). 
-   - Answer: 
-   - Why might you want to do this?
-     Perhaps you want to get the most out of your museum trip by seeing 75% of the museum,
-     but you are at the Polynesian Paintings exhibition and you do not want to go back to the other exhibitions!
-   - We can set up and solve this mathematically as a math problem,
-     but this exploratory and dynamic approach offers an alternative.
-     It is easy to edit any of the 8 fractions involved in the calculation.
-   - There is a scenario very similar to this one
-     that you have cared about many times in your life:
-     you know all of your homework and
-     midterm scores in a course you are taking,
-     and you want to know what score you need on the Final exam to get an A.
+> "What is the advantage of using a spreadsheet?"
+
+We now have a dynamic representation of the weighted average calculation
+and we can perform other exploratory calculations.
+
+> What if you had seen
+  50% of the Polynesian paintings
+  instead of just 22%?
+
+By changing the cell `C5` to store 50%,
+we immediately obtain a new value of 62.09%
+for the fraction of the museum's items you visited.
+We can perform the same calculation without have to enter
+the formulas over and over again!
+
+> By exploring different fractions,
+  find the **minimum fraction**
+  (to the nearest whole percent)
+  of the Polynesian paintings
+  that you would need to see
+  in order to have seen more than
+  75% of the items in the museum
+  (with the other fractions unchanged). 
+
+<textarea id="polynesian" rows="1" cols="8"></textarea>
+<input type="button" value="Submit" id="polynesian_submit">
+<script>
+  function respond_to_polynesian_submission() {
+    const submission = document.getElementById('polynesian').value.replaceAll(' ', '').replaceAll('\n', '');
+
+    if (submission == '83' || submission == '85') {
+      alert('That is very close!');
+    }
+    else if (submission !== '84') {
+      alert('Try again.');
+    }
+    else {
+      alert('Correct - well done!');
+      document.getElementById('new-lines').remove();
+    }
+  }
+  document.getElementById('polynesian_submit').addEventListener('click', respond_to_polynesian_submission);
+</script>
+<span id="new-lines">
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</span>
+
+> Why might you want to do this?*
+
+- Perhaps you want to get the most out of your museum trip
+  by seeing 75% of the items, but you are at the Polynesian Paintings exhibition
+  and you do not want to go back to the other exhibitions!
+- We can set up and solve this mathematically as a math problem,
+  but this exploratory and dynamic approach offers an alternative.
+  It is easy to edit any of the 8 fractions involved in the calculation.
+- There is a scenario very similar to this one
+  that you have thought about many times in your life:
+  you know all of your homework and midterm scores in a course you are taking,
+  and you want to know what score you need on the Final exam to get an A.
