@@ -1,4 +1,4 @@
-# Weighted Averages and a Trip to the Museum
+# Weighted Averages, a Trip to the Museum, and a Final Exam
 
 
 
@@ -131,6 +131,7 @@ Create the following table in Google Sheets.
      - Select `Fraction of museum visited > Edit column type > Number > Percent`.
  - Type in the values indicated for the first three columns.
    ![Table](./sheets-screenshots/61.png)
+
 
 
 
@@ -285,7 +286,7 @@ the formulas over and over again!
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </span>
 
-> Why might you want to do this?*
+> Why might you want to do this?
 
 - Perhaps you want to get the most out of your museum trip
   by seeing 75% of the items, but you are at the Polynesian Paintings exhibition
@@ -293,7 +294,15 @@ the formulas over and over again!
 - We can set up and solve this mathematically as a math problem,
   but this exploratory and dynamic approach offers an alternative.
   It is easy to edit any of the 8 fractions involved in the calculation.
-- There is a scenario very similar to this one
+- There is a scenario that is very similar to this one
   that you have thought about many times in your life:
   you know all of your homework and midterm scores in a course you are taking,
   and you want to know what score you need on the Final exam to get an A.
+
+
+
+
+## Creating a Course Grade Calculator
+
+
+
