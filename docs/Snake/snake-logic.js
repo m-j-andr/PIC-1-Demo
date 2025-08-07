@@ -78,7 +78,7 @@ function update_apple() {
 
 
 function reset() {
-  next_direction = "right";
+  direction = "right"; next_direction = "right";
 
 
   while (snake.length > 0) { snake.pop(); }
