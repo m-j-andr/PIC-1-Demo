@@ -1,4 +1,4 @@
-# Weighted Averages, a Trip to the Museum, and a Final Exam
+# Weighted Averages, a Trip to the Museum, and a Course Grade Calculator
 
 
 
@@ -130,7 +130,7 @@ Create the following table in Google Sheets.
      - Select `Fraction of exhibition visited > Edit column type > Number > Percent`.
      - Select `Fraction of museum visited > Edit column type > Number > Percent`.
  - Type in the values indicated for the first three columns.
-   ![Table](./sheets-screenshots/61.png)
+   ![Museum Table](./sheets-screenshots/61.png)
 
 
 
@@ -304,5 +304,48 @@ the formulas over and over again!
 
 ## Creating a Course Grade Calculator
 
+Suppose that you are taking a class where
+the syllabus specifies the following weights.
 
+|           Assessment | Weight |
+| -------------------: | :----: |
+| Homework assignments |  10%   |
+|              Quizzes |  15%   |
+|            Midterm 1 |  20%   |
+|            Midterm 2 |  20%   |
+|           Final Exam |  35%   |
 
+Suppose that
+the professor believes that
+difficult exams are important
+for motivating students to
+learn course material thoroughly,
+and that they list the following
+grading scheme.
+
+|            Bin           | Grade |
+| :----------------------: | :---: |
+| 80% and above            |   A   |
+| 65% and above, below 80% |   B   |
+| 50% and above, below 65% |   C   |
+| 35% and above, below 50% |   D   |
+|                below 35% |   F   |
+
+Suppose it is before the final exam and that
+you have earned 95.5% on homework assignments,
+79% on quizzes, 82% on midterm 1, and 47% on midterm 2.
+
+![Grading Table](./sheets-screenshots/63.png)
+
+ - What score do you need to get an A in the class? <!-- 94% / 77% -->
+ - What score do you need to get a B in the class? <!-- 51% / 50% -->
+ - What score do you need to get a C in the class? <!-- 8% / 23% -->
+
+It is the day before the exam and
+you receive an email from your professor saying,
+ > "I have decided to count
+   only the highest of your two midterm scores.
+   Your final will now be worth 55% of your grade."
+
+By considering the three questions above again,
+is this grading scheme better or worse for you?

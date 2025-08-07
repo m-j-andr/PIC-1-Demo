@@ -50,7 +50,7 @@
 
 [4 - 2048 and friends](./3-Spreadsheets/3-4-pow2.md)
 
-[5 - Weighted Averages and a Trip to the Museum](./3-Spreadsheets/3-5-museum.md)
+[5 - Weighted Averages, a Trip to the Museum, and a Course Grade Calculator](./3-Spreadsheets/3-5-museum.md)
 
 [6 - Creating Graphics For F1 TV](./3-Spreadsheets/3-6-f1.md)
 
