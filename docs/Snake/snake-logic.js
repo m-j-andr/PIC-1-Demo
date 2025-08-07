@@ -4,18 +4,18 @@ let period = 240;
 
 
 
+let next_direction = undefined;
 let direction = undefined;
-let last_direction = undefined;
 
 document.addEventListener('keydown', function(e) {
-  if      (e.key === "ArrowLeft")  { if (last_direction !== "right") { direction = "left";  } }
-  else if (e.key === "ArrowRight") { if (last_direction !== "left")  { direction = "right"; } }
-  else if (e.key === "ArrowUp")    { if (last_direction !== "down")  { direction = "up";    } }
-  else if (e.key === "ArrowDown")  { if (last_direction !== "up")    { direction = "down";  } }
+  if      (e.key === "ArrowLeft")  { if (direction !== "right") { next_direction = "left";  } }
+  else if (e.key === "ArrowRight") { if (direction !== "left")  { next_direction = "right"; } }
+  else if (e.key === "ArrowUp")    { if (direction !== "down")  { next_direction = "up";    } }
+  else if (e.key === "ArrowDown")  { if (direction !== "up")    { next_direction = "down";  } }
 });
 
-function update_last_direction() {
-  last_direction = direction;
+function update_direction() {
+  direction = next_direction;
 }
 
 
@@ -69,8 +69,8 @@ function update_apple() {
     period = Math.max(period - 80, 40);
     X += 6; Y += 6;
 
-    reset();
     alert('YOU WON!');
+    reset();
   }
 }
 
@@ -78,7 +78,7 @@ function update_apple() {
 
 
 function reset() {
-  direction = "right";
+  next_direction = "right";
 
 
   while (snake.length > 0) { snake.pop(); }
@@ -175,14 +175,14 @@ function game_over() {
 
 
 function update_state() {
-  update_last_direction();
+  update_direction();
   update_non_snake(update_snake(direction, snake, apple));
   update_apple_if_necessary();
 
   if (game_over()) {
     playing = false;
 
-    reset();
     alert('GAME OVER!');
+    reset();
   }
 }
