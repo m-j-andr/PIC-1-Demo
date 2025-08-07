@@ -225,7 +225,7 @@ Here, we are a little bit more careful.
 Since this calculation could have been done with a calculator,
 you might ask...
 
-> "What is the advantage of using a spreadsheet?"
+> What is the advantage of using a spreadsheet?
 
 We now have a dynamic representation of the weighted average calculation
 and we can perform other exploratory calculations.
@@ -249,15 +249,15 @@ the formulas over and over again!
   75% of the items in the museum
   (with the other fractions unchanged). 
 
-<textarea id="polynesian" rows="1" cols="8"></textarea>
+<textarea id="polynesian" rows="1" cols="6"></textarea>
 <input type="button" value="Submit" id="polynesian_submit">
 <script>
   function respond_to_polynesian_submission() {
     const submission = document.getElementById('polynesian').value.replaceAll(' ', '').replaceAll('\n', '');
-    if (submission == '83' || submission == '85') {
+    if (submission.startsWith('83') || submission.startsWith('85')) {
       alert('That is very close!');
     }
-    else if (submission !== '84') {
+    else if (!submission.startsWith('84')) {
       alert('Try again.');
     }
     else {
@@ -288,23 +288,23 @@ the formulas over and over again!
 
 > Why might you want to do this?
 
-- Perhaps you want to get the most out of your museum trip
-  by seeing 75% of the items, but you are at the Polynesian Paintings exhibition
-  and you do not want to go back to the other exhibitions!
-- We can set up and solve this mathematically as a math problem,
+- Perhaps you want to gain the most from your museum trip by seeing 75% of the items,
+  but you are at the Polynesian Paintings exhibition and
+  you do not want to go back to the other exhibitions!
+- We can set up and solve this as a math problem,
   but this exploratory and dynamic approach offers an alternative.
   It is easy to edit any of the 8 fractions involved in the calculation.
 - There is a scenario that is very similar to this one
   that you have thought about many times in your life:
   you know all of your homework and midterm scores in a course you are taking,
-  and you want to know what score you need on the Final exam to get an A.
+  and you want to know the score that you need on the Final exam to get an A!
 
 
 
 
 ## Creating a Course Grade Calculator
 
-Suppose that you are taking a class where
+Suppose that you are taking a course where
 the syllabus specifies the following weights.
 
 |           Assessment | Weight |
@@ -313,7 +313,7 @@ the syllabus specifies the following weights.
 |              Quizzes |  15%   |
 |            Midterm 1 |  20%   |
 |            Midterm 2 |  20%   |
-|           Final Exam |  35%   |
+|                Final |  35%   |
 
 Suppose that
 the professor believes that
@@ -329,23 +329,23 @@ grading scheme.
 | 65% and above, below 80% |   B   |
 | 50% and above, below 65% |   C   |
 | 35% and above, below 50% |   D   |
-|                below 35% |   F   |
+|                Below 35% |   F   |
 
-Suppose it is before the final exam and that
+Suppose it is before the Final exam and that
 you have earned 95.5% on homework assignments,
 79% on quizzes, 82% on midterm 1, and 47% on midterm 2.
 
 ![Grading Table](./sheets-screenshots/63.png)
 
- - What score do you need to get an A in the class? <!-- 94% / 77% -->
- - What score do you need to get a B in the class? <!-- 51% / 50% -->
- - What score do you need to get a C in the class? <!-- 8% / 23% -->
+ - What score do you need to obtain an A in the class? <!-- 94% / 77% -->
+ - What score do you need to obtain a B in the class? <!-- 51% / 50% -->
+ - What score do you need to obtain a C in the class? <!-- 8% / 23% -->
 
 It is the day before the exam and
 you receive an email from your professor saying,
- > "I have decided to count
-   only the highest of your two midterm scores.
-   Your final will now be worth 55% of your grade."
+ > I have decided to count
+   only the higher of your two midterm scores.
+   Your Final will now be worth 55% of your grade.
 
 By considering the three questions above again,
 is this grading scheme better or worse for you?
