@@ -1,9 +1,9 @@
-# PIC 1 - Snake Tutorial
+# PIC 1 - Snake
 
 
 
 
-## Snake
+## A Brief History of Snake
 
 
 You might have played the game
@@ -58,7 +58,7 @@ but once we have explained step-by-step what it will accomplish
 during the playing of the game, it will seem much less intimidating.
 
 
-**Code using `update_snake`.**
+### Code using `update_snake`.
 ```python
 snake = [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6), (7, 7)]
 
@@ -88,7 +88,8 @@ apple = (7, 0)
 popped = update_snake(direction, snake, apple);  print(" " *  0, snake, " " * 30, popped, " " * 4, apple)
 ```
 
-**The output that should be produced by the code using `update_snake`.**
+
+### The output that should be produced by the code using `update_snake`.
 ```
                                                 [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6), (7, 7)]
                                         [[0, 4], (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]        (7, 7)      (0, 5)
@@ -101,7 +102,7 @@ popped = update_snake(direction, snake, apple);  print(" " *  0, snake, " " * 30
 [[1, 8], [1, 7], [1, 6], [1, 5], [0, 5], [0, 4], (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5)]                                (6, 5)      (7, 0)
 ```
 
-Okay. That looks a little hectic! Bear with me. Let's explain what is going on...
+That looks a little hectic! Bear with me. Let's explain what is going on...
 
 
 
@@ -109,7 +110,7 @@ Okay. That looks a little hectic! Bear with me. Let's explain what is going on..
 ## The first six lines of code: how game states are stored
 
 
-### `snake`
+### The variable `snake`
 
 The first line of the code says...
 ```
@@ -151,7 +152,7 @@ Spaces are printed throughout the code
 to make the output easier to read.
 
 
-### `apple`
+### The variable `apple`
 
 The next non-empty line of code says `apple = (0, 5)`.
 Looking back on the previous image,
@@ -160,7 +161,7 @@ by starting at the top-left
 and moving 5 grid positions down.
 
 
-### `direction`
+### The variable `direction`
 
 The next non-empty line of code says `direction = "down"`.
 If we are to move the snake,
@@ -200,7 +201,7 @@ Therefore `update_snake("down", snake, (0, 5))` should change
 ```
 
 
-## The remain lines of code
+## The remaining lines of code
 
 
 <canvas id="snake-3">This should be a canvas describing Snake.</canvas><br><br>
@@ -212,4 +213,3 @@ Therefore `update_snake("down", snake, (0, 5))` should change
 <canvas id="snake-9">This should be a canvas describing Snake.</canvas><br><br>
 <script src="snake-draw-frame.js" defer></script>
 <script src="snake-examples.js" defer></script>
-
