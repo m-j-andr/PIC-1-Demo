@@ -20,7 +20,7 @@ to finish the creation of a fully working game of Snake.
 
 
 The idea of the version of Snake you will code is simple to describe.
- - A snake moves around the screen and grows when it eats an apple.
+ - A snake moves around the screen and grows whenever it eats an apple.
  - The snake is not allowed to hit the walls or eat itself;
    doing so leads to "GAME OVER".
  - The goal is to direct the snake around the playing area
@@ -42,10 +42,10 @@ This function has three parameters.
  - `snake`
    - This parameter records the current position of the snake as a *list*.
    - Valid list arguments will store the coordinates that comprise a snake.
-     Each pair of coordinates will be stored as a *tuple* of two *int*s.
+     Each pair of coordinates will be stored as a *tuple* of two *ints*.
  - `apple`
    - This parameter records the current position of the apple
-     as a *tuple* of two *int*s.
+     as a *tuple* of two *ints*.
 
 
 The quickest way to demonstate what this function needs to do is
@@ -88,7 +88,7 @@ apple = (7, 0)
 popped = update_snake(direction, snake, apple);  print(" " *  0, snake, " " * 30, popped, " " * 4, apple)
 ```
 
-**Necessary output produced by the code using `update_snake`.**
+**The output that should be produced by the code using `update_snake`.**
 ```
                                                 [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6), (7, 7)]
                                         [[0, 4], (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]        (7, 7)      (0, 5)
@@ -112,6 +112,32 @@ The first line of the code says...
 ```
 snake = [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6), (7, 7)]
 ```
+This *list* corresponds to the snake in the following image.
+ - The list contains 12 *tuples*. You can see 12 blue dots in the snake.
+ - The playing area is build on an 8-by-8 grid.
+   - `x`-coordinates on the grid go from `0` to `7` and take us from left to right.
+   - `y`-coordinates on the grid go from `0` to `7` and take us down the image.
+   - The top-left position in the grid is described by the *tuple* `(0, 0)`.
+   - The bottom-right position in the grid is described by the *tuple* `(7, 7)`.
+ - The first element in the list is `(0, 3)`.
+   - Start at the top-left.
+   - Move down by three grid positions.
+   - You are now at the *head* of the snake.
+ - The last element in the list is `(7, 7)`.
+   - Go to the bottom-right.
+   - You find the *tail* of the snake.
+ - The grid points between the head and the tail are described by
+   `(1, 3)`, `(2, 3)`, `(2, 4)`, `(2, 5)`, `(3, 5)`,
+   `(4, 5)`, `(5, 5)`, `(6, 5)`, `(7, 5)`, `(7, 6)`.
+ - You should check that all these points make sense to you.
+ - As another example consider `(6, 5)`.
+   - Start at the top-left.
+   - Move right by 6 grid positions.
+   - Move down by 5 grid positions.
+   - You find yourself within the snake.
+   - There are three blue points to the right.
+     That is because `(7, 5)`, `(7, 6)`, `(7, 7)`
+     come after `(6, 5)` in the `snake` list.
 
 <canvas id="snake-1">This should be a canvas describing Snake.</canvas><br><br>
 
