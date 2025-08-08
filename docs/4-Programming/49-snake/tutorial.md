@@ -106,15 +106,21 @@ Okay. That looks a little hectic! Bear with me. Let's explain what is going on..
 
 
 
-## The first six lines of code
+## The first six lines of code: how game states are stored
+
+
+### `snake`
 
 The first line of the code says...
 ```
 snake = [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6), (7, 7)]
 ```
 This *list* corresponds to the snake in the following image.
+
+<canvas id="snake-1">This should be a canvas describing Snake.</canvas>
+
  - The list contains 12 *tuples*. You can see 12 blue dots in the snake.
- - The playing area is build on an 8-by-8 grid.
+ - The playing area is built on an 8-by-8 grid.
    - `x`-coordinates on the grid go from `0` to `7` and take us from left to right.
    - `y`-coordinates on the grid go from `0` to `7` and take us down the image.
    - The top-left position in the grid is described by the *tuple* `(0, 0)`.
@@ -129,7 +135,7 @@ This *list* corresponds to the snake in the following image.
  - The grid points between the head and the tail are described by
    `(1, 3)`, `(2, 3)`, `(2, 4)`, `(2, 5)`, `(3, 5)`,
    `(4, 5)`, `(5, 5)`, `(6, 5)`, `(7, 5)`, `(7, 6)`.
- - You should check that all these points make sense to you.
+   You should check that all these points make sense to you.
  - As another example consider `(6, 5)`.
    - Start at the top-left.
    - Move right by 6 grid positions.
@@ -137,16 +143,66 @@ This *list* corresponds to the snake in the following image.
    - You find yourself within the snake.
    - There are three blue points to the right.
      That is because `(7, 5)`, `(7, 6)`, `(7, 7)`
-     come after `(6, 5)` in the `snake` list.
+     come after `(6, 5)` in `snake`.
 
-<canvas id="snake-1">This should be a canvas describing Snake.</canvas><br><br>
+The first line of output comes from `print(" " * 48, snake)`.
+This prints `snake` together with some leading spaces.
+Spaces are printed throughout the code
+to make the output easier to read.
 
 
+### `apple`
+
+The next non-empty line of code says `apple = (0, 5)`.
+Looking back on the previous image,
+you can see the apple
+by starting at the top-left
+and moving 5 grid positions down.
+
+
+### `direction`
+
+The next non-empty line of code says `direction = "down"`.
+If we are to move the snake,
+we need to know in which direction.
+
+
+
+
+## The first use of `update_snake`
+
+ - The snake's current position is described by
+   ```
+   [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6), (7, 7)]
+   ```
+ - The position of the apple is given by `(0, 5)`.
+ - The snake should move down because `direction` stores `"down"`.
+
+We have enough information to deduce the next position of the snake.
+It is shown in the following image.
+
+<canvas id="snake-2">This should be a canvas describing Snake.</canvas>
+
+It is the job of `update_snake(direction, snake, apple)`
+to take us from one snake position to the next.
+What *list* describes the new position?
+You should check carefully that
+the new position is described
+by the following *list*.
+```
+[[0, 4], (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]
+```
+Therefore `update_snake("down", snake, (0, 5))` should change
+`snake` from the first line to the second line.
+```
+        [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6), (7, 7)]
+[[0, 4], (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]
+```
 
 
 ## The remain lines of code
 
-<canvas id="snake-2">This should be a canvas describing Snake.</canvas><br><br>
+
 <canvas id="snake-3">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-4">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-5">This should be a canvas describing Snake.</canvas><br><br>
