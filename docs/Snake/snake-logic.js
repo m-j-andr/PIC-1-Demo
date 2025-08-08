@@ -4,8 +4,8 @@ let period = 240;
 
 
 
-let next_direction = undefined;
-let direction = undefined;
+let direction = "right";
+let next_direction = "right";
 
 document.addEventListener('keydown', function(e) {
   if      (e.key === "ArrowLeft")  { if (direction !== "right") { next_direction = "left";  } }
@@ -43,15 +43,17 @@ const apple = [0, 0];
 
 
 function update_apple() {
-  if (non_snake.size !== 0) {
-/*
-    do {
-      apple[0] = get_random_int(X);
-      apple[1] = get_random_int(Y);
-    }
-    while (!non_snake.has(flat_idx(apple)));
-*/
+  if (non_snake.size === 0) {
+    playing = false;
+    alert('YOU WON!');
 
+    period = Math.max(period - 80, 40);
+
+    X += 6;
+    Y += 6;
+    reset();
+  }
+  else {
     const k = non_snake.values();
     const j = get_random_int(non_snake.size);
 
@@ -63,22 +65,14 @@ function update_apple() {
     apple[0] = Math.floor(val / X);
     apple[1] =            val % X;
   }
-
-  else {
-    playing = false;
-    period = Math.max(period - 80, 40);
-    X += 6; Y += 6;
-
-    alert('YOU WON!');
-    reset();
-  }
 }
 
 
 
 
 function reset() {
-  direction = "right"; next_direction = "right";
+  direction = "right";
+  next_direction = "right";
 
 
   while (snake.length > 0) { snake.pop(); }

@@ -5,7 +5,7 @@ const P = 18;
 
 
 function draw_frame() {
-  canvas.width = (2 * X + 1) * P;
+  canvas.width  = (2 * X + 1) * P;
   canvas.height = (2 * Y + 1) * P;
 
 
