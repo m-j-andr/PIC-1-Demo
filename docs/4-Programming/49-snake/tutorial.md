@@ -271,17 +271,16 @@ The output corresponding to the code
 ```python
 popped = update_snake(direction, snake, apple);  print(" " * 40, snake, " " *  6, popped, " " * 4, apple)
 ```
-(ignoring the leading spaces) should be as follows.
+(ignoring the spaces) should be as follows.
 ```
-[(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]        (7, 7)      (0, 5)
+[(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]   (7, 7)   (0, 5)
 ```
 This shows the newly edited value of `snake`,
 the returned value of `(7, 7)`,
 and the fact that `apple` is unchanged and still has the value `(0, 5)`.
 
-**In fact,
-`update_snake` never makes any attempt to change the apple position,
-whatever the scenario**
+**In fact, `update_snake` never makes any attempt to change the apple position,
+whatever the scenario.**
 
 
 
@@ -297,3 +296,4 @@ whatever the scenario**
 <canvas id="snake-9">This should be a canvas describing Snake.</canvas><br><br>
 <script src="snake-draw-frame.js" defer></script>
 <script src="snake-examples.js" defer></script>
+
