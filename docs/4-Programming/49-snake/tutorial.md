@@ -38,13 +38,14 @@ This function has three parameters.
 
  - `direction`
    - This parameter is a *string* which records the direction the snake is supposed to move.
-   - Valid arguments we can use when calling the function are `"left"`, `"right"`, `"up"`, and `"down"`.
+   - We can use the values `"left"`, `"right"`, `"up"`, and `"down"` when calling the function.
  - `snake`
    - This parameter records the current position of the snake as a *list*.
-   - Valid list arguments will store the coordinates that comprise a snake.
-     Each pair of coordinates will be stored as a *tuple* of two *ints*.
+   - Valid list arguments store the coordinates that comprise a snake.
+     Each pair of coordinates is stored as a *tuple* of two *ints*.
  - `apple`
-   - This parameter records the current position of the apple
+   - This parameter records
+     the current position of the apple
      as a *tuple* of two *ints*.
 
 
@@ -56,6 +57,9 @@ and how it fits into the whole jigsaw that makes Snake work.
 The following code and its output will originally look overwhelming,
 but once we have explained step-by-step what it will accomplish
 during the playing of the game, it will seem much less intimidating.
+
+
+<br>
 
 
 ### Code using `update_snake`.
@@ -89,6 +93,9 @@ popped = update_snake(direction, snake, apple);  print(" " *  0, snake, " " * 30
 ```
 
 
+<br>
+
+
 ### The output that should be produced by the code using `update_snake`.
 ```
                                                 [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6), (7, 7)]
@@ -120,7 +127,7 @@ This *list* corresponds to the snake in the following image.
 
 <canvas id="snake-1">This should be a canvas describing Snake.</canvas>
 
- - The list contains 12 *tuples*. You can see 12 blue dots in the snake.
+ - The list contains 12 *tuples* and you can see 12 blue dots in the snake.
  - The playing area is built on an 8-by-8 grid.
    - `x`-coordinates on the grid go from `0` to `7` and take us from left to right.
    - `y`-coordinates on the grid go from `0` to `7` and take us down the image.
@@ -148,8 +155,8 @@ This *list* corresponds to the snake in the following image.
 
 The first line of output comes from `print(" " * 48, snake)`.
 This prints `snake` together with some leading spaces.
-Spaces are printed throughout the code
-to make the output easier to read.
+The spaces that are printed throughout the code are
+only there to make the output easier to read.
 
 
 ### The variable `apple`
@@ -158,7 +165,7 @@ The next non-empty line of code says `apple = (0, 5)`.
 Looking back to the previous image,
 you can see the apple
 by starting at the top-left
-and moving 5 grid positions down.
+and moving down by 5 grid positions.
 
 
 ### The variable `direction`
@@ -182,6 +189,7 @@ we need to know in which direction!
 This is enough information to deduce the next position of the snake.
 The next position is shown in the following image.
 
+<canvas id="snake-1">This should be a canvas describing Snake.</canvas>
 <canvas id="snake-2">This should be a canvas describing Snake.</canvas>
 
 **One responsibility of `update_snake(direction, snake, apple)`
