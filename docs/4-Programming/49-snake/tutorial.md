@@ -171,8 +171,8 @@ and moving down by 5 grid positions.
 ### The variable `direction`
 
 The next non-empty line of code says `direction = "down"`.
-If we are to move the snake,
-we need to know in which direction!
+If we are to move the snake correctly,
+we need to know what direction to move it!
 
 
 
@@ -189,8 +189,8 @@ we need to know in which direction!
 This is enough information to deduce the next position of the snake.
 The next position is shown in the following image.
 
-<canvas id="snake-1">This should be a canvas describing Snake.</canvas>
 <canvas id="snake-2">This should be a canvas describing Snake.</canvas>
+<canvas id="snake-3">This should be a canvas describing Snake.</canvas>
 
 **One responsibility of `update_snake(direction, snake, apple)`
 is to change `snake` from one snake position to the next.**
@@ -261,12 +261,12 @@ and the fact that `apple` is unchanged and still has the value `(0, 5)`.
 ## The remaining lines of code
 
 
-<canvas id="snake-3">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-4">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-5">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-6">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-7">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-8">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-9">This should be a canvas describing Snake.</canvas><br><br>
+<canvas id="snake-10">This should be a canvas describing Snake.</canvas><br><br>
 <script src="snake-draw-frame.js" defer></script>
 <script src="snake-examples.js" defer></script>
