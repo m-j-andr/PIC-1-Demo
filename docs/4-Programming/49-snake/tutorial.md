@@ -62,7 +62,7 @@ during the playing of the game, it will seem much less intimidating.
 <br>
 
 
-### Code using `update_snake`.
+### Code using `update_snake`
 ```python
 snake = [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6), (7, 7)]
 
@@ -96,7 +96,7 @@ popped = update_snake(direction, snake, apple);  print(" " *  0, snake, " " * 30
 <br>
 
 
-### The output that should be produced by the code using `update_snake`.
+### The output that should be produced by the code using `update_snake`
 ```
                                                 [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6), (7, 7)]
                                         [(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]        (7, 7)      (0, 5)
@@ -125,7 +125,7 @@ snake = [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5),
 ```
 This *list* corresponds to the snake in the following image.
 
-<canvas id="snake-1">This should be a canvas describing Snake.</canvas>
+<canvas id="snake-1a">This should be a canvas describing Snake.</canvas>
 
  - The list contains 12 *tuples* and you can see 12 blue dots in the snake.
  - The playing area is built on an 8-by-8 grid.
@@ -161,9 +161,10 @@ only there to make the output easier to read.
 
 ### The variable `apple`
 
+<canvas id="snake-1b">This should be a canvas describing Snake.</canvas>
+
 The next non-empty line of code says `apple = (0, 5)`.
-Looking back to the previous image,
-you can see the apple
+You can see the apple
 by starting at the top-left
 and moving down by 5 grid positions.
 
@@ -179,6 +180,8 @@ we need to know what direction to move it!
 
 ## The first use of `update_snake` and its main responsibility
 
+<canvas id="snake-1c">This should be a canvas describing Snake.</canvas>
+
  - The snake's current position is described by
    ```
    [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6), (7, 7)]
@@ -190,7 +193,6 @@ This is enough information to deduce the next position of the snake.
 The next position is shown in the following image.
 
 <canvas id="snake-2">This should be a canvas describing Snake.</canvas>
-<canvas id="snake-3">This should be a canvas describing Snake.</canvas>
 
 **One responsibility of `update_snake(direction, snake, apple)`
 is to change `snake` from one snake position to the next.**
@@ -261,12 +263,12 @@ and the fact that `apple` is unchanged and still has the value `(0, 5)`.
 ## The remaining lines of code
 
 
+<canvas id="snake-3">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-4">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-5">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-6">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-7">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-8">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-9">This should be a canvas describing Snake.</canvas><br><br>
-<canvas id="snake-10">This should be a canvas describing Snake.</canvas><br><br>
 <script src="snake-draw-frame.js" defer></script>
 <script src="snake-examples.js" defer></script>
