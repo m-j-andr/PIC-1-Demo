@@ -233,8 +233,8 @@ We have just seen that `update_snake("down", snake, (0, 5))` needs to change
 ```
 **It also needs to return the old tail position `(7, 7)`**.
 
-This is to give the other code that uses your code
-(the other pieces of the jigsaw you are completing)
+This is to give the other code that uses your code,
+the other pieces of the jigsaw that you are completing,
 permission to use this grid position for apples.
 If you define `update_snake` correctly except for this part,
 players will be able to "complete" Snake without truly completing it:
@@ -244,14 +244,23 @@ eating just a few apples will lead to the message "YOU WON!"
 It is a bit difficult to understand why this is necessary
 because you did not write the other code. For an analogy,
 suppose you are working at the front desk of a hotel
-and four friends arrive to use rooms 61, 62, 63, and 64.
-It was important for the friends to be next to each other
-and upon arrival it becomes clear that one of them needs to
-be in room 60 because it is the only room with ...
-Since room 60 is free, you move them to rooms 60, 61, 62, and 63.
-It is important for the next front desk manager,
-that you register in the system that room 64 is now free.
-Otherwise, they may unnecessarily turn away new customers.
+whose computer system is not currently working.
+Four friends arrive to use rooms 61, 62, 63, and 64 and
+it is important to the friends to be next to each other.
+Upon arrival, it becomes clear that one of them needs to
+use room 60 because it is the only room with a bathtub.
+Because room 60 is free, you move the group
+to rooms 60, 61, 62, and 63.
+Since the computer system is not working,
+you need leave a note to the front desk manager
+on the next shift, who you have never met,
+so that they know room 64 is now free.
+Otherwise, they may turn away new customers, unnecessarily.
+In this analogy,
+the front desk manager who you have never met
+plays the role of the code that you have not written
+and leaving a note is analogous to
+returning the old snake tail position.
 
 
 
@@ -270,6 +279,10 @@ This shows the newly edited value of `snake`,
 the returned value of `(7, 7)`,
 and the fact that `apple` is unchanged and still has the value `(0, 5)`.
 
+**In fact,
+`update_snake` never makes any attempt to change the apple position,
+whatever the scenario**
+
 
 
 
@@ -284,4 +297,3 @@ and the fact that `apple` is unchanged and still has the value `(0, 5)`.
 <canvas id="snake-9">This should be a canvas describing Snake.</canvas><br><br>
 <script src="snake-draw-frame.js" defer></script>
 <script src="snake-examples.js" defer></script>
-
