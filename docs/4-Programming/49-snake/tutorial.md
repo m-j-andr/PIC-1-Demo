@@ -189,8 +189,8 @@ we need to know what direction to move it!
  - The position of the apple is given by `(0, 5)`.
  - The snake should move down because `direction` stores `"down"`.
 
-This is enough information to deduce the next position of the snake.
-The next position is shown in the following image.
+This is enough information to deduce the next position of the snake,
+shown in the following image.
 
 <canvas id="snake-2">This should be a canvas describing Snake.</canvas>
 
@@ -210,8 +210,8 @@ Therefore, `update_snake("down", snake, (0, 5))` needs to change
 [(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)] 
 ```
 
-We see that
-there are two **changes that
+**We see that
+there are two changes that
 `update_snake("down", snake, (0, 5))`
 needs to make to `snake`.**
  - It needs to insert `(0, 4)` at the start of the `snake`, that is, create a new *head* position.
@@ -232,6 +232,7 @@ We have just seen that `update_snake("down", snake, (0, 5))` needs to change
 [(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)] 
 ```
 **It also needs to return the old tail position `(7, 7)`**.
+
 This is to give the other code that uses your code
 (the other pieces of the jigsaw you are completing)
 permission to use this grid position for apples.
@@ -239,6 +240,18 @@ If you define `update_snake` correctly except for this part,
 players will be able to "complete" Snake without truly completing it:
 zig-zagging through all of the playing area and
 eating just a few apples will lead to the message "YOU WON!"
+
+It is a bit difficult to understand why this is necessary
+because you did not write the other code. For an analogy,
+suppose you are working at the front desk of a hotel
+and four friends arrive to use rooms 61, 62, 63, and 64.
+It was important for the friends to be next to each other
+and upon arrival it becomes clear that one of them needs to
+be in room 60 because it is the only room with ...
+Since room 60 is free, you move them to rooms 60, 61, 62, and 63.
+It is important for the next front desk manager,
+that you register in the system that room 64 is now free.
+Otherwise, they may unnecessarily turn away new customers.
 
 
 
@@ -262,7 +275,6 @@ and the fact that `apple` is unchanged and still has the value `(0, 5)`.
 
 ## The remaining lines of code
 
-
 <canvas id="snake-3">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-4">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-5">This should be a canvas describing Snake.</canvas><br><br>
@@ -272,3 +284,4 @@ and the fact that `apple` is unchanged and still has the value `(0, 5)`.
 <canvas id="snake-9">This should be a canvas describing Snake.</canvas><br><br>
 <script src="snake-draw-frame.js" defer></script>
 <script src="snake-examples.js" defer></script>
+
