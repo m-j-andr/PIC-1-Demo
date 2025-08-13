@@ -169,6 +169,9 @@ In this example, we are consistent with how the
 in [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML){:target="_blank"} interprets coordinates.
 
 
+<br>
+
+
 ### The variable `apple`
 
 <canvas id="snake-1b">This should be a canvas describing Snake.</canvas>
@@ -177,6 +180,9 @@ The next non-empty line of code says `apple = (0, 5)`.
 You can see the apple
 by starting at the top-left
 and moving down by 5 grid positions.
+
+
+<br>
 
 
 ### The variable `direction`
@@ -327,10 +333,10 @@ Therefore, `update_snake("down", snake, (0, 5))` needs to change
 [(0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]
 ```
 
-We see that
-there is **only one change** that
+**We see that
+there is only one change that
 `update_snake("down", snake, (0, 5))`
-needs to make to `snake`.
+needs to make to `snake`.**
  - It needs to insert `(0, 5)` at the start of the `snake`, that is, create a new *head* position.
  - It does not need to remove `(7, 6)` from the end of the `snake`. The *tail* position remains the same.
 
@@ -338,10 +344,16 @@ This means that the length of `snake` increases by one.
 This is appropriate because the snake eats the apple.
 
 
+<br>
+
+
 ### Its other responsibility
 
 Since no tail position has been deleted,
 it returns `None`.
+
+
+<br>
 
 
 ### The corresponding output
