@@ -25,8 +25,10 @@ d = "down";
                                    draw_frame(document.getElementById('snake-1b'), s, a, true);
                                    draw_frame(document.getElementById('snake-1c'), s, a, true);
 
-t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-2'), s, a, true);
-t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-3'), s, a, true);
+t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-2a'), s, a, true);
+                                   draw_frame(document.getElementById('snake-2b'), s, a, true);
+t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-3a'), s, a, true);
+                                   draw_frame(document.getElementById('snake-3b'), s, a, true);
 
 a = [1, 7]; d = "right";           draw_frame(document.getElementById('snake-4'), s, a, true);
 
