@@ -472,3 +472,12 @@ Who do you think wrote that last sent<span id="egg">en</span>ce?!
     window.location.assign('3-hmm.html');
   });
 </script>
+
+
+
+
+<br><br>
+
+
+On to [datatypes and powers of two](3-4-pow2.md)!!
+

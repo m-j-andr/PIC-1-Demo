@@ -1,4 +1,4 @@
-# Weighted Averages, a Trip to the Museum, and a Course Grade Calculator
+# Google Sheets - Weighted Averages, a Trip to the Museum, and a Course Grade Calculator
 
 
 
@@ -353,5 +353,7 @@ is this grading scheme better or worse for you?
 
 
 
-Next, you will create [graphics for F1 TV](3-6-f1.md)!!
+<br><br>
 
+
+Next: [creating graphics for F1 TV](3-6-f1.md)!!
