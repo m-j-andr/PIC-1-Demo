@@ -237,7 +237,7 @@ and we can perform other exploratory calculations.
 By changing the cell `C5` to store 50%,
 we immediately obtain a new value of 62.09%
 for the fraction of the museum's items you visited.
-We can perform similar calculations without have to enter
+We can perform similar calculations without having to enter
 the formulas over and over again!
 
 > By exploring different fractions,
@@ -349,3 +349,9 @@ you receive an email from your professor saying,
 
 By considering the three questions above again,
 is this grading scheme better or worse for you?
+
+
+
+
+Next, you will create [graphics for F1 TV](3-6-f1.md)!!
+
