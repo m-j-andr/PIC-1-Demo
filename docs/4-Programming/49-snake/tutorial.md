@@ -581,7 +581,7 @@ popped = update_snake(direction, snake, apple);  print(" " *  0, snake, " " * 30
 ```
 should be as follows (up to spaces).
 ```
-[(1, 8), (1, 7), (1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5)]  (6, 5)  (7, 0)
+[(1, 8), (1, 7), (1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5)]   (6, 5)   (7, 0)
 ```
 This shows the newly edited value of `snake`,
 the returned value of `(6, 5)`,
