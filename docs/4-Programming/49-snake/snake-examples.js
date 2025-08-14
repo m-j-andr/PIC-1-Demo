@@ -30,9 +30,11 @@ t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-2a'
 t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-3a'), s, a, true);
                                    draw_frame(document.getElementById('snake-3b'), s, a, true);
 
-a = [1, 7]; d = "right";           draw_frame(document.getElementById('snake-4'), s, a, true);
+a = [1, 7]; d = "right";           draw_frame(document.getElementById('snake-4a'), s, a, true);
+                                   draw_frame(document.getElementById('snake-4b'), s, a, true);
 
-t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-5'), s, a, true);
+t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-5a'), s, a, true);
+                                   draw_frame(document.getElementById('snake-5b'), s, a, true);
 t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-6'), s, a, true);
 
 s.push(t); s.shift(); d = "down";

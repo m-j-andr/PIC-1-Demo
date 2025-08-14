@@ -304,7 +304,7 @@ whatever the scenario.**
 ## The second use of `update_snake`
 
 
-### Its main responsibility
+### `update_snake`'s main responsibility
 
 <canvas id="snake-2b">This should be a canvas describing Snake.</canvas>
 
@@ -347,7 +347,7 @@ This is appropriate because the snake eats the apple.
 <br>
 
 
-### Its other responsibility
+### `update_snake`'s other responsibility
 
 Since no tail position has been deleted,
 it returns `None`.
@@ -364,9 +364,9 @@ popped = update_snake(direction, snake, apple);  print(" " * 32, snake, " " *  7
 ```
 should be as follows.
 ```
-[(0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]   None   (0, 5)
+[(0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]  None  (0, 5)
 ```
-This shows the newly edited value of `snake`,
+This shows the newly edited value of `snake`
 and the returned value of `None`.
 It also shows that `apple` is unchanged
 and still has the value `(0, 5)`.
@@ -376,24 +376,86 @@ and still has the value `(0, 5)`.
 Even when the apple is eaten,
 `update_snake` does **not**
 place the apple at a new location.
-
 During gameplay,
 the other code that you have not written
 will take care of repositioning the apple.
 In the code we are considering,
 the reassignment `apple = (1, 7)`
-takes care of it.
+takes care of this so that
+we can consider more examples.
 
-<canvas id="snake-4">This should be a canvas describing Snake.</canvas>
+<canvas id="snake-4a">This should be a canvas describing Snake.</canvas>
+
+
+
+
+## The third use of `update_snake`
+
+<canvas id="snake-4b">This should be a canvas describing Snake.</canvas>
+
+ - The snake's current position is described by
+   ```
+   [(0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]
+   ```
+ - The position of the apple is given by `(1, 7)`.
+ - The snake should move right because `direction` stores `"right"`
+   after the reassignment `direction = "right"`.
+
+This is enough information to deduce the next position of the snake,
+shown in the following image.
+
+<canvas id="snake-5a">This should be a canvas describing Snake.</canvas>
+
+The non-space output corresponding to the code
+```python
+popped = update_snake(direction, snake, apple);  print(" " * 24, snake, " " * 14, popped, " " * 4, apple)
+```
+should be as follows.
+```
+[(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)]  (7, 6)  (1, 7)
+```
+This shows the newly edited value of `snake`,
+the returned value of `(7, 6)`,
+and the fact that `apple` is unchanged and still has the value `(1, 7)`.
+
+
+
+
+## The fourth use of `update_snake`
+
+<canvas id="snake-5b">This should be a canvas describing Snake.</canvas>
+
+ - The snake's current position is described by
+   ```
+   [(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)]
+   ```
+ - The position of the apple is still given by `(1, 7)`.
+ - The snake should move down because `direction` still stores `"right"`.
+
+This is enough information to deduce the next position of the snake,
+shown in the following image.
+
+<canvas id="snake-6">This should be a canvas describing Snake.</canvas>
+
+The non-space output corresponding to the code
+```python
+popped = update_snake(direction, snake, apple);  print(" " * 16, snake, " " * 22, popped, " " * 4, apple)
+```
+should be as follows.
+```
+[(2, 5), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]  (7, 5)  (1, 7)
+```
+This shows the newly edited value of `snake`,
+the returned value of `(7, 5)`,
+and the fact that `apple` is unchanged and still has the value `(1, 7)`.
 
 
 
 
 ## The remaining lines of code
-<canvas id="snake-5">This should be a canvas describing Snake.</canvas><br><br>
-<canvas id="snake-6">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-7">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-8">This should be a canvas describing Snake.</canvas><br><br>
 <canvas id="snake-9">This should be a canvas describing Snake.</canvas><br><br>
 <script src="snake-draw-frame.js" defer></script>
 <script src="snake-examples.js" defer></script>
+
