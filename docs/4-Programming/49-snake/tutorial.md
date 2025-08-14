@@ -67,8 +67,9 @@ and submit your definition of it [here](submit.md){:target="_blank"}.
 
 
 ### Code using `update_snake`
+
 ```python
-snake = [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6), (7, 7)]
+snake = [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)]
 
 print(" " * 48, snake)
 
@@ -101,6 +102,7 @@ popped = update_snake(direction, snake, apple);  print(" " *  0, snake, " " * 30
 
 
 ### The output that should be produced by the code using `update_snake`
+
 ```
                                                 [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)]
                                         [(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]        (7, 5)      (0, 5)
@@ -126,13 +128,13 @@ You can download the code [here](./snake.py).
 
 The first line of the code says...
 ```
-snake = [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6), (7, 7)]
+snake = [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)]
 ```
 This *list* corresponds to the snake in the following image.
 
 <canvas id="snake-1a">This should be a canvas describing Snake.</canvas>
 
- - The *list* contains 12 *tuples* and you can see 12 blue dots in the snake.
+ - The *list* contains 10 *tuples* and you can see 10 blue dots in the snake.
  - The playing area is built on an 8-by-8 grid.
    - `x`-coordinates on the grid go from `0` to `7` and take us from left to right.
    - `y`-coordinates on the grid go from `0` to `7` and take us down the image.<br>
@@ -143,21 +145,22 @@ This *list* corresponds to the snake in the following image.
    - Start at the top-left.
    - Move down by 3 grid positions.
    - You are now at the *head* of the snake.
- - The last element in the *list* is `(7, 7)`.
-   - Go to the bottom-right.
-   - You find the *tail* of the snake.
+ - The last element in the *list* is `(7, 5)`.
+   - Start at the bottom-right.
+   - Move up by 2 grid positions.
+   - You are now at the *tail* of the snake.
  - The grid points between the head and the tail are described by
-   `(1, 3)`, `(2, 3)`, `(2, 4)`, `(2, 5)`, `(3, 5)`,
-   `(4, 5)`, `(5, 5)`, `(6, 5)`, `(7, 5)`, `(7, 6)`.
+   `(1, 3)`, `(2, 3)`, `(2, 4)`, `(2, 5)`,
+   `(3, 5)`, `(4, 5)`, `(5, 5)`, `(6, 5)`.
    You should check that all these points make sense to you.
- - As another example consider `(6, 5)`.
+ - As another example consider `(4, 5)`.
    - Start at the top-left.
-   - Move right by 6 grid positions.
+   - Move right by 4 grid positions.
    - Move down by 5 grid positions.
    - You find yourself within the snake.
    - There are three blue points to the right.
-     That is because `(7, 5)`, `(7, 6)`, `(7, 7)`
-     come after `(6, 5)` in `snake`.
+     That is because `(5, 5)`, `(6, 5)`, `(7, 5)`
+     come after `(4, 5)` in `snake`.
 
 The first line of output comes from `print(" " * 48, snake)`.
 This prints `snake` together with some leading spaces.
@@ -200,11 +203,12 @@ we need to know what direction to move it!
 
 ## The first use of `update_snake` and its main responsibility
 
+
 <canvas id="snake-1c">This should be a canvas describing Snake.</canvas>
 
  - The snake's current position is described by
    ```
-   [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6), (7, 7)]
+   [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)]
    ```
  - The position of the apple is given by `(0, 5)`.
  - The snake should move down because `direction` stores `"down"`.
@@ -221,13 +225,13 @@ You should check carefully that
 the new position is described
 by the following *list*.
 ```
-[(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]
+[(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]
 ```
 Therefore, `update_snake("down", snake, (0, 5))` needs to change
 `snake` from the first line displayed below to the second line.
 ```
-        [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6), (7, 7)]
-[(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)] 
+        [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)]
+[(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]
 ```
 
 **We see that
@@ -235,7 +239,7 @@ there are two changes that
 `update_snake("down", snake, (0, 5))`
 needs to make to `snake`.**
  - It needs to insert `(0, 4)` at the start of the `snake`, that is, create a new *head* position.
- - It needs to remove `(7, 7)` from the end of the `snake`, that is, delete the old *tail* position.
+ - It needs to remove `(7, 5)` from the end of the `snake`, that is, delete the old *tail* position.
 
 Together, these operations preserve the length of `snake`.
 This is appropriate because the snake has not eaten the apple.
@@ -245,13 +249,14 @@ This is appropriate because the snake has not eaten the apple.
 
 ## The first use of `update_snake` and its other responsibility
 
+
 We have just seen that `update_snake("down", snake, (0, 5))` needs to change
 `snake` from the first line displayed below to the second line.
 ```
-        [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6), (7, 7)]
-[(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)] 
+        [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)]
+[(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]
 ```
-**It also needs to return the deleted tail position `(7, 7)`**.
+**It also needs to return the deleted tail position `(7, 5)`**.
 
 This is to give the other code that uses your code,
 the other pieces of the jigsaw that you are completing,
@@ -287,16 +292,17 @@ returning the deleted tail position.
 
 ## The first use of `update_snake` and the corresponding output
 
+
 The output corresponding to the code
 ```python
 popped = update_snake(direction, snake, apple);  print(" " * 40, snake, " " *  6, popped, " " * 4, apple)
 ```
 should be as follows (up to spaces).
 ```
-[(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]   (7, 7)   (0, 5)
+[(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]   (7, 5)   (0, 5)
 ```
 This shows the newly edited value of `snake`,
-the returned value of `(7, 7)`,
+the returned value of `(7, 5)`,
 and the fact that `apple` is unchanged
 and still has the value `(0, 5)`.
 **In fact, `update_snake` should
@@ -316,7 +322,7 @@ whatever the scenario.**
 
  - The snake's current position is described by
    ```
-   [(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]
+   [(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]
    ```
  - The position of the apple is still given by `(0, 5)`.
  - The snake should move down because `direction` still stores `"down"`.
@@ -330,13 +336,13 @@ You should check carefully that
 the new position is described
 by the following *list*.
 ```
-[(0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]
+[(0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]
 ```
 Therefore, `update_snake("down", snake, (0, 5))` needs to change
 `snake` from the first line displayed below to the second line.
 ```
-        [(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]
-[(0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]
+        [(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]
+[(0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]
 ```
 
 **We see that
@@ -344,7 +350,7 @@ there is only one change that
 `update_snake("down", snake, (0, 5))`
 needs to make to `snake`.**
  - It needs to insert `(0, 5)` at the start of the `snake`, that is, create a new *head* position.
- - It does **not** need to remove `(7, 6)` from the end of the `snake`. The *tail* position remains the same.
+ - It does **not** need to remove `(6, 5)` from the end of the `snake`. The *tail* position remains the same.
 
 This means that the length of `snake` increases by one.
 This is appropriate because the snake eats the apple.
@@ -370,7 +376,7 @@ popped = update_snake(direction, snake, apple);  print(" " * 32, snake, " " *  7
 ```
 should be as follows (up to spaces).
 ```
-[(0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)] None (0, 5)
+[(0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]   None   (0, 5)
 ```
 This shows the newly edited value of `snake`
 and the returned value of `None`.
@@ -397,11 +403,12 @@ we can consider more examples.
 
 ## The third use of `update_snake`: the snake is unfed but it moves in a new direction
 
+
 <canvas id="snake-4b">This should be a canvas describing Snake.</canvas>
 
  - The snake's current position is described by
    ```
-   [(0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]
+   [(0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]
    ```
  - The position of the apple is given by `(1, 7)`.
  - The snake should move right because `direction` stores `"right"`
@@ -418,10 +425,10 @@ popped = update_snake(direction, snake, apple);  print(" " * 24, snake, " " * 14
 ```
 should be as follows (up to spaces).
 ```
-[(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)] (7, 6) (1, 7)
+[(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5)]   (6, 5)   (1, 7)
 ```
 This shows the newly edited value of `snake`,
-the returned value of `(7, 6)`,
+the returned value of `(6, 5)`,
 and the fact that `apple` is unchanged
 and still has the value `(1, 7)`.
 
@@ -430,11 +437,12 @@ and still has the value `(1, 7)`.
 
 ## The fourth use of `update_snake`: the snake eats itself
 
+
 <canvas id="snake-5b">This should be a canvas describing Snake.</canvas>
 
  - The snake's current position is described by
    ```
-   [(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)]
+   [(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5)]
    ```
  - The position of the apple is still given by `(1, 7)`.
  - The snake should move right because `direction` still stores `"right"`.
@@ -450,10 +458,10 @@ popped = update_snake(direction, snake, apple);  print(" " * 16, snake, " " * 22
 ```
 should be as follows (up to spaces).
 ```
-[(2, 5), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)] (7, 5) (1, 7)
+[(2, 5), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5)]   (5, 5)   (1, 7)
 ```
 This shows the newly edited value of `snake`,
-the returned value of `(7, 5)`,
+the returned value of `(5, 5)`,
 and the fact that `apple` is unchanged
 and still has the value `(1, 7)`.
 
@@ -480,18 +488,19 @@ The output corresponding to the code
 `print(" " * 24, snake)` should be
 as follows (up to spaces).
 ```
-[(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)]
+[(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5)]
 ```
 
 
 
 ## The fifth use of `update_snake`: nothing new here, the snake is unfed
 
+
 <canvas id="snake-6b">This should be a canvas describing Snake.</canvas>
 
  - The snake's current position is described by
    ```
-   [(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)]
+   [(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5)]
    ```
  - The position of the apple is still given by `(1, 7)`.
  - The snake should move down because `direction` stores `"down"`
@@ -508,10 +517,10 @@ popped = update_snake(direction, snake, apple);  print(" " * 16, snake, " " * 22
 ```
 should be as follows (up to spaces).
 ```
-[(1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)] (7, 5) (1, 7)
+[(1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5)]   (5, 5)   (1, 7)
 ```
 This shows the newly edited value of `snake`,
-the returned value of `(7, 5)`,
+the returned value of `(5, 5)`,
 and the fact that `apple` is unchanged
 and still has the value `(1, 7)`.
 
@@ -520,11 +529,12 @@ and still has the value `(1, 7)`.
 
 ## The sixth use of `update_snake`: nothing new here, the snake eats another apple
 
+
 <canvas id="snake-7b">This should be a canvas describing Snake.</canvas>
 
  - The snake's current position is described by
    ```
-   [(1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]
+   [(1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5)]
    ```
  - The position of the apple is still given by `(1, 7)`.
  - The snake should move down because `direction` still stores `"down"`.
@@ -540,7 +550,7 @@ popped = update_snake(direction, snake, apple);  print(" " *  8, snake, " " * 23
 ```
 should be as follows (up to spaces).
 ```
-[(1, 7), (1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]  None  (1, 7)
+[(1, 7), (1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5)]   None   (1, 7)
 ```
 This shows the newly edited value of `snake`,
 the returned value of `None`,
@@ -561,11 +571,12 @@ we can consider one more example.
 
 ## The seventh and final use of `update_snake`: the snake hits a wall
 
+
 <canvas id="snake-9b">This should be a canvas describing Snake.</canvas>
 
  - The snake's current position is described by
    ```
-   [(1, 7), (1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]
+   [(1, 7), (1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5)]
    ```
  - The position of the apple is given by `(7, 0)`.
  - The snake should move down because `direction` still stores `"down"`.
@@ -581,10 +592,10 @@ popped = update_snake(direction, snake, apple);  print(" " *  0, snake, " " * 30
 ```
 should be as follows (up to spaces).
 ```
-[(1, 8), (1, 7), (1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5)]   (6, 5)   (7, 0)
+[(1, 8), (1, 7), (1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5)]   (4, 5)   (7, 0)
 ```
 This shows the newly edited value of `snake`,
-the returned value of `(6, 5)`,
+the returned value of `(4, 5)`,
 and the fact that `apple` is unchanged
 and still has the value `(7, 0)`.
 
@@ -603,6 +614,51 @@ handle ending the game.
 During gameplay,
 the other code that you have not written
 will take care of checking for such a scenario.
+
+
+
+
+## Summarizing
+
+Look again at the output that should be produced by the code that uses `update_snake`.
+
+```
+                                                [(0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)]
+                                        [(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]        (7, 5)      (0, 5)
+                                [(0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]         None       (0, 5)
+                        [(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5)]                (6, 5)      (1, 7)
+                [(2, 5), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5)]                        (5, 5)      (1, 7)
+                        [(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5)]
+                [(1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5)]                        (5, 5)      (1, 7)
+        [(1, 7), (1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5)]                         None       (1, 7)
+[(1, 8), (1, 7), (1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5)]                                (4, 5)      (7, 0)
+```
+
+Now that we have discussed what the output represents for the snake,
+the carefully chosen spacing allows you to recall everything that we just discussed quickly.
+
+ - We started with the snake in some configuration.
+ - (0) A new head position was added and the tail position was deleted because the snake was unfed.
+ - (1) A new head position was added and the tail position was not deleted because the snake ate an apple.
+ - (0) A new head position was added and the tail position was deleted because the snake was unfed.
+ - (0) A new head position was added and the tail position was deleted because the snake was unfed.
+ - We reverted to the previous configuration (because the snake ate itself).
+ - (0) A new head position was added and the tail position was deleted because the snake was unfed.
+ - (1) A new head position was added and the tail position was not deleted because the snake ate an apple.
+ - (0) A new head position was added and the tail position was deleted because the snake was unfed.
+
+By comparing carefully with the code that should produce the output,
+we see that `update_snake` never changes the coordinates of `apple`.
+
+Other than by careful analyzing of the *list* `snake`,
+nothing about `update_snake` indicates
+whether the snake ate itself or
+whether the snake hit a wall.
+This is fine because other code
+addresses these issues for you.
+
+
+
 
 <script src="snake-draw-frame.js" defer></script>
 <script src="snake-examples.js" defer></script>
