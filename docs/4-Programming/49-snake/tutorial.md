@@ -41,7 +41,7 @@ This function has three parameters.
    - We can use the values `"left"`, `"right"`, `"up"`, and `"down"` when calling the function.
  - `snake`
    - This parameter records the current position of the snake as a *list*.
-   - Valid list arguments store the positions that comprise a snake in the playing area.
+   - Valid *list* arguments store the positions that comprise a snake in the playing area.
    - Each position is stored as a *tuple* of two *int* coordinates.
  - `apple`
    - This parameter records
@@ -131,7 +131,7 @@ This *list* corresponds to the snake in the following image.
  - The list contains 12 *tuples* and you can see 12 blue dots in the snake.
  - The playing area is built on an 8-by-8 grid.
    - `x`-coordinates on the grid go from `0` to `7` and take us from left to right.
-   - `y`-coordinates on the grid go from `0` to `7` and take us down the image.
+   - `y`-coordinates on the grid go from `0` to `7` and take us down the image.<br>
      **NOTE.** This may be the opposite to what you expect.
    - The top-left position in the grid is described by the *tuple* `(0, 0)`.
    - The bottom-right position in the grid is described by the *tuple* `(7, 7)`.
@@ -276,25 +276,24 @@ In this analogy,
 the front desk manager who you have never met
 plays the role of the code that you have not written;
 leaving a note is analogous to
-returning the old snake tail position.
+returning the deleted tail position.
 
 
 
 
 ## The first use of `update_snake` and the corresponding output
 
-The non-space output corresponding to the code
+The output corresponding to the code
 ```python
 popped = update_snake(direction, snake, apple);  print(" " * 40, snake, " " *  6, popped, " " * 4, apple)
 ```
-should be as follows.
+should be as follows (up to correct spaces).
 ```
 [(0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]   (7, 7)   (0, 5)
 ```
 This shows the newly edited value of `snake`,
 the returned value of `(7, 7)`,
 and the fact that `apple` is unchanged and still has the value `(0, 5)`.
-
 **In fact, `update_snake` should never make any attempt to change the apple position,
 whatever the scenario.**
 
@@ -338,7 +337,7 @@ there is only one change that
 `update_snake("down", snake, (0, 5))`
 needs to make to `snake`.**
  - It needs to insert `(0, 5)` at the start of the `snake`, that is, create a new *head* position.
- - It does not need to remove `(7, 6)` from the end of the `snake`. The *tail* position remains the same.
+ - It does **not** need to remove `(7, 6)` from the end of the `snake`. The *tail* position remains the same.
 
 This means that the length of `snake` increases by one.
 This is appropriate because the snake eats the apple.
@@ -349,8 +348,8 @@ This is appropriate because the snake eats the apple.
 
 ### `update_snake`'s other responsibility
 
-Since no tail position has been deleted,
-it returns `None`.
+Since the tail position has not been deleted,
+`update_snake` returns `None`.
 
 
 <br>
@@ -358,13 +357,13 @@ it returns `None`.
 
 ### The corresponding output
 
-The non-space output corresponding to the code
+The output corresponding to the code
 ```python
 popped = update_snake(direction, snake, apple);  print(" " * 32, snake, " " *  7, popped, " " * 5, apple)
 ```
-should be as follows.
+should be as follows (up to correct spaces).
 ```
-[(0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]  None  (0, 5)
+[(0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 6)]  None (0, 5)
 ```
 This shows the newly edited value of `snake`
 and the returned value of `None`.
@@ -406,13 +405,13 @@ shown in the following image.
 
 <canvas id="snake-5a">This should be a canvas describing Snake.</canvas>
 
-The non-space output corresponding to the code
+The output corresponding to the code
 ```python
 popped = update_snake(direction, snake, apple);  print(" " * 24, snake, " " * 14, popped, " " * 4, apple)
 ```
-should be as follows.
+should be as follows (up to correct spaces).
 ```
-[(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)]  (7, 6)  (1, 7)
+[(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)] (7, 6) (1, 7)
 ```
 This shows the newly edited value of `snake`,
 the returned value of `(7, 6)`,
@@ -430,20 +429,72 @@ and the fact that `apple` is unchanged and still has the value `(1, 7)`.
    [(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)]
    ```
  - The position of the apple is still given by `(1, 7)`.
- - The snake should move down because `direction` still stores `"right"`.
+ - The snake should move right because `direction` still stores `"right"`.
 
 This is enough information to deduce the next position of the snake,
 shown in the following image.
 
-<canvas id="snake-6">This should be a canvas describing Snake.</canvas>
+<canvas id="snake-6a">This should be a canvas describing Snake.</canvas>
 
-The non-space output corresponding to the code
+The output corresponding to the code
 ```python
 popped = update_snake(direction, snake, apple);  print(" " * 16, snake, " " * 22, popped, " " * 4, apple)
 ```
-should be as follows.
+should be as follows (up to correct spaces).
 ```
-[(2, 5), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]  (7, 5)  (1, 7)
+[(2, 5), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)] (7, 5) (1, 7)
+```
+This shows the newly edited value of `snake`,
+the returned value of `(7, 5)`,
+and the fact that `apple` is unchanged and still has the value `(1, 7)`.
+
+It is clear from the picture that
+the snake is now eating itself.
+In terms of the *list* `snake`,
+this is highlighted by the fact that
+`snake[0] == (2, 5)` and `(2, 5) == snake[8]`.
+`update_snake` does **not**
+handle ending the game.
+During gameplay,
+the other code that you have not written
+will take care of checking for such a scenario.
+In the code we are considering,
+`snake.append(popped); snake.pop(0);`
+undoes this move so that
+we can consider more examples.
+The output corresponding to the code
+`print(" " * 24, snake)` should be
+as follows (up to correct spaces).
+```
+[(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)]
+```
+
+
+
+## The fifth use of `update_snake`
+
+<canvas id="snake-6b">This should be a canvas describing Snake.</canvas>
+
+ - The snake's current position is described by
+   ```
+   [(1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5)]
+   ```
+ - The position of the apple is still given by `(1, 7)`.
+ - The snake should move down because `direction` stores `"down"`
+   after the reassignment `direction = "down"`.
+
+This is enough information to deduce the next position of the snake,
+shown in the following image.
+
+<canvas id="snake-7a">This should be a canvas describing Snake.</canvas>
+
+The output corresponding to the code
+```python
+popped = update_snake(direction, snake, apple);  print(" " * 16, snake, " " * 22, popped, " " * 4, apple)
+```
+should be as follows (up to correct spaces).
+```
+[(1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)] (7, 5) (1, 7)
 ```
 This shows the newly edited value of `snake`,
 the returned value of `(7, 5)`,
@@ -452,10 +503,85 @@ and the fact that `apple` is unchanged and still has the value `(1, 7)`.
 
 
 
-## The remaining lines of code
-<canvas id="snake-7">This should be a canvas describing Snake.</canvas><br><br>
-<canvas id="snake-8">This should be a canvas describing Snake.</canvas><br><br>
-<canvas id="snake-9">This should be a canvas describing Snake.</canvas><br><br>
+## The sixth use of `update_snake`
+
+<canvas id="snake-7b">This should be a canvas describing Snake.</canvas>
+
+ - The snake's current position is described by
+   ```
+   [(1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]
+   ```
+ - The position of the apple is still given by `(1, 7)`.
+ - The snake should move down because `direction` still stores `"down"`.
+
+This is enough information to deduce the next position of the snake,
+shown in the following image.
+
+<canvas id="snake-8">This should be a canvas describing Snake.</canvas>
+
+The output corresponding to the code
+```python
+popped = update_snake(direction, snake, apple);  print(" " *  8, snake, " " * 23, popped, " " * 5, apple)
+```
+should be as follows (up to correct spaces).
+```
+[(1, 7), (1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]  None  (1, 7)
+```
+This shows the newly edited value of `snake`,
+the returned value of `None`,
+and the fact that `apple` is unchanged and still has the value `(1, 7)`.
+Even when the apple is eaten,
+`update_snake` does **not**
+place the apple at a new location.
+In the code we are considering,
+the reassignment `apple = (7, 0)`
+takes care of this so that
+we can consider one more example.
+
+<canvas id="snake-9a">This should be a canvas describing Snake.</canvas>
+
+
+
+
+## The seventh and final use of `update_snake`
+
+<canvas id="snake-9b">This should be a canvas describing Snake.</canvas>
+
+ - The snake's current position is described by
+   ```
+   [(1, 7), (1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5)]
+   ```
+ - The position of the apple is given by `(7, 0)`.
+ - The snake should move down because `direction` still stores `"down"`.
+
+This is enough information to deduce the next position of the snake,
+shown in the following image.
+
+<canvas id="snake-10">This should be a canvas describing Snake.</canvas>
+
+The output corresponding to the code
+```python
+popped = update_snake(direction, snake, apple);  print(" " *  0, snake, " " * 30, popped, " " * 4, apple)
+```
+should be as follows (up to correct spaces).
+```
+[(1, 8), (1, 7), (1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5)]  (6, 5)  (7, 0)
+```
+This shows the newly edited value of `snake`,
+the returned value of `(6, 5)`,
+and the fact that `apple` is unchanged and still has the value `(7, 0)`.
+
+It is clear from the picture
+that the snake has hit a wall.
+In terms of the *list* `snake`,
+this is highlighted by the fact that
+`snake[0][0] == 8` and `8 > 7`.
+`update_snake` does **not**
+handle ending the game.
+During gameplay,
+the other code that you have not written
+will take care of checking for such a scenario.
+
+
 <script src="snake-draw-frame.js" defer></script>
 <script src="snake-examples.js" defer></script>
-

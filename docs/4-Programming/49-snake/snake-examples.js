@@ -35,12 +35,14 @@ a = [1, 7]; d = "right";           draw_frame(document.getElementById('snake-4a'
 
 t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-5a'), s, a, true);
                                    draw_frame(document.getElementById('snake-5b'), s, a, true);
-t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-6'), s, a, true);
+t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-6a'), s, a, true);
 
-s.push(t); s.shift(); d = "down";
+s.push(t); s.shift(); d = "down";  draw_frame(document.getElementById('snake-6b'), s, a, true);
 
-t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-7'), s, a, true);
-t = u_s(d, s, a);
+t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-7a'), s, a, true);
+                                   draw_frame(document.getElementById('snake-7b'), s, a, true);
+t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-8'), s, a, true);
 
-a = [7, 0];                        draw_frame(document.getElementById('snake-8'), s, a, true);
-t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-9'), s, a, true);
+a = [7, 0];                        draw_frame(document.getElementById('snake-9a'), s, a, true);
+                                   draw_frame(document.getElementById('snake-9b'), s, a, true);
+t = u_s(d, s, a);                  draw_frame(document.getElementById('snake-10'), s, a, true);
