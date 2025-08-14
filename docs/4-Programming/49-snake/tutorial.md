@@ -274,10 +274,10 @@ Four friends arrive to use rooms 61, 62, 63, and 64, and
 it is important to the friends to be next to each other.
 Upon arrival, it becomes clear that one of them needs to
 use room 60 because it is the only room with a bathtub.
-Because room 60 is free, you move the group
-to rooms 60, 61, 62, and 63.
+Because room 60 is free, you move the group to
+rooms 60, 61, 62, and 63.
 Since the computer system is not working,
-you need leave a note to the front desk manager
+you need to leave a note for the front desk manager
 on the next shift, who you have never met,
 so that they know room 64 is now free.
 Otherwise, they may turn away new customers unnecessarily.
@@ -493,6 +493,7 @@ as follows (up to spaces).
 
 
 
+
 ## The fifth use of `update_snake`: nothing new here, the snake is unfed
 
 
@@ -620,6 +621,7 @@ will take care of checking for such a scenario.
 
 ## Summarizing
 
+
 Look again at the output that should be produced by the code that uses `update_snake`.
 
 ```
@@ -635,7 +637,7 @@ Look again at the output that should be produced by the code that uses `update_s
 ```
 
 Now that we have discussed what the output represents for the snake,
-the carefully chosen spacing allows you to recall everything that we just discussed quickly.
+the carefully chosen spacing allows you to recall everything that we discussed.
 
  - We started with the snake in some configuration.
  - (0) A new head position was added and the tail position was deleted because the snake was unfed.
@@ -649,16 +651,16 @@ the carefully chosen spacing allows you to recall everything that we just discus
 
 By comparing carefully with the code that should produce the output,
 we see that `update_snake` never changes the coordinates of `apple`.
-
-Other than by careful analyzing of the *list* `snake`,
+Other than by carefully analyzing the *list* `snake`,
 nothing about `update_snake` indicates
 whether the snake ate itself or
 whether the snake hit a wall.
 This is fine because other code
 addresses these issues for you.
 
-
-
+Remember that you can download the testing code [here](./snake.py)
+and that you can try your code in the context of the game [here](submit.md){:target="_blank"}.
+Good luck!
 
 <script src="snake-draw-frame.js" defer></script>
 <script src="snake-examples.js" defer></script>
