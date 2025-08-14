@@ -132,7 +132,7 @@ This *list* corresponds to the snake in the following image.
 
 <canvas id="snake-1a">This should be a canvas describing Snake.</canvas>
 
- - The list contains 12 *tuples* and you can see 12 blue dots in the snake.
+ - The *list* contains 12 *tuples* and you can see 12 blue dots in the snake.
  - The playing area is built on an 8-by-8 grid.
    - `x`-coordinates on the grid go from `0` to `7` and take us from left to right.
    - `y`-coordinates on the grid go from `0` to `7` and take us down the image.<br>
@@ -161,8 +161,8 @@ This *list* corresponds to the snake in the following image.
 
 The first line of output comes from `print(" " * 48, snake)`.
 This prints `snake` together with some leading spaces.
-The spaces that are printed throughout the code are
-only there to make the output easier to read.
+**The spaces that are printed throughout the code are
+only there to make the output easier to read.**
 
 **ASIDE.**
 When graphics are involved,
@@ -462,8 +462,8 @@ the snake is now eating itself.
 In terms of the *list* `snake`,
 this is highlighted by the fact that
 `snake[0] == (2, 5)` and `(2, 5) == snake[8]`.
-One should not expect that `update_snake`
-will be given such a *list* `snake`,
+One should not expect that
+`update_snake` will be given such a *list*,
 but it is fine for `update_snake`
 to create such a *list*.
 
@@ -593,8 +593,8 @@ that the snake has hit a wall.
 In terms of the *list* `snake`,
 this is highlighted by the fact that
 `snake[0][0] == 8` and `8 > 7`.
-One should not expect that `update_snake`
-will be given such a *list* `snake`,
+One should not expect that
+`update_snake` will be given such a *list*,
 but it is fine for `update_snake`
 to create such a *list*.
 
