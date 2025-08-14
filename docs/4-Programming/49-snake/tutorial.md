@@ -56,7 +56,7 @@ However, we will need to talk carefully about this code so that
 you can see why the function needs to perform this way,
 and how it fits into the whole jigsaw that makes Snake work.
 The following code and its output will originally look overwhelming,
-but once we have explained step-by-step what it accomplishes
+but once we have explained step-by-step what it would accomplish
 during the playing of the game, it will seem much less intimidating.
 Once you understand the role of `update_snake`,
 you can attempt to define this function correctly,
@@ -113,7 +113,8 @@ popped = update_snake(direction, snake, apple);  print(" " *  0, snake, " " * 30
 [(1, 8), (1, 7), (1, 6), (1, 5), (0, 5), (0, 4), (0, 3), (1, 3), (2, 3), (2, 4), (2, 5), (3, 5), (4, 5), (5, 5)]                                (6, 5)      (7, 0)
 ```
 
-That looks a little hectic! Please bear with me. Let's explain what is going on...
+That looks a little hectic! Please bear with me as I explain what is going on...
+You can download the code [here](./snake.py).
 
 
 
@@ -138,11 +139,11 @@ This *list* corresponds to the snake in the following image.
      **NOTE.** This may be the opposite to what you expect.
    - The top-left position in the grid is described by the *tuple* `(0, 0)`.
    - The bottom-right position in the grid is described by the *tuple* `(7, 7)`.
- - The first element in the list is `(0, 3)`.
+ - The first element in the *list* is `(0, 3)`.
    - Start at the top-left.
    - Move down by 3 grid positions.
    - You are now at the *head* of the snake.
- - The last element in the list is `(7, 7)`.
+ - The last element in the *list* is `(7, 7)`.
    - Go to the bottom-right.
    - You find the *tail* of the snake.
  - The grid points between the head and the tail are described by
