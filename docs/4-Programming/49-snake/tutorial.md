@@ -8,7 +8,7 @@
 
 You might have played the game
 [Snake](https://en.wikipedia.org/wiki/Snake_(video_game_genre)#/media/File:Snake_can_be_completed.gif){:target="_blank"}.
-It was difficult to talk to a 12-year-old in 2000 because they would be playing Snake on
+It was difficult to talk to a 12-year-old in the year 2000 because they would be playing Snake on
 "The Unbreakable" [Nokia 3310](https://en.wikipedia.org/wiki/Nokia_3310){:target="_blank"}.
 Coding this game from scratch is challenging because
 one has to handle both the logic of the game and the graphics.
@@ -41,13 +41,13 @@ This function has three parameters.
    - We can use the values `"left"`, `"right"`, `"up"`, and `"down"` when calling the function.
  - `snake`
    - This parameter records the current position of the snake as a *list*.
-   - Valid *list* arguments store the positions that comprise a snake in the playing area.
+   - Valid *list* arguments store positions that comprise a snake in the playing area.
    - Each position is stored as a *tuple* of two *int* coordinates.
  - `apple`
    - This parameter records
      the current position of the apple
      as a *tuple* of two *int* coordinates.
-   - Valid arguments will specify a position in the playing area.
+   - Valid *tuple* arguments will specify a position in the playing area.
 
 
 To demonstate what this function needs to do, it is quickest to
@@ -58,6 +58,9 @@ and how it fits into the whole jigsaw that makes Snake work.
 The following code and its output will originally look overwhelming,
 but once we have explained step-by-step what it accomplishes
 during the playing of the game, it will seem much less intimidating.
+Once you understand the role of `update_snake`,
+you can attempt to define this function correctly,
+and submit your definition of it [here](submit.md){:target="_blank"}.
 
 
 <br>
