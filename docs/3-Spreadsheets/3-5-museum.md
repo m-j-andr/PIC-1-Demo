@@ -3,6 +3,17 @@
 
 
 
+This exercise will show you that
+Google Sheets can be used as a calculator.
+In fact, it will show you that Google Sheets is
+better than the calculator on your phone because
+it allows you to perform many similar calculations
+using different numbers without you having to
+retype every aspect of the calculation.
+
+
+
+
 ## Motivating Weighted Averages
 
 A museum has the following exhibitions.
