@@ -40,7 +40,7 @@
 [4 - Homework](./2-Desmos/2-4-homework.md)
 
 
-# 3 - Spreadsheet: data analysis
+# 3 - Spreadsheets: data analysis
 
 [1 - Filters](./3-Spreadsheets/3-1-filter.md)
 
@@ -55,3 +55,10 @@
 [6 - Creating Graphics For F1 TV](./3-Spreadsheets/3-6-f1.md)
 
 [7 - Calculating Grades](https://two.bonsoon.net/read/pic-1-design/unit-3/04-calculating-grades-and-averages.md)
+
+
+# 3 - Python: programming
+
+[1 - An Incantation](./4-Programming/4-1.md)
+
+[9 - Snake](./4-Programming/49-snake/tutorial.md)
