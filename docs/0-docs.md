@@ -619,35 +619,33 @@ Python provides a few different ways to create strings.
 
 To see the benefits of each, consider the following three pieces of text.
 
-- Someone said, "I like single quotes." Good for them!
+1. Someone said, "I like single quotes." Good for them!
 
-- Double quotes are someone else's favorite.
+2. Double quotes are someone else's favorite.
 
-- One person likes single quotes.
-
-  Another person likes double quotes.
-
-  But what about the person who likes new lines?
+3. One person likes single quotes.<br>
+   Another likes double quotes.<br>
+   What about the person who likes new lines?
 
 
 Let's see how we can create strings containing these characters.
 
- - First example.
+1. First example.
    - `'Someone said, "I like single quotes." Good for them!'`
    - `"Someone said, \"I like single quotes.\" Good for them!"`
    - `"""Someone said, "I like single quotes." Good for them!"""`
 
- - Second example.
+2. Second example.
    - `'Double quotes are someone else\'s favorite.'`
    - `"Double quotes are someone else's favorite."`
    - `"""Double quotes are someone else's favorite."""`
 
- - Third example.
-   - `'One person likes single quotes.\nAnother person likes double quotes.\nBut what about the person who likes new lines?'`
-   - `"One person likes single quotes.\nAnother person likes double quotes.\nBut what about the person who likes new lines?"`
+3. Third example.
+   - `'One person likes single quotes.\nAnother likes double quotes.\nWhat about the person who likes new lines?'`
+   - `"One person likes single quotes.\nAnother likes double quotes.\nWhat about the person who likes new lines?"`
    - `"""One person likes single quotes.`<br>
-     `Another person likes double quotes.`<br>
-     `But what about the person who likes new lines?"""`
+     `Another likes double quotes.`<br>
+     `What about the person who likes new lines?"""`
 
 
 ## concept::charset
