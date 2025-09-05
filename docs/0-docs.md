@@ -430,7 +430,8 @@ reliable than ChatGPT when it comes to mathematics and computer science!
 
 ## concept::sheets, concept::table
 
-Tables are convenient because they allow one
+In [Google Sheets](https://docs.google.com/spreadsheets){:target="_blank"},
+*tables* are convenient because they allow one
 to specify *datatypes* for each column.
 After selecting a collection of cells,
 you can select `Format > Convert to table`
@@ -442,7 +443,8 @@ to select the appropriate datatype.
 
 ## concept::sheets, concept::filter
 
-*Filters* allow us to focus
+When using spreadsheets,
+*filters* allow us to focus
 on a subset of our data.
 
 You can create a *filter view* as follows.
@@ -465,7 +467,8 @@ You can exit a filter view as follows.
 
 ## concept::sheets, concept::pivot-table
 
-Pivot tables allow us to display our data in different ways
+When using spreadsheets,
+*pivot tables* allow us to display our data in different ways
 to highlight the information that concerns us the most.
 You can create one as follows.
 
@@ -481,9 +484,74 @@ You can create one as follows.
    and make your chosen selections.
 
 
+## concept::sheets, concept::formula
+
+In a spreadsheet,
+one can begin a formula by typing `=`.
+ - By typing `= A1 * B1` into cell `C1`,
+   we make sure that `C1` calculates the product
+   of the values contained in cells `A1` and `B1`.
+ - By typing `= SUM(A1: A10)` into `A11`,
+   we make sure that `A11` calculates the
+   sum of the values contained in cells
+   `A1`, `A2`,  `A3`, ..., `A10`.
+
+When typing a formula,
+you can also select cells with your mouse.
+ - To arrive at the formula `= A1 * B1` in cell `C1`...
+   - Click on cell `C1`.
+   - Type `= `.
+   - Click on cell `A1`.
+   - Type ` * `.
+   - Click on cell `B1`.
+   - Hit `ENTER`.
+ - To arrive at the formula `= SUM(A1: A10)` in cell `A11`...
+   - Click on cell `A11`.
+   - Type `= SUM()`.
+   - Press `←` to go back to between the parentheses.
+   - Highlight cells `A1` to `A10`.
+   - Hit `ENTER`.
+
+
+## concept::sheets, concept::formula-and-dollar, concept::formula-dollar
+
+A formula from one cell can be used to create formulae in other cells
+by hovering the mouse where the blue circle is until a cross (+) appears,
+and then clicking and dragging.
+
+ - Suppose that columns `B` and `C` contain some data.
+ - To fill column `A` with the numbers 1, 2, 3,...
+   - Type 1 into `A1`.
+   - Type 2 into `A2`.
+   - Highlight `A1` and `A2`.
+   - Hover your mouse where the blue circle is:
+     at the bottom-right of the highlighted region.
+     A cross (+) will appear.
+   - Click and drag down to where you like.
+ - When using a formula...
+   - As we drag it into new columns
+     `A`s will change to `B`s,
+     `B`s to `C`s, `C`s to `D`s,
+     and so on.
+   - As we drag it into new rows
+     `1`s will change to `2`s,
+     `2`s to `3`s, `3`s to `4`s,
+     and so on.
+   - We can prevent such changes using `$`s.
+     If we type `= SUM(B$1:B1) / $A1` into `D1` and drag it to `E8`,
+     `E8` will contain the formula `= SUM(C$1:C8) / $A8` so that
+     `$A` has remained as `$A`,
+     `$1` has remained as `$1`,
+     but the `B`s (without `$`s)
+     have changed to `C`s and
+     the `1`s without a `$`s
+     have changed to `8`s.
+
+
 ## concept::sheets, concept::datatype, concept::text
 
-When a cell's datatype is *text*,
+In [Google Sheets](https://docs.google.com/spreadsheets){:target="_blank"},
+when a cell's datatype is *text*,
 it can store up to 50,000 characters.
 
  - Characters from the English alphabet are allowed.
@@ -493,7 +561,8 @@ it can store up to 50,000 characters.
 
 ## concept::sheets, concept::datatype, concept::number
 
-When a cell's datatype is *number*,
+In [Google Sheets](https://docs.google.com/spreadsheets){:target="_blank"},
+when a cell's datatype is *number*,
 it can store many numerical values.
 However,
 there are limitations to which numbers can
@@ -505,7 +574,7 @@ In many applications, this lack of precision can be ignored,
 but this issue can matter much more than you might expect.
 
 
-## concept::sheets, concept::to_text, concept::value,
+## concept::sheets, concept::to_text, concept::value
 
  - Any *number* can be used to produce some *text*
    by using the `TO_TEXT` function.
@@ -525,7 +594,60 @@ but this issue can matter much more than you might expect.
    and gives the left-most character.
 
 
+
+
+## concept::unicode
+
+[Unicode](https://en.wikipedia.org/wiki/Unicode){:target="_blank"} is a
+[list of over 140,000 characters](https://en.wikipedia.org/wiki/List_of_Unicode_characters){:target="_blank"}
+together with their "code points".
+
+
 ## concept::string
+
+A *string* is a sequence of unicode characters.
+In most programming languages one can specify a *string*
+by typing a sequence of characters between double quotes.
+For example, in Python,
+`"a sequence of characters"`
+is a string of length 24.
+
+Python provides a few different ways to create strings.
+ - `'A string created using single quotes.'`
+ - `"A string created using double quotes."`
+ - `"""A string created using three double quotes."""`
+
+To see the benefits of each, consider the following three pieces of text.
+
+> Someone said, "I like single quotes." Good for them!
+
+> Double quotes are someone else's favorite.
+
+> One person likes single quotes.
+  Another person likes double quotes.
+  But what about the person who likes new lines?
+
+Let's see how we can create strings containing these characters.
+
+ - > Someone said, "I like single quotes."
+   - `'Someone said, "I like single quotes." Good for them!'`
+   - `"Someone said, \"I like single quotes.\" Good for them!"`
+   - `"""Someone said, "I like single quotes." Good for them!"""`
+
+ - > Double quotes are someone else's favorite.
+   - `'Double quotes are someone else\'s favorite.'`
+   - `"Double quotes are someone else's favorite."`
+   - `"""Double quotes are someone else's favorite."""`
+
+ - > One person likes single quotes.
+     Another person likes double quotes.
+     But what about the person who likes new lines?
+   - `'One person likes single quotes.\nAnother person likes double quotes.\nBut what about the person who likes new lines?'`
+   - `"One person likes single quotes.\nAnother person likes double quotes.\nBut what about the person who likes new lines?"`
+   - `"""One person likes single quotes.
+     Another person likes double quotes.
+     But what about the person who likes new lines?"""`
+
 
 ## concept::charset
 
