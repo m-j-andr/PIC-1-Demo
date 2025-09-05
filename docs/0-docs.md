@@ -500,9 +500,9 @@ When typing a formula,
 you can also select cells with your mouse.
  - To arrive at the formula `= A1 * B1` in cell `C1`...
    - Click on cell `C1`.
-   - Type `= `.
+   - Type `=`.
    - Click on cell `A1`.
-   - Type ` * `.
+   - Type `*`.
    - Click on cell `B1`.
    - Hit `ENTER`.
  - To arrive at the formula `= SUM(A1: A10)` in cell `A11`...
@@ -619,34 +619,35 @@ Python provides a few different ways to create strings.
 
 To see the benefits of each, consider the following three pieces of text.
 
-> Someone said, "I like single quotes." Good for them!
+- Someone said, "I like single quotes." Good for them!
 
-> Double quotes are someone else's favorite.
+- Double quotes are someone else's favorite.
 
-> One person likes single quotes.
+- One person likes single quotes.
+
   Another person likes double quotes.
+
   But what about the person who likes new lines?
+
 
 Let's see how we can create strings containing these characters.
 
- - > Someone said, "I like single quotes."
+ - First example.
    - `'Someone said, "I like single quotes." Good for them!'`
    - `"Someone said, \"I like single quotes.\" Good for them!"`
    - `"""Someone said, "I like single quotes." Good for them!"""`
 
- - > Double quotes are someone else's favorite.
+ - Second example.
    - `'Double quotes are someone else\'s favorite.'`
    - `"Double quotes are someone else's favorite."`
    - `"""Double quotes are someone else's favorite."""`
 
- - > One person likes single quotes.
-     Another person likes double quotes.
-     But what about the person who likes new lines?
+ - Third example.
    - `'One person likes single quotes.\nAnother person likes double quotes.\nBut what about the person who likes new lines?'`
    - `"One person likes single quotes.\nAnother person likes double quotes.\nBut what about the person who likes new lines?"`
-   - `"""One person likes single quotes.
-     Another person likes double quotes.
-     But what about the person who likes new lines?"""`
+   - `"""One person likes single quotes.`<br>
+     `Another person likes double quotes.`<br>
+     `But what about the person who likes new lines?"""`
 
 
 ## concept::charset
