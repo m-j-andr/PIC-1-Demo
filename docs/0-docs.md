@@ -632,23 +632,89 @@ Let's see how we can create strings containing these characters.
 
 1. First example.
    - `'Someone said, "I like single quotes." Good for them!'`
-   - `"Someone said, \"I like single quotes.\" Good for them!"`
+   - `"Someone said, \"I like single quotes.\" Good for them!"`<br>
+     Because double quotes are used to start and end the string,
+     the double quotes in the string need to be specified
+     using a backslash: `\"`.
    - `"""Someone said, "I like single quotes." Good for them!"""`
 
 2. Second example.
-   - `'Double quotes are someone else\'s favorite.'`
+   - `'Double quotes are someone else\'s favorite.'`<br>
+     Because single quotes are used to start and end the string,
+     the single quotes in the string need to be specified
+     using a backslash: `\'`.
    - `"Double quotes are someone else's favorite."`
    - `"""Double quotes are someone else's favorite."""`
 
 3. Third example.
-   - `'One person likes single quotes.\nAnother likes double quotes.\nWhat about the person who likes new lines?'`
-   - `"One person likes single quotes.\nAnother likes double quotes.\nWhat about the person who likes new lines?"`
+   - `'One person likes single quotes.\nAnother likes double quotes.\nWhat about the person who likes new lines?'`<br>
+     The new line character needs to be typed as `\n`.
+   - `"One person likes single quotes.\nAnother likes double quotes.\nWhat about the person who likes new lines?"`<br>
+     The new line character needs to be typed as `\n`.
    - `"""One person likes single quotes.`<br>
      `Another likes double quotes.`<br>
      `What about the person who likes new lines?"""`
+     The new line character can be typed normally by pressing `ENTER`.
 
 
-## concept::charset
+## concept::charset, concept::encoding
+
+When you store text in a `.txt` file,
+an *encoding* is used to translate
+between characters and bytes.
+
+For an example,
+suppose that files called
+`1.txt`, `2.txt`, and `3.txt`,
+each store the following text.
+
+!$<br>
+$!<br>
+$\mathbb{Z}$
+
+A byte can be thought of as a value between 0 and 255.
+
+1. If `1.txt` is encoded with UTF-8,
+   the following 9 bytes are used.
+   <div>
+     \[ 33 36 10 36 33 10 226 132 164 \]
+   </div>
+
+   - ! is encoded using the byte 33.
+   - $ is encoded using the byte 36.
+   - new line is encoded using the byte 10.
+   - $\mathbb{Z}$ is encoded using the bytes 226 132 164.
+
+2. If `2.txt` is encoded with UTF-16-LE,
+   the following 14 bytes are used.
+   <div>
+     \[ 33 0 36 0 10 0 36 0 33 0 10 0 36 33 \]
+   </div>
+
+   - ! is encoded using the bytes 33 0.
+   - $ is encoded using the bytes 36 0.
+   - new line is encoded using the bytes 10 0.
+   - $\mathbb{Z}$ is encoded using the bytes 36 33.
+
+3. If `3.txt` is encoded with UTF-16-BE,
+   the following 14 bytes are used.
+   <div>
+     \[ 0 33 0 36 0 10 0 36 0 33 0 10 33 36 \]
+   </div>
+
+   - ! is encoded using the bytes 0 33.
+   - $ is encoded using the bytes 0 36.
+   - new line is encoded using the bytes 0 10.
+   - $\mathbb{Z}$ is encoded using the bytes 33 36.
+
+4. Notice that 33 encodes ! in UTF-8 and that
+   it shows up as part of the encoding of
+   ! and $\mathbb{Z}$ in UTF-16.
+
+   Notice that 36 encodes $ in UTF-8 and that
+   it shows up as part of the encoding of
+   $ and $\mathbb{Z}$ in UTF-16.
+
 
 ## concept::print
 
