@@ -668,13 +668,13 @@ suppose that files called
 `1.txt`, `2.txt`, and `3.txt`,
 each store the following text.
 
-!$<br>
-$!<br>
+!\$<br>
+\$!<br>
 $\mathbb{Z}$
 
 A byte can be thought of as a value between 0 and 255.
 
-1. If `1.txt` is encoded with UTF-8,
+1. If `1.txt` is encoded with [UTF-8](https://en.wikipedia.org/wiki/UTF-8){:target="_blank"},
    the following 9 bytes are used.
    <div>
      \[ 33 36 10 36 33 10 226 132 164 \]
@@ -685,7 +685,7 @@ A byte can be thought of as a value between 0 and 255.
    - new line is encoded using the byte 10.
    - $\mathbb{Z}$ is encoded using the bytes 226 132 164.
 
-2. If `2.txt` is encoded with UTF-16-LE,
+2. If `2.txt` is encoded with [UTF-16-LE](https://en.wikipedia.org/wiki/UTF-16#Byte-order_encoding_schemes){:target="_blank"},
    the following 14 bytes are used.
    <div>
      \[ 33 0 36 0 10 0 36 0 33 0 10 0 36 33 \]
@@ -696,7 +696,7 @@ A byte can be thought of as a value between 0 and 255.
    - new line is encoded using the bytes 10 0.
    - $\mathbb{Z}$ is encoded using the bytes 36 33.
 
-3. If `3.txt` is encoded with UTF-16-BE,
+3. If `3.txt` is encoded with [UTF-16-BE](https://en.wikipedia.org/wiki/UTF-16#Byte-order_encoding_schemes){:target="_blank"},
    the following 14 bytes are used.
    <div>
      \[ 0 33 0 36 0 10 0 36 0 33 0 10 33 36 \]
@@ -707,13 +707,16 @@ A byte can be thought of as a value between 0 and 255.
    - new line is encoded using the bytes 0 10.
    - $\mathbb{Z}$ is encoded using the bytes 33 36.
 
-4. Notice that 33 encodes ! in UTF-8 and that
-   it shows up as part of the encoding of
-   ! and $\mathbb{Z}$ in UTF-16.
+4. - Notice that 33 encodes ! in UTF-8 and that
+     it shows up as part of the encoding of
+     ! and $\mathbb{Z}$ in UTF-16.
 
-   Notice that 36 encodes $ in UTF-8 and that
-   it shows up as part of the encoding of
-   $ and $\mathbb{Z}$ in UTF-16.
+   - Notice that 36 encodes \$ in UTF-8 and that
+     it shows up as part of the encoding of
+     $ and $\mathbb{Z}$ in UTF-16.
+
+   - Therefore opening a file using the incorrect encoding
+     could produce something that looks very confusing!
 
 
 ## concept::print
