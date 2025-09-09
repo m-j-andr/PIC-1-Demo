@@ -596,14 +596,14 @@ but this issue can matter much more than you might expect.
 
 
 
-## concept::unicode
+## concept::unicode, concept::characters
 
 [Unicode](https://en.wikipedia.org/wiki/Unicode){:target="_blank"} is a
 [list of over 140,000 characters](https://en.wikipedia.org/wiki/List_of_Unicode_characters){:target="_blank"}
 together with their "code points".
 
 
-## concept::string
+## concept::string, concept::characters
 
 A *string* is a sequence of unicode characters.
 In most programming languages one can specify a *string*
@@ -641,7 +641,7 @@ Let's see how we can create strings containing these characters.
 2. Second example.
    - `'Double quotes are someone else\'s favorite.'`<br>
      Because single quotes are used to start and end the string,
-     the single quotes in the string need to be specified
+     the single quote in the string needs to be specified
      using a backslash: `\'`.
    - `"Double quotes are someone else's favorite."`
    - `"""Double quotes are someone else's favorite."""`
@@ -654,14 +654,15 @@ Let's see how we can create strings containing these characters.
    - `"""One person likes single quotes.`<br>
      `Another likes double quotes.`<br>
      `What about the person who likes new lines?"""`
-     The new line character can be typed normally by pressing `ENTER`.
+     The new line character can be typed normally as a new line by pressing `ENTER`.
 
 
 ## concept::charset, concept::encoding
 
 When you store text in a `.txt` file,
 an *encoding* is used to translate
-between characters and bytes.
+between characters and bytes,
+what the file consists of.
 
 For an example,
 suppose that files called
@@ -672,7 +673,7 @@ each store the following text.
 \\$!<br>
 $\mathbb{Z}$
 
-A byte can be thought of as a value between 0 and 255.
+A *byte* can be understood as a value between 0 and 255.
 
 1. If `1.txt` is encoded with
    [UTF-8](https://en.wikipedia.org/wiki/UTF-8){:target="_blank"},
@@ -684,7 +685,7 @@ A byte can be thought of as a value between 0 and 255.
    - ! is encoded using the byte 33.
    - $ is encoded using the byte 36.
    - The new line character is encoded using the byte 10.
-   - $\mathbb{Z}$ is encoded using the bytes 226 132 164.
+   - $\mathbb{Z}$ is encoded using the three bytes 226 132 164.
 
 2. If `2.txt` is encoded with
    [UTF-16-LE](https://en.wikipedia.org/wiki/UTF-16#Byte-order_encoding_schemes){:target="_blank"},
@@ -693,10 +694,10 @@ A byte can be thought of as a value between 0 and 255.
      \[ 33\ 0\ 36\ 0\ 10\ 0\ 36\ 0\ 33\ 0\ 10\ 0\ 36\ 33 \]
    </div>
 
-   - ! is encoded using the bytes 33 0.
-   - $ is encoded using the bytes 36 0.
-   - The new line character is encoded using the bytes 10 0.
-   - $\mathbb{Z}$ is encoded using the bytes 36 33.
+   - ! is encoded using the two bytes 33 0.
+   - $ is encoded using the two bytes 36 0.
+   - The new line character is encoded using the two bytes 10 0.
+   - $\mathbb{Z}$ is encoded using the two bytes 36 33.
 
 3. If `3.txt` is encoded with
    [UTF-16-BE](https://en.wikipedia.org/wiki/UTF-16#Byte-order_encoding_schemes){:target="_blank"},
@@ -705,10 +706,10 @@ A byte can be thought of as a value between 0 and 255.
      \[ 0\ 33\ 0\ 36\ 0\ 10\ 0\ 36\ 0\ 33\ 0\ 10\ 33\ 36 \]
    </div>
 
-   - ! is encoded using the bytes 0 33.
-   - $ is encoded using the bytes 0 36.
-   - The new line character is encoded using the bytes 0 10.
-   - $\mathbb{Z}$ is encoded using the bytes 33 36.
+   - ! is encoded using the two bytes 0 33.
+   - $ is encoded using the two bytes 0 36.
+   - The new line character is encoded using the two bytes 0 10.
+   - $\mathbb{Z}$ is encoded using the two bytes 33 36.
 
 4. Notice that 33 encodes ! in UTF-8 and that
    it shows up as part of the encoding of
@@ -719,26 +720,28 @@ A byte can be thought of as a value between 0 and 255.
    \\$ and $\mathbb{Z}$ in UTF-16.
 
    Therefore, opening a file using the incorrect encoding
-   could produce text that looks very confusing!
+   could produce text that looks very different to intended!
 
-In this course,
-we will not consider encodings carefully,
-but just in case it is necessary to specify
-a *charset* or an *encoding*,
+In this course, we will not consider encodings carefully,
+but just in case it is necessary for you to specify
+a *charset* or an *encoding* at some point,
 we want you to know that `'utf-8'`
 is the most common character encoding,
 and it is normally best to choose this option.
-It is able to encode all
-[unicode](https://en.wikipedia.org/wiki/Unicode){:target="_blank"} characters.
+UTF-8 is able to encode all [unicode](https://en.wikipedia.org/wiki/Unicode){:target="_blank"} characters,
+and the most common characters ([ASCII](https://en.wikipedia.org/wiki/ASCII){:target="_blank"})
+are encoded using only one byte.
+
+
 
 
 ## concept::print
 
-`print` is likely to be the first function you will use in Python.
- - By default, new lines are printed after the arguments you provide.
-   You can change this by using `end = `.
+`print` is likely to be the first function you use in Python.
+ - By default, new lines are printed after the arguments that you provide.
+   You can change this by using `end = ` (see below).
  - By default, multiple arguments are each seperated by a single space.
-   You can change this by using `sep = `.
+   You can change this by using `sep = ` (see below).
 
 For example, consider the following code.
 ```python
@@ -761,40 +764,242 @@ Testing...
 Some great sportspeople: Carlos Alcaraz, Max Verstappen, Serena Williams
 ```
 
+Notice that the sportspeople are on the same lines as the word "sportspeople"
+and that they are each separated by a comma and a space.
 
-## concept::int
+
+## concept::comment
+
+*Comments* allow you to explain your code to other humans including your future self.
+In Python, after typing `#`, the rest of the line will be ignored by the interpreter.
+
+For example, consider the following code.
+```python
+print('Line 1')
+# Line 2. Since this is a comment, it will not produce output.
+print('Line 3')
+print('Line 4') # Since this is a comment, it will not produce further output.
+```
+
+When it executes, the output is as follows.
+```
+Line 1
+Line 3
+Line 4
+```
+
+
+
+
+## concept::int, concept::arithmetic, concept::comparison
 
 The *numeric type* `int` is for storing integers.
+
+`int`s allow arithmetic
+like `+`, `*`, `-`, `/`.
+We can calculate
+$2^3 = 2\times 2\times 2$ and $3^2 = 3\times 3$
+by typing `2 ** 3` and `3 ** 2`, respectively.
+
+For example, consider the following code.
+```python
+print('1 + 2 is', 1 + 2)
+print('3 * 4 is', 3 * 4)
+print('5 - 6 is', 5 - 6)
+print('7 / 8 is', 7 / 8)
+print()
+
+print('2 ** 3 is', 2 ** 3)
+print('3 ** 2 is', 3 ** 2)
+print('2 ** 63 is', 2 ** 63)
+```
+
+When it executes, the output is as follows.
+```
+1 + 2 is 3
+3 * 4 is 12
+5 - 6 is -1
+7 / 8 is 0.875
+
+2 ** 3 is 8
+3 ** 2 is 9
+2 ** 63 is 9223372036854775808
+```
 
 In many programming languages,
 integer datatypes impose constraints
 on the integers than can be stored,
 but in Python, the `int` data type
-has no such limitations.
+has no such limitations. For example,
+it has no issues calculating $2^63$.
+
+We can also compare `int`s using
+`==` (equals),
+`!=` (not equal),
+`<` (less than),
+`>` (greater than),
+`<=` (less than or equal to),
+and `>=` (greater than or equal to).
+
+For example, consider the following code.
+```python
+print('0 == 1 is', 0 == 1)
+print('0 != 1 is', 0 != 1)
+print('1 + 2 <= 2 is', 1 + 2 <= 2)
+print('1 + 2 <= 3 is', 1 + 2 <= 3)
+print('1 + 2 <= 4 is', 1 + 2 <= 4)
+print('1 < 2 is', 1 < 2)
+print('1 < 2 < 3 is', 1 < 2 < 3)
+print('4 > 5 is', 4 > 5)
+```
+
+When it executes, the output is as follows.
+```
+0 == 1 is False
+0 != 1 is True
+1 + 2 <= 2 is False
+1 + 2 <= 3 is True
+1 + 2 <= 4 is True
+1 < 2 is True
+1 < 2 < 3 is True
+4 > 5 is False
+```
+
+`True` and `False` are called *booleans*.
+See [concept::boolean](#conceptbool-conceptboolean) for more information.
 
 
-## concept::arithmetic
-
-## concept::comparison
 
 
-## concept::list
+## concept::list, concept::len, concept::length-of-a-list, concept::length-of-list
 
-## concept::index
+*Lists* keep track of a collection of objects in a sequential order.
+For example, you might have a *list* of `int`s.
+You can ask for a *list*'s length using `len`.
 
-## concept::len, concept::length-of-a-list, concept::length-of-list
+For example, consider the following code.
+```python
+print([1, 1, 2, 3, 5, 8])
+print(len([1, 1, 2, 3, 5, 8]))
+```
 
-## concept::sum, concept::max, concept::min
+When it executes, the output is as follows.
+```
+[1, 1, 2, 3, 5, 8]
+6
+```
+
+## concept::min, concept::max, concept::sum 
+
+When we have a *list* of `int`s (or some other numeric type),
+we can ask for the minimum, maximum, and sum of its elements
+using functions `min`, `max`, and `sum`.
+
+For example, consider the following code.
+```python
+print(min([1, 1, 2, 3, 5, 8]))
+print(max([1, 1, 2, 3, 5, 8]))
+print(sum([1, 1, 2, 3, 5, 8]))
+```
+
+When it executes, the output is as follows.
+```
+1
+8
+20
+```
 
 
-## concept::assignment, concept::assign, concept::=
+
+
+## concept::variable, concept::assignment, concept::assign, concept::=
+
+ - *Variables* allow us to store values and
+   to give descriptive names to useful values.
+ - We can update the value stored by a variable using *assignment*: `=`.
+   It updates the value of a variable written on the left side of it
+   by evaluating the expression written on the right side of it.
+
+
+### Example 1
+
+For example, consider the following code
+which is related to [a previous spreadsheet exercise](./3-Spreadsheets/3-4-pow2.md).
+```python
+n = 63
+
+# calculate two to the n as an int and a string...
+two_tt_n = 2 ** n
+two_tt_n_str = str(two_tt_n)
+
+# calculate the first digit of two to the n as a string and an int...
+fst_dig_two_tt_n_str = two_tt_n_str[0]
+fst_dig_two_tt_n = int(fst_dig_two_tt_n_str)
+
+# print the result of the calculation...
+print('The first digit of 2 to the', n, 'is', fst_dig_two_tt_n)
+```
+
+When it executes,
+ - `n` stores the `int` `63`,
+ - `two_tt_n` stores the `int` `9223372036854775808`,
+ - `two_tt_n_str` stores the *string* `'9223372036854775808'`,
+ - `fst_dig_two_tt_n_str` stores the *string* `'9'`,
+ - `fst_dig_two_tt_n` stores the `int` `9`,
+and so the output is as follows.
+```
+The first digit of 2 to the 63 is 9
+```
+
+
+### Example 2
+
+As another example, the following code produces the same output as Example 1.
+```python
+n = 63
+
+a = 2 ** n
+a = str(a)
+a = a[0]
+a = int(a)
+
+print('The first digit of 2 to the', n, 'is', a)
+```
+
+When it executes,
+ - `n` stores the `int` `63`,
+ - after `a = 2 ** n`, `a` stores the `int` `9223372036854775808`,
+ - after `a = str(a)`, `a` stores the *string* `'9223372036854775808'`,
+ - after `a = a[0]`, `a` stores the *string* `'9'`,
+ - after `a = int(a)`, `a` stores the `int` `9`.
+
+
+### Comparing the examples
+
+The first example is a little bit nicer to read
+because the variables are named descriptively
+and the type of the variables never changes.
+
+In the second example,
+`a` is not a particularly descriptive name
+and it starts life as an `int`,
+dynamically changes to a *string*,
+and then back to an `int`.
+Some programmers might
+look upon this code with disdain.
+
+
 
 
 ## concept::bool, concept::boolean
 
+
+
 ## concept::equals, concept::equal-to, concept::==
 
 ## concept::and, concept::or, concept::not
+
+## concept::string-index, concept::list-index, concept::index
 
 
 ## concept::control, concept::control-flow
