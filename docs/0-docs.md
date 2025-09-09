@@ -772,11 +772,10 @@ and that they are each separated by a comma and a space.
 
 *Comments* allow you to explain your code to other humans including your future self.
 In Python, after typing `#`, the rest of the line will be ignored by the interpreter.
-
 For example, consider the following code.
 ```python
 print('Line 1')
-# Line 2. Since this is a comment, it will not produce output.
+# Line 2. Since this line is a comment, it will not produce output (or an error).
 print('Line 3')
 print('Line 4') # Since this is a comment, it will not produce further output.
 ```
@@ -793,14 +792,13 @@ Line 4
 
 ## concept::int, concept::arithmetic, concept::comparison
 
-The *numeric type* `int` is for storing integers.
-
+The *numeric type* `int`
+is for storing integers.
 `int`s allow arithmetic
 like `+`, `*`, `-`, `/`.
 We can calculate
 $2^3 = 2\times 2\times 2$ and $3^2 = 3\times 3$
 by typing `2 ** 3` and `3 ** 2`, respectively.
-
 For example, consider the following code.
 ```python
 print('1 + 2 is', 1 + 2)
@@ -831,7 +829,7 @@ integer datatypes impose constraints
 on the integers than can be stored,
 but in Python, the `int` data type
 has no such limitations. For example,
-it has no issues calculating $2^63$.
+it has no issues calculating $2^{63}$.
 
 We can also compare `int`s using
 `==` (equals),
@@ -840,7 +838,6 @@ We can also compare `int`s using
 `>` (greater than),
 `<=` (less than or equal to),
 and `>=` (greater than or equal to).
-
 For example, consider the following code.
 ```python
 print('0 == 1 is', 0 == 1)
@@ -876,7 +873,6 @@ See [concept::boolean](#conceptbool-conceptboolean) for more information.
 *Lists* keep track of a collection of objects in a sequential order.
 For example, you might have a *list* of `int`s.
 You can ask for a *list*'s length using `len`.
-
 For example, consider the following code.
 ```python
 print([1, 1, 2, 3, 5, 8])
@@ -893,20 +889,19 @@ When it executes, the output is as follows.
 
 When we have a *list* of `int`s (or some other numeric type),
 we can ask for the minimum, maximum, and sum of its elements
-using functions `min`, `max`, and `sum`.
-
+using functions `min`, `max`, and `sum`, respectively.
 For example, consider the following code.
 ```python
-print(min([1, 1, 2, 3, 5, 8]))
-print(max([1, 1, 2, 3, 5, 8]))
-print(sum([1, 1, 2, 3, 5, 8]))
+print('min', min([1, 1, 2, 3, 5, 8]))
+print('max', max([1, 1, 2, 3, 5, 8]))
+print('sum', sum([1, 1, 2, 3, 5, 8]))
 ```
 
 When it executes, the output is as follows.
 ```
-1
-8
-20
+min 1
+max 8
+sum 20
 ```
 
 
@@ -916,16 +911,20 @@ When it executes, the output is as follows.
 
  - *Variables* allow us to store values and
    to give descriptive names to useful values.
- - We can update the value stored by a variable using *assignment*: `=`.
-   It updates the value of a variable written on the left side of it
-   by evaluating the expression written on the right side of it.
+ - We can update the value stored by a variable using the *assignment operator* `=`.
+   The assignment operator updates the value of a variable written on the left side
+   of it by evaluating the expression written on the right side of it.
 
 
 ### Example 1
 
 For example, consider the following code
 which is related to [a previous spreadsheet exercise](./3-Spreadsheets/3-4-pow2.md).
+We use `str` to create a *string* from an `int`,
+`int` to create an `int` from a *string*,
+and `[0]` to obtain the first character of a string.
 ```python
+# a value to experiment with...
 n = 63
 
 # calculate two to the n as an int and a string...
