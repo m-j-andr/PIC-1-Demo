@@ -736,9 +736,9 @@ It is able to encode all
 
 `print` is likely to be the first function you will use in Python.
  - By default, new lines are printed after the arguments you provide.
-   You can change this by typing by using `end = `.
- - By default, multiple arguments are seperated by spaces.
-   You can change this by typing by using `sep = `.
+   You can change this by using `end = `.
+ - By default, multiple arguments are each seperated by a single space.
+   You can change this by using `sep = `.
 
 For example, consider the following code.
 ```python
@@ -763,6 +763,15 @@ Some great sportspeople: Carlos Alcaraz, Max Verstappen, Serena Williams
 
 
 ## concept::int
+
+The *numeric type* `int` is for storing integers.
+
+In many programming languages,
+integer datatypes impose constraints
+on the integers than can be stored,
+but in Python, the `int` data type
+has no such limitations.
+
 
 ## concept::arithmetic
 
@@ -823,3 +832,4 @@ Some great sportspeople: Carlos Alcaraz, Max Verstappen, Serena Williams
 ## concept::fitting, concept::line-fitting, concept::curve-fitting
 
 ## concept::matplotlib, concept::plotting, concept::plt
+
