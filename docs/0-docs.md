@@ -674,7 +674,8 @@ $\mathbb{Z}$
 
 A byte can be thought of as a value between 0 and 255.
 
-1. If `1.txt` is encoded with [UTF-8](https://en.wikipedia.org/wiki/UTF-8){:target="_blank"},
+1. If `1.txt` is encoded with
+   [UTF-8](https://en.wikipedia.org/wiki/UTF-8){:target="_blank"},
    then the following 9 bytes are used.
    <div>
      \[ 33\ 36\ 10\ 36\ 33\ 10\ 226\ 132\ 164 \]
@@ -685,7 +686,8 @@ A byte can be thought of as a value between 0 and 255.
    - The new line character is encoded using the byte 10.
    - $\mathbb{Z}$ is encoded using the bytes 226 132 164.
 
-2. If `2.txt` is encoded with [UTF-16-LE](https://en.wikipedia.org/wiki/UTF-16#Byte-order_encoding_schemes){:target="_blank"},
+2. If `2.txt` is encoded with
+   [UTF-16-LE](https://en.wikipedia.org/wiki/UTF-16#Byte-order_encoding_schemes){:target="_blank"},
    then the following 14 bytes are used.
    <div>
      \[ 33\ 0\ 36\ 0\ 10\ 0\ 36\ 0\ 33\ 0\ 10\ 0\ 36\ 33 \]
@@ -696,7 +698,8 @@ A byte can be thought of as a value between 0 and 255.
    - The new line character is encoded using the bytes 10 0.
    - $\mathbb{Z}$ is encoded using the bytes 36 33.
 
-3. If `3.txt` is encoded with [UTF-16-BE](https://en.wikipedia.org/wiki/UTF-16#Byte-order_encoding_schemes){:target="_blank"},
+3. If `3.txt` is encoded with
+   [UTF-16-BE](https://en.wikipedia.org/wiki/UTF-16#Byte-order_encoding_schemes){:target="_blank"},
    then the following 14 bytes are used.
    <div>
      \[ 0\ 33\ 0\ 36\ 0\ 10\ 0\ 36\ 0\ 33\ 0\ 10\ 33\ 36 \]
@@ -715,11 +718,48 @@ A byte can be thought of as a value between 0 and 255.
    it shows up as part of the encoding of
    \\$ and $\mathbb{Z}$ in UTF-16.
 
-   Therefore opening a file using the incorrect encoding
-   could produce something that looks very confusing!
+   Therefore, opening a file using the incorrect encoding
+   could produce text that looks very confusing!
+
+In this course,
+we will not consider encodings carefully,
+but just in case it is necessary to specify
+a *charset* or an *encoding*,
+we want you to know that `'utf-8'`
+is the most common character encoding,
+and it is normally best to choose this option.
+It is able to encode all
+[unicode](https://en.wikipedia.org/wiki/Unicode){:target="_blank"} characters.
 
 
 ## concept::print
+
+`print` is likely to be the first function you will use in Python.
+ - By default, new lines are printed after the arguments you provide.
+   You can change this by typing by using `end = `.
+ - By default, multiple arguments are seperated by spaces.
+   You can change this by typing by using `sep = `.
+
+For example, consider the following code.
+```python
+print('Testing...')
+print('1, 2')
+print()
+print('1 + 2 is equal to', 1 + 2, 'and 4 + 5 is equal to', 4 + 5)
+print()
+print('Some great sportspeople:', end = ' ')
+print('Carlos Alcaraz', 'Max Verstappen', 'Serena Williams', sep = ', ')
+```
+
+When it executes, the output is as follows.
+```
+Testing...
+1, 2
+
+1 + 2 is equal to 3 and 4 + 5 is equal to 9
+
+Some great sportspeople: Carlos Alcaraz, Max Verstappen, Serena Williams
+```
 
 
 ## concept::int
@@ -734,6 +774,8 @@ A byte can be thought of as a value between 0 and 255.
 ## concept::index
 
 ## concept::len, concept::length-of-a-list, concept::length-of-list
+
+## concept::sum, concept::max, concept::min
 
 
 ## concept::assignment, concept::assign, concept::=
