@@ -1041,15 +1041,23 @@ Recall...
 Booleans can be used to obtain other booleans,
 by using the connectives `not`, `and`, and `or`.
 
-For example,
-when coding what a self-driving car does
-when turning right at an intersection with traffic lights,
-you might have booleans called
+For example, consider what
+a self-driving car does
+when turning right at
+an intersection with traffic lights.
+You might have booleans called
 `things_to_hit`, `green_light`,
 and `no_right_turn_on_red`.
-It would be useful to specify another boolean
-`go = not things_to_hit and (green_light or not no_right_turn_on_red)`.
-This determines a new boolean as demonstrated in the following table.
+It would be useful to specify
+another boolean as follows.
+```python
+go = not things_to_hit and (green_light or not no_right_turn_on_red)
+```
+The following table shows how
+the value of `go` depends on
+the value of `things_to_hit`,
+`green_light`,
+and `no_right_turn_on_red`.
 
 | `things_to_hit` | `green_light` | `no_right_turn_on_red` |   `go`   |
 | :-------------: | :-----------: | :--------------------: | :------: |
@@ -1062,26 +1070,33 @@ This determines a new boolean as demonstrated in the following table.
 |     `False`     |    `False`    |         `True`         |  `False` |
 |     `False`     |    `False`    |         `False`        |  `True`  |
 
-The individual rules are as follows.
+The individual rules fpor `not`, `and`, and `or`
+can be expressed by the following tables.
 
-|   `b`   | `not b` |
-| :-----: | :-----: |
-| `True`  | `False` |
-| `False` | `True`  |
+- `not`
 
-|   `b1`   |   `b2`   | `b1 and b2` |
-| :------: | :------: | :---------: |
-|  `True`  |  `True`  |   `True`    |
-|  `True`  |  `False` |   `False`   |
-|  `False` |  `True`  |   `False`   |
-|  `False` |  `False` |   `False`   |
+  |   `b`   | `not b` |
+  | :-----: | :-----: |
+  | `True`  | `False` |
+  | `False` | `True`  |
 
-|   `b1`   |   `b2`   | `b1 or b2` |
-| :------: | :------: | :--------: |
-|  `True`  |  `True`  |   `True`   |
-|  `True`  |  `False` |   `True`   |
-|  `False` |  `True`  |   `True`   |
-|  `False` |  `False` |   `False`  |
+- `and`
+
+  |   `b1`   |   `b2`   | `b1 and b2` |
+  | :------: | :------: | :---------: |
+  |  `True`  |  `True`  |   `True`    |
+  |  `True`  |  `False` |   `False`   |
+  |  `False` |  `True`  |   `False`   |
+  |  `False` |  `False` |   `False`   |
+
+- `or`
+
+  |   `b1`   |   `b2`   | `b1 or b2` |
+  | :------: | :------: | :--------: |
+  |  `True`  |  `True`  |   `True`   |
+  |  `True`  |  `False` |   `True`   |
+  |  `False` |  `True`  |   `True`   |
+  |  `False` |  `False` |   `False`  |
 
 You can confirm these tables in Python
 with the following code.
@@ -1103,7 +1118,7 @@ for b1 in [True, False]:
     print(b1, 'or', b2, '==', b1 or b2)
 ```
 
-This code uses `for` loops (see [concept::boolean](#conceptfor-conceptfor-loop)).
+This code uses `for` loops (see [concept::for-loop](#conceptfor-conceptfor-loop)).
 When it executes, the output is as follows.
 ```
 not True == False
