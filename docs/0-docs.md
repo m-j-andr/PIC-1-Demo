@@ -795,8 +795,8 @@ Line 4
 The *numeric type* `int`
 is for storing integers.
 `int`s allow arithmetic
-like `+`, `*`, `-`, `/`.
-We can calculate
+like `+`, `*`, `-`, `/`
+and we can calculate
 $2^3 = 2\times 2\times 2$ and $3^2 = 3\times 3$
 by typing `2 ** 3` and `3 ** 2`, respectively.
 For example, consider the following code.
@@ -871,7 +871,6 @@ See [concept::boolean](#conceptbool-conceptboolean) for more information.
 ## concept::list, concept::len, concept::length-of-a-list, concept::length-of-list
 
 *Lists* keep track of a collection of objects in a sequential order.
-For example, you might have a *list* of `int`s.
 You can ask for a *list*'s length using `len`.
 For example, consider the following code.
 ```python
@@ -910,7 +909,7 @@ sum 20
 ## concept::variable, concept::assignment, concept::assign, concept::=
 
  - *Variables* allow us to store values and
-   to give descriptive names to useful values.
+   to give descriptive names to useful quantities.
  - We can update the value stored by a variable using the *assignment operator* `=`.
    The assignment operator updates the value of a variable written on the left side
    of it by evaluating the expression written on the right side of it.
@@ -920,9 +919,6 @@ sum 20
 
 For example, consider the following code
 which is related to [a previous spreadsheet exercise](./3-Spreadsheets/3-4-pow2.md).
-We use `str` to create a *string* from an `int`,
-`int` to create an `int` from a *string*,
-and `[0]` to obtain the first character of a string.
 ```python
 # a value to experiment with...
 n = 63
@@ -938,13 +934,18 @@ fst_dig_two_tt_n = int(fst_dig_two_tt_n_str)
 # print the result of the calculation...
 print('The first digit of 2 to the', n, 'is', fst_dig_two_tt_n)
 ```
+We use `str` to create a *string* from an `int`,
+`int` to create an `int` from a *string*,
+and `two_tt_n_str[0]` to obtain
+the first character of `two_tt_n_str` (see [concept::string-index](#conceptstring-index-conceptlist-index-conceptindex)).
+When the code executes,
 
-When it executes,
  - `n` stores the `int` `63`,
  - `two_tt_n` stores the `int` `9223372036854775808`,
  - `two_tt_n_str` stores the *string* `'9223372036854775808'`,
  - `fst_dig_two_tt_n_str` stores the *string* `'9'`,
  - `fst_dig_two_tt_n` stores the `int` `9`,
+
 and so the output is as follows.
 ```
 The first digit of 2 to the 63 is 9
@@ -978,25 +979,147 @@ When it executes,
 The first example is a little bit nicer to read
 because the variables are named descriptively
 and the type of the variables never changes.
-
 In the second example,
-`a` is not a particularly descriptive name
-and it starts life as an `int`,
+`a` is not a very descriptive name
+and `a` starts life as an `int`,
 dynamically changes to a *string*,
 and then back to an `int`.
-Some programmers might
-look upon this code with disdain.
+Some programmers might look
+upon this code with disdain.
 
 
 
 
-## concept::bool, concept::boolean
+## concept::bool, concept::boolean, concept::equals, concept::equal-to, concept::==
+
+The datatype `bool`, the Boolean data type, is named after
+[George Boole](https://en.wikipedia.org/wiki/George_Boole){:target="_blank"}.
+Booleans have one of two possible values: `False` and `True`.
+Very frequently, booleans are obtained as the result of comparisons.
+For example, consider the following code.
+```python
+b = False
+print(b)
+
+b = (2 + 2 == 5)
+print(b)
+
+b = ('2' + '34' == '234')
+print(b)
+
+b = (1 + 2 < 4)
+print(b)
+
+b = (len([1, 1, 2, 3, 5, 8]) == 6)
+print(b)
+```
+
+When it executes, the output is as follows.
+```
+False
+False
+True
+True
+True
+```
+
+Recall...
+ - `=` is the assignment operator
+   and it is used five times
+   to update the value of `b`.
+ - `==` checks two expressions for equality.
+   - In the second example, four is not equal to five.
+   - In the last example, the length of `[1, 1, 2, 3, 5, 8]` is six.
+   - The third example shows that when we use `+` with two *strings*,
+     the result is the concatenation of the strings.
 
 
 
-## concept::equals, concept::equal-to, concept::==
 
-## concept::and, concept::or, concept::not
+## concept::not, concept::and, concept::or
+
+Booleans can be used to obtain other booleans,
+by using the connectives `not`, `and`, and `or`.
+
+For example,
+when coding what a self-driving car does
+when turning right at an intersection with traffic lights,
+you might have booleans called
+`things_to_hit`, `green_light`,
+and `no_right_turn_on_red`.
+It would be useful to specify another boolean
+`go = not things_to_hit and (green_light or not no_right_turn_on_red)`.
+This determines a new boolean as demonstrated in the following table.
+
+| `things_to_hit` | `green_light` | `no_right_turn_on_red` |   `go`   |
+| :-------------: | :-----------: | :--------------------: | :------: |
+|     `True`      |    `True`     |         `True`         |  `False` |
+|     `True`      |    `True`     |         `False`        |  `False` |
+|     `True`      |    `False`    |         `True`         |  `False` |
+|     `True`      |    `False`    |         `False`        |  `False` |
+|     `False`     |    `True`     |         `True`         |  `True`  |
+|     `False`     |    `True`     |         `False`        |  `True`  |
+|     `False`     |    `False`    |         `True`         |  `False` |
+|     `False`     |    `False`    |         `False`        |  `True`  |
+
+The individual rules are as follows.
+
+|   `b`   | `not b` |
+| :-----: | :-----: |
+| `True`  | `False` |
+| `False` | `True`  |
+
+|   `b1`   |   `b2`   | `b1 and b2` |
+| :------: | :------: | :---------: |
+|  `True`  |  `True`  |   `True`    |
+|  `True`  |  `False` |   `False`   |
+|  `False` |  `True`  |   `False`   |
+|  `False` |  `False` |   `False`   |
+
+|   `b1`   |   `b2`   | `b1 or b2` |
+| :------: | :------: | :--------: |
+|  `True`  |  `True`  |   `True`   |
+|  `True`  |  `False` |   `True`   |
+|  `False` |  `True`  |   `True`   |
+|  `False` |  `False` |   `False`  |
+
+You can confirm these tables in Python
+with the following code.
+
+```python
+for b in [True, False]:
+  print('not', b, '==', not b)
+
+print()
+
+for b1 in [True, False]:
+  for b2 in [True, False]:
+    print(b1, 'and', b2, '==', b1 and b2)
+
+print()
+
+for b1 in [True, False]:
+  for b2 in [True, False]:
+    print(b1, 'or', b2, '==', b1 or b2)
+```
+
+This code uses `for` loops (see [concept::boolean](#conceptfor-conceptfor-loop)).
+When it executes, the output is as follows.
+```
+not True == False
+not False == True
+
+True and True == True
+True and False == False
+False and True == False
+False and False == False
+
+True or True == True
+True or False == True
+False or True == True
+False or False == False
+```
+
 
 ## concept::string-index, concept::list-index, concept::index
 
@@ -1036,4 +1159,3 @@ look upon this code with disdain.
 ## concept::fitting, concept::line-fitting, concept::curve-fitting
 
 ## concept::matplotlib, concept::plotting, concept::plt
-
