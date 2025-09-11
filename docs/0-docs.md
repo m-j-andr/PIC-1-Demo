@@ -1176,7 +1176,6 @@ False or False == False
 ## concept::string-index, concept::list-index, concept::index
 
 Consider the following code.
-
 ```python
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
@@ -1227,8 +1226,44 @@ even though there are `26` characters. Therefore, if we need to obtain the last 
 then we need to use index `len(alphabet) - 1`, not index `len(alphabet)`.
 Python allows us to specify this element using the index `-1` as well.
 
+We can index *lists* in a similar way.
+
+For example, consider the following code.
+```python
+L = [3, 5, 7, 13, 23, 17, 19, 23, 37, 61]
+
+print(L[0], L[1], '...', L[7], L[8], L[-1])
+```
+
+When it executes, the output is as follows.
+```
+3 5 ... 23 37 61
+```
+
 
 ## concept::concatenation
+
+We can *concatenate* *strings* and *lists* using `+`.
+
+For example, consider the following code.
+```python
+s1 = 'conc'
+s2 = "ate"
+s3 = """nate"""
+
+L1 = [3, 5, 7, 13, 23]
+L2 = [17, 19, 23, 37, 61]
+
+print(s1 + s2 + s3)
+print(L1 + L2)
+```
+
+When it executes, the output is as follows.
+```
+concatenate
+[3, 5, 7, 13, 23, 17, 19, 23, 37, 61]
+```
+
 
 ## concept::control, concept::control-flow
 
@@ -1265,3 +1300,4 @@ Python allows us to specify this element using the index `-1` as well.
 ## concept::fitting, concept::line-fitting, concept::curve-fitting
 
 ## concept::matplotlib, concept::plotting, concept::plt
+
