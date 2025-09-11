@@ -1031,7 +1031,7 @@ Recall...
    - In the second example, four is not equal to five.
    - In the last example, the length of `[1, 1, 2, 3, 5, 8]` is six.
    - The third example shows that when we use `+` with two *strings*,
-     the result is the concatenation of the strings.
+     the result is the concatenation of the strings (see [concept::concatenation](#conceptconcatenation)).
 
 
 
@@ -1044,11 +1044,17 @@ by using the connectives `not`, `and`, and `or`.
 For example, consider what
 a self-driving car does
 when turning right at
-an intersection with traffic lights.
-You might have booleans called
+an intersection
+with traffic lights
+in the United States.
+Note that in the United States,
+one can turn right during a red light
+as long as there is not a sign
+prohibiting doing so. Therefore,
+you might have booleans called
 `things_to_hit`, `green_light`,
-and `no_right_turn_on_red`.
-It would be useful to specify
+and `no_right_turn_on_red`, and
+it would be useful to specify
 another boolean as follows.
 ```python
 go = not things_to_hit and (green_light or not no_right_turn_on_red)
@@ -1070,17 +1076,17 @@ and `no_right_turn_on_red`.
 |     `False`     |    `False`    |         `True`         |  `False` |
 |     `False`     |    `False`    |         `False`        |  `True`  |
 
-The individual rules fpor `not`, `and`, and `or`
+The individual rules for `not`, `and`, and `or`
 can be expressed by the following tables.
 
-- `not`
+- `not` swaps `True` and `False`.
 
   |   `b`   | `not b` |
   | :-----: | :-----: |
   | `True`  | `False` |
   | `False` | `True`  |
 
-- `and`
+- `and` produces `True` only when both booleans are `True`.
 
   |   `b1`   |   `b2`   | `b1 and b2` |
   | :------: | :------: | :---------: |
@@ -1089,7 +1095,7 @@ can be expressed by the following tables.
   |  `False` |  `True`  |   `False`   |
   |  `False` |  `False` |   `False`   |
 
-- `or`
+- `or` produces `False` only when both booleans are `False`.
 
   |   `b1`   |   `b2`   | `b1 or b2` |
   | :------: | :------: | :--------: |
@@ -1135,9 +1141,41 @@ False or True == True
 False or False == False
 ```
 
+- Notice `or` is inclusive:
+  when `b1` and `b2` are `True`,
+  `b1 or b2` is `True`.
+  For some English sentences this can sound strange,
+  but there are many examples where this usage sounds normal.
+  - Provided that there are no things to hit,
+    when does a self-driving car turn right
+    at an intersection with traffic lights?
+    "When the light is green or when there
+    is not a no-right-turn-on-red sign"
+    seems like a reasonable answer.
+    This answer includes the situation
+    when the light is green *and* there
+    is not a no-right-turn-on-red sign.
+  - Also, consider the more mathematical statement,
+    "the absolute value of a number $x$ is equal to
+    either $x$ or $-x$." This is correct. However,
+    note that when $x$ is zero, the absolute value
+    of $x$ is equal to $x$ *and* $-x$.
+
+- "Exclusive or" is `True` when
+  exactly one of the booleans given to it is `True`.
+  This is the same a `!=`.
+
+  |   `b1`   |   `b2`   | `b1 != b2` |
+  | :------: | :------: | :--------: |
+  |  `True`  |  `True`  |   `False`  |
+  |  `True`  |  `False` |   `True`   |
+  |  `False` |  `True`  |   `True`   |
+  |  `False` |  `False` |   `False`  |
+
 
 ## concept::string-index, concept::list-index, concept::index
 
+## concept::concatenation
 
 ## concept::control, concept::control-flow
 
