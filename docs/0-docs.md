@@ -1156,14 +1156,14 @@ False or False == False
     when the light is green *and* there
     is not a no-right-turn-on-red sign.
   - Also, consider the more mathematical statement,
-    "the absolute value of a number $x$ is equal to
-    either $x$ or $-x$." This is correct. However,
+    "the absolute value of a real number $x$ is equal
+    to either $x$ or $-x$." This is correct. However,
     note that when $x$ is zero, the absolute value
     of $x$ is equal to $x$ *and* $-x$.
 
 - "Exclusive or" is `True` when
   exactly one of the booleans given to it is `True`.
-  This is the same a `!=`.
+  This can be calculated with `!=`.
 
   |   `b1`   |   `b2`   | `b1 != b2` |
   | :------: | :------: | :--------: |
@@ -1174,6 +1174,59 @@ False or False == False
 
 
 ## concept::string-index, concept::list-index, concept::index
+
+Consider the following code.
+
+```python
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
+print(alphabet[0])
+print(alphabet[1])
+print(alphabet[2])
+print(alphabet[3])
+print(alphabet[25])
+print(alphabet[len(alphabet) - 1])
+print(alphabet[-1])
+```
+
+When it executes, the output is as follows.
+```
+a
+b
+c
+d
+z
+z
+z
+```
+
+This tells us the following.
+ - `a` is the `0`-th character of `alphabet`.
+ - `b` is the `1`-th character of `alphabet`.
+ - `c` is the `2`-th character of `alphabet`.
+ - `d` is the `3`-th character of `alphabet`.
+ - `z` is the `25`-th character of `alphabet`.
+
+In computer science, one starts counting at `0`.
+This can cause a confusing ambiguity for the word "first".
+Is the first or $1$-st character of `alphabet` `a` or `b`?
+For this reason, some instructors say
+zero-th, one-th, two-th, and three-th
+even if this sounds a bit weird.
+Some instructors also write
+`0`-th, `1`-th, `2`-th, and `3`-th,
+even if this reads weirdly.
+
+| character | `a` | `b` | `c` | `d` | ... |  `z` |
+| --------: | :-: | :-: | :-: | :-: | :-: | :--: |
+|     index | `0` | `1` | `2` | `3` | ... | `25` |
+
+The numbers describing the positions in a *string* are referred to as *indices*.
+Due to counting from `0`, the last element in `alphabet` is given by the index `25` element
+even though there are `26` characters. Therefore, if we need to obtain the last character algorithmically,
+then we need to use index `len(alphabet) - 1`, not index `len(alphabet)`.
+Python allows us to specify this element using the index `-1` as well.
+
 
 ## concept::concatenation
 
