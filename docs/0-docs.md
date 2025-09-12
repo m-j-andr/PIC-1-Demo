@@ -1208,7 +1208,7 @@ This tells us the following.
 
 In computer science, one starts counting at `0`.
 This can cause a confusing ambiguity for the word "first".
-Is the first or $1$-st character of `alphabet` `a` or `b`?
+Is the first or 1-st character of `alphabet` `a` or `b`?
 For this reason, some instructors say
 zero-th, one-th, two-th, and three-th
 even if this sounds a bit weird.
@@ -1227,7 +1227,6 @@ then we need to use index `len(alphabet) - 1`, not index `len(alphabet)`.
 Python allows us to specify this element using the index `-1` as well.
 
 We can index *lists* in a similar way.
-
 For example, consider the following code.
 ```python
 L = [3, 5, 7, 13, 23, 17, 19, 23, 37, 61]
@@ -1244,7 +1243,6 @@ When it executes, the output is as follows.
 ## concept::concatenation
 
 We can *concatenate* *strings* and *lists* using `+`.
-
 For example, consider the following code.
 ```python
 s1 = 'conc'
@@ -1266,6 +1264,18 @@ concatenate
 
 
 ## concept::control, concept::control-flow
+
+The simplest bits of code you encounter execute line-by-line,
+each line executes once and only once. *Control flow*
+allows us to control the flow of the code! For example,
+lines may execute more than once or not at all depending
+on the status of other variables in the code.
+
+There are three main ways to control the flow of code.
+ 1. `if` statements
+ 2. `while` loops
+ 3. `for` loops
+
 
 ## concept::if, concept::if-statement
 
