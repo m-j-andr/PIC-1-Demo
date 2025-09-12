@@ -1265,25 +1265,48 @@ concatenate
 
 ## concept::control, concept::control-flow
 
-The simplest bits of code you encounter execute line-by-line,
-each line executes once and only once. *Control flow*
+The simplest bits of code you encounter execute line-by-line
+and each line executes once and only once. *Control flow*
 allows us to control the flow of the code! For example,
-lines may execute more than once or not at all depending
-on the status of other variables in the code.
+a line of code may execute more than once or not at all
+depending on the values of variables in the code.
 
-There are three main ways to control the flow of code.
+There are three common ways to control the flow of code.
+
  1. `if` statements
+    - You can think of these as turning a block of code on or off.
+    - When "on", the lines of code execute **once**.
+    - When "off", the lines of code do not execute.
+
  2. `while` loops
+    - You can think of these as turning a block of code on or off.
+    - When "on", the lines of code execute **repeatedly**.
+    - When "off", the lines of code stop executing.
+
  3. `for` loops
+    - Any code written using a `for` loop can be written with a `while` loop.
+    - Normally, `for` loops are used for repeating code a specific number of times...
+    - or for repeating code for each element in a container like a *list*.
 
 
 ## concept::if, concept::if-statement
 
+
+
+
 ## concept::while, concept::while-loop
+
+
+
 
 ## concept::for, concept::for-loop
 
+
+
+
 ## concept::range
+
+
 
 
 ## concept::float, concept::int-division, concept::float-division
@@ -1310,4 +1333,3 @@ There are three main ways to control the flow of code.
 ## concept::fitting, concept::line-fitting, concept::curve-fitting
 
 ## concept::matplotlib, concept::plotting, concept::plt
-
