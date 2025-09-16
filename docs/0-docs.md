@@ -864,7 +864,7 @@ When it executes, the output is as follows.
 ```
 
 `True` and `False` are called *booleans*.
-See [concept::boolean](#conceptbool-conceptboolean-conceptequals-conceptequal-to-concept==) for more information.
+See [concept::boolean](#conceptbool-conceptboolean-conceptequals-conceptequal-to-concept) for more information.
 
 
 
@@ -919,7 +919,7 @@ sum: 20
 ### Example 1
 
 For example, consider the following code
-which is related to [a previous spreadsheet exercise](./3-Spreadsheets/3-4-pow2.md).
+which is related to [a previous spreadsheet exercise](./3-Spreadsheets/3-4-pow2.md){:target="_blank"}.
 ```python
 # a value to experiment with...
 n = 63
@@ -1158,7 +1158,7 @@ for b1 in [True, False]:
     print(b1, 'or', b2, '==', b1 or b2)
 ```
 
-This code uses `for` loops (see [concept::for-loop](#conceptfor-conceptfor-loop)).
+This code uses `for` loops (see [concept::for-loop](#conceptfor-conceptfor-loop-conceptcontainer)).
 When it executes, the output is as follows.
 ```
 not True == False
@@ -1483,7 +1483,7 @@ el: 7
     if el < 10:
       print('small:', el)
     else:
-      print('  big:', el)
+      print('large:', el)
   ```
 
   When it executes, the output is as follows.
@@ -1642,7 +1642,7 @@ el: 7
 
 ## concept::while, concept::while-loop
 
-A `while` loop is more primitive coding construct than a `for` loop:
+A `while` loop is more general coding construct than a `for` loop:
 in most coding languages, a `for` loop can be written in terms of a `while` loop.
 In this course, `for` loops will normally provide enough functionality for us and
 we will not explain how a `for` loop can be written in terms of a `while` loop (using iterators).
@@ -1816,7 +1816,7 @@ until the *list* contains the number of elements we want.
 L = [1, 2]
 n = 3                 # n is the next potential number in the sequence.
 
-while len(L) < 123:   # we make sure to obtain 12 terms in the sequence.
+while len(L) < 123:   # we make sure to obtain 123 terms in the sequence.
   c = 0               # we count how many ways n can be expressed
                       # as a sum of two distinct earlier terms.
   for a in L:
