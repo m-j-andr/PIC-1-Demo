@@ -1438,7 +1438,7 @@ el: 7
 
 - Using `len(L)`,
   we have a second way
-  to loop through all the value in a *list*.
+  to loop through all the values in a *list*.
   ```python
   L = [1, 22, 3, 44, 5, 66, 7, 88]
 
@@ -1459,10 +1459,10 @@ el: 7
   ```
 
 
-- This can be useful because some code might need to use
+- This is useful because sometimes your code may need to use
   the index `i` as well as the corresponding value `L[i]`.
   This example demonstrates using both `i` and `L[i]`
-  in a short `if` statement,
+  in a short `if` statement.
   ```python
   L = [1, 22, 3, 44, 5, 66, 7, 88]
 
@@ -1479,6 +1479,9 @@ el: 7
   6 7
   7 88
   ```
+  `0 + 1`, `2 + 3`, and `4 + 5` are not greater than `9`
+  so `print(i, L[i])` does not execute 
+  when `i` is `0`, `2`, and `4`.
 
 
 
@@ -1526,13 +1529,13 @@ are given by 1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28.
   they can be expressed as a sum of two *distinct* earlier terms
   in exactly one way (1 + 2 is regarded as the same as 2 + 1).
 
-- <div>
+  <div>
   \[\begin{aligned}
-  1 + 2\ &=\ 3\\
-  1 + 3\ &=\ 4\\
-  2 + 4\ &=\ 6\\
-  2 + 6\ &=\ 8\\
-  3 + 8\ &=\ 11\\
+  1 +  2\ &=\  3\\
+  1 +  3\ &=\  4\\
+  2 +  4\ &=\  6\\
+  2 +  6\ &=\  8\\
+  3 +  8\ &=\ 11\\
   2 + 11\ &=\ 13\\
   3 + 13\ &=\ 16\\
   2 + 16\ &=\ 18\\
@@ -1546,20 +1549,20 @@ are given by 1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28.
 
   <div>
   \[\begin{aligned}
-  1 + 4\ &=\ 2 + 3 &=\ 5\\
-  1 + 6\ &=\ 3 + 4 &=\ 7\\
-  1 + 8\ &=\ 3 + 6 &=\ 9\\
-  2 + 8\ &=\ 4 + 6 &=\ 10\\
-  1 + 11\ &=\ 4 + 8 &=\ 12\\
-  1 + 13\ &=\ 3 + 11 &=\ 14\\
-  2 + 13\ &=\ 4 + 11 &=\ 15\\
-  1 + 16\ &=\ 4 + 13 &=\ 17\\
-  1 + 18\ &=\ 3 + 16 &=\ 19\\
-  2 + 18\ &=\ 4 + 16 &=\ 20\\
-  3 + 18\ &=\ 8 + 13 &=\ 21\\
-  4 + 18\ &=\ 6 + 16 &=\ 22\\
-  6 + 18\ &=\ 8 + 16 &=\ 24\\
-  1 + 26\ &=\ 11 + 16 &=\ 27\\
+  1 +  4\ =\  2 +  3 &=\  5\\
+  1 +  6\ =\  3 +  4 &=\  7\\
+  1 +  8\ =\  3 +  6 &=\  9\\
+  2 +  8\ =\  4 +  6 &=\ 10\\
+  1 + 11\ =\  4 +  8 &=\ 12\\
+  1 + 13\ =\  3 + 11 &=\ 14\\
+  2 + 13\ =\  4 + 11 &=\ 15\\
+  1 + 16\ =\  4 + 13 &=\ 17\\
+  1 + 18\ =\  3 + 16 &=\ 19\\
+  2 + 18\ =\  4 + 16 &=\ 20\\
+  3 + 18\ =\  8 + 13 &=\ 21\\
+  4 + 18\ =\  6 + 16 &=\ 22\\
+  6 + 18\ =\  8 + 16 &=\ 24\\
+  1 + 26\ =\ 11 + 16 &=\ 27\\
   \end{aligned}\]
   </div>
 
@@ -1592,8 +1595,9 @@ When it executes, the output is as follows.
 [1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28]
 ```
 
-The while loop keeps executing until the list contains 12 elements.
-Until 28 has been calculated, we did not know how big `n` needed to get.
+The `while` loop keeps executing until the *list* contains 12 elements.
+Until `28` has been calculated, we did not know how big `n` needed to get.
+In particular, we could not write `for n in range(28)`.
 
 
 
