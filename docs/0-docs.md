@@ -1525,6 +1525,7 @@ the first 12 terms of
 are given by 1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28.
 
 - The sequence begins with 1 and 2.
+
 - 3, 4, 6, 8, 11, 13, 16, 18, 26, 28 are in the sequence because
   they can be expressed as a sum of two *distinct* earlier terms
   in exactly one way (1 + 2 is regarded as the same as 2 + 1).
@@ -1568,6 +1569,44 @@ are given by 1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28.
 
 - 23 and 25 are not in the list because they cannot be expressed as a sum of two earlier terms.
 
+
+Suppose we want code that prints
+the first 12 terms of the standard Ulam sequence.
+```python
+L = [1, 2]
+n = 3
+
+for n in range(29):
+  c = 0
+
+  for el in L:
+    if 2 * el >= n:
+      break
+    if n - el in L:
+      c += 1
+
+  if c == 1:
+    L.append(n)
+
+print(L)
+```
+
+When the code above executes, the output is as follows.
+```
+[1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28]
+```
+
+Therefore, this code is good for calculating
+the first 12 terms of the standard Ulam sequence.
+But where on earth did `29` come from???
+Well, this section began by telling you
+the first 12 numbers in the sequence,
+the 12-th number is 28,
+and 29 is the number after 28.
+If we change our minds and want to print
+the first 100 terms of the sequence,
+then it is unclear how to edit `29`.
+
 Consider the following code.
 ```python
 L = [1, 2]
@@ -1595,9 +1634,11 @@ When it executes, the output is as follows.
 [1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28]
 ```
 
-The `while` loop keeps executing until the *list* contains 12 elements.
-Until `28` has been calculated, we did not know how big `n` needed to get.
-In particular, we could not write `for n in range(28)`.
+Therefore, this is good code for calculating
+the first 12 terms of the standard Ulam sequence.
+Moreover, we can change 12 to other numbers of our choice!
+In this more suitable code, the `while` loop keeps executing
+until the *list* contains the number of elements we specify.
 
 
 
