@@ -1351,54 +1351,54 @@ el: 7
 - The following code demonstrates using
   an `if-else` statement to select between
   two different lines of code.
-```python
-L = [1, 22, 3, 44, 5, 66, 7, 88]
+  ```python
+  L = [1, 22, 3, 44, 5, 66, 7, 88]
 
-for el in L:
-  if el < 10:
-    print('small:', el)
-  else:
-    print('  big:', el)
-```
+  for el in L:
+    if el < 10:
+      print('small:', el)
+    else:
+      print('  big:', el)
+  ```
 
   When it executes, the output is as follows.
-```
-small: 1
-large: 22
-small: 3
-large: 44
-small: 5
-large: 66
-small: 7
-large: 88
-```
+  ```
+  small: 1
+  large: 22
+  small: 3
+  large: 44
+  small: 5
+  large: 66
+  small: 7
+  large: 88
+  ```
 
 - The following code demonstrates using
   an `if-elif-else` statement to select
   between three different lines of code.
-```python
-L = [1, 22, 3, 44, 5, 66, 7, 88]
+  ```python
+  L = [1, 22, 3, 44, 5, 66, 7, 88]
 
-for el in L:
-  if el < 10:
-    print(' small:', el)
-  elif el < 50:
-    print('medium:', el)
-  else:
-    print(' large:', el)
-```
+  for el in L:
+    if el < 10:
+      print(' small:', el)
+    elif el < 50:
+      print('medium:', el)
+    else:
+      print(' large:', el)
+  ```
 
   When it executes, the output is as follows.
-```
- small: 1
-medium: 22
- small: 3
-medium: 44
- small: 5
- large: 66
- small: 7
- large: 88
-```
+  ```
+   small: 1
+  medium: 22
+   small: 3
+  medium: 44
+   small: 5
+   large: 66
+   small: 7
+   large: 88
+  ```
 
 
 ## concept::range
@@ -1406,79 +1406,79 @@ medium: 44
 - The following code demonstrates using
   a `for` loop with `range` to obtain the
   integers from 0 up to and *excluding* 4.
-```python
-for i in range(4):
-  print(i)
-```
+  ```python
+  for i in range(4):
+    print(i)
+  ```
 
   When it executes, the output is as follows.
-```
-0
-1
-2
-3
-```
+  ```
+  0
+  1
+  2
+  3
+  ```
 
 - Using the variable `i` to index a list,
   we can loop through part of a *list*.
-```python
-L = [1, 22, 3, 44, 5, 66, 7, 88]
+  ```python
+  L = [1, 22, 3, 44, 5, 66, 7, 88]
 
-for i in range(4):
-  print(L[i])
-```
+  for i in range(4):
+    print(L[i])
+  ```
 
   When the code above executes, the output is as follows.
-```
-1
-22
-3
-44
-```
+  ```
+  1
+  22
+  3
+  44
+  ```
 
 - Using `len(L)`,
   we have a second way
   to loop through all the value in a *list*.
-```python
-L = [1, 22, 3, 44, 5, 66, 7, 88]
+  ```python
+  L = [1, 22, 3, 44, 5, 66, 7, 88]
 
-for i in range(len(L)):
-  print(L[i])
-```
+  for i in range(len(L)):
+    print(L[i])
+  ```
 
   When the code above executes, the output is as follows.
-```
-1
-22
-3
-44
-5
-66
-7
-88
-```
+  ```
+  1
+  22
+  3
+  44
+  5
+  66
+  7
+  88
+  ```
 
 
 - This can be useful because some code might need to use
   the index `i` as well as the corresponding value `L[i]`.
   This example demonstrates using both `i` and `L[i]`
   in a short `if` statement,
-```python
-L = [1, 22, 3, 44, 5, 66, 7, 88]
+  ```python
+  L = [1, 22, 3, 44, 5, 66, 7, 88]
 
-for i in range(len(L)):
-  if i + L[i] > 9:
-    print(i, L[i])
-```
+  for i in range(len(L)):
+    if i + L[i] > 9:
+      print(i, L[i])
+  ```
 
   When the code above executes, the output is as follows.
-```
-1 22
-3 44
-5 66
-6 7
-7 88
-```
+  ```
+  1 22
+  3 44
+  5 66
+  6 7
+  7 88
+  ```
 
 
 
