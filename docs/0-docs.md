@@ -653,7 +653,7 @@ Let's see how we can create strings containing these characters.
      The new line character needs to be typed as `\n`.
    - `"""One person likes single quotes.`<br>
      `Another likes double quotes.`<br>
-     `What about the person who likes new lines?"""`
+     `What about the person who likes new lines?"""`<br>
      The new line character can be typed normally as a new line by pressing `ENTER`.
 
 
@@ -662,7 +662,7 @@ Let's see how we can create strings containing these characters.
 When you store text in a `.txt` file,
 an *encoding* is used to translate
 between characters and bytes,
-what the file consists of.
+what the file really consists of.
 
 For an example,
 suppose that files called
@@ -719,7 +719,7 @@ A *byte* can be understood as a value between 0 and 255.
    it shows up as part of the encoding of
    \\$ and $\mathbb{Z}$ in UTF-16.
 
-   Therefore, opening a file using the incorrect encoding
+   Therefore, opening a file using the wrong encoding
    could produce text that looks very different to intended!
 
 In this course, we will not consider encodings carefully,
@@ -729,7 +729,7 @@ we want you to know that `'utf-8'`
 is the most common character encoding,
 and it is normally best to choose this option.
 UTF-8 is able to encode all [unicode](https://en.wikipedia.org/wiki/Unicode){:target="_blank"} characters,
-and the most common characters ([ASCII](https://en.wikipedia.org/wiki/ASCII){:target="_blank"})
+and the most common characters ([ASCII](https://en.wikipedia.org/wiki/ASCII#Character_set){:target="_blank"})
 are encoded using only one byte.
 
 
@@ -764,8 +764,8 @@ Testing...
 Some great sportspeople: Carlos Alcaraz, Max Verstappen, Serena Williams
 ```
 
-Notice that the sportspeople are on the same lines as the word "sportspeople"
-and that they are each separated by a comma and a space.
+Notice that the sportspeople are on the same lines as the word "sportspeople" thanks to `end = ' '`
+and that they are each separated by a comma and a space thanks to `sep = ', '`.
 
 
 ## concept::comment
@@ -829,7 +829,8 @@ integer datatypes impose constraints
 on the integers than can be stored,
 but in Python, the `int` data type
 has no such limitations. For example,
-it has no issues calculating $2^{63}$.
+it has no issues calculating $2^{63}$
+(recall [how Google Sheets handles *numbers*](./3-Spreadsheets/3-4-pow2.html#the-text-datatype-and-the-number-datatype){:target="_blank"}).
 
 We can also compare `int`s using
 `==` (equals),
@@ -863,7 +864,7 @@ When it executes, the output is as follows.
 ```
 
 `True` and `False` are called *booleans*.
-See [concept::boolean](#conceptbool-conceptboolean) for more information.
+See [concept::boolean](#conceptbool-conceptboolean-conceptequals-conceptequal-to-concept==) for more information.
 
 
 
@@ -891,16 +892,16 @@ we can ask for the minimum, maximum, and sum of its elements
 using functions `min`, `max`, and `sum`, respectively.
 For example, consider the following code.
 ```python
-print('min', min([1, 1, 2, 3, 5, 8]))
-print('max', max([1, 1, 2, 3, 5, 8]))
-print('sum', sum([1, 1, 2, 3, 5, 8]))
+print('min:', min([1, 1, 2, 3, 5, 8]))
+print('max:', max([1, 1, 2, 3, 5, 8]))
+print('sum:', sum([1, 1, 2, 3, 5, 8]))
 ```
 
 When it executes, the output is as follows.
 ```
-min 1
-max 8
-sum 20
+min: 1
+max: 8
+sum: 20
 ```
 
 
@@ -990,9 +991,43 @@ upon this code with disdain.
 
 
 
+## concept::assign-arithmetic, concept::+=
+
+Assignment and arithmetic combine to give `+=`, `*=`, `-=`, and `/=`.
+For example, consider the following code.
+```python
+i = 2
+print('i:', i)
+
+i += 5
+print('i:', i)
+
+i *= 4
+print('i:', i)
+
+i -= 20
+print('i:', i)
+```
+
+When it executes, the output is as follows.
+```
+i: 2
+i: 7
+i: 28
+i: 8
+```
+
+- `i = 2` makes `i` store `2`. 
+- `i += 5` adds `5` to `i` so that `i` stores `7`.
+- `i *= 4` multiplies `i` by `4` so that `i` stores `28`.
+- `i -= 20` subtracts `20` from `i` so that `i` stores `8`.
+
+
+
+
 ## concept::bool, concept::boolean, concept::equals, concept::equal-to, concept::==
 
-The datatype `bool`, the Boolean data type, is named after
+The datatype `bool`, the boolean data type, is named after
 [George Boole](https://en.wikipedia.org/wiki/George_Boole){:target="_blank"}.
 Booleans have one of two possible values: `False` and `True`.
 Very frequently, booleans are obtained as the result of comparisons.
@@ -1024,9 +1059,9 @@ True
 ```
 
 Recall...
- - `=` is the assignment operator
-   and it is used five times
-   to update the value of `b`.
+ - `=` is the assignment operator and
+   it is used to update the value of `b`
+   five times in this code.
  - `==` checks two expressions for equality.
    - In the second example, four is not equal to five.
    - In the last example, the length of `[1, 1, 2, 3, 5, 8]` is six.
@@ -1038,8 +1073,8 @@ Recall...
 
 ## concept::not, concept::and, concept::or
 
-Booleans can be used to obtain other booleans,
-by using the connectives `not`, `and`, and `or`.
+Booleans can be used to obtain other booleans
+by using the *connectives* `not`, `and`, and `or`.
 
 For example, consider what
 a self-driving car does
@@ -1061,9 +1096,8 @@ go = not things_to_hit and (green_light or not no_right_turn_on_red)
 ```
 The following table shows how
 the value of `go` depends on
-the value of `things_to_hit`,
-`green_light`,
-and `no_right_turn_on_red`.
+the values of `things_to_hit`,
+`green_light`, and `no_right_turn_on_red`.
 
 | `things_to_hit` | `green_light` | `no_right_turn_on_red` |   `go`   |
 | :-------------: | :-----------: | :--------------------: | :------: |
@@ -1141,11 +1175,11 @@ False or True == True
 False or False == False
 ```
 
-- Notice `or` is inclusive:
+- Notice that `or` is inclusive:
   when `b1` and `b2` are `True`,
   `b1 or b2` is `True`.
-  For some English sentences this can sound strange,
-  but there are many examples where this usage sounds normal.
+  For some English sentences this can sound strange, but
+  there are many examples where this usage sounds normal.
   - Provided that there are no things to hit,
     when does a self-driving car turn right
     at an intersection with traffic lights?
@@ -1171,6 +1205,8 @@ False or False == False
   |  `True`  |  `False` |   `True`   |
   |  `False` |  `True`  |   `True`   |
   |  `False` |  `False` |   `False`  |
+
+
 
 
 ## concept::string-index, concept::list-index, concept::index
@@ -1209,12 +1245,12 @@ This tells us the following.
 In computer science, one starts counting at `0`.
 This can cause a confusing ambiguity for the word "first".
 Is the first or 1-st character of `alphabet` `a` or `b`?
-For this reason, some instructors say
+For this reason, for clarity, some instructors say
 zero-th, one-th, two-th, and three-th
 even if this sounds a bit weird.
 Some instructors also write
-`0`-th, `1`-th, `2`-th, and `3`-th,
-even if this reads weirdly.
+`0`-th, `1`-th, `2`-th, and `3`-th
+for clarity even if this reads weirdly.
 
 | character | `a` | `b` | `c` | `d` | ... |  `z` |
 | --------: | :-: | :-: | :-: | :-: | :-: | :--: |
@@ -1224,7 +1260,7 @@ The numbers describing the positions in a *string* are referred to as *indices*.
 Due to counting from `0`, the last element in `alphabet` is given by the index `25` element
 even though there are `26` characters. Therefore, if we need to obtain the last character algorithmically,
 then we need to use index `len(alphabet) - 1`, not index `len(alphabet)`.
-Python allows us to specify this element using the index `-1` as well.
+Python allows us to access the last element using the magic index `-1` as well.
 
 We can index *lists* in a similar way.
 For example, consider the following code.
@@ -1267,37 +1303,124 @@ concatenate
 
 ## concept::control, concept::control-flow
 
-The simplest bits of code you encounter execute line-by-line
-and each line executes once and only once. *Control flow*
+The simplest bits of code that you encounter execute line-by-line
+with each line executing once and only once. *Control flow*
 allows us to control the flow of the code! For example,
 a line of code may execute more than once or not at all
 depending on the values of variables in the code.
 
 There are three common ways to control the flow of code.
 
- 1. `if` statements (see [concept::if-statement](#conceptif-conceptif-statement))
+ 1. `if` statements
+    (see [concept::if-no-for-loop](#conceptif-conceptif-statement-conceptif-no-for-loop)
+    and [concept::if-with-for-loop](#conceptif-conceptif-statement-conceptif-with-for-loop))
     - You can think of these as turning a block of code on or off.
-    - When "on", the lines of code execute **once**.
+    - When "on", the lines of code execute **once** (unless wrapped in other control flow).
     - When "off", the lines of code do not execute.
 
  2. `while` loops (see [concept::while-loop](#conceptwhile-conceptwhile-loop))
-    - You can think of these as turning a block of code on or off.
+    - You can also think of these as turning a block of code on or off.
     - When "on", the lines of code execute **repeatedly**.
     - When "off", the lines of code stop executing.
 
- 3. `for` loops (see [concept::for-loop](#conceptfor-conceptfor-loop))
+ 3. `for` loops
     - Any code written using a `for` loop can be written with a `while` loop.
-    - Normally, `for` loops are used for repeating code a specific number of times...
-    - or for repeating code for each element in a container like a *list*.
+      However, `for` loops are normally used...
+       - for repeating code a specific number of times (see [concept::range](#conceptfor-conceptfor-loop-conceptrange)) or...
+       - for repeating code for each element in a container like a *list* (see [concept::for-loop](#conceptfor-conceptfor-loop-conceptcontainer)).
 
-For brevity, these are described in a different order below.
+These constructs are described in a logical and different order below.
 
 
 
 
-## concept::for, concept::for-loop
+## concept::if, concept::if-statement, concept::if-no-for-loop
 
-The following code demonstrates using a `for` loop
+
+### Example 1
+
+The following code uses `if` statements to give
+useful information to someone learning to drive
+based on the status of their surroundings.
+
+```python
+things_to_hit = False
+green_light = False
+no_right_turn_on_red = False
+
+go = not things_to_hit and (green_light or not no_right_turn_on_red)
+
+if go:
+  print('It is okay to hit the gas!')
+
+if things_to_hit:
+  print('It is not okay to go because there are things to hit.')
+
+if no_right_turn_on_red and not green_light:
+  print('It is not okay to go because')
+  print('there is not a green light and')
+  print('there is a no-right-turn-on-red sign.')
+```
+
+When the code above executes,
+the output is as follows.
+```
+It is okay to hit the gas!
+```
+
+- `print('It is okay to hit the gas!')` executes because `go` is `True`.
+  - `things_to_hit` is `False`, so `not things_to_hit` is `True`.
+  - `no_right_turn_on_red` is `False`, so `not no_right_turn_on_red` is `True`.
+  - `not no_right_turn_on_red` is `True`, so `green_light or not no_right_turn_on_red` is `True`.
+  - `not things_to_hit` is `True` and `green_light or not no_right_turn_on_red` is `True`, so `go` is `True`.
+- `print('It is not okay to go because there are things to hit.')` does not execute because `things_to_hit` is `False`.
+- The remaining 3 print statements do not execute because `no_right_turn_on_red and not green_light` is `False`.
+
+
+### Example 2
+
+Changing the value of `no_right_turn_on_red` causes the code to execute very differently.
+
+```python
+things_to_hit = False
+green_light = False
+no_right_turn_on_red = True
+
+go = not things_to_hit and (green_light or not no_right_turn_on_red)
+
+if go:
+  print('It is okay to hit the gas!')
+
+if things_to_hit:
+  print('It is not okay to go because there are things to hit.')
+
+if no_right_turn_on_red and not green_light:
+  print('It is not okay to go because')
+  print('there is not a green light and')
+  print('there is a no-right-turn-on-red sign.')
+```
+
+When the code above executes,
+the output is as follows.
+```
+It is not okay to go because
+there is not a green light and
+there is a no-right-turn-on-red sign.
+```
+
+- `print('It is okay to hit the gas!')` does not execute because `go` is `False`.
+  - `no_right_turn_on_red` is `True`, so `not no_right_turn_on_red` is `False`.
+  - `green_light` is `False` and `not no_right_turn_on_red` is `False`, so `green_light or not no_right_turn_on_red` is `False`.
+  - `green_light or not no_right_turn_on_red` is `False`, so `go` is `False`.
+- `print('It is not okay to go because there are things to hit.')` does not execute because `things_to_hit` is `False`.
+- The remaining 3 print statements execute because `not green_light and no_right_turn_on_red` is `True`.
+
+
+
+
+## concept::for, concept::for-loop, concept::container
+
+The code below uses a `for` loop
 to access each element of a *list* `L` one by one.
 ```python
 L = [1, 22, 3, 44, 5, 66, 7, 88]
@@ -1322,10 +1445,13 @@ el: 88
 ```
 
 
-## concept::if, concept::if-statement
 
-The following code demonstrates using an `if` statement
-to toggle a line of code between "on" and "off".
+
+## concept::if, concept::if-statement, concept::if-with-for-loop
+
+The following code uses an `if` statement to
+toggle a line of code inside a `for` loop
+between "on" and "off".
 ```python
 L = [1, 22, 3, 44, 5, 66, 7, 88]
 
@@ -1348,9 +1474,8 @@ el: 7
 
 ## concept::if-else, concept::else, concept::elif
 
-- The following code demonstrates using
-  an `if-else` statement to select between
-  two different lines of code.
+- The following code uses an `if-else` statement
+  to select between two different lines of code.
   ```python
   L = [1, 22, 3, 44, 5, 66, 7, 88]
 
@@ -1373,9 +1498,8 @@ el: 7
   large: 88
   ```
 
-- The following code demonstrates using
-  an `if-elif-else` statement to select
-  between three different lines of code.
+- The following code uses an `if-elif-else` statement
+  to select between three different lines of code.
   ```python
   L = [1, 22, 3, 44, 5, 66, 7, 88]
 
@@ -1400,12 +1524,30 @@ el: 7
    large: 88
   ```
 
+- `elif` is abbreviation for "else-if".
+  The previous code could also be written as follows.
+  ```python
+  L = [1, 22, 3, 44, 5, 66, 7, 88]
 
-## concept::range
+  for el in L:
+    if el < 10:
+      print(' small:', el)
+    else:
+      if el < 50:
+        print('medium:', el)
+      else:
+        print(' large:', el)
+  ```
+  Since this code uses more indentations,
+  the other code using `elif` is preferable.
 
-- The following code demonstrates using
-  a `for` loop with `range` to obtain the
-  integers from 0 up to and *excluding* 4.
+
+
+
+## concept::for, concept::for-loop, concept::range
+
+- The following code uses a `for` loop with `range`
+  to obtain the integers from 0 up to and *excluding* 4.
   ```python
   for i in range(4):
     print(i)
@@ -1419,8 +1561,8 @@ el: 7
   3
   ```
 
-- Using the variable `i` to index a list,
-  we can loop through part of a *list*.
+- The following code uses the looping variable `i`
+  to index a *list* and loop through part of the *list*.
   ```python
   L = [1, 22, 3, 44, 5, 66, 7, 88]
 
@@ -1436,8 +1578,8 @@ el: 7
   44
   ```
 
-- Using `len(L)`,
-  we have a second way
+- By using `len(L)`,
+  we obtain a second way
   to loop through all the values in a *list*.
   ```python
   L = [1, 22, 3, 44, 5, 66, 7, 88]
@@ -1458,37 +1600,57 @@ el: 7
   88
   ```
 
-
-- This is useful because sometimes your code may need to use
-  the index `i` as well as the corresponding value `L[i]`.
-  This example demonstrates using both `i` and `L[i]`
-  in a short `if` statement.
+- Looping through a *list* using an index like `i` is
+  necessary if you wish to edit the values `L[i]`.
+  For example, consider the following code.
   ```python
   L = [1, 22, 3, 44, 5, 66, 7, 88]
 
   for i in range(len(L)):
-    if i + L[i] > 9:
-      print(i, L[i])
+    L[i] *= 10
+
+  print(L)
+  ```  
+
+  When it executes, the output is as follows.
+  ```
+  [10, 220, 30, 440, 50, 660, 70, 880]
   ```
 
-  When the code above executes, the output is as follows.
+- Looping through a *string* using an index like
+  `i` is also useful if the index is needed.
+  For example, consider the following code.
+  ```python
+  s = 'The secret numbers are given by the indices of the letter e'
+
+  print('The secret numbers are', end = ' ')
+
+  for i in range(len(s)):
+    if s[i] == 'e':
+      print(i, end = ' ')
+
+  print()
+  ```  
+
+  When it executes, the output is as follows.
   ```
-  1 22
-  3 44
-  5 66
-  6 7
-  7 88
+  The secret numbers are 2 5 8 15 21 26 34 41 49 52 55 58 
   ```
-  `0 + 1`, `2 + 3`, and `4 + 5` are not greater than `9`
-  so `print(i, L[i])` does not execute 
-  when `i` is `0`, `2`, and `4`.
 
 
 
 
 ## concept::while, concept::while-loop
 
-Consider the following code.
+A `while` loop is more primitive coding construct than a `for` loop:
+in most coding languages, a `for` loop can be written in terms of a `while` loop.
+In this course, `for` loops will normally provide enough functionality for us and
+we will not explain how a `for` loop can be written in terms of a `while` loop (using iterators).
+However, for completeness, we provide some examples of `while` loops.
+
+
+The following code shows how we can use a `while` loop
+to loop through a *list*.
 ```python
 L = [1, 22, 3, 44, 5, 66, 7, 88]
 
@@ -1501,7 +1663,18 @@ while i < len(L):
 print('i ==', i)
 ```
 
-When it executes, the output is as follows.
+- An index `i` is introduced and given the value `0`.
+- The lines `print(L[i])` and `i += 1` repeatedly execute as long as `i < len(L)`,
+  that is, for the indices `0`, `1`, `2`, `3`, `4`, `5`, `6`, and `7`.
+  In this way, the values `L[0]`, `L[1]`, `L[2]`, `L[3]`, `L[4]`,
+  `L[5]`, `L[6]`, and `L[7]` are printed.
+- When `i` has the value `7`, `i += 1` increments its value to `8`.
+  `8` is equal to `len(L)`, not less than `len(L)`. Therefore,
+  the code in the `while` loop stops executing.
+- Finally, `print('i ==', i)` executes to print `i == 8`.
+
+In summary, when the code above executes,
+the output is as follows.
 ```
 1
 22
@@ -1513,8 +1686,6 @@ When it executes, the output is as follows.
 88
 i == 8
 ```
-
-
 
 
 ### A trickier example where a `while` loop is more suitable than a `for` loop
@@ -1545,7 +1716,7 @@ are given by 1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28.
   \end{aligned}\]
   </div>
 
-- 5, 7, 9, 10, 12, 14, 15, 17, 19, 20, 21, 22, 24, 27 are not in the list because
+- 5, 7, 9, 10, 12, 14, 15, 17, 19, 20, 21, 22, 24, 27 are not in the sequence because
   they can be expressed as a sum of two distinct earlier terms in more than one way.
 
   <div>
@@ -1570,61 +1741,62 @@ are given by 1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28.
 - 23 and 25 are not in the list because they cannot be expressed as a sum of two earlier terms.
 
 
-Suppose we want code that prints
-the first 12 terms of the standard Ulam sequence.
+The following code successfully prints the first 12 terms of the standard Ulam sequence.
 ```python
 L = [1, 2]
-n = 3
 
-for n in range(29):
-  c = 0
+for n in range(29):   # n is the next potential number in the sequence;
+  c = 0               # we count how many ways it can be expressed
+                      # as a sum of two distinct earlier terms.
+  for a in L:
+    b = n - a         # this forces n == a + b,
+                      # but b might not be in L.
 
-  for el in L:
-    if 2 * el >= n:
-      break
-    if n - el in L:
-      c += 1
+    if not a < b:     # we only want to count
+      break           # n == a + b if a < b.
+
+    if b in L:
+      c += 1          # we increase the count.
 
   if c == 1:
-    L.append(n)
+    L.append(n)       # if the count is 1, we add n to the list.
 
 print(L)
 ```
+Some new syntax is used in this code.
+ - `break` provides a way of stopping the `for` loop that `for a in L:` started.
+ - `b in L` tests whether `b` is an element of `L`.
+ - `L.append(n)` provides a way of inserting `n` to the end of the *list* `L`.
 
-When the code above executes, the output is as follows.
-```
-[1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28]
-```
-
-Therefore, this code is good for calculating
-the first 12 terms of the standard Ulam sequence.
-But where on earth did `29` come from???
-Well, this section began by telling you
-the first 12 numbers in the sequence,
-the 12-th number is 28,
-and 29 is the number after 28.
-If we change our minds and want to print
-the first 100 terms of the sequence,
-then it is unclear how to edit `29`.
+These tricky bits of code are not the point of this example.
+Instead, ask yourself, "where on earth did `29` come from???"
+This section began by telling you the first 12 numbers in the sequence,
+the last number is 28 and `for n in range(29)` will consider `n` up to `28`.
+If we change our minds and want to print the first 100 terms of the sequence,
+then it is very unclear how to edit `29`.
 
 Consider the following code.
 ```python
 L = [1, 2]
-n = 3
+n = 3                 # n is the next potential number in the sequence.
 
-while len(L) < 12:
-  c = 0
+while len(L) < 12:    # we make sure to obtain 12 terms in the sequence.
+  c = 0               # we count how many ways n can be expressed
+                      # as a sum of two distinct earlier terms.
+  for a in L:
+    b = n - a         # this forces n == a + b,
+                      # but b might not be in L.
 
-  for el in L:
-    if 2 * el >= n:
-      break
-    if n - el in L:
-      c += 1
+    if not a < b:     # we only want to count
+      break           # n == a + b if a < b.
+
+    if b in L:
+      c += 1          # we increase the count.
 
   if c == 1:
-    L.append(n)
+    L.append(n)       # if the count is 1, we add n to the list.
 
-  n += 1
+  n += 1              # we increment n.
 
 print(L)
 ```
@@ -1634,11 +1806,41 @@ When it executes, the output is as follows.
 [1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28]
 ```
 
-Therefore, this is good code for calculating
+Therefore, it is still good code for calculating
 the first 12 terms of the standard Ulam sequence.
 Moreover, we can change 12 to other numbers of our choice!
 In this more suitable code, the `while` loop keeps executing
-until the *list* contains the number of elements we specify.
+until the *list* contains the number of elements we want.
+
+```python
+L = [1, 2]
+n = 3                 # n is the next potential number in the sequence.
+
+while len(L) < 123:   # we make sure to obtain 12 terms in the sequence.
+  c = 0               # we count how many ways n can be expressed
+                      # as a sum of two distinct earlier terms.
+  for a in L:
+    b = n - a         # this forces n == a + b,
+                      # but b might not be in L.
+
+    if not a < b:     # we only want to count
+      break           # n == a + b if a < b.
+
+    if b in L:
+      c += 1          # we increase the count.
+
+  if c == 1:
+    L.append(n)       # if the count is 1, we add n to the list.
+
+  n += 1              # we increment n.
+
+print(L)
+```
+
+When the code above executes, the output is as follows.
+```
+[1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28, 36, 38, 47, 48, 53, 57, 62, 69, 72, 77, 82, 87, 97, 99, 102, 106, 114, 126, 131, 138, 145, 148, 155, 175, 177, 180, 182, 189, 197, 206, 209, 219, 221, 236, 238, 241, 243, 253, 258, 260, 273, 282, 309, 316, 319, 324, 339, 341, 356, 358, 363, 370, 382, 390, 400, 402, 409, 412, 414, 429, 431, 434, 441, 451, 456, 483, 485, 497, 502, 522, 524, 544, 546, 566, 568, 585, 602, 605, 607, 612, 624, 627, 646, 668, 673, 685, 688, 690, 695, 720, 722, 732, 734, 739, 751, 781, 783, 798, 800, 820, 847, 849, 861, 864, 866, 891, 893, 905, 927, 949, 983]
+```
 
 
 
