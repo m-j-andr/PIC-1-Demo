@@ -1263,6 +1263,8 @@ concatenate
 ```
 
 
+
+
 ## concept::control, concept::control-flow
 
 The simplest bits of code you encounter execute line-by-line
@@ -1273,38 +1275,325 @@ depending on the values of variables in the code.
 
 There are three common ways to control the flow of code.
 
- 1. `if` statements
+ 1. `if` statements (see [concept::if-statement](#conceptif-conceptif-statement))
     - You can think of these as turning a block of code on or off.
     - When "on", the lines of code execute **once**.
     - When "off", the lines of code do not execute.
 
- 2. `while` loops
+ 2. `while` loops (see [concept::while-loop](#conceptwhile-conceptwhile-loop))
     - You can think of these as turning a block of code on or off.
     - When "on", the lines of code execute **repeatedly**.
     - When "off", the lines of code stop executing.
 
- 3. `for` loops
+ 3. `for` loops (see [concept::for-loop](#conceptfor-conceptfor-loop))
     - Any code written using a `for` loop can be written with a `while` loop.
     - Normally, `for` loops are used for repeating code a specific number of times...
     - or for repeating code for each element in a container like a *list*.
 
-
-## concept::if, concept::if-statement
-
-
-
-
-## concept::while, concept::while-loop
+For brevity, these are described in a different order below.
 
 
 
 
 ## concept::for, concept::for-loop
 
+The following code demonstrates using a `for` loop
+to access each element of a *list* `L` one by one.
+```python
+L = [1, 22, 3, 44, 5, 66, 7, 88]
 
+for el in L:
+  print('el:', el)
+```
+
+When the code above executes,
+`print(el)` executes 8 times,
+once for each element in the *list*,
+and the output is as follows.
+```
+el: 1
+el: 22
+el: 3
+el: 44
+el: 5
+el: 66
+el: 7
+el: 88
+```
+
+
+## concept::if, concept::if-statement
+
+The following code demonstrates using an `if` statement
+to toggle a line of code between "on" and "off".
+```python
+L = [1, 22, 3, 44, 5, 66, 7, 88]
+
+for el in L:
+  if el < 10:
+    print('el:', el)
+```
+
+When the code above executes, `print(el)` executes 4 times,
+once for each element in the *list* that is less than 10;
+it does not execute for the other elements in the *list*.
+The output is as follows.
+```
+el: 1
+el: 3
+el: 5
+el: 7
+```
+
+
+## concept::if-else, concept::else, concept::elif
+
+- The following code demonstrates using
+  an `if-else` statement to select between
+  two different lines of code.
+  ```python
+L = [1, 22, 3, 44, 5, 66, 7, 88]
+
+for el in L:
+  if el < 10:
+    print('small:', el)
+  else:
+    print('  big:', el)
+  ```
+
+  When it executes, the output is as follows.
+  ```
+small: 1
+large: 22
+small: 3
+large: 44
+small: 5
+large: 66
+small: 7
+large: 88
+  ```
+
+- The following code demonstrates using
+  an `if-elif-else` statement to select
+  between three different lines of code.
+  ```python
+L = [1, 22, 3, 44, 5, 66, 7, 88]
+
+for el in L:
+  if el < 10:
+    print(' small:', el)
+  elif el < 50:
+    print('medium:', el)
+  else:
+    print(' large:', el)
+  ```
+
+  When it executes, the output is as follows.
+  ```
+ small: 1
+medium: 22
+ small: 3
+medium: 44
+ small: 5
+ large: 66
+ small: 7
+ large: 88
+  ```
 
 
 ## concept::range
+
+- The following code demonstrates using
+  a `for` loop with `range` to obtain the
+  integers from 0 up to and *excluding* 4.
+  ```python
+for i in range(4):
+  print(i)
+  ```
+
+  When it executes, the output is as follows.
+  ```
+0
+1
+2
+3
+  ```
+
+- Using the variable `i` to index a list,
+  we can loop through part of a *list*.
+  ```python
+L = [1, 22, 3, 44, 5, 66, 7, 88]
+
+for i in range(4):
+  print(L[i])
+  ```
+
+  When the code above executes, the output is as follows.
+  ```
+1
+22
+3
+44
+  ```
+
+- Using `len(L)`,
+  we have a second way
+  to loop through all the value in a *list*.
+  ```python
+L = [1, 22, 3, 44, 5, 66, 7, 88]
+
+for i in range(len(L)):
+  print(L[i])
+  ```
+
+  When the code above executes, the output is as follows.
+  ```
+1
+22
+3
+44
+5
+66
+7
+88
+  ```
+
+
+- This can be useful because some code might need to use
+  the index `i` as well as the corresponding value `L[i]`.
+  This example demonstrates using both `i` and `L[i]`
+  in a short `if` statement,
+  ```python
+L = [1, 22, 3, 44, 5, 66, 7, 88]
+
+for i in range(len(L)):
+  if i + L[i] > 9:
+    print(i, L[i])
+  ```
+
+  When the code above executes, the output is as follows.
+  ```
+1 22
+3 44
+5 66
+6 7
+7 88
+  ```
+
+
+
+
+## concept::while, concept::while-loop
+
+Consider the following code.
+```python
+L = [1, 22, 3, 44, 5, 66, 7, 88]
+
+i = 0
+
+while i < len(L):
+  print(L[i])
+  i += 1
+
+print('i ==', i)
+```
+
+When it executes, the output is as follows.
+```
+1
+22
+3
+44
+5
+66
+7
+88
+i == 8
+```
+
+
+
+
+### A trickier example where a `while` loop is more suitable than a `for` loop
+
+In mathematics,
+the first 12 terms of
+*the standard [Ulam sequence](https://en.wikipedia.org/wiki/Ulam_number){:target="_blank"}*
+are given by 1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28.
+
+- The sequence begins with 1 and 2.
+- 3, 4, 6, 8, 11, 13, 16, 18, 26, 28 are in the sequence because
+  they can be expressed as a sum of two *distinct* earlier terms
+  in exactly one way (1 + 2 is regarded as the same as 2 + 1).
+
+- <div>
+  \[\begin{aligned}
+  1 + 2\ &=\ 3\\
+  1 + 3\ &=\ 4\\
+  2 + 4\ &=\ 6\\
+  2 + 6\ &=\ 8\\
+  3 + 8\ &=\ 11\\
+  2 + 11\ &=\ 13\\
+  3 + 13\ &=\ 16\\
+  2 + 16\ &=\ 18\\
+  8 + 18\ &=\ 26\\
+  2 + 26\ &=\ 28\\
+  \end{aligned}\]
+  </div>
+
+- 5, 7, 9, 10, 12, 14, 15, 17, 19, 20, 21, 22, 24, 27 are not in the list because
+  they can be expressed as a sum of two distinct earlier terms in more than one way.
+
+  <div>
+  \[\begin{aligned}
+  1 + 4\ &=\ 2 + 3 &=\ 5\\
+  1 + 6\ &=\ 3 + 4 &=\ 7\\
+  1 + 8\ &=\ 3 + 6 &=\ 9\\
+  2 + 8\ &=\ 4 + 6 &=\ 10\\
+  1 + 11\ &=\ 4 + 8 &=\ 12\\
+  1 + 13\ &=\ 3 + 11 &=\ 14\\
+  2 + 13\ &=\ 4 + 11 &=\ 15\\
+  1 + 16\ &=\ 4 + 13 &=\ 17\\
+  1 + 18\ &=\ 3 + 16 &=\ 19\\
+  2 + 18\ &=\ 4 + 16 &=\ 20\\
+  3 + 18\ &=\ 8 + 13 &=\ 21\\
+  4 + 18\ &=\ 6 + 16 &=\ 22\\
+  6 + 18\ &=\ 8 + 16 &=\ 24\\
+  1 + 26\ &=\ 11 + 16 &=\ 27\\
+  \end{aligned}\]
+  </div>
+
+- 23 and 25 are not in the list because they cannot be expressed as a sum of two earlier terms.
+
+Consider the following code.
+```python
+L = [1, 2]
+n = 3
+
+while len(L) < 12:
+  c = 0
+
+  for el in L:
+    if 2 * el >= n:
+      break
+    if n - el in L:
+      c += 1
+
+  if c == 1:
+    L.append(n)
+
+  n += 1
+
+print(L)
+```
+
+When it executes, the output is as follows.
+```
+[1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28]
+```
+
+The while loop keeps executing until the list contains 12 elements.
+Until 28 has been calculated, we did not know how big `n` needed to get.
 
 
 
