@@ -666,7 +666,7 @@ what the file really consists of.
 
 For an example,
 suppose that files called
-`1.txt`, `2.txt`, and `3.txt`,
+`1.txt`, `2.txt`, and `3.txt`
 each store the following text.
 
 !\\$<br>
@@ -764,7 +764,7 @@ Testing...
 Some great sportspeople: Carlos Alcaraz, Max Verstappen, Serena Williams
 ```
 
-Notice that the sportspeople are on the same lines as the word "sportspeople" thanks to `end = ' '`
+Notice that the sportspeople are on the same line as the word "sportspeople" thanks to `end = ' '`
 and that they are each separated by a comma and a space thanks to `sep = ', '`.
 
 
@@ -979,7 +979,7 @@ When it executes,
 
 The first example is a little bit nicer to read
 because the variables are named descriptively
-and the type of the variables never changes.
+and the type of each variable never changes.
 In the second example,
 `a` is not a very descriptive name
 and `a` starts life as an `int`,
@@ -1073,7 +1073,7 @@ Recall...
 
 ## concept::not, concept::and, concept::or
 
-Booleans can be used to obtain other booleans
+Booleans can produce other booleans
 by using the *connectives* `not`, `and`, and `or`.
 
 For example, consider what
@@ -1092,7 +1092,7 @@ and `no_right_turn_on_red`, and
 it would be useful to specify
 another boolean as follows.
 ```python
-go = not things_to_hit and (green_light or not no_right_turn_on_red)
+go = (not things_to_hit) and (green_light or not no_right_turn_on_red)
 ```
 The following table shows how
 the value of `go` depends on
@@ -1191,9 +1191,9 @@ False or False == False
     is not a no-right-turn-on-red sign.
   - Also, consider the more mathematical statement,
     "the absolute value of a real number $x$ is equal
-    to either $x$ or $-x$." This is correct. However,
-    note that when $x$ is zero, the absolute value
-    of $x$ is equal to $x$ *and* $-x$.
+    to $x$ or $-x$." This is correct. However, note that
+    when $x$ is zero, the absolute value of $x$ is
+    also equal to $x$ *and* $-x$.
 
 - "Exclusive or" is `True` when
   exactly one of the booleans given to it is `True`.
@@ -1257,7 +1257,7 @@ for clarity even if this reads weirdly.
 |     index | `0` | `1` | `2` | `3` | ... | `25` |
 
 The numbers describing the positions in a *string* are referred to as *indices*.
-Due to counting from `0`, the last element in `alphabet` is given by the index `25` element
+Due to counting from `0` (`0`-indexing), the last element in `alphabet` is given by the index `25` element
 even though there are `26` characters. Therefore, if we need to obtain the last character algorithmically,
 then we need to use index `len(alphabet) - 1`, not index `len(alphabet)`.
 Python allows us to access the last element using the magic index `-1` as well.
@@ -1348,7 +1348,7 @@ things_to_hit = False
 green_light = False
 no_right_turn_on_red = False
 
-go = not things_to_hit and (green_light or not no_right_turn_on_red)
+go = (not things_to_hit) and (green_light or not no_right_turn_on_red)
 
 if go:
   print('It is okay to hit the gas!')
@@ -1386,7 +1386,7 @@ things_to_hit = False
 green_light = False
 no_right_turn_on_red = True
 
-go = not things_to_hit and (green_light or not no_right_turn_on_red)
+go = (not things_to_hit) and (green_light or not no_right_turn_on_red)
 
 if go:
   print('It is okay to hit the gas!')
@@ -1642,7 +1642,7 @@ el: 7
 
 ## concept::while, concept::while-loop
 
-A `while` loop is more general coding construct than a `for` loop:
+A `while` loop is a more general coding construct than a `for` loop:
 in most coding languages, a `for` loop can be written in terms of a `while` loop.
 In this course, `for` loops will normally provide enough functionality for us and
 we will not explain how a `for` loop can be written in terms of a `while` loop (using iterators).
