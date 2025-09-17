@@ -1649,6 +1649,8 @@ we will not explain how a `for` loop can be written in terms of a `while` loop (
 However, for completeness, we provide some examples of `while` loops.
 
 
+### Using a `while` loop to loop through a list
+
 The following code shows how we can use a `while` loop
 to loop through a *list*.
 ```python
@@ -1686,6 +1688,93 @@ the output is as follows.
 88
 i == 8
 ```
+
+
+### Using a `while` loop to account for randomness
+
+After typing `from random import choice`,
+we are able to use a function called `choice`
+(see [concept::choice](#conceptrandom-conceptrandint-conceptchoice)).
+When we provide a *list* to this function,
+we obtain a random element of the *list*.
+For example, `choice([1, 2, 3, 4, 5, 6])`
+produces either `1`, `2`, `3`, `4`,
+`5`, or `6` at random.
+This type of function could be
+used for rolling a die during a game.
+
+The following code repeatedly chooses
+`1`, `2`, `3`, `4`, `5`, or `6` at
+random and prints the chosen value
+until `6` has been selected.
+
+```python
+from random import choice
+
+i = 0
+
+while i != 6:
+  i = choice([1, 2, 3, 4, 5, 6])
+  print(i)
+
+print('You rolled a 6!')
+```
+
+When the code above executes,
+there are many possible outputs.
+The person typing this document
+observed the following outputs
+the first four times that
+they executed the code.
+
+- ```
+  5
+  5
+  4
+  2
+  4
+  1
+  6
+  You rolled a 6!
+  ```
+
+- ```
+  3
+  1
+  2
+  6
+  You rolled a 6!
+  ```
+
+- ```
+  1
+  4
+  3
+  2
+  1
+  5
+  2
+  4
+  2
+  6
+  You rolled a 6!
+  ```
+
+- ```
+  1
+  4
+  6
+  You rolled a 6!
+  ```
+
+When writing the code, we know that the two lines
+`i = choice([1, 2, 3, 4, 5, 6])` and `print(i)`
+will always execute one or more times,
+but due to the randomness used by the function `choice`,
+it is impossible to know exactly how many times these two lines will execute.
+For this reason, a `while` loop is the simplest construct that allows us to write the code.
+In this context `while i != 6:` says, "if `i` is not equal to `6`, execute the next two lines of code
+and then read these instructions again; if `i` is equal to `6`, move beyond the next two lines of code."
 
 
 ### A trickier example where a `while` loop is more suitable than a `for` loop
@@ -1845,12 +1934,137 @@ When the code above executes, the output is as follows.
 
 
 
-## concept::float, concept::int-division, concept::float-division
+## concept::float, concept::float-division
+
+The numerical type `int` is good for storing integers,
+but when a number has a fractional part, the numerical type `float` is needed.
+We have the expected arithmetic operations: `+`, `-`, `*`, `/`, and `**`.
+For example, consider the following code.
+
+```python
+f1 = 2.25
+f2 = 0.5
+
+print(f1 + f2)
+print(f1 - f2)
+print(f1 * f2)
+print(f1 / f2)
+print(f1 ** f2)
+```
+
+When it executes, the output is as follows.
+```
+2.75
+1.75
+1.125
+4.5
+1.5
+```
+
+We also have `+=`, `-=`, `*=`, and `/=`.
+
+Even when a `float` stores an integer,
+you can tell it apart from an `int` when printing it.
+For example, consider the following code.
+```python
+i = 1
+f = 1.0
+
+print(i, f)
+```
+
+When it executes, the output is as follows.
+```
+1 1.0
+```
+
+The result of `/` is always a `float`.
+For example, consider the following code.
+```python
+i1 = 1
+i2 = 2
+
+print(i1 / i1)
+print(i1 / i2)
+print(i2 / i2)
+```
+
+When it executes, the output is as follows.
+```
+1.0
+0.5
+1.0
+```
+
 
 ## concept::floating-point-imprecision
 
+The data type `float` suffers from imprecision.
+For example, consider the following code.
+
+```python
+f  =  4 / 3  -  1  -  1 / 3
+
+print(      f  == 0)                # False
+print(      f  <  0)                # True
+print(      f  == -(2 ** -54))      # True
+print(round(f) == 0)                # True
+print()
+
+f  =  20.15
+f *=  100.0
+
+print(      f  == 2015.0)           # False
+print(round(f) == 2015.0)           # True
+print()
+
+f  =  107.0
+
+print(      f * (1 / f)  == f / f)  # False
+print(round(f * (1 / f)) == f / f)  # True
+print()
+
+i  =  2 ** 63
+f  =  2 ** 63.0
+
+print((1 + i) - i == 1)             # True
+print((1 + f) - f == 0)             # True
+print()
+
+l  =  9223372036854770000
+
+print(i - l == 5808)                # True
+print(f - l == 6144)                # True
+```
+
+Its output is indicated by the comments.
+This output shows many surprising calculations.
+
+ - `4 / 3  -  1  -  1 / 3` does not give `0`.
+   Instead, it gives a number very close to `0`. 
+
+ - `20.15 * 100.0` does not give `2015.0`.
+   Instead, it gives a number very close to `2015.0`. 
+
+ - `107.0 * (1 / 107.0)` does not give `1.0`.
+   Instead, it gives a number very close to `1.0`.
+
+ - The `int` `i` with value `2 ** 63` behaves mathematically correctly
+   in the arithmetic `(1 + i) - i` and `i - 9223372036854770000`.
+
+ - The `float` `f` with value `2 ** 63.0` behaves mathematically incorrectly
+   in the arithmetic `(1 + f) - f` and `f - 9223372036854770000`.
+
+
+## concept::int-division, concept::floor, concept::ceil
+
+For two `int`s `i` and `j`,
+ - `i // j` calculates `int(floor(i / j))`
+ - `i % j` calculates `i - ((i // j) * j)`
 
 ## concept::function, concept::method
+
+## concept::random, concept::randint, concept::choice
 
 ## concept::sort, concept::sorted
 
