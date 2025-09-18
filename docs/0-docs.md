@@ -1727,7 +1727,8 @@ observed the following outputs
 the first four times that
 they executed the code.
 
-- ```
+- **Output 1.**
+  ```
   5
   5
   4
@@ -1738,7 +1739,8 @@ they executed the code.
   You rolled a 6!
   ```
 
-- ```
+- **Output 2.**
+  ```
   3
   1
   2
@@ -1746,7 +1748,8 @@ they executed the code.
   You rolled a 6!
   ```
 
-- ```
+- **Output 3.**
+  ```
   1
   4
   3
@@ -1760,7 +1763,8 @@ they executed the code.
   You rolled a 6!
   ```
 
-- ```
+- **Output 4.**
+  ```
   1
   4
   6
@@ -1934,67 +1938,150 @@ When the code above executes, the output is as follows.
 
 
 
-## concept::float, concept::float-division
+## concept::float, concept::float-division, concept::round, concept::floor, concept::ceil
 
 The numerical type `int` is good for storing integers,
 but when a number has a fractional part, the numerical type `float` is needed.
-We have the expected arithmetic operations: `+`, `-`, `*`, `/`, and `**`.
+
+- We have the expected arithmetic operations: `+`, `-`, `*`, `/`, and `**`.
+  For example, consider the following code.
+
+  ```python
+  f1 = 2.25
+  f2 = 0.5
+
+  print(f1 + f2)
+  print(f1 - f2)
+  print(f1 * f2)
+  print(f1 / f2)
+  print(f1 ** f2)
+  ```
+
+  When it executes, the output is as follows.
+  ```
+  2.75
+  1.75
+  1.125
+  4.5
+  1.5
+  ```
+
+  We also have `+=`, `-=`, `*=`, and `/=`.
+
+- Even when a `float` stores an integer,
+  you can tell it apart from an `int` when printing it.
+  For example, consider the following code.
+  ```python
+  i = 1
+  f = 1.0
+
+  print(i, f)
+  ```
+
+  When it executes, the output is as follows.
+  ```
+  1 1.0
+  ```
+
+- The result of `/` is always a `float`.
+  For example, consider the following code.
+  ```python
+  i1 = 1
+  i2 = 2
+
+  print(i1 / i1)
+  print(i1 / i2)
+  print(i2 / i2)
+  ```
+
+  When it executes, the output is as follows.
+  ```
+  1.0
+  0.5
+  1.0
+  ```
+
+- We can create a `float` from an `int`
+  and we can create an `int` from a `float`.
+  For example, consider the following code.
+  ```python
+  i1 = 1
+  i2 = 2
+
+  f1 =  1.1
+  f2 =  2.8
+  f3 = -3.3
+  f4 = -4.8
+  f5 =  5.0
+
+  print(float(i1), float(i2))
+  print(int(f1), int(f2), int(f3), int(f4), int(f5))
+  ```
+
+  When it executes, the output is as follows.
+  ```
+  1.0 2.0
+  1 2 -3 -4 5
+  ```
+
+- There is a function called `round` and
+  after typing `from math import floor, ceil`,
+  we are able to use functions called `floor` and `ceil`.
+  For example, consider the following code.
+  ```python
+  from math import floor, ceil
+
+  f1 =  1.1
+  f2 =  2.8
+  f3 = -3.3
+  f4 = -4.8
+  f5 =  5.0
+
+  print(floor(f1), floor(f2), floor(f3), floor(f4), floor(f5))
+  print(round(f1), round(f2), round(f3), round(f4), round(f5))
+  print( ceil(f1),  ceil(f2),  ceil(f3),  ceil(f4),  ceil(f5))
+  ```
+
+  When it executes, the output is as follows.
+  ```
+  1 2 -4 -5 5
+  1 3 -3 -5 5
+  2 3 -3 -4 5
+  ```
+
+
+## concept::int-division, concept::floor, concept::ceil
+
+For two `int`s `i` and `j`,
+ - `i // j` calculates `floor(i / j)` and
+ - `i % j` calculates `i - ((i // j) * j)`.
+
 For example, consider the following code.
-
 ```python
-f1 = 2.25
-f2 = 0.5
+i = 28
+j = 10
 
-print(f1 + f2)
-print(f1 - f2)
-print(f1 * f2)
-print(f1 / f2)
-print(f1 ** f2)
+print(' ',  i,  ' ==  ',  i // j,  '* ',  j,  ' +  ',  i % j,  ' ',  i  ==  ((i // j) * j)  +  (i % j))
+
+i *= -1
+print('',   i,  ' == ',   i // j,  '* ',  j,  ' +  ',  i % j,  ' ',  i  ==  ((i // j) * j)  +  (i % j))
+
+j *= -1
+print('',   i,  ' ==  ',  i // j,  '*',   j,  ' + ',   i % j,  ' ',  i  ==  ((i // j) * j)  +  (i % j))
+
+i *= -1
+print(' ',  i,  ' == ',   i // j,  '*',   j,  ' + ',   i % j,  ' ',  i  ==  ((i // j) * j)  +  (i % j))
 ```
 
 When it executes, the output is as follows.
 ```
-2.75
-1.75
-1.125
-4.5
-1.5
+  28  ==   2 *  10  +   8   True
+ -28  ==  -3 *  10  +   2   True
+ -28  ==   2 * -10  +  -8   True
+  28  ==  -3 * -10  +  -2   True
 ```
 
-We also have `+=`, `-=`, `*=`, and `/=`.
 
-Even when a `float` stores an integer,
-you can tell it apart from an `int` when printing it.
-For example, consider the following code.
-```python
-i = 1
-f = 1.0
-
-print(i, f)
-```
-
-When it executes, the output is as follows.
-```
-1 1.0
-```
-
-The result of `/` is always a `float`.
-For example, consider the following code.
-```python
-i1 = 1
-i2 = 2
-
-print(i1 / i1)
-print(i1 / i2)
-print(i2 / i2)
-```
-
-When it executes, the output is as follows.
-```
-1.0
-0.5
-1.0
-```
 
 
 ## concept::floating-point-imprecision
@@ -2014,8 +2101,8 @@ print()
 f  =  20.15
 f *=  100.0
 
-print(      f  == 2015.0)           # False
-print(round(f) == 2015.0)           # True
+print(      f  == 2015)             # False
+print(round(f) == 2015)             # True
 print()
 
 f  =  107.0
@@ -2025,7 +2112,7 @@ print(round(f * (1 / f)) == f / f)  # True
 print()
 
 i  =  2 ** 63
-f  =  2 ** 63.0
+f  =  float(i)
 
 print((1 + i) - i == 1)             # True
 print((1 + f) - f == 0)             # True
@@ -2038,29 +2125,33 @@ print(f - l == 6144)                # True
 ```
 
 Its output is indicated by the comments.
-This output shows many surprising calculations.
+The printed booleans highlight the result of
+some comparisons that might be very surprising to you.
 
- - `4 / 3  -  1  -  1 / 3` does not give `0`.
-   Instead, it gives a number very close to `0`. 
+ - `4 / 3  -  1  -  1 / 3` does not equal `0.0`.
+   Instead, it gives a negative `float` very close to `0.0`. 
 
- - `20.15 * 100.0` does not give `2015.0`.
-   Instead, it gives a number very close to `2015.0`. 
+ - `20.15 * 100.0` does not equal `2015.0`.
+   Instead, it gives a `float` very close to `2015.0`. 
 
- - `107.0 * (1 / 107.0)` does not give `1.0`.
-   Instead, it gives a number very close to `1.0`.
+ - `107.0 * (1 / 107.0)` does not equal `1.0`.
+   Instead, it gives a `float` very close to `1.0`.
 
  - The `int` `i` with value `2 ** 63` behaves mathematically correctly
-   in the arithmetic `(1 + i) - i` and `i - 9223372036854770000`.
+   with the arithmetic `(1 + i) - i` and `i - 9223372036854770000`.
 
- - The `float` `f` with value `2 ** 63.0` behaves mathematically incorrectly
-   in the arithmetic `(1 + f) - f` and `f - 9223372036854770000`.
+ - The `float` `f` with value `2.0 ** 63.0` behaves mathematically incorrectly
+   with the arithmetic `(1 + f) - f` and `f - 9223372036854770000`.
+   The second calculation coincides with
+   [Google Sheets](./3-Spreadsheets/3-4-pow2.html#the-text-datatype-and-the-number-datatype){:target="_blank"}).
+
+It is not important to understand
+the exact reasons for the imprecision of `float`s.
+However, it is important to be aware that such issues can arise
+so that one can avoid such issues ever having negative consequences.
 
 
-## concept::int-division, concept::floor, concept::ceil
 
-For two `int`s `i` and `j`,
- - `i // j` calculates `int(floor(i / j))`
- - `i % j` calculates `i - ((i // j) * j)`
 
 ## concept::function, concept::method
 
@@ -2083,3 +2174,4 @@ For two `int`s `i` and `j`,
 ## concept::fitting, concept::line-fitting, concept::curve-fitting
 
 ## concept::matplotlib, concept::plotting, concept::plt
+
