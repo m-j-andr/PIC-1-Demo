@@ -2138,12 +2138,11 @@ some comparisons that might be very surprising to you.
    Instead, it gives a `float` very close to `1.0`.
 
  - The `int` `i` with value `2 ** 63` behaves mathematically correctly
-   with the arithmetic `(1 + i) - i` and `i - 9223372036854770000`.
+   when used in the arithmetic `(1 + i) - i` and `i - 9223372036854770000`.
 
- - The `float` `f` with value `2.0 ** 63.0` behaves mathematically incorrectly
-   with the arithmetic `(1 + f) - f` and `f - 9223372036854770000`.
-   The second calculation coincides with
-   [Google Sheets](./3-Spreadsheets/3-4-pow2.html#the-text-datatype-and-the-number-datatype){:target="_blank"}).
+ - The `float` `f` with value `2.0 ** 63.0` behaves mathematically **incorrectly**
+   when used in the arithmetic `(1 + f) - f` and `f - 9223372036854770000`.
+   The second calculation coincides with [Google Sheets](./3-Spreadsheets/3-4-pow2.html#the-text-datatype-and-the-number-datatype){:target="_blank"}.
 
 It is not important to understand
 the exact reasons for the imprecision of `float`s.
@@ -2174,4 +2173,3 @@ so that one can avoid such issues ever having negative consequences.
 ## concept::fitting, concept::line-fitting, concept::curve-fitting
 
 ## concept::matplotlib, concept::plotting, concept::plt
-
