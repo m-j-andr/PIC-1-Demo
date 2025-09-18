@@ -1648,6 +1648,8 @@ In this course, `for` loops will normally provide enough functionality for us an
 we will not explain how a `for` loop can be written in terms of a `while` loop (using iterators).
 However, for completeness, we provide some examples of `while` loops.
 
+<br>
+<br>
 
 ### Using a `while` loop to loop through a list
 
@@ -1689,6 +1691,8 @@ the output is as follows.
 i == 8
 ```
 
+<br>
+<br>
 
 ### Using a `while` loop to account for randomness
 
@@ -1780,6 +1784,8 @@ For this reason, a `while` loop is the simplest construct that allows us to writ
 In this context `while i != 6:` says, "if `i` is not equal to `6`, execute the next two lines of code
 and then read these instructions again; if `i` is equal to `6`, move beyond the next two lines of code."
 
+<br>
+<br>
 
 ### A trickier example where a `while` loop is more suitable than a `for` loop
 
