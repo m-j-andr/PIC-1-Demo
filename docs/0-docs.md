@@ -2132,8 +2132,8 @@ print()
 i  =  2 ** 63
 f  =  float(i)
 
-print((1 + i) - i == 1)             # True
-print((1 + f) - f == 0)             # True
+print(1 + i - i == 1)               # True
+print(1 + f - f == 0)               # True
 print()
 
 l  =  9223372036854770000
@@ -2156,10 +2156,10 @@ some comparisons that might be very surprising to you.
    Instead, it gives a `float` very close to `1.0`.
 
  - The `int` `i` with value `2 ** 63` behaves mathematically correctly
-   when used in the arithmetic `(1 + i) - i` and `i - 9223372036854770000`.
+   when used in the arithmetic `1 + i - i` and `i - 9223372036854770000`.
 
  - The `float` `f` with value `2.0 ** 63.0` behaves mathematically **incorrectly**
-   when used in the arithmetic `(1 + f) - f` and `f - 9223372036854770000`.
+   when used in the arithmetic `1 + f - f` and `f - 9223372036854770000`.
    The second calculation coincides with [Google Sheets](./3-Spreadsheets/3-4-pow2.html#the-text-datatype-and-the-number-datatype){:target="_blank"}.
 
 It is not important to understand
