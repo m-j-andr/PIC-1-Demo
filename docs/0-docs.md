@@ -2030,6 +2030,9 @@ but when a number has a fractional part, the numerical type `float` is needed.
   1 2 -3 -4 5
   ```
 
+  An `int` is created from a `float` by *truncation*,
+  that is, discarding the fractional part of the number.
+
 - There is a function called `round` and
   after typing `from math import floor, ceil`,
   we are able to use functions called `floor` and `ceil`.
@@ -2055,12 +2058,21 @@ but when a number has a fractional part, the numerical type `float` is needed.
   2 3 -3 -4 5
   ```
 
+  `(floor(f) <= f <= ceil(f)) and (round(f) == floor(f) or round(f) == ceil(f))` is always `True`.
+  - `floor` rounds *down* to the next `int`.
+  - `ceil` rounds *up* to the next `int`.
+  - `round` rounds to the *nearest* `int`.
 
-## concept::int-division, concept::floor, concept::ceil
+
+## concept::int-division, concept::mod
 
 For two `int`s `i` and `j`,
  - `i // j` calculates `floor(i / j)` and
  - `i % j` calculates `i - ((i // j) * j)`.
+
+`i // j` is referred to as *int-division*.
+`i % j` is read as `i` *mod* `j` and
+calculates the remainder when performing the division `i // j`.
 
 For example, consider the following code.
 ```python
@@ -2162,6 +2174,15 @@ so that one can avoid such issues ever having negative consequences.
 
 ## concept::random, concept::randint, concept::choice
 
+`choice(L)`: picks from a list `L`
+
+`randint(a, b)`: gives an `int` in $[a, b]$
+
+`random()`: gives a float in $[0, 1)$.
+
+
+## concept::range-more
+
 ## concept::sort, concept::sorted
 
 
@@ -2179,3 +2200,4 @@ so that one can avoid such issues ever having negative consequences.
 ## concept::fitting, concept::line-fitting, concept::curve-fitting
 
 ## concept::matplotlib, concept::plotting, concept::plt
+
