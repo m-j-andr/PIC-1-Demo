@@ -2072,8 +2072,8 @@ For two `int`s `i` and `j`,
 
 `i // j` is referred to as *int-division*.
 `i % j` is read as `i` *mod* `j` and
-calculates the remainder when performing the division `i // j`.
-
+calculates the *remainder*
+when performing the division `i // j`.
 For example, consider the following code.
 ```python
 i = 28
@@ -2178,7 +2178,7 @@ so that one can avoid such issues ever having negative consequences.
 
 `randint(a, b)`: gives an `int` in $[a, b]$
 
-`random()`: gives a float in $[0, 1)$.
+`random()`: gives a `float` in $[0, 1)$.
 
 
 ## concept::range-more
