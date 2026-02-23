@@ -1,0 +1,28 @@
+<script src="circle_area.js" defer></script>
+
+
+<label for="mesh_textbox">Input for mesh size (between 0.001 and 1):</label>
+<input type="text" size="10" minlength="1" maxlength="10" id="mesh_textbox" name="mesh_textbox"/>
+<input type="button" id="mesh_button" value="Update mesh size"/>
+
+
+<br>
+
+
+<label for="mesh_slider">Slider for mesh size:</label>
+<input type="range" min="6" max="114" step="1" id="mesh_slider"/>
+
+
+<br><br>
+
+
+<canvas id="riemann"></canvas>
+
+
+<ul>
+  <li>Number of squares enclosed by circle:         <span id="squares_lower"></span></li>
+  <li>Number of squares needed to cover the circle: <span id="squares_upper"></span></li>
+  <li>Area of each square:                          <span id="area">         </span> (6dp)</li>
+  <li>Area of squares enclosed by circle:           <span id="area_lower">   </span> (4dp)</li>
+  <li>Area of squares that cover circle:            <span id="area_upper">   </span> (4dp)</li>
+</ul>
