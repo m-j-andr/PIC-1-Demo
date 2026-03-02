@@ -154,7 +154,6 @@ Now, let's filter by date.
          sorting.src = sorting_clicked_on_an_even_number_of_times ? './sheets-screenshots/28.png' : './sheets-screenshots/29.png';
        });
      </script>
-
    - The student who spent the most time at tutoring sessions
      on 09/08/2025 --- Mariana da Silva --- is at the bottom now.
      ![Sorting](./sheets-screenshots/30.png)
